@@ -103,7 +103,7 @@ HTML;
                                     内装コストをかけず、すぐに営業を開始できます。</p>
                             </article>
                             <article>
-                                <figure><img src="<?php echo $img; ?>/hero_scene.webp" alt="にぎわう屋台村の相互集客イメージ" loading="lazy"></figure>
+                                <figure><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="にぎわう屋台村の相互集客イメージ" loading="lazy"></figure>
                                 <h3>相互集客で安定した来客</h3>
                                 <p>屋台村全体のお客様が自然とあなたのお店にも流れてくる横丁スタイル。<br>
                                     開業直後から認知されやすい環境です。</p>
