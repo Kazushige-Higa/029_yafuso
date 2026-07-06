@@ -1,0 +1,9 @@
+$font_zen_maru: 'Zen Maru Gothic', sans-serif;
+
+@mixin font_zen_maru {
+    font-family: $font_zen_maru;
+}
+.font_zen_maru {
+    @include font_zen_maru;
+    font-weight: 900;
+}

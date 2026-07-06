@@ -1,0 +1,9 @@
+$font_mincho: "Noto Serif JP", "YakuHanMP", "Noto Serif JP", "游明朝 Medium", "Yu Mincho", YuMincho,
+    "Hiragino Mincho ProN", HGS明朝E, serif;
+@mixin mincho {
+    font-family: $font_mincho;
+}
+.mincho {
+    @include mincho;
+    font-weight: 900 !important;
+}

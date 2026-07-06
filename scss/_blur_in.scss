@@ -1,0 +1,78 @@
+// blur_in
+.blur_in {
+    -webkit-animation: blur_in 0.5s ease-in-out infinite alternate;
+    -moz-animation: blur_in 0.5s ease-in-out infinite alternate;
+    animation: blur_in 0.5s ease-in-out infinite alternate;
+    animation-iteration-count: 1 !important;
+    opacity: 0;
+}
+
+@-webkit-keyframes blur_in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blur_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blur_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blur_in {
+    animation-name: blur_in-transform-keyframes;
+    animation-duration: 2000ms;
+    animation-delay: 100ms;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    transform-origin: 0 0;
+    display: inline-block;
+}
+
+@keyframes blur_in-transform-keyframes {
+    0% {
+        transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0%, 0%);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+        opacity: 0;
+        filter: blur(1.5rem);
+    }
+
+    33.33% {
+        transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0%, 0%);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    66.67% {
+        transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0%, 0%);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0%, 0%);
+        opacity: 0;
+        filter: blur(1.5rem);
+    }
+}

@@ -1,0 +1,69 @@
+#pagetop {
+    position: fixed;
+    bottom: 5em;
+    right: 1%;
+    z-index: 200;
+    opacity: 0;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    transform: translateY(30px);
+    &.bottom {
+        bottom: 1%;
+    }
+    &.radius a {
+        border-radius: 50%;
+    }
+    &.view {
+        opacity: 1;
+        transition: 0.4s ease-in-out;
+        transform: translateY(0);
+    }
+    a {
+        display: grid;
+        place-items: center;
+        background: #fff;
+        box-shadow: rgba(#333, 0.1) 0px 2px 2px 2px;
+        color: $base_color;
+        border: 1px solid $base_color;
+        width: 3em;
+        height: 3em;
+        font-size: 120%;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    &.bottom {
+        @include for-size(phone-only) {
+            bottom: 0.5%;
+        }
+    }
+    @include for-size(tablet) {
+        bottom: 50px;
+        a {
+            width: 40px;
+            height: 40px;
+            font-size: 1.6rem;
+        }
+    }
+}
+#page-top_img {
+    position: fixed;
+    bottom: 10px;
+    right: 7px;
+    z-index: 980;
+    a {
+        display: block;
+        img {
+            width: 120px;
+            @include for-size(phone-only) {
+                bottom: 40px;
+            }
+        }
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    @include for-size(phone-only) {
+        bottom: 70px;
+    }
+}

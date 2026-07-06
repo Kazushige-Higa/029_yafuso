@@ -1,0 +1,86 @@
+.tbl_simple {
+    background: transparent;
+    width: 100%;
+    &.black {
+        td,
+        th {
+            border-top: #111 1px solid !important;
+            border-bottom: #111 1px solid !important;
+        }
+    }
+    &.white {
+        td,
+        th {
+            border-top: #fff 1px solid !important;
+            border-bottom: #fff 1px solid !important;
+        }
+    }
+    &.type_s {
+        th {
+            width: 80px;
+            font-size: 85% !important;
+        }
+        th,
+        td {
+            padding: 1em 0.5em !important;
+            font-size: 85% !important;
+        }
+        tr {
+            &:first-child {
+                td,
+                th {
+                    border-top: #888 1px solid;
+                }
+            }
+        }
+    }
+    th {
+        text-align: left;
+        vertical-align: middle;
+        padding: 1em 0.5em;
+        line-height: 1.5;
+        border-top: #888 1px solid;
+        border-left: #888 0px solid;
+        border-right: #888 0px solid;
+        border-bottom: #888 1px solid;
+        width: 25%;
+        @include for-size(phone-only) {
+            width: 35%;
+        }
+    }
+    td {
+        b {
+            color: $red;
+        }
+        padding: 1em 0.5em;
+        vertical-align: middle;
+        border-top: #888 1px solid;
+        border-bottom: #888 1px solid;
+        border-left: #888 0px solid;
+        border-right: #888 0px solid;
+    }
+    tr {
+        &:first-child {
+            td,
+            th {
+                border-top: #888 0px solid;
+            }
+        }
+    }
+    &.type1 {
+        tr {
+            &:first-child {
+                td,
+                th {
+                    border-top: #888 1px solid;
+                }
+            }
+        }
+        .space {
+            padding-left: 9em;
+            @include for-size(phone-only) {
+                padding-left: 0;
+            }
+        }
+    }
+}

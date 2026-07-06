@@ -1,0 +1,81 @@
+.btn_txtbtn {
+    display: inline;
+    &.white {
+        a {
+            color: #fff;
+            &:before,
+            &:after {
+                background-color: #fff;
+            }
+        }
+    }
+    &.bg_grd {
+        a {
+
+        }
+    }
+    &.left {
+        margin: 0 auto 0 0;
+        text-align: left;
+    }
+    &.right {
+        margin: 0 0 0 auto;
+        text-align: right;
+        @include for-size(phone-only) {
+            margin: 0 auto 0;
+            text-align: center;
+        }
+    }
+    &.center {
+        margin: 15px auto !important;
+        text-align: center !important;
+        display: block !important;
+    }
+    a {
+        color: #fff;
+        font-size: 140%;
+        display: block;
+        letter-spacing: 0.1em;
+        background-color: $base_color;
+        position: relative;
+        padding: 1em 0;
+        max-width: 400px;
+        margin: auto;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            bottom: -5px;
+            width: 50px;
+            left: 0;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.5s;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 2px;
+            left: 50px;
+            top: 51%;
+            background-color: #fff;
+            -webkit-transform-origin: 0px 0.5px;
+            transform-origin: 0px 0.5px;
+            -webkit-transform: rotate(-150deg);
+            transform: rotate(-150deg);
+            transition: 0.5s;
+        }
+        &:hover {
+            opacity: 0.6;
+            &:before {
+                left: 10px;
+                transition: 0.5s;
+            }
+            &:after {
+                left: 60px;
+                transition: 0.5s;
+            }
+        }
+    }
+}

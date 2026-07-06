@@ -1,0 +1,8 @@
+$font_alumni: "Alumni Sans Pinstripe", sans-serif;
+
+@mixin font_alumni {
+	font-family: $font_alumni !important;
+}
+.font_Oswald {
+	@include font_alumni;
+}

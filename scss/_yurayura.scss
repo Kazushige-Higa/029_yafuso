@@ -1,0 +1,49 @@
+.yurayura {
+    transform-origin: center bottom;
+    animation-name: yurayura;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    -webkit-animation-name: yurayura;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-name: yurayura;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease;
+}
+@keyframes yurayura {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+@-webkit-keyframes yurayura {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

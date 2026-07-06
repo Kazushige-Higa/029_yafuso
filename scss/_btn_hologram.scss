@@ -1,0 +1,64 @@
+.btn_hologram a {
+	@include bg_grd;
+	background-size: 400% 400%;
+	color: white;
+	padding: 1em 0;
+	max-width: 460px;
+	width: 100%;
+	border: none;
+	border-radius: 0.5em;
+	font-size: 120%;
+	font-weight: 700;
+	cursor: pointer;
+	@include transition(all 0.4s ease);
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	animation: hologram 6s ease-in-out infinite;
+	box-shadow: 0 0 10px rgba(#000, 0.3);
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+		transform: rotate(45deg);
+		@include transition(all 1.6s ease);
+		opacity: 0;
+	}
+
+	&:hover {
+		transform: translateY(-3px) scale(1.05);
+		box-shadow: 0 0 50px rgba(#000, 0.5);
+
+		&::before {
+			animation: shine 1.8s ease-in-out;
+			opacity: 1;
+		}
+	}
+}
+
+@keyframes hologram {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+@keyframes shine {
+	0% {
+		transform: translateX(-100%) translateY(-100%) rotate(45deg);
+	}
+	100% {
+		transform: translateX(100%) translateY(100%) rotate(45deg);
+	}
+}

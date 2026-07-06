@@ -1,0 +1,127 @@
+button.circle_more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 12rem;
+    height: auto;
+}
+
+button.circle_more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #2c3e50;
+    border-radius: 50%;
+}
+
+button.circle_more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+button.circle_more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 1.0125rem;
+    width: 0.7625rem;
+    height: 0.15rem;
+}
+
+button.circle_more .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.15rem;
+    right: 0.03125rem;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-top: 0.19375rem solid #fff;
+    border-right: 0.19375rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.circle_more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    margin: 0 0 0 0.925rem;
+    color: #2c3e50;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+button.circle_more:hover .circle {
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+button.circle_more:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(0.5rem, 0);
+}
+
+button.circle_more:hover .button-text {
+    color: #fff;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 480px) {
+    button.circle_more {
+        width: 10rem;
+    }
+    
+    button.circle_more .circle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    button.circle_more .circle .icon.arrow {
+        left: 0.8rem;
+    }
+    
+    button.circle_more .circle .icon.arrow::before {
+        border-top: 0.14375rem solid #fff;
+        border-right: 0.14375rem solid #fff;
+    }
+    
+    button.circle_more .button-text {
+        font-size: 0.7rem;
+        margin: 0 0 0 0.7rem;
+    }
+}
+
+/* 追加のスタイリング */
+button.circle_more {
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+button.circle_more:hover {
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.2);
+    transform: translateY(-1px);
+}
+
+button.circle_more:active {
+    transform: translateY(0);
+    transition-duration: 0.1s;
+}

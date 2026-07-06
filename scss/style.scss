@@ -1,0 +1,101 @@
+//@charset "utf-8";
+@import "_font_josefin.scss";
+@import "_vars.scss";
+@import "_common.scss";
+
+// default
+/////////////////////////////////////////////////////
+@import "_default.scss";
+
+// ファーストビュー slider
+/////////////////////////////////////////////////////
+//@import "_slider_hero.scss";
+@import "_slider_fullslider.scss";
+//@import "_slider_thirds.scss";
+//@import "_slider_arrows.scss";
+//@import "_slider_card.scss";
+
+// header header_list.php
+/////////////////////////////////////////////////////
+//@import "_header_list.scss";
+
+// ページリンク pagelink.php
+/////////////////////////////////////////////////////
+//@import "_page_link.scss";
+
+// ボタン btn.php
+/////////////////////////////////////////////////////
+//@import "_page_btn.scss";
+
+// background background.php
+/////////////////////////////////////////////////////
+@import "_page_background.scss";
+
+// テーブル table.php
+/////////////////////////////////////////////////////
+//@import "_page_table.scss";
+
+// li_ol_dlタグ li_ol_dl.php
+/////////////////////////////////////////////////////
+//@import "_page_li_ol_dl.scss";
+
+// ナビ page_nav.php
+/////////////////////////////////////////////////////
+//@import "_page_nav.scss";
+
+// ニュースリスト index.php
+/////////////////////////////////////////////////////
+//@import "_news_simple.scss";
+//@import "_news_list.scss";
+
+// ギャラリー・実績一覧 page_works.php
+/////////////////////////////////////////////////////
+@import "_page_works.scss";
+
+// 料金表 price.php
+/////////////////////////////////////////////////////
+//@import "_page_price.scss";
+
+// お客様の声 page_voice.php
+/////////////////////////////////////////////////////
+//@import "_page_voice.scss";
+
+// よくあるご質問 page_faq.php
+/////////////////////////////////////////////////////
+//@import "_page_faq.scss";
+
+// ご利用の流れ page_flow.php
+/////////////////////////////////////////////////////
+//@import "_page_flow.scss";
+
+// ブログ関連 blog
+/////////////////////////////////////////////////////
+@import "_page_blog.scss";
+
+// お問い合わせ　contact.php
+/////////////////////////////////////////////////////
+//@import "_page_contact.scss";
+
+// カスタム
+/////////////////////////////////////////////////////
+@import "_page_sample.scss";
+//@import "_side_menu.scss";
+//@import "_4701002001.scss";
+//@import "_4701002113.scss";
+//@import "_4701002023.scss";
+//@import "_3601001358.scss";
+//@import "_4701002073.scss";
+//@import "_4701002064.scss";
+//@import "_4701002074.scss";
+//@import "_4701002120.scss";
+//@import "_4701002157.scss";
+//@import "_4701002170.scss";
+//@import "_4701002172.scss";
+//@import "_21308.scss";
+//@import "_4701002176.scss";
+//@import "_4701002182.scss";
+//@import "_4701002183.scss";
+//@import "_3601000144.scss";
+//@import "_23641.scss";
+@import "_029_yafuso.scss";
+//@import "_030_truth.scss";

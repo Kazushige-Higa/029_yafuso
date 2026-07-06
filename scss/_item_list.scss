@@ -1,0 +1,118 @@
+.item_list {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+
+    &.border {
+        border: 1px solid #aaa;
+
+        &:before {
+            position: absolute;
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            right: 14px;
+            top: 35%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: $base_color;
+            border: 1px solid #aaa;
+            font-size: 120%;
+            background-color: #fff;
+            z-index: 999;
+            transition: 0.5s;
+
+            @include for-size(phone-only) {
+                width: 30px;
+                height: 30px;
+                font-size: 1.3rem;
+            }
+        }
+
+        &:hover {
+            &:before {
+                right: 2px;
+                background-color: $base_color;
+                border: 1px solid $base_color;
+                color: #fff;
+            }
+        }
+    }
+
+    @include for-size(phone-only) {
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+
+    &.a_center {
+        align-items: center;
+    }
+
+    &.j-center {
+        justify-content: center;
+    }
+
+    > a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        &:hover {
+            background-color: rgba(#fff, 0.4);
+        }
+    }
+
+    .item_list_ttl {
+        margin-bottom: 5px;
+
+        @include for-size(phone-only) {
+            font-size: 85% !important;
+        }
+    }
+
+    .item_list_txt {
+        font-size: 90%;
+    }
+
+    .item_list_img {
+        width: 300px;
+        height: auto;
+
+        @include for-size(phone-only) {
+            width: 260px;
+            height: auto;
+        }
+
+        &.type_r {
+            width: 200px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            @include for-size(phone-only) {
+                height: 120px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .item_list_detail {
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        position: relative;
+    }
+}

@@ -1,0 +1,62 @@
+.num {
+    font-weight: 600;
+
+    a {
+        color: $base_color;
+        font-size: 2.8rem;
+        text-align: center;
+        margin-left: 5px;
+
+        @include for-size(phone-only) {
+            font-size: 120%;
+        }
+
+        &:before {
+            content: "\f879";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.num_bg {
+    .num {
+        color: rgba($base_color, 0.3);
+        font-size: 18rem;
+        line-height: 1;
+        position: absolute;
+        z-index: 0;
+        @include for-size(pro) {
+            font-size: 15rem;
+        }
+        @include for-size(phone-only) {
+            font-size: 10rem;
+        }
+    }
+    &.top {
+        .num {
+            top: -120px;
+            @include for-size(phone-only) {
+                top: -5px;
+            }
+        }
+    }
+    &.right {
+        .num {
+            left: inherit;
+            right: 20px;
+        }
+    }
+    &.right2 {
+        .num {
+            left: inherit;
+            top: -20px;
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+$font_homemade: "Homemade Apple", cursive;
+@mixin font_homemade {
+	font-family: $font_homemade;
+}
+.font_homemade {
+	@include font_homemade;
+}

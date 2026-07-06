@@ -1,0 +1,73 @@
+.btn_more {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+
+    a {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1;
+        color: $base_color;
+        padding-right: 30px;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 1px solid $base_color;
+        border-radius: 50%;
+        top: 50%;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 5px;
+        top: 50%;
+        right: 10px;
+        border-top: 1px solid $base_color;
+        border-right: 1px solid $base_color;
+        -webkit-transform: rotate(45deg) translateY(-50%);
+        transform: rotate(45deg) translateY(-50%);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+        &:before {
+            background: $base_color;
+        }
+
+        &:after {
+            border-color: #fefefe !important;
+        }
+    }
+
+    @include for-size(tablet) {
+        justify-content: flex-start;
+        max-width: 160px;
+        margin: 10px auto;
+        background: #fff;
+        padding: 6px 20px;
+        border-radius: 30px;
+
+        &:before {
+            right: 10px;
+        }
+
+        &:after {
+            right: 20px;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+$font_rocknroll: 'RocknRoll One', sans-serif;
+
+@mixin font_rocknroll {
+	font-family: $font_rocknroll;
+}
+.font_rocknroll {
+	@include font_rocknroll;
+}

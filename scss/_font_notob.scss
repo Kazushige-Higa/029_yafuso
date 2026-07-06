@@ -1,0 +1,9 @@
+$font_notob: "Noto Sans JP", sans-serif;
+
+@mixin font_notob {
+	font-family: $font_notob;
+}
+.font_notob {
+	@include font_notob;
+	font-weight: 900;
+}

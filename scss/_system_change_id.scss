@@ -1,0 +1,634 @@
+body {
+    color: $main_color;
+    accent-color: $base_color;
+    background-color: $bg_color;
+    background-image: $bg_image;
+    min-height: 100vh;
+    position: relative;
+}
+.system_change_id_area {
+    background-color: #f2f2f2;
+    padding: 0.3em;
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+    margin-top: 1em;
+    line-height: 1;
+    .system_change_id_area_title {
+        padding: 0.2em;
+        white-space: nowrap;
+        font-size: 80%;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 0.2em;
+    }
+    button {
+        padding: 0.2em;
+        border: 1px solid #aaa;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+.btn_mini a {
+    background: rgba(31, 95, 169, 0) !important;
+}
+.tbl.color2 td:nth-child(2n) {
+    background-color: rgba(31, 95, 169, 0) !important;
+}
+.tbl.color2 td:nth-child(3n) {
+    background-color: rgba(31, 95, 169, 0) !important;
+}
+.tbl.color2 td {
+    background-color: rgba(31, 95, 169, 0) !important;
+}
+.system_change_id_area button#small-btn {
+    background-color: $base_color;
+    color: #fff;
+}
+.system_change_id_area button#normal-btn {
+    background-color: $base_color;
+    color: #fff;
+}
+body {
+    &#small {
+        $fontsize: 16;
+        @media screen and (min-width: 1600px) {
+            font-size: calc($fontsize / 1800 * 100vw) !important;
+        }
+        @media screen and (max-width: 1600px) {
+            font-size: calc($fontsize / 1600 * 100vw) !important;
+        }
+        @media screen and (max-width: 1200px) {
+            font-size: calc($fontsize / 1200 * 100vw) !important;
+        }
+        @include for-size(phone-only) {
+            font-size: calc($fontsize_sp / 500 * 100vw) !important;
+        }
+        .system_change_id_area button#small-btn {
+            background-color: $base_color;
+            color: #fff;
+        }
+    }
+    &#medium {
+        $fontsize: 18;
+        @media screen and (min-width: 1600px) {
+            font-size: calc($fontsize / 1800 * 100vw) !important;
+        }
+        @media screen and (max-width: 1600px) {
+            font-size: calc($fontsize / 1600 * 100vw) !important;
+        }
+        @media screen and (max-width: 1200px) {
+            font-size: calc($fontsize / 1200 * 100vw) !important;
+        }
+        @include for-size(phone-only) {
+            font-size: calc($fontsize_sp / 500 * 100vw) !important;
+        }
+        .system_change_id_area button#medium-btn {
+            background-color: $base_color;
+            color: #fff;
+        }
+        .system_change_id_area button {
+            &#small-btn,
+            &#large-btn {
+                background-color: #fff !important;
+                color: $main_color !important;
+            }
+        }
+    }
+    &#large {
+        $fontsize: 20;
+        @media screen and (min-width: 1600px) {
+            font-size: calc($fontsize / 1800 * 100vw) !important;
+        }
+        @media screen and (max-width: 1600px) {
+            font-size: calc($fontsize / 1600 * 100vw) !important;
+        }
+        @media screen and (max-width: 1200px) {
+            font-size: calc($fontsize / 1200 * 100vw) !important;
+        }
+        @include for-size(phone-only) {
+            font-size: calc($fontsize_sp / 500 * 100vw) !important;
+        }
+        .system_change_id_area button#large-btn {
+            background-color: $base_color;
+            color: #fff;
+        }
+        .system_change_id_area button {
+            &#small-btn,
+            &#medium-btn {
+                background-color: #fff !important;
+                color: $main_color !important;
+            }
+        }
+    }
+    &.normal-back {
+        color: $main_color !important;
+        accent-color: $base_color !important;
+        background-color: $bg_color !important;
+        background-image: $bg_image !important;
+        .system_change_id_area button#normal-btn {
+            background-color: $base_color;
+            color: #fff;
+        }
+        .system_change_id_area button {
+            &#black-btn,
+            &#red-btn {
+                background-color: #fff !important;
+                color: $main_color !important;
+            }
+        }
+    }
+    &.black-back {
+        $base_color: #fff !important;
+        background-color: #111 !important;
+        color: #fff !important;
+        #fixed_nav nav > ul > li > ul, #fixed_nav nav > ul > li .menu ul {
+            background-color: #111 !important;
+        }
+        .system_change_id_area button {
+            &#normal-btn,
+            &#black-btn,
+            &#red-btn {
+                color: #fff !important;
+            }
+        }
+        .system_change_id_area button#black-btn {
+            background-color: $base_color;
+            color: #111;
+        }
+        .system_change_id_area {
+            background-color: transparent !important;
+        }
+        .system_change_id_area button#black-btn {
+            background-color: #fff;
+            color: #111 !important;
+        }
+        .system_change_id_area button {
+            &#normal-btn,
+            &#red-btn {
+                background-color: transparent !important;
+                color: #fff !important;
+            }
+        }
+        .tbl_border_s {
+            th,
+            td {
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+            }
+            th {
+                border-top-color: #fff;
+                border-bottom-color: #fff;
+                background-color: rgba(#fff, 0);
+                color: #fff;
+            }
+        }
+        //
+        .bg_white {
+            background-color: #000 !important;
+        }
+        .bg_blue {
+            background-color: #000 !important;
+        }
+        .bg_base1,
+        .bg_blue,
+        .bg_base2,
+        .bg_base3,
+        .bg_base4,
+        .bg_base5,
+        .bg_base6,
+        .bg_base7,
+        .bg_base8,
+        .bg_base9 {
+            &:before {
+                background-color: #000 !important;
+            }
+        }
+        .form-pattern-1 .submit-btn,
+        .form-pattern-1 dl dt:not(.pattern-exclusion) span.required::before,
+        .title_box5:before {
+            background-color: #fff !important;
+        }
+        .form-pattern-1 .submit-btn,
+        .form-pattern-1 dl dt:not(.pattern-exclusion) span.required::before {
+            color: #111 !important;
+        }
+        .title_box5 {
+            background: none !important;
+        }
+        a,
+        .title_box2,
+        .title_box4,
+        .list_disc li:before,
+        .news_list > li a:after,
+        #fixed_nav nav > ul > li > a > span,
+        .nav_icon a span,
+        .base_color,
+        .sub_color,
+        .orange,
+        .header_main_nav > ul > li > a span,
+        .header_main_nav .menu ul > li > a span {
+            color: #fff !important;
+        }
+        .tbl_company th::after {
+            display: none !important;
+        }
+        .title_box2:before,
+        .tbl th,
+        .title_box2,
+        .dl_list dt,
+        .title_box5,
+        .tbl_company th,
+        .tbl_company td,
+        .title_box4,
+        .tbl.color,
+        .tbl.color th,
+        .tbl.color td,
+        .news_list > li .data,
+        .bg_base,
+        .list_disc.pdf li:after,
+        .voice_box li,
+        .voice_box li .memo,
+        .bg_f2,
+        .ol_list li:before,
+        .form-pattern-1,
+        .bg_base_color {
+            background-color: #111 !important;
+        }
+        #fixed_nav {
+            background-color: rgba(#111, 0.8);
+        }
+        #pagetop a,
+        .form-pattern-1 .form-thanks-msg,
+        .btn_slim li a,
+        .news_list > li div,
+        .header_main_nav > ul > li > a:before,
+        .header_main_nav .menu ul > li > a:before,
+        .header_main_nav > ul > li > ul,
+        .header_main_nav > ul > li .menu ul {
+            background-color: #111 !important;
+            border-color: #111 !important;
+        }
+
+        .header_main .contact_wrap .linkbtn a {
+            color: #fff !important;
+            border: 1px solid #fff !important;
+        }
+        .voice_box li .memo {
+            background-image: none !important;
+        }
+        .dl_list dt,
+        .form-pattern-1 .submit-btn,
+        .base_color,
+        span.border_bottom,
+        .nav_icon a:before,
+        .list_disc.pdf li:after,
+        .tbl_border th,
+        .btn_slim li a:before,
+        .btn_slim li,
+        span.box.base_color,
+        .btn_slim li a {
+            border-color: #fff !important;
+        }
+        @mixin svg_wave_color_top($svg_color) {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 240"><path fill="%23#{111}" d="M0.2,240L0,111.3c0,0,112-61.3,267-88.3C326.6,12.6,457,0,487,0c78,0,227.6,7,411.5,77.2 c186.8,71.3,381.7,108.3,512.7,108.3c146.9,0,274.2,3.7,508.9-71.9V240H0.2z" /></svg>')
+                no-repeat center top/cover;
+        }
+        @mixin svg_wave_color_bottom($svg_color) {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 240"><path fill="%23#{111}" d="M0.2,240L0,111.3c0,0,112-61.3,267-88.3C326.6,12.6,457,0,487,0c78,0,227.6,7,411.5,77.2 c186.8,71.3,381.7,108.3,512.7,108.3c146.9,0,274.2,3.7,508.9-71.9V240H0.2z" /></svg>')
+                no-repeat center bottom/cover;
+        }
+        .bg_wave {
+            position: relative;
+            &.bg_base {
+                background: $bg_base;
+                &::before {
+                    @include svg_wave_color_top(111);
+                }
+                &:after {
+                    @include svg_wave_color_bottom(111);
+                }
+            }
+            &.bg_base_color {
+                background: $base_color;
+                &::before {
+                    @include svg_wave_color_top(111);
+                }
+                &:after {
+                    @include svg_wave_color_bottom(111);
+                }
+            }
+            &.light_brown {
+                background: #111;
+                &::before {
+                    @include svg_wave_color_top("111");
+                }
+                &:after {
+                    @include svg_wave_color_bottom("111");
+                }
+            }
+            &.bottom {
+                &::after {
+                    height: 0px;
+                    bottom: 0px;
+                }
+            }
+            &::before,
+            &::after {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 200px;
+                z-index: -1;
+                content: "";
+            }
+            &::before {
+                top: -200px;
+                @include svg_wave_color_top("111");
+            }
+            &:after {
+                top: auto;
+                bottom: -200px;
+                @include svg_wave_color_bottom("111");
+                transform: rotate(180deg);
+            }
+            &.reversal {
+                &::before {
+                    transform: scale(-1, 1);
+                }
+                &:after {
+                    transform: scale(1, -1);
+                }
+            }
+        }
+        .bg_img.type1,
+        .bg_img.type2,
+        .bg_img.type3,
+        .bg_img.type4,
+        .bg_img.type5,
+        .bg_img.type6,
+        .bg_img.type7,
+        .bg_img.type8,
+        .bg_img.type9,
+        .bg_img.type10,
+        .bg_img.type1a,
+        .bg_img.type2a,
+        .bg_img.type3a,
+        .bg_img.type4a,
+        .bg_img.type5a,
+        .bg_img.type6a,
+        .bg_img.type7a,
+        .bg_img.type8a,
+        .bg_img.type9a,
+        .bg_img.type10a {
+            &:before {
+                background-image: none !important;
+            }
+        }
+    }
+    &.red-back {
+        $base_color: #fff !important;
+        background-color: $bg_red !important;
+        color: #fff !important;
+        #fixed_nav nav > ul > li > ul, #fixed_nav nav > ul > li .menu ul {
+            background-color: $bg_red !important;
+        }
+        .system_change_id_area button#red-btn {
+            background-color: $base_color;
+            color: #111;
+        }
+        .system_change_id_area {
+            background-color: transparent !important;
+        }
+        .system_change_id_area button#red-btn {
+            background-color: #fff;
+            color: #111;
+        }
+        .system_change_id_area button {
+            &#normal-btn,
+            &#black-btn {
+                background-color: transparent !important;
+                color: #fff !important;
+            }
+        }
+        .tbl_border_s {
+            th,
+            td {
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+            }
+            th {
+                border-top-color: #fff;
+                border-bottom-color: #fff;
+                color: #fff;
+                background-color: rgba(#fff, 0);
+            }
+        }
+        //
+        .bg_white {
+            background-color: $bg_red !important;
+        }
+        .bg_blue {
+            background-color: $bg_red !important;
+        }
+        .bg_base1,
+        .bg_blue,
+        .bg_base2,
+        .bg_base3,
+        .bg_base4,
+        .bg_base5,
+        .bg_base6,
+        .bg_base7,
+        .bg_base8,
+        .bg_base9 {
+            &:before {
+                background-color: $bg_red !important;
+            }
+        }
+        .form-pattern-1 .submit-btn,
+        .form-pattern-1 dl dt:not(.pattern-exclusion) span.required::before,
+        .title_box5:before {
+            background-color: #fff !important;
+        }
+        .form-pattern-1 .submit-btn,
+        .form-pattern-1 dl dt:not(.pattern-exclusion) span.required::before {
+            color: #111 !important;
+        }
+        .title_box5 {
+            background: none !important;
+        }
+        a,
+        .title_box2,
+        .title_box4,
+        .list_disc li:before,
+        .news_list > li a:after,
+        #fixed_nav nav > ul > li > a > span,
+        .nav_icon a span,
+        .base_color,
+        .sub_color,
+        .orange,
+        .header_main_nav > ul > li > a span,
+        .header_main_nav .menu ul > li > a span {
+            color: #fff !important;
+        }
+        .tbl_company th::after {
+            display: none !important;
+        }
+        .title_box2:before,
+        .tbl th,
+        .title_box2,
+        .dl_list dt,
+        .title_box5,
+        .tbl_company th,
+        .tbl_company td,
+        .title_box4,
+        .tbl.color,
+        .tbl.color th,
+        .tbl.color td,
+        .news_list > li .data,
+        .bg_base,
+        .list_disc.pdf li:after,
+        .voice_box li,
+        .voice_box li .memo,
+        .bg_f2,
+        .ol_list li:before,
+        .form-pattern-1,
+        .bg_base_color {
+            background-color: $bg_red !important;
+        }
+        #fixed_nav {
+            background-color: rgba($bg_red, 0.8);
+        }
+        #pagetop a,
+        .form-pattern-1 .form-thanks-msg,
+        .btn_slim li a,
+        .news_list > li div,
+        .header_main_nav > ul > li > a:before,
+        .header_main_nav .menu ul > li > a:before,
+        .header_main_nav > ul > li > ul,
+        .header_main_nav > ul > li .menu ul {
+            background-color: $bg_red !important;
+            border-color: $bg_red !important;
+        }
+
+        .header_main .contact_wrap .linkbtn a {
+            color: #fff !important;
+            border: 1px solid #fff !important;
+        }
+        .voice_box li .memo {
+            background-image: none !important;
+        }
+        .dl_list dt,
+        .form-pattern-1 .submit-btn,
+        .base_color,
+        span.border_bottom,
+        .nav_icon a:before,
+        .list_disc.pdf li:after,
+        .tbl_border th,
+        .btn_slim li a:before,
+        .btn_slim li,
+        span.box.base_color,
+        .btn_slim li a {
+            border-color: #fff !important;
+        }
+        @mixin svg_wave_color_top($svg_color) {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 240"><path fill="%23#{1B1464}" d="M0.2,240L0,111.3c0,0,112-61.3,267-88.3C326.6,12.6,457,0,487,0c78,0,227.6,7,411.5,77.2 c186.8,71.3,381.7,108.3,512.7,108.3c146.9,0,274.2,3.7,508.9-71.9V240H0.2z" /></svg>')
+                no-repeat center top/cover;
+        }
+        @mixin svg_wave_color_bottom($svg_color) {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 240"><path fill="%23#{1B1464}" d="M0.2,240L0,111.3c0,0,112-61.3,267-88.3C326.6,12.6,457,0,487,0c78,0,227.6,7,411.5,77.2 c186.8,71.3,381.7,108.3,512.7,108.3c146.9,0,274.2,3.7,508.9-71.9V240H0.2z" /></svg>')
+                no-repeat center bottom/cover;
+        }
+        .bg_wave {
+            position: relative;
+            &.bg_base {
+                background: $bg_base;
+                &::before {
+                    @include svg_wave_color_top(111);
+                }
+                &:after {
+                    @include svg_wave_color_bottom(111);
+                }
+            }
+            &.bg_base_color {
+                background: $base_color;
+                &::before {
+                    @include svg_wave_color_top(111);
+                }
+                &:after {
+                    @include svg_wave_color_bottom(111);
+                }
+            }
+            &.light_brown {
+                background: $bg_red;
+                &::before {
+                    @include svg_wave_color_top("111");
+                }
+                &:after {
+                    @include svg_wave_color_bottom("111");
+                }
+            }
+            &.bottom {
+                &::after {
+                    height: 0px;
+                    bottom: 0px;
+                }
+            }
+            &::before,
+            &::after {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 200px;
+                z-index: -1;
+                content: "";
+            }
+            &::before {
+                top: -200px;
+                @include svg_wave_color_top("111");
+            }
+            &:after {
+                top: auto;
+                bottom: -200px;
+                @include svg_wave_color_bottom("111");
+                transform: rotate(180deg);
+            }
+            &.reversal {
+                &::before {
+                    transform: scale(-1, 1);
+                }
+                &:after {
+                    transform: scale(1, -1);
+                }
+            }
+        }
+        .bg_img.type1,
+        .bg_img.type2,
+        .bg_img.type3,
+        .bg_img.type4,
+        .bg_img.type5,
+        .bg_img.type6,
+        .bg_img.type7,
+        .bg_img.type8,
+        .bg_img.type9,
+        .bg_img.type10,
+        .bg_img.type1a,
+        .bg_img.type2a,
+        .bg_img.type3a,
+        .bg_img.type4a,
+        .bg_img.type5a,
+        .bg_img.type6a,
+        .bg_img.type7a,
+        .bg_img.type8a,
+        .bg_img.type9a,
+        .bg_img.type10a {
+            &:before {
+                background-image: none !important;
+            }
+        }
+    }
+}

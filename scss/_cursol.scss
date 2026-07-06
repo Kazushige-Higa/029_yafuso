@@ -1,0 +1,55 @@
+//cursorを画像化する
+body {
+    cursor: url(#{$img}/cursor.png), auto;
+}
+//cursorを回転
+.cursor {
+    -webkit-animation: rotate-cursor 25s linear infinite;
+    animation: rotate-cursor 25s linear infinite;
+    transform-origin: center;
+    
+}
+@-webkit-keyframes rotate-cursor {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-cursor {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #111;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(0px); /* 初期状態ではぼかしなし */
+    transition: filter 0.2s ease-in-out; /* ぼかし効果の遷移 */
+}
+/* 
+a {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+ */

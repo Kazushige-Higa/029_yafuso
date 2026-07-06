@@ -1,0 +1,61 @@
+.faq_list_simple {
+    dt,
+    dd {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 4.5rem;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            border: 2px solid $base_color;
+            border-radius: 10px;
+            padding: 0 0.5em;
+            margin-right: 0.5em;
+            font-weight: bold;
+        }
+    }
+    dt {
+        margin-bottom: 0.8em;
+        color: $base_color;
+        font-size: 125%;
+        &:before {
+            content: "Q";
+            background-color: $base_color;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 80%;
+        }
+    }
+    dd {
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        &:before {
+            content: "A";
+            background-color: #fff;
+            color: $base_color;
+        }
+    }
+    &.sub {
+        dt,
+        dd {
+            &:before {
+                border: 2px solid $sub_color;
+            }
+        }
+        dt {
+            color: $sub_color;
+            &:before {
+                background-color: $sub_color;
+            }
+        }
+        dd {
+            &:before {
+                color: $sub_color;
+            }
+        }
+    }
+}

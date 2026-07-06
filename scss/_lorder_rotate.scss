@@ -1,0 +1,22 @@
+.lorder_rotate {
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin: auto;
+    animation: lorder_rotate 0.5s linear infinite;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    border-right: 1px solid rgba($base_color, 0.8);
+    border-top: 1px solid rgba($base_color, 0.8);
+    content: "";
+    height: 70px;
+    width: 70px;
+}
+@keyframes lorder_rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

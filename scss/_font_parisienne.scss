@@ -1,0 +1,10 @@
+$font_parisienne: "Parisienne", cursive;
+@mixin font_parisienne {
+	font-family: $font_parisienne !important;
+	&:first-letter {
+		text-transform: uppercase !important;
+	}
+}
+.font_parisienne {
+	@include font_parisienne;
+}

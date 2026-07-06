@@ -1,0 +1,3253 @@
+.wakasa_page_23641 {
+  --wakasa_base: #0045a3;
+  --wakasa_sub: #2076e6;
+  --wakasa_bg: #f2f2f2;
+  --wakasa_green: #59bc21;
+  --wakasa_ink: #20252d;
+  --wakasa_muted: #687385;
+  --wakasa_line: #dfe6ef;
+  --wakasa_red: #df4b3f;
+  color: var(--wakasa_ink);
+  background: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0;
+  overflow: clip;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  > header {
+    position: sticky;
+    top: 0;
+    z-index: 300;
+    width: 100%;
+  }
+}
+
+.wakasa_single_23641 {
+  width: min(92vw, 1180px);
+  margin-inline: auto;
+}
+
+.wakasa_header_23641 {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(0, 69, 163, 0.1);
+  box-shadow: 0 8px 26px rgba(18, 44, 78, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.wakasa_header_inner_23641 {
+  width: min(96vw, 1380px);
+  min-height: 96px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.wakasa_logo_23641 {
+  flex: 0 0 auto;
+  width: min(33vw, 360px);
+
+  img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.wakasa_nav_23641 {
+  flex: 1;
+
+  .commonnav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.65em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .commonnav > li {
+    list-style: none;
+  }
+
+  .commonnav > li > a {
+    position: relative;
+    display: grid;
+    gap: 0.35em;
+    padding: 1.9em 0;
+    color: #222;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 0.84em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+
+    span,
+    small {
+      display: block;
+    }
+
+    small {
+      color: #5f6875;
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 0.78em;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 1.15em;
+      width: 0;
+      height: 2px;
+      margin: auto;
+      background: var(--wakasa_sub);
+      transition: width 0.25s ease;
+    }
+
+    &:hover {
+      color: var(--wakasa_base);
+
+      small {
+        color: var(--wakasa_base);
+      }
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.wakasa_header_tel_23641 {
+  align-self: stretch;
+  min-width: 196px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.35em;
+  margin-right: -2vw;
+  padding-inline: 1.6em;
+  color: #fff !important;
+  background: var(--wakasa_base);
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  font-size: 1.24em;
+  font-weight: 700;
+  line-height: 1;
+
+  span {
+    font-size: 0.62em;
+  }
+}
+
+.wakasa_page_23641 #nav_slide_toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  width: 58px;
+  height: 58px;
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--wakasa_base);
+  box-shadow: 0 12px 28px rgba(0, 69, 163, 0.28);
+
+  .hamburger_icon {
+    width: 24px;
+    display: grid;
+    gap: 5px;
+  }
+
+  .hamburger_icon span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 0;
+    background: #fff;
+  }
+
+  .menu_text {
+    color: #fff;
+    font-size: 0.58em;
+    line-height: 1;
+  }
+}
+
+.wakasa_page_23641 .wakasa_slide_nav_23641 .nav_slide_container {
+  background: #fff;
+}
+
+.wakasa_page_23641 .nav_menu_content .commonnav {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 69, 163, 0.12);
+  }
+
+  a {
+    display: grid;
+    gap: 0.35em;
+    padding: 1.1em 1em;
+    color: var(--wakasa_ink);
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  span,
+  small {
+    display: block;
+  }
+
+  small {
+    color: var(--wakasa_muted);
+    font-size: 0.75em;
+    font-weight: 800;
+  }
+}
+
+.wakasa_sp_tel_23641 {
+  padding: 1.4em 1em;
+
+  a {
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.3em;
+    color: #fff;
+    background: var(--wakasa_base);
+    border-radius: 6px;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  span {
+    font-size: 0.6em;
+  }
+}
+
+.wakasa_hero_23641 {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+}
+
+.wakasa_hero_slider_23641.slider_fullslider_wrap {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  min-height: 640px;
+}
+
+.wakasa_hero_slides_23641.slider_fullslider {
+  width: 100%;
+  height: 100%;
+
+  .slide img {
+    object-position: center;
+  }
+}
+
+.wakasa_hero_overlay_23641 {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.02) 46%, rgba(0, 69, 163, 0.08)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.1));
+}
+
+.wakasa_hero_inner_23641 {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 1180px);
+  min-height: 640px;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+}
+
+.wakasa_hero_copy_23641 {
+  width: min(100%, 760px);
+  padding: 3em 3.5em;
+  color: #20242b;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  box-shadow: 0 20px 56px rgba(34, 62, 96, 0.18);
+  text-align: center;
+  backdrop-filter: blur(8px);
+
+  h1 {
+    margin: 0;
+    font-weight: 900;
+    line-height: 1.42;
+  }
+
+  h1 > span {
+    display: block;
+  }
+
+  h1 span span {
+    color: var(--wakasa_base);
+  }
+
+  p {
+    margin: 1em 0 0;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.9em;
+    margin: 1.8em 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.45em;
+    min-height: 42px;
+    padding: 0.55em 1.15em;
+    color: var(--wakasa_green);
+    background: #fff;
+    border: 2px solid rgba(89, 188, 33, 0.45);
+    border-radius: 999px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+}
+
+.wakasa_slide_gallery_23641 {
+  position: relative;
+  overflow: hidden;
+  padding: 2em 0 2.5em;
+  background: #fff;
+
+  .single02 {
+    position: relative;
+  }
+
+  .gallery_slider {
+    margin-block: 0.4em;
+
+    li {
+      height: 180px;
+      overflow: hidden;
+      background: var(--wakasa_bg);
+      border-radius: 6px;
+      box-shadow: 0 10px 24px rgba(31, 56, 86, 0.08);
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.wakasa_slide_gallery_body_23641 {
+  width: min(92vw, 760px);
+  margin: 1.8em auto;
+  text-align: center;
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h2 {
+    margin: 0.35em 0 0;
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  p {
+    margin: 0.8em 0 0;
+    color: #4e5b6e;
+    font-weight: 700;
+    line-height: 1.8;
+  }
+}
+
+.wakasa_topics_23641 {
+  background: #fff;
+}
+
+.wakasa_topics_grid_23641 {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 4em;
+  padding: 4em 0 3.3em;
+}
+
+.wakasa_section_label_23641 {
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 3.1em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h2 {
+    margin: 0.45em 0 0;
+    font-weight: 800;
+    line-height: 1.45;
+  }
+
+  p {
+    margin: 1.7em 0 0;
+    color: var(--wakasa_ink);
+    line-height: 1.8;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 3px;
+    margin-top: 1.4em;
+    background: var(--wakasa_green);
+  }
+}
+
+.wakasa_section_label_white_23641 {
+  span,
+  h2,
+  p {
+    color: #fff;
+  }
+
+  &::after {
+    background: #8bdc54;
+  }
+}
+
+.wakasa_topics_panel_23641 {
+  min-width: 0;
+}
+
+.wakasa_topics_list_23641 {
+  max-height: 335px;
+  margin: 0;
+  padding: 0 0.5em 0 0;
+  overflow-y: auto;
+  list-style: none;
+  scrollbar-color: rgba(0, 69, 163, 0.45) transparent;
+
+  li {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr) 22px;
+    align-items: center;
+    gap: 1.4em;
+    min-height: 58px;
+    border-bottom: 1px dotted #cfd7e2;
+  }
+
+  time {
+    color: #4a4f57;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 0.98em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  a {
+    min-width: 0;
+    color: #303843;
+    font-size: 0.95em;
+    line-height: 1.65;
+  }
+
+  i {
+    color: var(--wakasa_base);
+    font-size: 0.76em;
+  }
+}
+
+.wakasa_topics_more_23641 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5em;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75em;
+    min-width: 162px;
+    min-height: 44px;
+    color: var(--wakasa_base);
+    background: #fff;
+    border: 1px solid rgba(0, 69, 163, 0.45);
+    border-radius: 3px;
+    font-weight: 800;
+    line-height: 1;
+  }
+}
+
+.wakasa_campaign_23641 {
+  padding: 2.2em 0;
+  background: var(--wakasa_bg);
+}
+
+.wakasa_campaign_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2em;
+}
+
+.wakasa_campaign_card_23641 {
+  min-height: 168px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 86px;
+  align-items: center;
+  gap: 1em;
+  padding: 1.45em;
+  background: #fff;
+  border: 1px solid var(--wakasa_line);
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(31, 56, 86, 0.08);
+
+  span {
+    display: block;
+    font-weight: 900;
+    line-height: 1.3;
+  }
+
+  h2 {
+    margin: 0.2em 0 0.4em;
+    font-weight: 900;
+    line-height: 1.25;
+  }
+
+  p {
+    margin: 0;
+    color: #364252;
+    font-size: 0.9em;
+    line-height: 1.55;
+  }
+
+  > i {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    font-size: 2.3em;
+  }
+}
+
+.wakasa_campaign_green_23641 {
+  border-color: rgba(89, 188, 33, 0.45);
+
+  span,
+  h2,
+  > i {
+    color: #2e8d12;
+  }
+
+  > i {
+    background: rgba(89, 188, 33, 0.13);
+  }
+}
+
+.wakasa_campaign_blue_23641 {
+  border-color: rgba(32, 118, 230, 0.32);
+
+  span,
+  h2,
+  > i {
+    color: var(--wakasa_base);
+  }
+
+  > i {
+    background: rgba(32, 118, 230, 0.1);
+  }
+}
+
+.wakasa_campaign_red_23641 {
+  border-color: rgba(223, 75, 63, 0.3);
+
+  span,
+  h2,
+  > i {
+    color: var(--wakasa_red);
+  }
+
+  > i {
+    background: rgba(223, 75, 63, 0.1);
+  }
+}
+
+.wakasa_works_23641 {
+  padding: 5.2em 0;
+  background: #fff;
+}
+
+.wakasa_works_grid_23641 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5em;
+  align-items: start;
+}
+
+.wakasa_top_work_intro_23641 {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.38fr) minmax(0, 1fr);
+  gap: 3em;
+  align-items: start;
+}
+
+.wakasa_top_work_text_23641 {
+  max-width: 760px;
+
+  p {
+    margin: 0;
+    color: #344050;
+    font-weight: 800;
+    line-height: 1.95;
+  }
+
+  p + p {
+    margin-top: 1em;
+  }
+
+  .wakasa_btn_23641 {
+    margin-top: 1.8em;
+  }
+}
+
+.wakasa_btn_23641 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+  min-width: 180px;
+  min-height: 52px;
+  margin-top: 2em;
+  padding: 0.95em 1.4em;
+  color: #fff !important;
+  background: var(--wakasa_base);
+  border-radius: 4px;
+  font-weight: 800;
+  line-height: 1.2;
+  box-shadow: 0 12px 24px rgba(0, 69, 163, 0.18);
+
+  &:hover {
+    background: var(--wakasa_sub);
+    transform: translateY(-2px);
+  }
+}
+
+.wakasa_work_alternates_23641 {
+  display: grid;
+  gap: 0;
+}
+
+.wakasa_work_alternate_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+  gap: 4.5em;
+  align-items: center;
+  padding: 4.6em 0;
+
+  &:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr);
+    margin-inline: calc(50% - 50vw);
+    padding-inline: max(4vw, calc((100vw - 1180px) / 2));
+    color: #fff;
+    background: $base_color;
+
+    .wakasa_work_alternate_body_23641 {
+      order: 2;
+    }
+
+    figure {
+      order: 1;
+    }
+
+    h3,
+    p,
+    i {
+      color: #fff;
+    }
+
+    .wakasa_work_alternate_body_23641 > a {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: var(--wakasa_bg);
+  }
+
+  figure > a {
+    display: block;
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.24s ease;
+  }
+
+  figure a:hover img {
+    transform: scale(1.04);
+  }
+}
+
+.wakasa_work_alternate_body_23641 {
+  i {
+    display: inline-grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1em;
+    color: var(--wakasa_base);
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 1.35em;
+  }
+
+  h3 {
+    margin: 0;
+    color: #1d2530;
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  p {
+    margin: 1.5em 0 0;
+    color: #3e4958;
+    font-weight: 800;
+    line-height: 2;
+  }
+
+  > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 174px;
+    min-height: 52px;
+    margin-top: 2.3em;
+    color: var(--wakasa_base);
+    border: 2px solid rgba(0, 69, 163, 0.78);
+    background: transparent;
+    font-weight: 900;
+    line-height: 1.2;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  }
+
+  > a:hover {
+    color: #fff;
+    background: var(--wakasa_base);
+    transform: translateY(-2px);
+  }
+}
+
+.wakasa_store_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
+  align-items: stretch;
+  background: #f7f8fa;
+}
+
+.wakasa_store_image_23641 {
+  min-height: 460px;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.wakasa_store_body_23641 {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5em min(7vw, 6em);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.96)),
+    var(--wakasa_bg);
+
+  p {
+    margin: 1.1em 0 0;
+    color: #344050;
+    line-height: 1.95;
+  }
+
+  &::after {
+    content: "\f015";
+    position: absolute;
+    right: 0.55em;
+    bottom: 0.22em;
+    color: rgba(0, 69, 163, 0.07);
+    font-family: "Font Awesome 6 Free";
+    font-size: 9em;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.wakasa_message_23641 {
+  padding: 5em 0 4.5em;
+  background: #fff;
+}
+
+.wakasa_message_head_23641 {
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    font-weight: 900;
+    line-height: 1.55;
+  }
+
+  span {
+    color: var(--wakasa_base);
+  }
+}
+
+.wakasa_message_grid_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3em;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.wakasa_message_text_23641 {
+  p {
+    margin: 0;
+    color: #344050;
+    line-height: 2;
+
+    + p {
+      margin-top: 1.1em;
+    }
+  }
+}
+
+.wakasa_keyword_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.9em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    place-items: center;
+    gap: 0.65em;
+    min-height: 128px;
+    padding: 1em 0.65em;
+    background: #fff;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(31, 56, 86, 0.06);
+  }
+
+  i {
+    color: var(--wakasa_base);
+    font-size: 2em;
+  }
+
+  span {
+    font-weight: 800;
+    line-height: 1.35;
+    text-align: center;
+  }
+}
+
+.wakasa_links_23641 {
+  padding: 0 0 4.5em;
+  background: #fff;
+}
+
+.wakasa_link_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid rgba(0, 69, 163, 0.35);
+
+  a {
+    position: relative;
+    min-height: 168px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 0.55em;
+    padding: 1.5em 2.6em 1.5em 1.5em;
+    color: var(--wakasa_base);
+    background: #fff;
+    border-right: 1px solid rgba(0, 69, 163, 0.28);
+    text-align: center;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &:hover {
+      color: #fff;
+      background: var(--wakasa_base);
+    }
+  }
+
+  i {
+    font-size: 1.8em;
+  }
+
+  span {
+    color: #20242b;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  strong {
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 1.32em;
+    line-height: 1;
+  }
+
+  em {
+    position: absolute;
+    right: 1.3em;
+    bottom: 1.3em;
+    font-style: normal;
+    font-size: 0.86em;
+  }
+
+  a:hover span,
+  a:hover strong,
+  a:hover em,
+  a:hover i {
+    color: #fff;
+  }
+}
+
+.wakasa_contact_23641 {
+  padding: 4em 0;
+  color: #fff;
+  background: linear-gradient(105deg, #0045a3 0%, #005dc7 48%, #2076e6 100%);
+}
+
+.wakasa_contact_grid_23641 {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1.1fr;
+  gap: 2.4em;
+  align-items: center;
+}
+
+.wakasa_contact_note_23641 {
+  padding: 1.35em 1.5em;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 6px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.55;
+  }
+
+  span {
+    display: block;
+    margin-top: 0.6em;
+    font-size: 0.82em;
+    line-height: 1.6;
+  }
+}
+
+.wakasa_contact_action_23641 {
+  display: grid;
+  gap: 1em;
+}
+
+.wakasa_contact_tel_23641 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45em;
+  color: #fff !important;
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  font-size: 2.3em;
+  font-weight: 700;
+  line-height: 1;
+
+  i {
+    font-size: 0.8em;
+  }
+}
+
+.wakasa_contact_btn_23641 {
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 0.9em 1.4em;
+  color: var(--wakasa_base) !important;
+  background: #fff;
+  border-radius: 4px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.wakasa_access_23641 {
+  padding: 4em 0 0;
+  background: #f6f7f9;
+}
+
+.wakasa_access_grid_23641 {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 3.5em;
+  align-items: stretch;
+}
+
+.wakasa_map_23641 {
+  min-height: 360px;
+  overflow: hidden;
+  background: #e3e8ee;
+  border-radius: 8px 8px 0 0;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+  }
+}
+
+.wakasa_footer_23641 {
+  padding: 1.4em 1em;
+  color: #fff;
+  background: #003477;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .wakasa_header_inner_23641 {
+    gap: 1.2em;
+  }
+
+  .wakasa_nav_23641 .commonnav {
+    gap: 1.2em;
+  }
+
+  .wakasa_header_tel_23641 {
+    min-width: 166px;
+    font-size: 1.05em;
+  }
+
+  .wakasa_top_work_intro_23641 {
+    grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+    gap: 2em;
+  }
+
+  .wakasa_work_alternate_23641,
+  .wakasa_work_alternate_23641:nth-child(even) {
+    gap: 2.4em;
+  }
+
+  .wakasa_work_cards_23641 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wakasa_work_card_23641 figure {
+    aspect-ratio: 16 / 10;
+  }
+
+  .wakasa_keyword_grid_23641 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .wakasa_page_23641 {
+    overflow: hidden;
+
+    > header {
+      position: static;
+    }
+  }
+
+  .wakasa_page_23641 #nav_slide_toggle {
+    display: flex !important;
+  }
+
+  .wakasa_header_inner_23641 {
+    width: 100%;
+    min-height: 82px;
+    padding: 0 88px 0 16px;
+  }
+
+  .wakasa_logo_23641 {
+    width: min(68vw, 320px);
+  }
+
+  .wakasa_hero_23641,
+  .wakasa_hero_inner_23641 {
+    min-height: 620px;
+  }
+
+  .wakasa_hero_23641 img {
+    object-position: 58% center;
+  }
+
+  .wakasa_hero_copy_23641 {
+    padding: 2em 1.4em;
+
+    ul {
+      gap: 0.55em;
+    }
+
+    li {
+      min-height: 38px;
+      padding: 0.48em 0.85em;
+      font-size: 0.88em;
+    }
+  }
+
+  .wakasa_topics_grid_23641,
+  .wakasa_works_grid_23641,
+  .wakasa_message_grid_23641,
+  .wakasa_contact_grid_23641,
+  .wakasa_access_grid_23641 {
+    grid-template-columns: 1fr;
+    gap: 2.2em;
+  }
+
+  .wakasa_topics_grid_23641 {
+    padding: 3.4em 0 3em;
+  }
+
+  .wakasa_topics_list_23641 {
+    max-height: 360px;
+
+    li {
+      grid-template-columns: 98px minmax(0, 1fr) 16px;
+      gap: 0.8em;
+      min-height: 62px;
+    }
+
+    time,
+    a {
+      font-size: 0.88em;
+    }
+  }
+
+  .wakasa_campaign_grid_23641 {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_campaign_card_23641 {
+    min-height: 138px;
+  }
+
+  .wakasa_works_23641,
+  .wakasa_message_23641 {
+    padding: 4em 0;
+  }
+
+  .wakasa_store_23641 {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_store_image_23641 {
+    min-height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .wakasa_store_body_23641 {
+    padding: 3.5em 5vw;
+  }
+
+  .wakasa_link_grid_23641 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    a {
+      border-right: 1px solid rgba(0, 69, 163, 0.28);
+      border-bottom: 1px solid rgba(0, 69, 163, 0.28);
+
+      &:nth-child(2n) {
+        border-right: 0;
+      }
+
+      &:nth-last-child(-n + 2) {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .wakasa_contact_grid_23641 {
+    text-align: center;
+  }
+
+  .wakasa_section_label_white_23641::after,
+  .wakasa_contact_grid_23641 .wakasa_section_label_23641::after {
+    margin-inline: auto;
+  }
+
+  .wakasa_contact_tel_23641 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wakasa_header_inner_23641 {
+    min-height: 74px;
+    padding-right: 82px;
+  }
+
+  .wakasa_logo_23641 {
+    width: min(68vw, 270px);
+  }
+
+  .wakasa_page_23641 #nav_slide_toggle {
+    width: 54px;
+    height: 54px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .wakasa_hero_23641,
+  .wakasa_hero_inner_23641 {
+    min-height: 560px;
+  }
+
+  .wakasa_hero_copy_23641 {
+    margin-top: 1.5em;
+    padding: 1.6em 1em;
+  }
+
+  .wakasa_hero_copy_23641 h1 {
+    line-height: 1.5;
+  }
+
+  .wakasa_hero_copy_23641 ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_topics_list_23641 li {
+    grid-template-columns: 1fr 18px;
+    gap: 0.35em 0.7em;
+    padding: 0.75em 0;
+  }
+
+  .wakasa_topics_list_23641 time {
+    grid-column: 1 / 2;
+  }
+
+  .wakasa_topics_list_23641 a {
+    grid-column: 1 / 2;
+  }
+
+  .wakasa_topics_list_23641 i {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .wakasa_section_label_23641 span {
+    font-size: 2.6em;
+  }
+
+  .wakasa_campaign_card_23641 {
+    grid-template-columns: minmax(0, 1fr) 64px;
+    padding: 1.2em;
+
+    > i {
+      width: 60px;
+      font-size: 1.8em;
+    }
+  }
+
+  .wakasa_top_work_intro_23641,
+  .wakasa_work_alternate_23641,
+  .wakasa_work_alternate_23641:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_work_alternate_23641,
+  .wakasa_work_alternate_23641:nth-child(even) {
+    gap: 1.8em;
+    padding-block: 3.2em;
+
+    .wakasa_work_alternate_body_23641,
+    figure {
+      order: 0;
+    }
+  }
+
+  .wakasa_work_cards_23641,
+  .wakasa_keyword_grid_23641,
+  .wakasa_link_grid_23641 {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_work_card_23641 > div {
+    min-height: auto;
+  }
+
+  .wakasa_link_grid_23641 a,
+  .wakasa_link_grid_23641 a:nth-child(2n),
+  .wakasa_link_grid_23641 a:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(0, 69, 163, 0.28);
+  }
+
+  .wakasa_link_grid_23641 a:last-child {
+    border-bottom: 0;
+  }
+
+  .wakasa_contact_tel_23641 {
+    font-size: 1.6em;
+  }
+}
+
+.wakasa_lower_23641 {
+  color: var(--wakasa_ink);
+  background: #fff;
+
+  .wakasa_single_23641 {
+    padding-block: 4.5em;
+  }
+}
+
+.wakasa_lower_hero_23641 {
+  position: relative;
+  min-height: 360px;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+
+  figure {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(1.03);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 40%, rgba(255, 255, 255, 0.08) 72%);
+  }
+}
+
+.wakasa_lower_hero_body_23641 {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 1180px);
+  margin-inline: auto;
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 5.2em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h2 {
+    margin: 0.35em 0 0;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    position: relative;
+    margin: 1em 0 0;
+    padding-bottom: 1em;
+    font-size: 1.18em;
+    font-weight: 800;
+    line-height: 1.6;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 42px;
+      height: 3px;
+      background: var(--wakasa_green);
+    }
+  }
+}
+
+.wakasa_lower_bg_23641 {
+  background:
+    radial-gradient(circle at 18% 9%, rgba(32, 118, 230, 0.08), transparent 25%),
+    linear-gradient(180deg, #fff 0%, var(--wakasa_bg) 100%);
+}
+
+.wakasa_lower_head_23641 {
+  margin: 0 0 1.8em;
+  text-align: center;
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-weight: 900;
+    line-height: 1.35;
+    font-size: 1.85em;
+  }
+
+  h3 {
+    margin: 0.2em 0 0;
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    margin: 1em auto 0;
+    background: var(--wakasa_green);
+  }
+}
+
+.wakasa_constitution_23641,
+.wakasa_history_panel_23641,
+.wakasa_profile_table_23641,
+.wakasa_design_partner_23641,
+.wakasa_gallery_panel_23641,
+.wakasa_qualification_grid_23641,
+.wakasa_about_mail_policy_23641,
+.wakasa_store_lead_23641,
+.wakasa_store_service_23641 article,
+.wakasa_loan_grid_23641 article {
+  background: #fff;
+  border: 1px solid var(--wakasa_line);
+  border-radius: 8px;
+  box-shadow: 0 12px 34px rgba(31, 56, 86, 0.07);
+}
+
+.wakasa_constitution_23641 {
+  padding: 2.2em;
+
+  ol {
+    counter-reset: constitution;
+    columns: 2;
+    column-gap: 3em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    min-height: 30px;
+    break-inside: avoid;
+    margin: 0 0 0.9em;
+    padding-left: 2.65em;
+    line-height: 1.65;
+
+    &::before {
+      counter-increment: constitution;
+      content: counter(constitution);
+      position: absolute;
+      top: 0.2em;
+      left: 0;
+      width: 1.8em;
+      height: 1.8em;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--wakasa_base);
+      border-radius: 3px;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  > p {
+    margin: 1.6em 0 0;
+    padding: 0.95em 1.2em;
+    color: #fff;
+    background: var(--wakasa_base);
+    border-radius: 4px;
+    font-weight: 800;
+    line-height: 1.55;
+    text-align: center;
+  }
+}
+
+.wakasa_history_panel_23641 {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 2em;
+  align-items: center;
+  margin-top: 2em;
+  padding: 2.2em;
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  h3 {
+    margin: 0.2em 0;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    color: #3c4655;
+    line-height: 1.9;
+  }
+}
+
+.wakasa_history_mark_23641 {
+  display: grid;
+  place-items: center;
+  gap: 0.8em;
+  min-height: 150px;
+  color: var(--wakasa_base);
+  background: rgba(32, 118, 230, 0.07);
+  border-radius: 8px;
+  text-align: center;
+
+  i {
+    font-size: 4em;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    padding: 0 0.8em;
+    color: #fff;
+    background: var(--wakasa_green);
+    border-radius: 4px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.85em;
+  }
+}
+
+.wakasa_business_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1em;
+  margin-bottom: 3em;
+
+  article {
+    min-width: 0;
+    display: grid;
+    justify-items: center;
+    gap: 0.7em;
+    min-height: 185px;
+    padding: 1.35em 0.85em;
+    background: #fff;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    box-shadow: 0 10px 26px rgba(31, 56, 86, 0.06);
+    text-align: center;
+  }
+
+  i {
+    color: var(--wakasa_base);
+    font-size: 2.4em;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0;
+    color: var(--wakasa_muted);
+    font-size: 0.86em;
+    line-height: 1.55;
+  }
+
+  small {
+    display: inline-flex;
+    padding: 0.32em 0.55em;
+    color: var(--wakasa_base);
+    background: rgba(32, 118, 230, 0.08);
+    border: 1px solid rgba(32, 118, 230, 0.18);
+    border-radius: 3px;
+    font-size: 0.72em;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+}
+
+.wakasa_profile_table_23641 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 2em;
+  overflow: hidden;
+
+  dl {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    margin: 0;
+    border-bottom: 1px solid var(--wakasa_line);
+
+    &:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    padding: 0.95em 1em;
+    line-height: 1.65;
+  }
+
+  dt {
+    color: var(--wakasa_base);
+    background: rgba(32, 118, 230, 0.07);
+    font-weight: 900;
+  }
+
+  dd {
+    color: #354152;
+  }
+}
+
+.wakasa_design_partner_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 2em;
+  align-items: center;
+  margin-bottom: 2em;
+  padding: 2.4em;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.78)),
+    repeating-linear-gradient(45deg, rgba(32, 118, 230, 0.08) 0 1px, transparent 1px 18px);
+
+  span,
+  h3 {
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  h3,
+  p {
+    margin: 0.35em 0 0;
+  }
+
+  p {
+    color: #354152;
+    line-height: 1.9;
+  }
+
+  > i {
+    display: grid;
+    place-items: center;
+    width: 150px;
+    aspect-ratio: 1;
+    margin-inline: auto;
+    color: var(--wakasa_base);
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(32, 118, 230, 0.16);
+    border-radius: 50%;
+    font-size: 4em;
+  }
+}
+
+.wakasa_design_partner_contact_23641 {
+  margin-top: 1.5em;
+  padding: 1.1em 1.25em;
+  background: #fff;
+  border: 1px solid rgba(32, 118, 230, 0.18);
+  border-left: 5px solid var(--wakasa_base);
+  border-radius: 6px;
+
+  strong {
+    display: block;
+    color: var(--wakasa_base);
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  p {
+    margin: 0.45em 0 0;
+    line-height: 1.75;
+  }
+}
+
+.wakasa_gallery_panel_23641 {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 2em;
+  align-items: stretch;
+  margin-bottom: 2em;
+  padding: 1.5em;
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.7em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h3 {
+    margin: 0.6em 0 0;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 1em 0 0;
+    color: #455064;
+    line-height: 1.65;
+  }
+
+  figure {
+    margin: 0;
+    min-height: 260px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.wakasa_qualification_grid_23641 {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 1.6em;
+  align-items: stretch;
+  margin-bottom: 2em;
+  padding: 1.8em;
+
+  .wakasa_lower_head_23641 {
+    margin-bottom: 0;
+    text-align: left;
+
+    &::after {
+      margin-inline: 0;
+    }
+  }
+}
+
+.wakasa_qualification_lead_23641 {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 0.4em 1em;
+  align-items: center;
+  padding: 1.2em 1.4em;
+  background: rgba(32, 118, 230, 0.06);
+  border: 1px solid rgba(32, 118, 230, 0.16);
+  border-radius: 8px;
+
+  > i {
+    grid-row: 1 / 3;
+    color: var(--wakasa_base);
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    color: #243247;
+    font-weight: 900;
+    line-height: 1.65;
+  }
+
+  small {
+    color: #627086;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+
+.wakasa_qualification_table_23641 {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid var(--wakasa_line);
+  border-bottom: 0;
+
+  dl {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 54px;
+    margin: 0;
+    border-bottom: 1px solid var(--wakasa_line);
+
+    &:nth-child(odd) {
+      border-right: 1px solid var(--wakasa_line);
+    }
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    padding: 0.68em 0.8em;
+    line-height: 1.45;
+  }
+
+  dt {
+    color: #344050;
+  }
+
+  dd {
+    color: var(--wakasa_base);
+    font-weight: 900;
+    text-align: right;
+  }
+}
+
+.wakasa_recruit_partner_23641 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3em;
+  margin-bottom: 2em;
+
+  a {
+    min-height: 150px;
+    display: grid;
+    align-content: center;
+    gap: 0.45em;
+    padding: 1.6em 1.8em;
+    overflow: hidden;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.68)),
+      url("./../images/23641/hero.jpg") center / cover;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+  }
+
+  a:nth-child(2) {
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.68)),
+      url("./../images/23641/work_exterior.jpg") center / cover;
+  }
+
+  span {
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  strong {
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6em;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0;
+    color: #344050;
+    line-height: 1.65;
+  }
+}
+
+.wakasa_about_mail_policy_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.4em;
+  margin-bottom: 2em;
+}
+
+.wakasa_form_mock_23641,
+.wakasa_policy_box_23641 {
+  padding: 2em;
+  background: #fff;
+  border: 1px solid var(--wakasa_line);
+  border-radius: 8px;
+  box-shadow: 0 12px 34px rgba(31, 56, 86, 0.07);
+}
+
+.wakasa_form_mock_23641 {
+  h3 {
+    margin: 0 0 1em;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  label {
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 0.9em;
+    align-items: start;
+    margin-bottom: 0.9em;
+  }
+
+  span {
+    font-weight: 900;
+    line-height: 1.5;
+  }
+
+  em {
+    display: inline-flex;
+    margin-left: 0.4em;
+    padding: 0.2em 0.45em;
+    color: #fff;
+    background: var(--wakasa_red);
+    border-radius: 3px;
+    font-size: 0.72em;
+    font-style: normal;
+    line-height: 1;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid #d6dde8;
+    border-radius: 4px;
+    padding: 0.85em 1em;
+    background: #f8fafc;
+    font-family: inherit;
+    font-size: 1em;
+  }
+
+  textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  button {
+    width: 100%;
+    min-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    color: #fff;
+    background: var(--wakasa_base);
+    border: 0;
+    border-radius: 4px;
+    font-weight: 900;
+    cursor: default;
+  }
+}
+
+.wakasa_policy_box_23641 {
+  h3 {
+    margin: 0;
+    color: var(--wakasa_base);
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  p {
+    margin: 1em 0;
+    color: #344050;
+    line-height: 1.8;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--wakasa_line);
+  }
+
+  li {
+    position: relative;
+    padding: 0.9em 2.2em 0.9em 0;
+    border-bottom: 1px solid var(--wakasa_line);
+    font-weight: 800;
+    line-height: 1.4;
+
+    &::after {
+      content: "+";
+      position: absolute;
+      right: 0.3em;
+      color: var(--wakasa_base);
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.3em;
+    }
+  }
+}
+
+.wakasa_store_lead_23641 {
+  margin-bottom: 2em;
+  padding: 2.4em;
+  text-align: center;
+
+  h3 {
+    margin: 0;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0.9em auto 0;
+    max-width: 780px;
+    color: #344050;
+    line-height: 1.9;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin: 1.8em 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55em;
+    min-height: 48px;
+    padding: 0 1.3em;
+    color: var(--wakasa_green);
+    background: #fff;
+    border: 2px solid rgba(89, 188, 33, 0.45);
+    border-radius: 999px;
+    font-weight: 900;
+  }
+}
+
+.wakasa_store_service_23641 {
+  display: grid;
+  gap: 0;
+  margin-bottom: 3em;
+
+  article {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: 8px 8px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  article:nth-child(even) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3em;
+  }
+
+  span {
+    display: inline-grid;
+    place-items: center;
+    width: 54px;
+    aspect-ratio: 1;
+    color: #fff;
+    background: var(--wakasa_base);
+    border-radius: 50%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h3 {
+    margin: 0.7em 0 0;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  p {
+    margin: 1em 0 0;
+    color: #344050;
+    line-height: 1.9;
+  }
+
+  figure {
+    min-height: 290px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.wakasa_flow_steps_23641 {
+  counter-reset: flow;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1em;
+  margin: 0 0 3em;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    min-width: 0;
+    padding: 1.4em 1em;
+    background: #fff;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    box-shadow: 0 10px 26px rgba(31, 56, 86, 0.06);
+    text-align: center;
+  }
+
+  i {
+    color: var(--wakasa_base);
+    font-size: 2.3em;
+  }
+
+  strong {
+    display: block;
+    margin: 0.7em 0 0;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0.6em 0 0;
+    color: var(--wakasa_muted);
+    font-size: 0.86em;
+    line-height: 1.55;
+  }
+}
+
+.wakasa_store_type_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1em;
+  margin-bottom: 3em;
+
+  article {
+    min-width: 0;
+    padding: 1.2em 0.9em;
+    background: #fff;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    box-shadow: 0 10px 26px rgba(31, 56, 86, 0.06);
+    text-align: center;
+  }
+
+  i {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    aspect-ratio: 1;
+    margin: 0 auto 0.7em;
+    color: var(--wakasa_base);
+    background: rgba(32, 118, 230, 0.08);
+    border-radius: 50%;
+    font-size: 1.6em;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0.55em 0 0;
+    color: var(--wakasa_muted);
+    font-size: 0.84em;
+    line-height: 1.5;
+  }
+}
+
+.wakasa_payment_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5em;
+  margin-bottom: 2em;
+
+  article {
+    min-width: 0;
+    padding: 2em;
+    background: #fff;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(31, 56, 86, 0.07);
+    text-align: center;
+  }
+
+  i {
+    color: var(--wakasa_base);
+    font-size: 2.3em;
+  }
+
+  h3 {
+    margin: 0.6em 0 1em;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 0.42em 0.7em;
+    background: rgba(32, 118, 230, 0.07);
+    border: 1px solid rgba(32, 118, 230, 0.13);
+    border-radius: 4px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+}
+
+.wakasa_loan_grid_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5em;
+  margin-bottom: 3em;
+
+  article {
+    padding: 2em;
+  }
+}
+
+.wakasa_bank_loan_23641 {
+  color: #fff;
+  background: linear-gradient(135deg, #0045a3, #2076e6) !important;
+
+  i {
+    font-size: 3.5em;
+  }
+
+  h3,
+  p,
+  strong {
+    margin: 0.8em 0 0;
+    color: #fff;
+  }
+
+  strong {
+    display: inline-flex;
+    padding: 0.7em 1em;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 4px;
+  }
+}
+
+.wakasa_orico_23641 {
+  h3 {
+    margin: 0 0 1em;
+    color: var(--wakasa_base);
+    font-weight: 900;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    margin: 0;
+    border-top: 1px solid var(--wakasa_line);
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    padding: 0.9em 1em;
+    line-height: 1.55;
+  }
+
+  dt {
+    color: var(--wakasa_base);
+    background: rgba(32, 118, 230, 0.07);
+    font-weight: 900;
+  }
+}
+
+.wakasa_orico_points_23641 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8em;
+  margin-bottom: 1.2em;
+
+  span {
+    display: grid;
+    place-items: center;
+    gap: 0.4em;
+    min-height: 90px;
+    padding: 0.8em;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 6px;
+    color: var(--wakasa_base);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  i {
+    font-size: 1.6em;
+  }
+}
+
+.wakasa_merit_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1em;
+  margin-bottom: 3em;
+
+  article {
+    min-width: 0;
+    padding: 1.45em 1em;
+    background: #fff;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    box-shadow: 0 10px 26px rgba(31, 56, 86, 0.06);
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  i {
+    margin: 0.7em 0;
+    color: var(--wakasa_base);
+    font-size: 2.6em;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 900;
+    line-height: 1.55;
+  }
+
+  p {
+    margin: 0.7em 0 0;
+    color: var(--wakasa_muted);
+    font-size: 0.86em;
+    line-height: 1.55;
+  }
+}
+
+.wakasa_lower_contact_access_23641 {
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.wakasa_lower_contact_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.95fr) minmax(260px, 0.75fr);
+  gap: 2em;
+  align-items: center;
+  padding: 2.5em;
+  color: #fff;
+  background: linear-gradient(105deg, #0045a3 0%, #005dc7 48%, #2076e6 100%);
+
+  span {
+    display: block;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.6em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h3,
+  p {
+    margin: 0.5em 0 0;
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45em;
+    min-height: 58px;
+    color: #fff;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+.wakasa_lower_access_23641 {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 2em;
+  align-items: stretch;
+  padding: 2.5em;
+  background: #fff;
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  p {
+    margin: 1em 0 0;
+    color: #344050;
+    font-weight: 800;
+    line-height: 1.8;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 260px;
+    border-radius: 6px;
+  }
+}
+
+.wakasa_works_page_23641 {
+  color: var(--wakasa_ink);
+  background: #fff;
+}
+
+.wakasa_works_mv_23641 {
+  position: relative;
+  min-height: 470px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.wakasa_works_mv_grid_23641 {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr 1fr;
+  grid-template-rows: 235px 235px;
+  gap: 5px;
+  min-height: 470px;
+  background: #fff;
+
+  figure {
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.04);
+  }
+
+  a {
+    display: block;
+    height: 100%;
+  }
+
+  figure:nth-child(3) {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+  }
+}
+
+.wakasa_works_mv_main_23641 {
+  grid-row: 1 / 3;
+}
+
+.wakasa_works_mv_text_23641 {
+  position: absolute;
+  left: max(4vw, 48px);
+  bottom: 54px;
+  z-index: 2;
+  width: min(54%, 720px);
+  padding: 2em 2.3em;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 20px 50px rgba(18, 43, 78, 0.12);
+  backdrop-filter: blur(8px);
+
+  span {
+    display: block;
+    color: var(--wakasa_base);
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 4.6em;
+    font-weight: 700;
+    line-height: 0.95;
+  }
+
+  h2 {
+    margin: 0.35em 0 0;
+    color: #1f2a38;
+    font-weight: 900;
+    line-height: 1.35;
+    letter-spacing: 0.08em;
+  }
+
+  p {
+    margin: 1em 0 0;
+    color: #465366;
+    font-weight: 800;
+    line-height: 1.8;
+  }
+}
+
+.wakasa_works_body_23641 {
+  background:
+    linear-gradient(180deg, #fff 0%, #fff 68%, var(--wakasa_bg) 100%);
+
+  .wakasa_single_23641 {
+    padding-block: 4.5em;
+  }
+}
+
+.wakasa_works_intro_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 5em;
+  align-items: start;
+  margin-bottom: 4em;
+
+  h3 {
+    margin: 0;
+    color: #263244;
+    font-weight: 900;
+    line-height: 1.75;
+  }
+
+  p {
+    margin: 1.2em 0 0;
+    color: #556174;
+    font-weight: 600;
+    line-height: 2;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    min-height: 56px;
+    margin-top: 2em;
+    padding: 0 1.2em;
+    color: var(--wakasa_base);
+    border: 2px solid rgba(0, 69, 163, 0.24);
+    border-radius: 8px;
+    background: #fff;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    font-size: 1.55em;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 12px 24px rgba(0, 69, 163, 0.08);
+  }
+}
+
+.wakasa_works_intro_photos_23641 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75em;
+  margin-top: 2em;
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    background: var(--wakasa_bg);
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+  }
+}
+
+.wakasa_works_category_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85em;
+  margin-bottom: 3em;
+
+  a {
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr);
+    gap: 0.2em 0.95em;
+    align-items: center;
+    min-height: 96px;
+    padding: 1em 1.1em;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(33, 58, 90, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 69, 163, 0.28);
+    box-shadow: 0 16px 34px rgba(0, 69, 163, 0.12);
+  }
+
+  i {
+    grid-row: 1 / 3;
+    color: var(--wakasa_base);
+    font-size: 2.65em;
+    text-align: center;
+  }
+
+  span {
+    color: var(--wakasa_green);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  strong {
+    color: #263244;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+}
+
+.wakasa_works_section_head_23641,
+.wakasa_works_group_head_23641 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  margin: 0 0 1.2em;
+  border-bottom: 1px solid var(--wakasa_line);
+
+  h3 {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0.5em;
+    color: var(--wakasa_base);
+    font-weight: 900;
+    line-height: 1.35;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 52px;
+      height: 3px;
+      background: var(--wakasa_green);
+    }
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    color: var(--wakasa_base);
+    font-size: 0.88em;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+}
+
+.wakasa_works_pickup_grid_23641 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1em;
+  margin-bottom: 3.5em;
+
+  article {
+    overflow: hidden;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 14px 32px rgba(33, 58, 90, 0.07);
+  }
+
+  article > div:last-child {
+    position: relative;
+    padding: 1em 1.1em 1.2em;
+  }
+
+  small {
+    display: inline-block;
+    color: var(--wakasa_green);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  h4 {
+    margin: 0.45em 0 0;
+    color: #223044;
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  p {
+    margin: 0.55em 0 0;
+    color: var(--wakasa_muted);
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+}
+
+.wakasa_works_before_after_23641 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: var(--wakasa_bg);
+
+  figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 1 / 0.82;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 72px;
+    padding: 0.35em 0.8em;
+    color: #fff;
+    background: rgba(65, 72, 82, 0.68);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+  }
+
+  figure:nth-child(2) span {
+    right: 0;
+    left: auto;
+    background: var(--wakasa_base);
+  }
+}
+
+.wakasa_works_list_23641 {
+  display: grid;
+  gap: 1.6em;
+}
+
+.wakasa_works_group_23641 {
+  scroll-margin-top: 120px;
+  padding: 1.4em 1.5em 1.6em;
+  border: 1px solid var(--wakasa_line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(33, 58, 90, 0.05);
+}
+
+.wakasa_works_strip_23641 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2em;
+
+  article {
+    min-width: 0;
+    overflow: hidden;
+    background: #f7f9fc;
+    border: 1px solid var(--wakasa_line);
+    border-radius: 7px;
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--wakasa_bg);
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.24s ease;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+  }
+
+  article:hover img {
+    transform: scale(1.04);
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0.7em 0.9em;
+    color: #fff;
+    background: var(--wakasa_base);
+    font-size: 0.95em;
+    font-weight: 900;
+    line-height: 1.55;
+    text-align: center;
+  }
+}
+
+.wakasa_work_case_images_23641 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  background: #fff;
+}
+
+.wakasa_work_case_images_23641 figure:only-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 10;
+}
+
+.wakasa_lightbox_trigger_23641 {
+  cursor: zoom-in;
+}
+
+.wakasa_lightbox_23641 {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: grid;
+  place-items: center;
+  padding: 5vh 4vw;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: rgba(2, 11, 24, 0.86);
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+
+  &.is_open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  figure {
+    width: min(92vw, 1100px);
+    margin: 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  img {
+    width: auto;
+    max-width: 100%;
+    max-height: 78vh;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
+  }
+
+  figcaption {
+    margin-top: 1em;
+    font-weight: 800;
+    line-height: 1.6;
+  }
+}
+
+.wakasa_lightbox_close_23641 {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: rgba(0, 69, 163, 0.88);
+  font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.wakasa_works_cta_23641 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 2em;
+  align-items: center;
+  margin: 3em 0 0;
+  padding: 2em 2.4em;
+  color: #fff;
+  border-radius: 8px;
+  background:
+    linear-gradient(100deg, rgba(0, 69, 163, 0.96) 0%, rgba(0, 93, 199, 0.94) 58%, rgba(32, 118, 230, 0.9) 100%),
+    url("./../images/23641/hero.jpg") center / cover;
+  box-shadow: 0 18px 42px rgba(0, 69, 163, 0.18);
+
+  h3,
+  p {
+    margin: 0;
+    color: #fff;
+    line-height: 1.65;
+  }
+
+  p {
+    margin-top: 0.6em;
+    font-weight: 700;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    min-height: 64px;
+    padding: 0 1.4em;
+    color: var(--wakasa_base);
+    border-radius: 6px;
+    background: #fff;
+    font-weight: 900;
+    line-height: 1;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .wakasa_works_category_grid_23641,
+  .wakasa_works_pickup_grid_23641 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .wakasa_works_strip_23641 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wakasa_business_grid_23641,
+  .wakasa_store_type_grid_23641 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .wakasa_merit_grid_23641 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .wakasa_qualification_grid_23641 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .wakasa_works_mv_23641 {
+    min-height: auto;
+  }
+
+  .wakasa_works_mv_grid_23641 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 190px);
+    min-height: 380px;
+  }
+
+  .wakasa_works_mv_main_23641,
+  .wakasa_works_mv_grid_23641 figure:nth-child(3) {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .wakasa_works_mv_text_23641 {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: min(92vw, 720px);
+    margin: -4.2em auto 0;
+    padding: 1.6em;
+  }
+
+  .wakasa_works_mv_text_23641 span {
+    font-size: 3.3em;
+  }
+
+  .wakasa_works_intro_23641,
+  .wakasa_works_cta_23641 {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+
+  .wakasa_works_category_grid_23641,
+  .wakasa_works_pickup_grid_23641,
+  .wakasa_works_strip_23641 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wakasa_lower_hero_23641 {
+    min-height: 330px;
+  }
+
+  .wakasa_constitution_23641 ol {
+    columns: 1;
+  }
+
+  .wakasa_history_panel_23641,
+  .wakasa_design_partner_23641,
+  .wakasa_gallery_panel_23641,
+  .wakasa_about_mail_policy_23641,
+  .wakasa_store_service_23641 article,
+  .wakasa_store_service_23641 article:nth-child(even),
+  .wakasa_loan_grid_23641,
+  .wakasa_lower_contact_23641,
+  .wakasa_lower_access_23641 {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_profile_table_23641,
+  .wakasa_payment_grid_23641 {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_profile_table_23641 dl,
+  .wakasa_profile_table_23641 dl:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--wakasa_line);
+  }
+
+  .wakasa_flow_steps_23641 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wakasa_lower_contact_23641,
+  .wakasa_lower_access_23641 {
+    padding: 2em 1.4em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wakasa_top_work_intro_23641 {
+    gap: 1.4em;
+  }
+
+  .wakasa_work_alternate_23641,
+  .wakasa_work_alternate_23641:nth-child(even) {
+    padding-block: 2.6em;
+  }
+
+  .wakasa_work_alternate_body_23641 > a {
+    width: 100%;
+  }
+
+  .wakasa_lightbox_23641 {
+    padding: 4vh 4vw;
+  }
+
+  .wakasa_lightbox_close_23641 {
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .wakasa_works_body_23641 .wakasa_single_23641 {
+    padding-block: 3em;
+  }
+
+  .wakasa_works_mv_grid_23641 {
+    grid-template-rows: repeat(2, 150px);
+    min-height: 300px;
+  }
+
+  .wakasa_works_mv_text_23641 {
+    width: 92vw;
+    padding: 1.35em;
+  }
+
+  .wakasa_works_mv_text_23641 span {
+    font-size: 2.6em;
+  }
+
+  .wakasa_works_intro_23641 {
+    margin-bottom: 2.5em;
+  }
+
+  .wakasa_works_intro_23641,
+  .wakasa_works_category_grid_23641,
+  .wakasa_works_pickup_grid_23641,
+  .wakasa_works_list_23641 {
+    gap: 1em;
+  }
+
+  .wakasa_works_intro_23641 a {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.28em;
+  }
+
+  .wakasa_works_category_grid_23641,
+  .wakasa_works_pickup_grid_23641,
+  .wakasa_works_strip_23641 {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_keyword_grid_23641 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6em;
+  }
+
+  .wakasa_works_section_head_23641,
+  .wakasa_works_group_head_23641 {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .wakasa_works_group_23641,
+  .wakasa_works_cta_23641 {
+    padding: 1.3em;
+  }
+
+  .wakasa_lower_23641 .wakasa_single_23641 {
+    padding-block: 3em;
+  }
+
+  .wakasa_lower_hero_body_23641 span {
+    font-size: 2.7em;
+  }
+
+  .wakasa_constitution_23641,
+  .wakasa_history_panel_23641,
+  .wakasa_design_partner_23641,
+  .wakasa_gallery_panel_23641,
+  .wakasa_qualification_grid_23641,
+  .wakasa_form_mock_23641,
+  .wakasa_policy_box_23641,
+  .wakasa_store_lead_23641,
+  .wakasa_loan_grid_23641 article {
+    padding: 1.3em;
+  }
+
+  .wakasa_business_grid_23641,
+  .wakasa_store_type_grid_23641,
+  .wakasa_merit_grid_23641,
+  .wakasa_recruit_partner_23641,
+  .wakasa_flow_steps_23641,
+  .wakasa_orico_points_23641 {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_profile_table_23641 dl,
+  .wakasa_orico_23641 dl,
+  .wakasa_form_mock_23641 label {
+    grid-template-columns: 1fr;
+  }
+
+  .wakasa_gallery_panel_23641 figure {
+    min-height: 190px;
+  }
+
+  .wakasa_store_service_23641 div {
+    padding: 1.6em;
+  }
+
+  .wakasa_store_service_23641 article:nth-child(even) div {
+    order: 1;
+  }
+
+  .wakasa_store_service_23641 figure {
+    min-height: 210px;
+  }
+
+  .wakasa_store_service_23641 article:nth-child(even) figure {
+    order: 2;
+  }
+
+  .wakasa_lower_contact_23641 a {
+    font-size: 1.5em;
+  }
+}

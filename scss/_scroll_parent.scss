@@ -1,0 +1,75 @@
+.scroll_parent {
+    position: relative;
+    width: 100vw;
+    padding-top: 20%;
+    height: auto;
+    overflow: hidden;
+    .scroll_element {
+        width: inherit;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        animation: primary 33s linear infinite;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .primary {
+        animation: primary 53s linear infinite;
+    }
+
+    .secondary {
+        animation: secondary 53s linear infinite;
+    }
+
+    &.right {
+        .scroll_element {
+            left: inherit;
+            right: 0%;
+        }
+        .primary {
+            animation: primary2 53s linear infinite;
+        }
+
+        .secondary {
+            animation: secondary2 53s linear infinite;
+        }
+    }
+}
+
+@keyframes primary {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes secondary {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes primary2 {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+@keyframes secondary2 {
+    from {
+        right: 100%;
+    }
+    to {
+        right: 0%;
+    }
+}

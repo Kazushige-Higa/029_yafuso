@@ -1,0 +1,8 @@
+$font_courgette: "Courgette", serif;
+@mixin font_courgette {
+    font-family: $font_courgette;
+}
+.font_courgette {
+    @include font_courgette;
+    font-weight: 400;
+}

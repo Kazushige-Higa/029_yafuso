@@ -1,0 +1,8 @@
+$font_yusei: "Yusei Magic", sans-serif;
+
+@mixin font_yusei {
+	font-family: $font_yusei;
+}
+.font_yusei {
+	@include font_yusei;
+}

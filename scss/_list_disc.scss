@@ -1,0 +1,224 @@
+.list_disc {
+    margin: 1em 0;
+    &.black {
+        li {
+            color: $main_color !important;
+            &:before {
+                content: "●";
+                color: $black;
+            }
+        }
+    }
+    &.orange {
+        li {
+            color: $main_color !important;
+            &:before {
+                content: "●";
+                color: $orange;
+            }
+        }
+    }
+    &.red {
+        li {
+            color: $main_color !important;
+            &:before {
+                content: "●";
+                color: $red;
+            }
+        }
+    }
+    &.blue {
+        li {
+            color: $main_color !important;
+            &:before {
+                content: "●";
+                color: $blue;
+            }
+        }
+    }
+    &.sub {
+        li {
+            &:before {
+                color: $sub_color;
+            }
+        }
+    }
+    &.white {
+        li {
+            &:before {
+                color: #fff;
+            }
+        }
+    }
+    &.check {
+        li {
+            &:before {
+                content: "\f14a";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+            }
+        }
+    }
+    &.kome {
+        margin: 0;
+        li {
+            &:before {
+                content: "※";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    &.pdf {
+        margin: 0;
+        li {
+            padding: 4px 8px 6px 2.5em;
+            border-bottom: 0px solid #ccc;
+            a {
+                color: #333;
+                position: relative;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 0;
+                    margin: 0;
+                    border-bottom: 1px solid $red;
+                    -webkit-transition: all 0.5s 0s ease;
+                    transition: all 0.5s 0s ease;
+                }
+                &:hover {
+                    color: $red;
+                    &:before {
+                        content: "";
+                        width: 100%;
+                        border-bottom: 1px solid $red;
+                    }
+                }
+            }
+            &:before {
+                content: "\f1c1";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                position: absolute;
+                z-index: 0;
+                color: $red;
+                top: 0;
+                left: 0;
+                width: 2em;
+                text-align: center;
+                font-size: 105%;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                background: #fff;
+                display: grid;
+                border: 1px solid $red;
+                place-items: center;
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+            }
+        }
+    }
+    &.link {
+        margin: 0;
+        li {
+            padding: 4px 8px 6px 2.5em;
+            border-bottom: 0px solid #ccc;
+            a {
+                color: $base_color;
+                position: relative;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 0;
+                    margin: 0;
+                    border-bottom: 1px solid $base_color;
+                    -webkit-transition: all 0.5s 0s ease;
+                    transition: all 0.5s 0s ease;
+                }
+                &:after {
+                    content: "▶";
+                    position: absolute;
+                    z-index: 0;
+                    color: $base_color;
+                    top: 0.1em;
+                    right: 0;
+                    width: 1em;
+                    text-align: center;
+                    font-size: 80%;
+                    transition: all 0.5s 0s ease;
+                }
+                &:hover {
+                    color: $base_color;
+                    &:before {
+                        content: "";
+                        width: 100%;
+                        border-bottom: 1px solid $base_color;
+                    }
+                    &:after {
+                        right: -0.3em;
+                        transition: all 0.5s 0s ease;
+                    }
+                }
+            }
+            &:before {
+                content: "\f0c1";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                position: absolute;
+                z-index: 0;
+                color: #fff;
+                top: 0.1em;
+                left: 0;
+                width: 2em;
+                text-align: center;
+                font-size: 100%;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                background: $base_color;
+                display: grid;
+                //border: 1px solid $red;
+                place-items: center;
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        line-height: 1.8;
+        padding: 0.5em 0 0.5em 1.5em;
+        margin-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;
+        &:before {
+            content: "●";
+            color: $base_color;
+            position: absolute;
+            top: 0.5em;
+            left: 0;
+        }
+    }
+}

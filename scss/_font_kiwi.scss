@@ -1,0 +1,8 @@
+$font_kiwi: "Kiwi Maru", serif;
+@mixin font_kiwi {
+	font-family: $font_kiwi;
+}
+.font_kiwi {
+	@include font_kiwi;
+	font-weight: 300;
+}

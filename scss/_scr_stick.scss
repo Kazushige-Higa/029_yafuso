@@ -1,0 +1,40 @@
+.scr_stick {
+    position: relative;
+    padding-top: 140px;
+    text-align: center;
+    div {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 100px;
+            background: #aaa;
+            animation: scr_stick 2.4s ease-in-out infinite;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes scr_stick {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    30% {
+        height: 50px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        top: 100px;
+        opacity: 0;
+    }
+}

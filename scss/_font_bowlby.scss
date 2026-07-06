@@ -1,0 +1,7 @@
+$font_bowlby: 'Bowlby One', sans-serif;
+@mixin font_bowlby {
+	font-family: $font_bowlby !important;
+}
+.font_bowlby {
+	@include font_bowlby;
+}

@@ -1,0 +1,9 @@
+$font_dancing: "Dancing Script", cursive;
+
+@mixin font_dancing {
+	font-family: $font_dancing;
+}
+.font_dancing {
+	@include font_dancing;
+	font-weight: 500;
+}

@@ -1,0 +1,1963 @@
+// 4701002001 - クリニックトップページ（有川スタイル調整済み）
+// _vars.scss の共有パレット使用
+
+$clinic_grad: linear-gradient(120deg, rgba($base_color, 0.95) 0%, rgba($sub_color, 0.95) 100%);
+
+// ユーティリティクラス
+.accent_color {
+	color: $sub_color;
+}
+span.border_bottom {
+	border-color: $sub_color;
+}
+.ls_wide {
+	letter-spacing: 0.2em;
+}
+.space_05 {
+	height: 0.5em;
+}
+
+// ボタン色上書き
+.btn_normal {
+	a {
+		background: $clinic_grad;
+		color: #fff;
+		border: 0;
+		&:hover {
+			filter: brightness(0.92);
+		}
+	}
+	&.white {
+		a {
+			background: #fff;
+			color: $base_color;
+			border-color: rgba($base_color, 0.35);
+			&:hover {
+				background: $clinic_grad;
+				color: #fff;
+			}
+		}
+	}
+}
+
+// テーブルヘッダー色上書き
+.tbl_border {
+	th {
+		background: $bg_base;
+		color: $base_color;
+		font-weight: 600;
+	}
+}
+
+// 高血圧の基準テーブル（生活習慣病）
+.htn-guide-table {
+	border-collapse: collapse;
+	th,
+	td {
+		border: 1px solid #bfd3e8;
+		padding: 0.75em 0.6em;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 1.45;
+	}
+	th {
+		width: auto;
+		background: #d9d9d9;
+		color: #222;
+		font-weight: 700;
+		text-align: center;
+	}
+	td {
+		background: #eeeeee;
+		color: #1f1f1f;
+	}
+	.group-normal,
+	.group-high {
+		color: #fff;
+		font-weight: 700;
+		white-space: nowrap;
+	}
+	.group-normal {
+		background: #f06464;
+	}
+	.group-high {
+		background: #2f69c4;
+	}
+	.label-normal,
+	.label-high {
+		font-weight: 700;
+	}
+	.label-normal {
+		background: #e88f8f;
+	}
+	.label-high {
+		background: #48b6e4;
+	}
+	@include for-size(phone-only) {
+		th,
+		td {
+			padding: 0.55em 0.35em;
+			font-size: 82% !important;
+		}
+	}
+}
+
+// 白衣高血圧/仮面高血圧テーブル（生活習慣病）
+.htn-home-table {
+	border-collapse: collapse;
+	th,
+	td {
+		border: 1px solid #bfd3e8;
+		padding: 0.75em 0.6em;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 1.45;
+	}
+	th {
+		width: auto;
+		background: #d9d9d9;
+		color: #222;
+		font-weight: 700;
+		text-align: center;
+	}
+	td {
+		background: #eeeeee;
+		color: #1f1f1f;
+	}
+	.label-clinic,
+	.label-home,
+	.label-abpm,
+	.label-abpm-sub {
+		font-weight: 700;
+		white-space: nowrap;
+	}
+	.label-clinic {
+		background: #f06464;
+		color: #fff;
+	}
+	.label-home {
+		background: #2f69c4;
+		color: #fff;
+	}
+	.label-abpm {
+		background: #efe585;
+		color: #202020;
+	}
+	.label-abpm-sub {
+		background: #eadf8b;
+		color: #202020;
+	}
+	@include for-size(phone-only) {
+		th,
+		td {
+			padding: 0.55em 0.35em;
+			font-size: 82% !important;
+		}
+	}
+}
+
+// ===========================
+// HEADER
+// ===========================
+.header_clinic {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background: rgba(#fff, 0.95);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+}
+
+.header_clinic_inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.65em 1.4em;
+}
+
+.header_clinic_logo {
+	img {
+		height: 52px;
+		width: auto;
+	}
+}
+
+.header_clinic_nav {
+	ul {
+		display: flex;
+		gap: 0;
+		align-items: center;
+	}
+	li {
+		a {
+			display: block;
+			padding: 0.5em 1em;
+			font-size: 14px;
+			font-weight: 600;
+			color: #333;
+			text-decoration: none;
+			position: relative;
+			transition: color 0.3s;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0;
+				height: 2px;
+				background: $clinic_grad;
+				transition: width 0.3s;
+			}
+			&:hover {
+				color: $base_color;
+				&::after {
+					width: 60%;
+				}
+			}
+		}
+	}
+}
+
+.header_clinic_badges {
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+}
+
+.badge_pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	padding: 0.5em 1.2em;
+	background: $clinic_grad;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	border-radius: 50px;
+	transition: all 0.3s;
+	i {
+		font-size: 12px;
+	}
+	&:hover {
+		transform: translateY(-1px);
+		filter: brightness(0.95);
+		box-shadow: 0 6px 18px rgba($base_color, 0.25);
+	}
+	&.accent {
+		background: $sub_color;
+		&:hover {
+			box-shadow: 0 4px 12px rgba($sub_color, 0.3);
+		}
+	}
+	&.outline {
+		background: transparent;
+		color: $base_color;
+		border: 2px solid rgba($base_color, 0.65);
+		font-weight: 700;
+		font-size: 15px;
+		&:hover {
+			background: $clinic_grad;
+			border-color: transparent;
+			color: #fff;
+		}
+	}
+}
+
+// ===========================
+// HERO（FV：左テキスト＋右アーチスライダー）
+// ===========================
+.fv_clinic {
+	margin-top: 72px;
+	position: relative;
+	background: linear-gradient(180deg, #ffffff 0%, #f7fcfb 100%);
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		top: -180px;
+		right: -220px;
+		width: 620px;
+		height: 620px;
+		border-radius: 50%;
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba($sub_color, 0.22),
+			rgba($sub_color, 0.16) 56%,
+			rgba(#fff, 0) 70%
+		);
+		pointer-events: none;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		left: -180px;
+		bottom: -220px;
+		width: 520px;
+		height: 520px;
+		border-radius: 50%;
+		background: radial-gradient(circle at 50% 45%, rgba($base_color, 0.12), rgba(#fff, 0) 70%);
+		pointer-events: none;
+	}
+}
+
+.fv_clinic_text {
+	position: absolute;
+	left: 7%;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	max-width: 34%;
+	min-width: 390px;
+	background: rgba(#fff, 0.88);
+	border: 1px solid rgba($base_color, 0.15);
+	backdrop-filter: blur(5px);
+	border-radius: 20px;
+	padding: 2em 2em 1.7em;
+	box-shadow: 0 12px 38px rgba($base_color, 0.15);
+}
+.fv_clinic_en {
+	display: block;
+	font-size: 11px;
+	color: $sub_color;
+	letter-spacing: 0.15em;
+	margin-bottom: 1.1em;
+	font-family: "Jost", sans-serif;
+	font-weight: 600;
+}
+.fv_clinic_catch {
+	font-size: clamp(1.65rem, 3vw, 2.55rem);
+	font-weight: 700;
+	color: $base_color;
+	line-height: 1.58;
+	letter-spacing: 0.05em;
+}
+.fv_clinic_dept {
+	margin-top: 1.2em;
+	font-size: 13px;
+	color: #4f645a;
+	letter-spacing: 0.06em;
+}
+.hero_cta_group {
+	display: flex;
+	gap: 0.7em;
+	flex-wrap: wrap;
+	margin-top: 1.3em;
+}
+.hero_cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	border-radius: 999px;
+	padding: 0.56em 1.1em;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+	transition: all 0.3s;
+	background: #fff;
+	color: $base_color;
+	border: 1px solid rgba($base_color, 0.4);
+	box-shadow: 0 4px 14px rgba($base_color, 0.13);
+	i {
+		font-size: 12px;
+	}
+	&.primary {
+		background: $clinic_grad;
+		color: #fff;
+		border: 0;
+	}
+	&:hover {
+		transform: translateY(-2px);
+		filter: brightness(0.95);
+	}
+}
+.fv_clinic_slider {
+	width: 76%;
+	height: 80vh;
+	margin-left: auto;
+	.slider_fullslider_wrap {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 10 / 9.25;
+		margin-top: 0;
+		border-top-left-radius: clamp(8.75rem, 24vw, 22rem);
+		overflow: hidden;
+		box-shadow: 0 18px 50px rgba($base_color, 0.2);
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+	.slider_fullslider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+		.slide {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+}
+
+// ===========================
+// ピックアップカード
+// ===========================
+.pickup_section {
+	position: relative;
+	margin-top: -4.6em;
+	z-index: 10;
+	padding-bottom: 2.2em;
+}
+.pickup_card {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	padding: 1.5em;
+	background: #fff;
+	border-radius: 12px;
+	text-decoration: none;
+	color: #333;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s;
+	border: 1px solid rgba($base_color, 0.12);
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: $clinic_grad;
+	}
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 32px rgba($base_color, 0.16);
+		.pickup_card_arrow i {
+			transform: translateX(3px);
+		}
+	}
+}
+.pickup_card_icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: $bg_base;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	i {
+		font-size: 20px;
+		color: $base_color;
+	}
+}
+.pickup_card_body {
+	flex: 1;
+	h3 {
+		font-size: 15px;
+		font-weight: 700;
+		color: $base_color;
+		margin-bottom: 0.3em;
+	}
+	p {
+		font-size: 12px;
+		color: #666;
+		line-height: 1.6;
+	}
+}
+.pickup_card_arrow {
+	flex-shrink: 0;
+	i {
+		font-size: 12px;
+		color: $sub_color;
+		transition: transform 0.3s;
+	}
+}
+
+// ===========================
+// インフォバー（NEWS＋タイムテーブル）
+// ===========================
+.info_bar_section {
+	padding: 0 0 4.5em;
+	background: linear-gradient(180deg, #f7fcfb 0%, #ffffff 70%);
+}
+.info_bar {
+	display: grid;
+	grid-template-columns: 1.15fr 1fr;
+	gap: 2em;
+	align-items: stretch;
+}
+.info_card {
+	background: #fff;
+	border: 1px solid rgba($base_color, 0.14);
+	border-radius: 16px;
+	padding: 2em;
+	box-shadow: 0 8px 26px rgba(32, 80, 66, 0.08);
+	height: 100%;
+}
+.info_ttl {
+	font-size: 16px;
+	font-weight: 700;
+	color: $base_color;
+	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+	border-bottom: 2px solid rgba($sub_color, 0.9);
+	i {
+		margin-right: 0.3em;
+	}
+}
+.info_news_list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		display: flex;
+		align-items: baseline;
+		gap: 0.8em;
+		padding: 0.6em 0;
+		border-bottom: 1px solid #edf2f0;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+.info_news_date {
+	font-family: "Jost", sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: $base_color;
+	white-space: nowrap;
+}
+.info_news_txt {
+	font-size: 13px;
+	line-height: 1.7;
+	color: #43524b;
+}
+.timetable_mini {
+	width: 100%;
+	border-collapse: collapse;
+	th,
+	td {
+		padding: 0.5em 0.4em;
+		text-align: center;
+		font-size: 13px;
+		border: 1px solid #e8e8e8;
+	}
+	thead th {
+		background: $base_color;
+		color: #fff;
+		font-weight: 600;
+		&:first-child {
+			background: transparent;
+			border-color: transparent;
+		}
+	}
+	tbody th {
+		background: $bg_base;
+		color: $base_color;
+		font-weight: 600;
+		text-align: left;
+		padding-left: 0.8em;
+		white-space: nowrap;
+		span {
+			display: block;
+			font-size: 10px;
+			font-weight: 400;
+			color: #666;
+		}
+	}
+	.open .fa-circle {
+		color: $base_color;
+		font-size: 10px;
+	}
+	.closed .fa-minus {
+		color: #ccc;
+		font-size: 10px;
+	}
+}
+
+// ===========================
+// コンセプトセクション
+// ===========================
+.concept_section {
+	background: $bg_base;
+	position: relative;
+	overflow: hidden;
+	padding: 5em 0;
+}
+.concept_bg_deco {
+	position: absolute;
+	top: -50px;
+	right: -100px;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	background: rgba($sub_color, 0.08);
+	z-index: 0;
+}
+.concept_img_wrap {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: -15px;
+		left: -15px;
+		width: 80px;
+		height: 80px;
+		border-top: 4px solid $sub_color;
+		border-left: 4px solid $sub_color;
+		border-radius: 8px 0 0 0;
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -15px;
+		right: -15px;
+		width: 80px;
+		height: 80px;
+		border-bottom: 4px solid $sub_color;
+		border-right: 4px solid $sub_color;
+		border-radius: 0 0 8px 0;
+		z-index: 1;
+	}
+}
+
+// ===========================
+// サービス詳細セクション
+// ===========================
+.service_detail_section {
+	background: $bg_base;
+	padding: 5em 0;
+	&.alt {
+		background: #fff;
+	}
+}
+.service_tel_box {
+	background: $bg_base;
+	border: 2px solid $sub_color;
+	border-radius: 12px;
+	padding: 1.2em 1.5em;
+	text-align: center;
+	p {
+		color: #666;
+		margin-bottom: 0.3em;
+	}
+}
+.service_tel_link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	font-size: 24px;
+	font-weight: 700;
+	color: $base_color;
+	text-decoration: none;
+	font-family: "Jost", sans-serif;
+	i {
+		font-size: 18px;
+	}
+	&:hover {
+		color: $sub_color;
+	}
+}
+
+// ===========================
+// NEWS セクション
+// ===========================
+.news_section {
+	background: $bg_base;
+	padding: 5em 0;
+}
+.news_list_wrap {
+	max-width: 700px;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 12px;
+	padding: 2em;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+.news_list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		display: flex;
+		align-items: baseline;
+		gap: 1.5em;
+		padding: 0.8em 0;
+		border-bottom: 1px solid #eee;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+.news_date {
+	font-size: 13px;
+	color: $base_color;
+	font-weight: 600;
+	font-family: "Jost", sans-serif;
+	white-space: nowrap;
+}
+.news_text {
+	font-size: 14px;
+	color: #333;
+	line-height: 1.6;
+}
+.news_more_link {
+	font-size: 14px;
+	font-weight: 600;
+	color: $base_color;
+	text-decoration: none;
+	&:hover {
+		color: $sub_color;
+	}
+}
+
+// ===========================
+// 施設情報セクション
+// ===========================
+.facility_info_section {
+	background: #fff;
+	padding: 5em 0;
+}
+.facility_info_cards {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+.facility_info_card {
+	background: $bg_base;
+	border-radius: 16px;
+	padding: 2.5em;
+	position: relative;
+	overflow: hidden;
+	border-top: 4px solid $base_color;
+}
+.facility_info_card_num {
+	position: absolute;
+	top: 0.2em;
+	right: 0.5em;
+	font-family: "Jost", sans-serif;
+	font-size: 72px;
+	font-weight: 700;
+	color: rgba($sub_color, 0.15);
+	line-height: 1;
+}
+.facility_info_card_title {
+	font-size: 22px;
+	font-weight: 700;
+	color: $base_color;
+	margin-bottom: 0.3em;
+}
+.facility_info_card_desc {
+	font-size: 14px;
+	color: #555;
+}
+.facility_info_label {
+	font-size: 15px;
+	font-weight: 700;
+	color: $base_color;
+	margin-bottom: 0.8em;
+	padding-bottom: 0.3em;
+	border-bottom: 2px solid $sub_color;
+	display: inline-block;
+}
+.facility_info_tel {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	i {
+		font-size: 16px;
+		color: $base_color;
+	}
+	a {
+		font-size: 22px;
+		font-weight: 700;
+		color: $base_color;
+		text-decoration: none;
+		font-family: "Jost", sans-serif;
+		&:hover {
+			color: $sub_color;
+		}
+	}
+}
+
+// ===========================
+// 治療カード
+// ===========================
+.treatment_card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 2em 1.5em;
+	background: $bg_base;
+	border-radius: 16px;
+	text-decoration: none;
+	color: #333;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, $base_color, $sub_color);
+		transform: scaleX(0);
+		transition: transform 0.3s;
+	}
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba($base_color, 0.12);
+		&::before {
+			transform: scaleX(1);
+		}
+		.treatment_card_icon {
+			background: $base_color;
+			i {
+				color: #fff;
+			}
+		}
+		.treatment_card_arrow {
+			background: $base_color;
+			i {
+				color: #fff;
+			}
+		}
+	}
+	h3 {
+		font-size: 16px;
+		font-weight: 700;
+		color: $base_color;
+		margin-bottom: 0.8em;
+	}
+	p {
+		font-size: 13px;
+		color: #555;
+		line-height: 1.7;
+		flex: 1;
+	}
+}
+.treatment_card_icon {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.2em;
+	border: 2px solid $sub_color;
+	transition: all 0.3s;
+	i {
+		font-size: 30px;
+		color: $base_color;
+		transition: color 0.3s;
+	}
+}
+.treatment_card_arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: $bg_base;
+	border: 1px solid $sub_color;
+	margin-top: 1.2em;
+	transition: all 0.3s;
+	i {
+		font-size: 12px;
+		color: $base_color;
+		transition: color 0.3s;
+	}
+}
+
+// ===========================
+// 特徴セクション
+// ===========================
+.feature_section {
+	background: $bg_base;
+	padding: 5em 0 3em;
+}
+.feature_item {
+	padding: 1em 0;
+}
+.feature_img_wrap {
+	position: relative;
+	overflow: hidden;
+	border-radius: 12px;
+	img {
+		border-radius: 12px;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(135deg, rgba($base_color, 0.05) 0%, transparent 100%);
+		border-radius: 12px;
+	}
+}
+.feature_num {
+	display: inline-block;
+	font-family: "Jost", sans-serif;
+	font-size: 64px;
+	font-weight: 700;
+	color: $sub_color;
+	line-height: 1;
+	margin-bottom: 0.1em;
+	opacity: 0.7;
+}
+.deco_dot {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background: $sub_color;
+	border-radius: 50%;
+	margin: 1em 0;
+	position: relative;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		background: $sub_color;
+		border-radius: 50%;
+	}
+	&::before {
+		left: -16px;
+	}
+	&::after {
+		left: 16px;
+	}
+}
+
+// ===========================
+// GREETING SECTION
+// ===========================
+.greeting_section {
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	padding: 5em 0;
+}
+.greeting_bg_deco {
+	position: absolute;
+	bottom: -80px;
+	left: -80px;
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	background: rgba($sub_color, 0.06);
+	z-index: 0;
+}
+.greeting_img_wrap {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: -12px;
+		right: -12px;
+		width: 70px;
+		height: 70px;
+		border-top: 4px solid $sub_color;
+		border-right: 4px solid $sub_color;
+		border-radius: 0 8px 0 0;
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -12px;
+		left: -12px;
+		width: 70px;
+		height: 70px;
+		border-bottom: 4px solid $sub_color;
+		border-left: 4px solid $sub_color;
+		border-radius: 0 0 0 8px;
+		z-index: 1;
+	}
+}
+
+// ===========================
+// FACILITY SECTION
+// ===========================
+.facility_section {
+	background: $bg_base;
+	padding: 5em 0;
+}
+
+// ===========================
+// ACCESS SECTION
+// ===========================
+.access_section {
+	background: #fff;
+	padding: 5em 0;
+}
+
+// ===========================
+// フッター
+// ===========================
+.footer_clinic_cta {
+	background: $bg_base;
+	padding: 3em 0;
+}
+.footer_cta_btns {
+	display: flex;
+	gap: 1em;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.footer_clinic_tel {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	font-size: 32px;
+	font-weight: 700;
+	color: $base_color;
+	text-decoration: none;
+	font-family: "Jost", sans-serif;
+	i {
+		font-size: 24px;
+	}
+	&:hover {
+		color: $sub_color;
+	}
+}
+.footer_clinic_main {
+	background: $base_color;
+	padding: 3em 0;
+}
+.footer_clinic_logo_img {
+	height: 50px;
+	width: auto;
+	filter: brightness(0) invert(1);
+	margin-bottom: 1em;
+}
+.footer_clinic_copy {
+	background: rgba($base_color, 0.82);
+}
+
+// ===========================
+// レスポンシブ - タブレット
+// ===========================
+@media screen and (max-width: 896px) {
+	.header_clinic_logo img {
+		height: 40px;
+	}
+	.fv_clinic_text {
+		max-width: 42%;
+		min-width: auto;
+		padding: 1.3em 1.3em 1.1em;
+	}
+	.fv_clinic_catch {
+		font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+	}
+	.fv_clinic_slider {
+		width: 70%;
+		.slider_fullslider_wrap {
+			border-top-left-radius: clamp(5rem, 15vw, 12rem);
+		}
+	}
+	.pickup_section {
+		margin-top: -1.6em;
+	}
+	.pickup_card {
+		padding: 1.2em;
+		gap: 0.8em;
+	}
+	.hero_cta_group {
+		gap: 0.5em;
+	}
+	.hero_cta {
+		font-size: 12px;
+		padding: 0.5em 0.9em;
+	}
+	.info_bar_section {
+		padding-bottom: 3em;
+	}
+	.info_bar {
+		grid-template-columns: 1fr;
+		gap: 1.4em;
+	}
+	.info_card {
+		padding: 1.4em;
+	}
+	.pickup_card_icon {
+		width: 42px;
+		height: 42px;
+		i {
+			font-size: 17px;
+		}
+	}
+	.treatment_card_icon {
+		width: 65px;
+		height: 65px;
+		i {
+			font-size: 24px;
+		}
+	}
+	.feature_num {
+		font-size: 50px;
+	}
+	.concept_section,
+	.treatment_section,
+	.feature_section,
+	.greeting_section,
+	.facility_section,
+	.access_section,
+	.service_detail_section,
+	.news_section,
+	.facility_info_section {
+		padding: 3em 0;
+	}
+	.concept_bg_deco {
+		width: 250px;
+		height: 250px;
+	}
+	.greeting_bg_deco {
+		width: 200px;
+		height: 200px;
+	}
+	.concept_img_wrap,
+	.greeting_img_wrap {
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
+
+// ===========================
+// レスポンシブ - モバイル
+// ===========================
+@media screen and (max-width: 500px) {
+	.fv_clinic {
+		margin-top: 0px !important;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 0 !important;
+	}
+	.fv_clinic_text {
+		position: relative;
+		left: auto;
+		top: auto;
+		transform: none;
+		max-width: 100%;
+		width: 100%;
+		padding: 1.5em 5% 0;
+		background: transparent;
+		border: 0;
+		box-shadow: none;
+		order: 1;
+	}
+	.fv_clinic_en {
+		font-size: 11px;
+		margin-bottom: 1em;
+	}
+	.fv_clinic_catch {
+		font-size: 1.4rem;
+		line-height: 1.6;
+	}
+	.fv_clinic_dept {
+		font-size: 12px;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	.hero_cta_group {
+		margin-top: 1em;
+		flex-direction: column;
+		gap: 0.55em;
+	}
+	.hero_cta {
+		justify-content: center;
+		width: 100%;
+		font-size: 13px;
+		padding: 0.75em 1em;
+	}
+	.fv_clinic_slider {
+		width: 90%;
+		order: 2;
+		.slider_fullslider_wrap {
+			aspect-ratio: 4 / 3;
+			border-top-left-radius: clamp(3rem, 12vw, 6rem);
+			box-shadow: 0 8px 25px rgba($base_color, 0.18);
+		}
+	}
+	.pickup_section {
+		margin-top: -0.8em;
+	}
+	.pickup_card {
+		padding: 1em;
+	}
+	.pickup_card_body {
+		h3 {
+			font-size: 14px;
+		}
+		p {
+			font-size: 11px;
+		}
+	}
+	.info_bar_section {
+		padding-bottom: 2.4em;
+	}
+	.info_bar {
+		gap: 1.2em;
+	}
+	.info_card {
+		padding: 1.1em;
+	}
+	.treatment_card {
+		padding: 1.5em 1em;
+	}
+	.treatment_card_icon {
+		width: 60px;
+		height: 60px;
+		i {
+			font-size: 22px;
+		}
+	}
+	.feature_num {
+		font-size: 40px;
+	}
+	.footer_clinic_tel {
+		font-size: 24px;
+	}
+	.footer_cta_btns {
+		flex-direction: column;
+		align-items: center;
+	}
+	.service_tel_link {
+		font-size: 20px;
+	}
+	.news_list_wrap {
+		padding: 1.2em;
+	}
+	.news_list li {
+		flex-direction: column;
+		gap: 0.3em;
+	}
+	.facility_info_card {
+		padding: 1.5em;
+	}
+	.facility_info_card_num {
+		font-size: 50px;
+	}
+	.facility_info_card_title {
+		font-size: 18px;
+	}
+	.facility_info_tel a {
+		font-size: 18px;
+	}
+}
+
+// 4701002001.php page_style より移行
+.clinic_intro_hero {
+	padding-top: 3.5em;
+	padding-bottom: 2.5em;
+	background: linear-gradient(180deg, #ffffff 0%, #f7fcfb 100%);
+}
+.clinic_intro_visual {
+	border-radius: 28px;
+	overflow: hidden;
+	box-shadow: 0 14px 40px rgba(30, 75, 66, 0.14);
+}
+.clinic_intro_visual img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.clinic_intro_box {
+	margin-top: -4em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 860px;
+	background: rgba(255, 255, 255, 0.94);
+	border: 1px solid rgba(56, 108, 94, 0.18);
+	border-radius: 18px;
+	box-shadow: 0 10px 30px rgba(30, 75, 66, 0.1);
+	padding: 1.7em 1.8em;
+	position: relative;
+	z-index: 2;
+}
+.clinic_guide_list {
+	margin-top: 0.8em;
+	li {
+		margin-bottom: 0.35em;
+	}
+}
+.clinic_photo_card,
+.clinic_equipment_card,
+.clinic_strength_card {
+	height: 100%;
+	background: #fff;
+	border: 1px solid rgba(56, 108, 94, 0.16);
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(30, 75, 66, 0.08);
+}
+.clinic_photo_card_img,
+.clinic_equipment_card_img,
+.clinic_strength_card_img {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	background: #ecf6f4;
+}
+.clinic_photo_card_img img,
+.clinic_equipment_card_img img,
+.clinic_strength_card_img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.clinic_photo_card_body,
+.clinic_equipment_card_body,
+.clinic_strength_card_body {
+	padding: 1em 1em 1.1em;
+}
+.clinic_profile_box {
+	background: #fff;
+	border-radius: 18px;
+	border: 1px solid rgba(56, 108, 94, 0.16);
+	box-shadow: 0 10px 30px rgba(30, 75, 66, 0.08);
+	padding: 1.4em;
+}
+.clinic_contact_banner {
+	display: block;
+	width: min(980px, 100%);
+	margin: 0 auto;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(30, 75, 66, 0.12);
+}
+.clinic_contact_banner img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.contact_three_wrap {
+	background: #fff;
+	border: 1px solid rgba(64, 86, 131, 0.22);
+	border-radius: 18px;
+	box-shadow: 0 10px 30px rgba(38, 60, 102, 0.12);
+	padding: 0.95em;
+}
+.contact_three_grid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.9em;
+}
+.contact_three_card {
+	height: 100%;
+	border-radius: 10px;
+	border: 1px solid rgba(58, 75, 111, 0.14);
+	padding: 0.8em 0.72em 0.7em;
+	display: flex;
+	flex-direction: column;
+	&.clinic {
+		background: #e7edf8;
+	}
+	&.rehab {
+		background: #f5eecf;
+	}
+	&.nursery {
+		background: #f8e6ec;
+	}
+}
+.contact_three_head {
+	text-align: center;
+	font-size: 0.93em;
+	line-height: 1.45;
+	min-height: 3.35em;
+	padding-bottom: 0.55em;
+	border-bottom: 2px dotted rgba(0, 0, 0, 0.17);
+}
+.contact_three_card {
+	&.clinic .contact_three_head {
+		border-bottom-color: rgba(34, 56, 135, 0.34);
+		color: #4a5778;
+	}
+	&.rehab .contact_three_head {
+		border-bottom-color: rgba(225, 115, 0, 0.4);
+		color: #6a5d3a;
+	}
+	&.nursery .contact_three_head {
+		border-bottom-color: rgba(239, 63, 113, 0.42);
+		color: #725766;
+	}
+	&.clinic .contact_three_name,
+	&.clinic .contact_three_tel {
+		color: #223887;
+	}
+	&.rehab .contact_three_name,
+	&.rehab .contact_three_tel {
+		color: #e17300;
+	}
+	&.nursery .contact_three_name,
+	&.nursery .contact_three_tel {
+		color: #ef3f71;
+	}
+	&.rehab .contact_three_meta {
+		color: #5e4b1f;
+	}
+	&.nursery .contact_three_meta {
+		color: #5f4352;
+	}
+}
+.contact_three_name {
+	text-align: center;
+	font-size: 2.05em;
+	font-weight: 700;
+	line-height: 1.12;
+	letter-spacing: 0.02em;
+	margin-top: 0.4em;
+	margin-bottom: 0.35em;
+}
+.contact_three_photo {
+	border: 1px solid #fff;
+	box-shadow: 0 6px 14px rgba(49, 64, 95, 0.14);
+	img {
+		width: 100%;
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+		display: block;
+	}
+}
+.contact_three_meta {
+	margin-top: 0.65em;
+	font-size: 0.93em;
+	line-height: 1.55;
+	color: #36486f;
+	.label {
+		display: block;
+		font-weight: 700;
+		margin-top: 0.3em;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+.contact_three_tel {
+	margin-top: auto;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.22em;
+	font-size: 2.02em;
+	font-weight: 800;
+	line-height: 1;
+	text-decoration: none;
+	i {
+		font-size: 0.7em;
+	}
+}
+.contact_three_address {
+	margin-top: 0.8em;
+	text-align: center;
+	font-size: 2em;
+	color: #2f2f2f;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	line-height: 1.25;
+}
+.medicine_intro {
+	padding-top: 3.3em;
+	padding-bottom: 2.2em;
+	background: linear-gradient(180deg, #f7fcfb 0%, #ffffff 100%);
+}
+.medicine_intro_visual {
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 14px 36px rgba(30, 75, 66, 0.12);
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+.medicine_intro_box {
+	margin-top: -3.2em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+	background: rgba(255, 255, 255, 0.94);
+	border: 1px solid rgba(56, 108, 94, 0.18);
+	border-radius: 18px;
+	box-shadow: 0 10px 30px rgba(30, 75, 66, 0.1);
+	padding: 1.5em 1.6em;
+	position: relative;
+	z-index: 2;
+}
+.medicine_anchor_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6em;
+	margin-top: 0.9em;
+	a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45em;
+		padding: 0.62em 0.95em;
+		border-radius: 999px;
+		border: 1px solid rgba(56, 108, 94, 0.24);
+		background: #fff;
+		color: #2e5f53;
+		font-weight: 700;
+		font-size: 0.92em;
+		line-height: 1.3;
+		&:hover {
+			opacity: 0.86;
+		}
+	}
+}
+.medicine_card {
+	height: 100%;
+	background: #fff;
+	border-radius: 18px;
+	border: 1px solid rgba(56, 108, 94, 0.16);
+	box-shadow: 0 10px 28px rgba(30, 75, 66, 0.08);
+	padding: 1.4em;
+}
+.medicine_card_img {
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(30, 75, 66, 0.12);
+	img {
+		width: 100%;
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+		display: block;
+	}
+}
+.medicine_subtitle {
+	font-size: 1.05em;
+	color: #2d6558;
+	font-weight: 700;
+}
+.medicine_list {
+	li {
+		margin-bottom: 0.35em;
+		line-height: 1.8;
+	}
+}
+.medicine_split_list {
+	column-count: 2;
+	column-gap: 1.2em;
+	li {
+		break-inside: avoid;
+	}
+}
+.medicine_source {
+	font-size: 0.84em;
+	color: #456d63;
+	line-height: 1.7;
+}
+.rehab_intro {
+	padding-top: 3.3em;
+	padding-bottom: 2.2em;
+	background: linear-gradient(180deg, #ffffff 0%, #f7fcfb 100%);
+}
+.rehab_intro_visual {
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 14px 36px rgba(30, 75, 66, 0.12);
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+.rehab_intro_box {
+	margin-top: -3.1em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 920px;
+	background: rgba(255, 255, 255, 0.95);
+	border: 1px solid rgba(56, 108, 94, 0.2);
+	border-radius: 18px;
+	box-shadow: 0 10px 30px rgba(30, 75, 66, 0.1);
+	padding: 1.5em 1.6em;
+	position: relative;
+	z-index: 2;
+}
+.rehab_anchor_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55em;
+	margin-top: 0.95em;
+	a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.42em;
+		padding: 0.58em 0.9em;
+		border-radius: 999px;
+		border: 1px solid rgba(56, 108, 94, 0.24);
+		background: #fff;
+		color: #2f6759;
+		font-size: 0.89em;
+		font-weight: 700;
+		line-height: 1.3;
+		&:hover {
+			opacity: 0.86;
+		}
+	}
+}
+.rehab_panel {
+	background: #fff;
+	border: 1px solid rgba(56, 108, 94, 0.16);
+	border-radius: 18px;
+	box-shadow: 0 10px 28px rgba(30, 75, 66, 0.08);
+	padding: 1.4em;
+	.rehab_panel_img {
+		border-radius: 14px;
+		overflow: hidden;
+		box-shadow: 0 8px 24px rgba(30, 75, 66, 0.12);
+		img {
+			width: 100%;
+			aspect-ratio: 16 / 10;
+			object-fit: cover;
+			display: block;
+		}
+	}
+}
+.rehab_caption {
+	font-size: 0.92em;
+	color: #3d695f;
+	line-height: 1.75;
+}
+.rehab_highlight {
+	background: #ecf7f4;
+	border-left: 4px solid #4f8d7d;
+	padding: 0.9em 1em;
+	border-radius: 8px;
+}
+#rehab-a07 {
+	.rehab_flow_nav {
+		li {
+			background: #f2faf7;
+			border: 1px solid rgba(56, 108, 94, 0.28);
+			border-radius: 10px;
+			overflow: hidden;
+			a {
+				padding: 0.52em 0.65em;
+				&:after {
+					color: #2f6759;
+				}
+				.number .num {
+					color: #2f6759;
+				}
+			}
+		}
+	}
+	.rehab_flow_contents {
+		> li {
+			margin-bottom: 2.1em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			.number {
+				background-color: #2f6759;
+				width: 6.4em;
+				height: 6.4em;
+			}
+			.title_area {
+				background: #2f6759;
+			}
+			.contents {
+				background: #fff;
+				border: 1px solid rgba(56, 108, 94, 0.16);
+				border-radius: 14px;
+				overflow: hidden;
+				box-shadow: 0 8px 24px rgba(30, 75, 66, 0.08);
+				.picture,
+				.textarea {
+					padding: 1.15em;
+				}
+				.picture img {
+					width: 100%;
+					aspect-ratio: 16 / 10;
+					object-fit: cover;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}
+.rehab_equipment_card {
+	height: 100%;
+	background: #fff;
+	border: 1px solid rgba(56, 108, 94, 0.16);
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(30, 75, 66, 0.08);
+}
+.rehab_equipment_img {
+	img {
+		width: 100%;
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+		display: block;
+	}
+}
+.rehab_equipment_body {
+	padding: 0.9em 0.95em 1em;
+}
+.rehab_source {
+	font-size: 0.84em;
+	color: #456d63;
+	line-height: 1.7;
+}
+.nursery_intro {
+	padding-top: 3.3em;
+	padding-bottom: 2.2em;
+	background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+}
+.nursery_intro_visual {
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 14px 36px rgba(73, 84, 118, 0.14);
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+.nursery_intro_box {
+	margin-top: -3.1em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 920px;
+	background: rgba(255, 255, 255, 0.96);
+	border: 1px solid rgba(100, 121, 173, 0.2);
+	border-radius: 18px;
+	box-shadow: 0 10px 30px rgba(63, 84, 133, 0.12);
+	padding: 1.5em 1.6em;
+	position: relative;
+	z-index: 2;
+}
+.nursery_anchor_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55em;
+	margin-top: 0.95em;
+	a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.42em;
+		padding: 0.58em 0.9em;
+		border-radius: 999px;
+		border: 1px solid rgba(100, 121, 173, 0.25);
+		background: #fff;
+		color: #50639a;
+		font-size: 0.88em;
+		font-weight: 700;
+		line-height: 1.3;
+		&:hover {
+			opacity: 0.86;
+		}
+	}
+}
+.nursery_panel {
+	background: #fff;
+	border: 1px solid rgba(100, 121, 173, 0.17);
+	border-radius: 18px;
+	box-shadow: 0 10px 28px rgba(63, 84, 133, 0.08);
+	padding: 1.4em;
+	.nursery_panel_img {
+		border-radius: 14px;
+		overflow: hidden;
+		box-shadow: 0 8px 24px rgba(63, 84, 133, 0.13);
+		img {
+			width: 100%;
+			aspect-ratio: 16 / 10;
+			object-fit: cover;
+			display: block;
+		}
+	}
+}
+.nursery_caption {
+	font-size: 0.92em;
+	color: #4f5b80;
+	line-height: 1.75;
+}
+.nursery_notice {
+	background: #f3f6ff;
+	border-left: 4px solid #6f83be;
+	padding: 0.9em 1em;
+	border-radius: 8px;
+}
+#nursery-a04 {
+	.nursery_flow_nav {
+		li {
+			background: #fff7fa;
+			border: 1px solid rgba(216, 93, 136, 0.26);
+			border-radius: 10px;
+			overflow: hidden;
+			a {
+				padding: 0.52em 0.65em;
+				&:after {
+					color: #d85d88;
+				}
+				.number .num {
+					color: #d85d88;
+				}
+			}
+		}
+	}
+	.nursery_flow_contents {
+		> li {
+			margin-bottom: 2.1em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			.number {
+				background-color: #d85d88;
+				width: 6.4em;
+				height: 6.4em;
+			}
+			.title_area {
+				background: #d85d88;
+			}
+			.contents {
+				background: #fff;
+				border: 1px solid rgba(100, 121, 173, 0.17);
+				border-radius: 14px;
+				overflow: hidden;
+				box-shadow: 0 8px 24px rgba(63, 84, 133, 0.08);
+				.picture,
+				.textarea {
+					padding: 1.15em;
+				}
+				.picture img {
+					width: 100%;
+					aspect-ratio: 16 / 10;
+					object-fit: cover;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}
+.nursery_source {
+	font-size: 0.84em;
+	color: #59648a;
+	line-height: 1.7;
+}
+@media (max-width: 959px) {
+	.clinic_intro_box {
+		margin-top: -1.4em;
+		padding: 1.2em 1.1em;
+	}
+	.medicine_intro_box {
+		margin-top: -1.1em;
+		padding: 1.15em 1.05em;
+	}
+	.medicine_card {
+		padding: 1.1em;
+	}
+	.medicine_split_list {
+		column-count: 1;
+	}
+	.rehab_intro_box {
+		margin-top: -1em;
+		padding: 1.15em 1.05em;
+	}
+	.rehab_panel {
+		padding: 1.1em;
+	}
+	#rehab-a07 {
+		.rehab_flow_nav {
+			gap: 1em;
+		}
+		.rehab_flow_contents > li {
+			.number {
+				width: 100%;
+				height: auto;
+				padding: 1.8em 0;
+				border-radius: 0;
+			}
+			.contents {
+				.picture {
+					padding: 1em 0 0;
+				}
+				.textarea {
+					padding: 1em 0 1.5em;
+				}
+			}
+		}
+	}
+	.contact_three_wrap {
+		padding: 0.72em;
+	}
+	.contact_three_grid {
+		grid-template-columns: 1fr;
+		gap: 0.75em;
+	}
+	.contact_three_name {
+		font-size: 1.95em;
+	}
+	.contact_three_tel {
+		font-size: 1.86em;
+	}
+	.contact_three_address {
+		font-size: 1.52em;
+	}
+	.nursery_intro_box {
+		margin-top: -1em;
+		padding: 1.15em 1.05em;
+	}
+	.nursery_panel {
+		padding: 1.1em;
+	}
+	#nursery-a04 {
+		.nursery_flow_nav {
+			gap: 1em;
+		}
+		.nursery_flow_contents > li {
+			.number {
+				width: 100%;
+				height: auto;
+				padding: 1.8em 0;
+				border-radius: 0;
+			}
+			.contents {
+				.picture {
+					padding: 1em 0 0;
+				}
+				.textarea {
+					padding: 1em 0 1.5em;
+				}
+			}
+		}
+	}
+}

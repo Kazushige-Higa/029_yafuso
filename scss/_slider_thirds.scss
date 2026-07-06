@@ -1,0 +1,335 @@
+// 変数定義
+$slider-thirds-slide-width: min(70vw, 960px);
+$slider-thirds-gap: clamp(0px, 0vw, 0px);
+$slider-thirds-peek: clamp(32px, 12vw, 140px);
+$slider-thirds-dot-size: 10px;
+$slider-thirds-dot-color: #8f8f94;
+
+$slider-thirds-dot-focus-outline: #111;
+$slider-thirds-toggle-bg: #e4e4e8;
+$slider-thirds-toggle-size: 36px;
+$slider-thirds-toggle-icon-size: 14px;
+
+// メディアクエリMIXIN (ブレークポイント用意)
+@mixin mq($bp) {
+  @if $bp == "tablet" {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $bp == "phone" {
+    @media (max-width: 640px) {
+      @content;
+    }
+  }
+}
+
+.slider_thirds__track {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+// main section
+.slider_thirds_section {
+  padding: clamp(20px, 6vw, 52px) 0;
+  position: relative;
+
+  @include for-size(phone-only) {
+    padding: 0 1.5em 0;
+  }
+}
+
+// メインラッパー
+.slider_thirds {
+  --slide-width: #{$slider-thirds-slide-width};
+  --gap: #{$slider-thirds-gap};
+  --peek: #{$slider-thirds-peek};
+  --dot-size: #{$slider-thirds-dot-size};
+  position: relative;
+  isolation: isolate;
+  &.contain {
+    .slider_thirds__slide {
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0);
+    }
+    .slider_thirds__slide.is-active {
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0);
+    }
+    .slider_thirds__image::after {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+    }
+    .slider_thirds__toggle {
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+    }
+    .slider_thirds__image img {
+      object-fit: contain !important;
+    }
+  }
+}
+
+@supports (width: 1svw) {
+  .slider_thirds {
+    --slide-width: min(70svw, 960px);
+  }
+}
+
+.slider_thirds__viewport {
+  //overflow: hidden;
+  padding: 0 var(--peek);
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .slider_thirds__viewport {
+    cursor: grab;
+  }
+
+  .slider_thirds__viewport:active {
+    cursor: grabbing;
+  }
+}
+
+.slider_thirds__track {
+  display: flex;
+  align-items: stretch;
+  gap: var(--gap);
+  transform: translateX(0);
+  //transition: transform 0.7s cubic-bezier(0.45, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.slider_thirds__slide {
+  position: relative;
+  flex: 0 0 var(--slide-width);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+  opacity: 0.55;
+  transform: scale(0.96);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.slider_thirds__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.24);
+}
+
+.slider_thirds__image {
+  position: relative;
+  min-height: clamp(320px, 55vw, 520px);
+  height: 100%;
+}
+
+.slider_thirds__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider_thirds__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.32) 75%, rgba(0, 0, 0, 0.58) 100%);
+  pointer-events: none;
+}
+
+.slider_thirds__layer {
+  position: absolute;
+  inset: auto 18px 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.slider_thirds__desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.slider_thirds__tag {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.slider_thirds__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 0 6px;
+}
+
+.slider_thirds__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider_thirds__dots {
+  button {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    border: none;
+    background: $base_color;
+    opacity: 0.4;
+    cursor: pointer;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+
+    &.is-active {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $slider-thirds-dot-focus-outline;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.slider_thirds__toggle {
+  width: $slider-thirds-toggle-size;
+  height: $slider-thirds-toggle-size;
+  border-radius: 50%;
+  border: none;
+  background: $slider-thirds-toggle-bg;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.slider_thirds__toggle_icon {
+  position: relative;
+  display: block;
+  width: $slider-thirds-toggle-icon-size;
+  height: $slider-thirds-toggle-icon-size;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 4px;
+    height: 14px;
+    border-radius: 2px;
+    background: #111;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      border 0.2s ease;
+  }
+  &::after {
+    right: 0;
+  }
+  &::before {
+    left: 0;
+  }
+}
+
+.slider_thirds__toggle.is-paused .slider_thirds__toggle_icon {
+  &::before {
+    width: 0;
+    height: 0;
+    left: 2px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #111;
+    border-radius: 0;
+    background: transparent;
+  }
+  &::after {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+// SCSSメディアクエリ
+@include mq("tablet") {
+  .slider_thirds {
+    --slide-width: calc(100% - 2 * var(--peek));
+  }
+
+  .slider_thirds__image {
+    min-height: clamp(300px, 70vw, 460px);
+  }
+}
+@include mq("phone") {
+  .slider_thirds {
+    --peek: clamp(8px, 5vw, 18px);
+    --gap: clamp(10px, 2vw, 18px);
+  }
+
+  .slider_thirds__cta {
+    width: auto;
+  }
+}
+// 瞬間ジャンプ（ループ補正）中はアニメを無効化
+.slider_thirds.is-jumping {
+  .slider_thirds__slide {
+    transition: none !important;
+  }
+
+  // ドットの微アニメも気になるなら
+  .slider_thirds__dots button {
+    transition: none !important;
+  }
+}
+
+// ===== popup アニメ（追加）=====
+
+// 初期：非表示（下に少しズラして透明）
+// 初期：非表示
+.slider_thirds__slide .popup {
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+  will-change: opacity, transform;
+}
+
+// 本物スライドがアクティブのときだけ表示（←ここがポイント）
+.slider_thirds__slide.is-active:not([data-clone]) .popup {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.18s;
+}
+
+// クローン上では常に出さない（念押し）
+.slider_thirds__slide[data-clone] .popup {
+  opacity: 0 !important;
+  transform: translateY(18px) !important;
+  pointer-events: none !important;
+}
+
+// ループ補正（瞬間ジャンプ）中はアニメ停止
+.slider_thirds.is-jumping .popup {
+  transition: none !important;
+}

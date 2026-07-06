@@ -1,0 +1,119 @@
+.accordion {
+    position: relative;
+
+    &.sub_color {
+        color: #333;
+        .open {
+            background-color: rgba($sub_color, 0.4);
+            color: #333;
+            font-weight: bold;
+            &:before {
+                color: $sub_color;
+            }
+            &:after {
+                color: $sub_color;
+            }
+            &:hover {
+                background-color: rgba($sub_color, 0.6);
+            }
+            &.active {
+                background-color: rgba($sub_color, 0.6);
+            }
+        }
+        > .panel {
+            .inner {
+                color: #333;
+                background-color: rgba($sub_color, 0.1);
+                &:before {
+                    color: $sub_color;
+                }
+            }
+        }
+    }
+
+    .open {
+        display: block;
+        line-height: 1.6;
+        border: none;
+        cursor: pointer;
+        font-size: 100%;
+        transition: 0.5s ease-in;
+        position: relative;
+        padding: 20px 60px;
+        margin: 0;
+        background: #f2f2f2;
+        font-weight: 600;
+        border: 1px solid #eee;
+        background-color: rgba($base_color, 0.2);
+        &:hover {
+            background-color: rgba($base_color, 0.1);
+        }
+        &:before {
+            content: "Q";
+            position: absolute;
+            left: 15px;
+            top: 33px;
+            width: 35px;
+            height: 35px;
+            font-size: 120%;
+            display: inline-block;
+            @include eng;
+            text-align: center;
+            //border: 1px solid $base_color;
+            background: #fff;
+            color: $base_color;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            line-height: 35px;
+        }
+        &:after {
+            content: "\2b";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: $base_color;
+            font-size: 120%;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-46%);
+        }
+        &.active {
+            background-color: rgba($base_color, 0.2);
+            &:after {
+                content: "\f068";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+            }
+        }
+    }
+
+    > .panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s ease-out;
+        margin-bottom: 10px;
+        .inner {
+            padding: 20px 20px;
+            background-color: rgba($base_color, 0.1);
+            margin: 0 0 15px;
+            position: relative;
+            padding-left: 60px;
+            &:before {
+                content: "A";
+                @include eng;
+                font-size: 120%;
+                position: absolute;
+                left: 15px;
+                display: inline-block;
+                text-align: center;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                background: #fff;
+                //border: 1px solid $red;
+                color: $red;
+                border-radius: 50%;
+            }
+        }
+    }
+}

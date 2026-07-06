@@ -1,0 +1,2956 @@
+@charset "utf-8";
+// =========================================================================
+// 4701002120 — P&W Car coating pro shop (TOP)
+// Reference: https://www.msi-azabulb.com/  (structural reference only)
+// Color: $base_color + @include bg_grd  (vars.scss に定義のトークンのみ使用)
+// Font: .eng class で英字 / 他は親の font-family を継承 (指定なし)
+// =========================================================================
+
+// ---- tokens (local to this page) ---------------------------------------
+$pw_bg: #000;
+$pw_panel: #333;
+$pw_panel_soft: #1f2228;
+$pw_text: #ffffff;
+$pw_text_mute: rgba(#ffffff, 0.72);
+$pw_text_weak: rgba(#ffffff, 0.55);
+$pw_border: rgba(#ffffff, 0.16);
+$pw_accent: #fff; // 参照色不使用: vars.scss の $base_color (#aaa) を流用
+$pw_footer_bg: #08090c;
+$pw_light_panel_bg: #f3f1ec;
+$pw_light_panel_text: #1c1e22;
+
+$pw_max: 1200px;
+$pw_gutter: 5vw;
+
+@mixin pw_inner {
+	width: min(92%, #{$pw_max});
+	margin-inline: auto;
+}
+@mixin pw_section_pad {
+	padding: clamp(70px, 10vw, 140px) 0;
+}
+@mixin pw_eng_label {
+	display: inline-block;
+	font-size: clamp(12px, 1.1vw, 15px);
+	letter-spacing: 0.42em;
+	line-height: 1;
+	color: $pw_accent;
+	text-transform: uppercase;
+}
+@mixin pw_title_ja {
+	font-weight: 600;
+	font-size: clamp(22px, 2.6vw, 36px);
+	letter-spacing: 0.14em;
+	line-height: 1.85;
+	color: $pw_text;
+}
+
+// =========================================================================
+// wrapper
+// =========================================================================
+.wrap_4701002120 {
+	background: $pw_bg;
+	color: $pw_text;
+	font-feature-settings: "palt";
+	overflow-x: hidden;
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		transition:
+			opacity 0.3s ease,
+			color 0.3s ease;
+	}
+
+	// ---- shared heading / button -------------------------------------------
+	.sec_eng_4701002120 {
+		@include pw_eng_label;
+	}
+	.sec_title_4701002120 {
+		@include pw_title_ja;
+		margin-top: 0.6em;
+	}
+	.btn_viewmore_4701002120 {
+		display: inline-flex;
+		align-items: center;
+		gap: 1.4em;
+		padding: 22px 48px 22px 32px;
+		min-width: 220px;
+		color: $pw_text;
+		font-size: clamp(12px, 0.9vw, 14px);
+		letter-spacing: 0.36em;
+		line-height: 1;
+		@include bg_grd;
+		position: relative;
+		overflow: hidden;
+		border: 1px solid transparent;
+		transition:
+			transform 0.35s ease,
+			box-shadow 0.35s ease,
+			background 0.35s ease;
+
+		span {
+			position: relative;
+			z-index: 2;
+		}
+		i {
+			position: relative;
+			z-index: 2;
+			margin-left: auto;
+			font-size: 1.1em;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			@include bg_grd;
+			opacity: 0;
+			transition: opacity 0.4s ease;
+			z-index: 1;
+		}
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 14px 30px rgba($base_color, 0.32);
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+	.sr_only_4701002120 {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	// ======================================================================
+	// Header
+	// ======================================================================
+	.header_4701002120 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 19999;
+		padding: 14px 0 14px 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 100%);
+		transition:
+			background 0.45s ease,
+			padding 0.35s ease,
+			backdrop-filter 0.4s ease;
+
+		&.is_scrolled_4701002120 {
+			background: rgba(6, 7, 9, 0.94);
+			backdrop-filter: blur(8px);
+			padding: 8px 0;
+			border-bottom: 1px solid $pw_border;
+		}
+
+		.header_inner_4701002120 {
+			display: flex;
+			align-items: center;
+			//gap: clamp(14px, 3vw, 36px);
+			padding-left: clamp(18px, 3vw, 40px);
+			padding-right: 0;
+		}
+
+		.header_logo_4701002120 {
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+
+			a {
+				display: inline-flex;
+				align-items: center;
+				line-height: 1;
+			}
+			.header_logo_img_4701002120 {
+				display: block;
+				width: auto;
+				height: clamp(36px, 3.4vw, 52px);
+				max-width: clamp(120px, 12vw, 180px);
+				object-fit: contain;
+				filter: brightness(0) invert(1); // dark header 用に白抜き
+				transition:
+					height 0.35s ease,
+					opacity 0.3s ease;
+
+				&:hover {
+					opacity: 0.85;
+				}
+			}
+		}
+
+		&.is_scrolled_4701002120 .header_logo_img_4701002120,
+		.is_scrolled_4701002120 .header_logo_img_4701002120 {
+			height: clamp(28px, 2.6vw, 40px);
+		}
+
+		.header_nav_4701002120 {
+			margin-left: auto;
+			margin-right: 3em;
+			.header_nav_list_4701002120 {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				gap: clamp(12px, 2vw, 30px);
+				li {
+					position: relative;
+					a {
+						font-size: clamp(12px, 0.92vw, 14px);
+						letter-spacing: 0.24em;
+						color: $pw_text;
+						padding: 8px 2px;
+						&:hover {
+							color: $base_color;
+						}
+					}
+				}
+			}
+		}
+
+		.header_cta_4701002120 {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.7em;
+			height: 96px;
+			padding: 0 clamp(22px, 2.4vw, 40px);
+			color: $pw_text;
+			font-size: clamp(12px, 0.92vw, 14px);
+			letter-spacing: 0.32em;
+			line-height: 1;
+			position: relative;
+			overflow: hidden;
+			transition:
+				padding 0.3s ease,
+				height 0.3s ease,
+				filter 0.3s ease;
+
+			i {
+				font-size: 1.1em;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				@include bg_grd;
+				opacity: 0;
+				transition: opacity 0.4s ease;
+			}
+			> * {
+				position: relative;
+				z-index: 1;
+			}
+			&:hover::before {
+				opacity: 1;
+			}
+		}
+
+		&.is_scrolled_4701002120 .header_cta_4701002120 {
+			height: 64px;
+		}
+	}
+
+	// ======================================================================
+	// First View  (msi-azabulb.com 3枚オーバーラップ構成 / 静止)
+	// layout: 左カラム車体 + 中央ポートレート大画像 + 右エンジン + 文字オーバーレイ
+	// ======================================================================
+	.kv_4701002120 {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		min-height: 720px;
+		overflow: hidden;
+		background: $pw_bg;
+		color: $pw_text;
+
+		.kv_canvas_4701002120 {
+			position: absolute;
+			inset: 0;
+			z-index: 1;
+		}
+
+		.kv_img_4701002120 {
+			position: absolute;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		// 角下地のグラデーションあしらい (bg01/bg02.png 相当 / CSS で再現)
+		.kv_grad_4701002120 {
+			position: absolute;
+			pointer-events: none;
+			z-index: 1;
+			// 台形に切って "角に寄せた下地板" 風のあしらい
+		}
+		.kv_grad_left_4701002120 {
+			left: 0;
+			bottom: 10%;
+			width: clamp(140px, 16vw, 237px);
+			height: clamp(180px, 24vh, 277px);
+			background: linear-gradient(
+				135deg,
+				rgba($base_color, 0.45) 0%,
+				rgba($base_color, 0.08) 65%,
+				transparent 100%
+			);
+			clip-path: polygon(0 0, 100% 8%, 96% 100%, 0 100%);
+		}
+		.kv_grad_right_4701002120 {
+			right: 0;
+			top: 16%;
+			width: clamp(110px, 12vw, 180px);
+			height: clamp(140px, 20vh, 210px);
+			background: linear-gradient(
+				225deg,
+				rgba($base_color, 0.45) 0%,
+				rgba($base_color, 0.08) 65%,
+				transparent 100%
+			);
+			clip-path: polygon(4% 0, 100% 0, 100% 100%, 0 92%);
+		}
+
+		// 左: 車体 (画面外にはみ出すように左端ギリギリ配置)
+		.kv_img_left_4701002120 {
+			left: 0;
+			top: 26%;
+			width: clamp(180px, 18vw, 290px);
+			height: clamp(260px, 40vh, 380px);
+			z-index: 2;
+			opacity: 0.95;
+		}
+
+		// 中央: メインのポートレート大画像 / 動画 (ヘッダー直下〜フッター直前まで伸びる縦長矩形)
+		.kv_img_center_4701002120 {
+			left: 20%;
+			top: 6%;
+			width: clamp(380px, 42vw, 650px);
+			height: calc(100vh - 140px);
+			max-height: 820px;
+			z-index: 4;
+			box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+			overflow: hidden;
+			background-color: $pw_bg;
+
+			.kv_video_4701002120 {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				pointer-events: none;
+			}
+		}
+
+		// 右上 (小): 明るめトーンのアクセント画像
+		.kv_img_right_top_4701002120 {
+			right: clamp(30px, 5vw, 90px);
+			top: 18%;
+			width: clamp(140px, 16vw, 240px);
+			height: clamp(150px, 20vh, 230px);
+			z-index: 3;
+			opacity: 0.92;
+		}
+
+		// 右下 (大): エンジン/ディテール (右端からはみ出す)
+		.kv_img_right_4701002120 {
+			right: 0;
+			top: 32%;
+			width: clamp(320px, 34vw, 500px);
+			height: clamp(300px, 48vh, 440px);
+			z-index: 3;
+		}
+
+		.kv_copy_4701002120 {
+			position: absolute;
+			top: 80%;
+			right: clamp(16px, 3vw, 48px);
+			transform: translateY(-48%);
+			z-index: 5;
+			text-align: right;
+			width: 66%;
+			max-width: 900px;
+			pointer-events: none;
+
+			.kv_sub_4701002120 {
+				font-size: clamp(13px, 1.15vw, 18px);
+				letter-spacing: 0.4em;
+				color: $pw_text;
+				margin: 0 0 clamp(20px, 2.6vw, 36px);
+				text-align: right;
+				white-space: nowrap;
+				opacity: 0.95;
+				text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+			}
+
+			.kv_main_4701002120 {
+				font-weight: 600;
+				margin: 0;
+				line-height: 1.15;
+				text-align: right;
+
+				.kv_main_line_4701002120 {
+					display: block;
+					color: $pw_text;
+					letter-spacing: 0.24em;
+					font-size: clamp(56px, 9vw, 130px);
+					line-height: 1.05;
+					text-shadow: 0 6px 30px rgba(0, 0, 0, 0.55);
+					white-space: nowrap;
+				}
+				.kv_main_line_small_4701002120 {
+					font-size: clamp(18px, 2.4vw, 38px);
+					letter-spacing: 0.22em;
+					line-height: 1.1;
+					margin-top: 0.35em;
+					color: $pw_text;
+					opacity: 0.96;
+				}
+			}
+		}
+
+		.kv_scroll_4701002120 {
+			position: absolute;
+			left: clamp(10px, 1.6vw, 24px);
+			bottom: 30px;
+			z-index: 6;
+			font-size: 120%;
+			letter-spacing: 0.4em;
+			color: $pw_text_mute;
+			text-transform: uppercase;
+			writing-mode: vertical-rl;
+
+			&::after {
+				content: "";
+				display: block;
+				width: 1px;
+				height: 42px;
+				margin: 12px auto 0;
+				background: linear-gradient($base_color, transparent);
+			}
+		}
+	}
+
+	// ======================================================================
+	// About us — reference: 上部ボンネット画像バンド + 左 copy + 右 フローティングマップ
+	// ======================================================================
+	.about_4701002120 {
+		position: relative;
+		background: $pw_bg;
+		padding: 0 0 clamp(70px, 10vw, 140px);
+
+		// 上部の車体ボンネット画像バンド
+		.about_hero_4701002120 {
+			position: relative;
+			width: 100%;
+			height: clamp(200px, 32vh, 380px);
+			background-size: cover;
+			background-position: center 40%;
+			background-repeat: no-repeat;
+
+			// 下側から黒へフェードして section 本文へ滑らかにつなぐ
+			&::after {
+				content: "";
+				position: absolute;
+				inset: auto 0 -2px 0;
+				height: 60%;
+				background: linear-gradient(180deg, transparent 0%, rgba($pw_bg, 0.8) 65%, $pw_bg 100%);
+				pointer-events: none;
+			}
+
+			// 右端を黒でカットして参照元の "左寄せ画像 + 右黒ブロック" 感を再現
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0 0 0 auto;
+				width: clamp(140px, 18vw, 320px);
+				background: linear-gradient(270deg, $pw_bg 40%, rgba($pw_bg, 0) 100%);
+				pointer-events: none;
+			}
+		}
+
+		.about_inner_4701002120 {
+			@include pw_inner;
+			display: grid;
+			grid-template-columns: 1.15fr 1fr;
+			gap: clamp(28px, 5vw, 80px);
+			align-items: start;
+			padding-top: clamp(20px, 3vw, 40px);
+			position: relative;
+			z-index: 2;
+		}
+
+		// ---- 左: コピー群 ----
+		.about_text_4701002120 {
+			padding-top: clamp(10px, 2vw, 24px);
+
+			.about_eng_wrap_4701002120 {
+				display: flex;
+				align-items: center;
+				gap: clamp(12px, 1.4vw, 20px);
+				margin: 0 0 clamp(26px, 3.5vw, 48px);
+
+				.about_eng_bar_4701002120 {
+					display: inline-block;
+					width: clamp(30px, 3.4vw, 52px);
+					height: 1px;
+					background: $base_color;
+					flex-shrink: 0;
+				}
+				.about_eng_4701002120 {
+					font-size: clamp(44px, 6.4vw, 92px);
+					letter-spacing: 0.04em;
+					color: $pw_text;
+					line-height: 1;
+					font-weight: 600;
+				}
+			}
+
+			.about_lead_4701002120 {
+				font-weight: 500;
+				font-size: clamp(18px, 1.9vw, 26px);
+				letter-spacing: 0.18em;
+				line-height: 2;
+				color: $pw_text;
+				margin: 0 0 clamp(28px, 4vw, 52px);
+
+				.about_lead_brand_4701002120 {
+					color: $base_color;
+					letter-spacing: 0.2em;
+					display: inline-block;
+					.eng {
+						letter-spacing: 0.24em;
+						margin-right: 0.1em;
+					}
+				}
+			}
+
+			.about_body_text_4701002120 {
+				p {
+					font-size: clamp(13px, 0.95vw, 14px);
+					line-height: 2.15;
+					letter-spacing: 0.1em;
+					color: $pw_text_mute;
+					margin: 0 0 1.3em;
+				}
+			}
+
+			.about_btn_wrap_4701002120 {
+				margin: clamp(30px, 4vw, 50px) 0 0;
+			}
+
+			// 横長ワイドな view more ボタン (参照元仕様)
+			.btn_viewmore_wide_4701002120 {
+				width: min(440px, 92%);
+				min-width: auto;
+				padding: 26px 48px;
+				justify-content: space-between;
+				font-size: clamp(13px, 1vw, 15px);
+				letter-spacing: 0.42em;
+			}
+		}
+
+		// ---- 右: フローティングマップ ----
+		.about_map_4701002120 {
+			position: relative;
+			width: 100%;
+			aspect-ratio: 4 / 3;
+			max-height: 420px;
+			overflow: hidden;
+			border: 1px solid $pw_border;
+			margin-top: clamp(90px, 12vw, 170px);
+			box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+
+			iframe {
+				width: 100% !important;
+				height: 100% !important;
+				border: 0;
+				display: block;
+			}
+		}
+	}
+
+	// ======================================================================
+	// Characteristics — reference: Service 7-block alternating (zero-bleed panel)
+	// 左右交互 / gray panel + offset image / 小さい番号バー / blue eng / wide CTA
+	// ======================================================================
+
+	.feature_4701002120 {
+		position: relative;
+		background: $pw_bg;
+		padding: clamp(50px, 7vw, 100px) 0 clamp(70px, 10vw, 140px);
+		overflow: hidden;
+
+		// ---- section header (orange bar + "Characteristics" + subtitle) ----
+		.feature_head_4701002120 {
+			margin-bottom: clamp(40px, 6vw, 90px);
+		}
+		.feature_head_inner_4701002120 {
+			@include pw_inner;
+			display: flex;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			gap: clamp(14px, 2.4vw, 40px);
+		}
+		.feature_head_eng_4701002120 {
+			display: flex;
+			align-items: center;
+			gap: clamp(12px, 1.4vw, 20px);
+			flex-shrink: 0;
+
+			.feature_head_bar_4701002120 {
+				display: inline-block;
+				width: clamp(30px, 3.4vw, 52px);
+				height: 1px;
+				background: $base_color;
+			}
+			.feature_head_title_4701002120 {
+				font-size: clamp(44px, 6.4vw, 92px);
+				letter-spacing: 0.04em;
+				color: $pw_text;
+				line-height: 1;
+				font-weight: 600;
+			}
+		}
+		.feature_head_sub_4701002120 {
+			font-size: clamp(12px, 0.95vw, 14px);
+			line-height: 1.9;
+			letter-spacing: 0.18em;
+			color: $pw_text_mute;
+			margin: 0 0 clamp(6px, 0.9vw, 14px);
+		}
+
+		// ---- blocks container (full-width, no inner padding for bleed visual) ----
+		.feature_blocks_4701002120 {
+			width: 100%;
+		}
+
+		// ---- single block (full-width grid with dominant visual column) ----
+		.feature_block_4701002120 {
+			position: relative;
+			display: grid;
+			align-items: center;
+			min-height: clamp(500px, 58vw, 760px);
+			margin-bottom: clamp(80px, 10vw, 150px);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		// ---- visual cluster (panel + image layered, BIG) ----
+		.feature_visual_4701002120 {
+			position: relative;
+			height: clamp(460px, 56vw, 720px);
+			width: 100%;
+		}
+		.feature_panel_4701002120 {
+			position: absolute;
+			top: -5%;
+			bottom: -3%;
+			background: #222;
+			z-index: 1;
+		}
+		.feature_image_4701002120 {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			z-index: 2;
+			box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+		}
+
+		// Block A: visual LEFT / bleed to viewport left ~60vw
+		.feature_block_left_4701002120 {
+			grid-template-columns: 60vw 1fr;
+
+			.feature_panel_4701002120 {
+				// 画像の右側に gray strip を見せつつ viewport 端までは行かない
+				left: 20%;
+				right: -1%;
+			}
+			.feature_image_4701002120 {
+				// 画像は viewport 左端までブリード（visual は 0 から始まる）
+				left: 0;
+				right: 18%;
+			}
+		}
+
+		// Block B: visual RIGHT (inverted) / bleed to viewport right ~60vw
+		.feature_block_right_4701002120 {
+			grid-template-columns: 1fr 60vw;
+
+			.feature_visual_4701002120 {
+				order: 2;
+			}
+			.feature_text_wrap_4701002120 {
+				order: 1;
+			}
+			.feature_panel_4701002120 {
+				right: 20%;
+				left: 1%;
+			}
+			.feature_image_4701002120 {
+				right: 0;
+				left: 18%;
+			}
+		}
+
+		// ---- text cluster ----
+		.feature_text_wrap_4701002120 {
+			display: flex;
+			align-items: center;
+			padding: clamp(14px, 2vw, 30px) 0;
+		}
+		.feature_text_4701002120 {
+			max-width: 440px;
+			padding: 0 clamp(10px, 1.5vw, 30px);
+		}
+		// 右テキストは viewport 右端との距離を 1200px コンテナに合わせる
+		.feature_block_left_4701002120 .feature_text_wrap_4701002120 {
+			justify-content: flex-start;
+			padding-right: max(4vw, calc((100vw - 1200px) / 2 + 24px));
+		}
+		.feature_block_left_4701002120 .feature_text_4701002120 {
+			padding-left: clamp(24px, 3.5vw, 60px);
+			padding-right: 0;
+		}
+		// 左テキストは viewport 左端との距離を 1200px コンテナに合わせる
+		.feature_block_right_4701002120 .feature_text_wrap_4701002120 {
+			justify-content: flex-end;
+			padding-left: max(4vw, calc((100vw - 1200px) / 2 + 24px));
+		}
+		.feature_block_right_4701002120 .feature_text_4701002120 {
+			padding-right: clamp(24px, 3.5vw, 60px);
+			padding-left: 0;
+		}
+
+		.feature_num_wrap_4701002120 {
+			display: flex;
+			align-items: center;
+			gap: clamp(10px, 1.2vw, 16px);
+			margin: 0 0 clamp(10px, 1.2vw, 18px);
+
+			.feature_num_bar_4701002120 {
+				display: inline-block;
+				width: clamp(22px, 2.2vw, 32px);
+				height: 1px;
+				background: $base_color;
+				flex-shrink: 0;
+			}
+			.feature_num_4701002120 {
+				font-size: clamp(34px, 3.6vw, 52px);
+				letter-spacing: 0.06em;
+				color: $pw_text;
+				line-height: 1;
+				font-weight: 400;
+			}
+		}
+		.feature_title_4701002120 {
+			font-weight: 500;
+			font-size: clamp(20px, 2.1vw, 30px);
+			letter-spacing: 0.2em;
+			line-height: 1.6;
+			color: $pw_text;
+			margin: 0 0 0.4em;
+		}
+		.feature_eng_4701002120 {
+			font-size: clamp(13px, 1.05vw, 17px);
+			letter-spacing: 0.22em;
+			color: $base_color;
+			margin: 0 0 clamp(20px, 3vw, 32px);
+			line-height: 1.2;
+			font-weight: 400;
+		}
+		.feature_body_4701002120 p {
+			font-size: clamp(13px, 0.95vw, 14px);
+			line-height: 2.05;
+			letter-spacing: 0.1em;
+			color: $pw_text_mute;
+			margin: 0 0 1.2em;
+		}
+		.feature_btn_wrap_4701002120 {
+			margin: clamp(26px, 3.4vw, 42px) 0 0;
+		}
+	}
+
+	// ======================================================================
+	// News
+	// ======================================================================
+	.news_4701002120 {
+		@include pw_section_pad;
+		background: $pw_bg;
+		position: relative;
+
+		.news_inner_4701002120 {
+			@include pw_inner;
+			border: 1px solid $pw_border;
+			padding: clamp(40px, 5vw, 70px) clamp(28px, 4vw, 60px);
+		}
+		.news_head_4701002120 {
+			text-align: center;
+			margin-bottom: clamp(30px, 4vw, 50px);
+		}
+		.news_body_4701002120 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: clamp(28px, 4vw, 60px);
+			align-items: center;
+		}
+		.news_media_4701002120 {
+			width: 100%;
+			aspect-ratio: 16 / 10;
+			background-size: cover;
+			background-position: center;
+		}
+		.news_text_4701002120 {
+			p {
+				font-size: clamp(13px, 1vw, 15px);
+				line-height: 2.1;
+				letter-spacing: 0.1em;
+				color: $pw_text_mute;
+				margin: 0 0 1.4em;
+			}
+			.news_btn_wrap_4701002120 {
+				margin-top: clamp(20px, 3vw, 34px);
+			}
+		}
+	}
+
+	// ======================================================================
+	// Contact — reference: 左: Contact 大見出し + 右: 右寄せリード / 下: 2カラム (TEL + CTA)
+	// bg: メール/ネットワークイラスト画像 + copper-tint グラデ overlay
+	// ======================================================================
+	.contact_4701002120 {
+		position: relative;
+		padding: clamp(70px, 9vw, 130px) 0 clamp(70px, 9vw, 130px);
+		isolation: isolate;
+		overflow: hidden;
+
+		// 背景 (参照元 mail/ネットワーク パターン)
+		.contact_bg_4701002120 {
+			position: absolute;
+			inset: 0;
+			background-size: cover;
+			background-position: center;
+			z-index: -3;
+			filter: brightness(0.62) contrast(1.02) saturate(0.9);
+		}
+		// 左側を暗く、右側に copper の淡い光を回す overlay
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				100deg,
+				rgba(0, 0, 0, 0.82) 0%,
+				rgba(0, 0, 0, 0.55) 45%,
+				rgba($base_color, 0.22) 78%,
+				rgba($base_color, 0.18) 100%
+			);
+			z-index: -2;
+		}
+		// 下側の暗転
+		&::after {
+			content: "";
+			position: absolute;
+			inset: auto 0 0 0;
+			height: 35%;
+			background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.55) 100%);
+			z-index: -1;
+			pointer-events: none;
+		}
+
+		.contact_inner_4701002120 {
+			@include pw_inner;
+			position: relative;
+		}
+
+		// ---- Top: 左見出し + 右リード ----
+		.contact_top_4701002120 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: end;
+			gap: clamp(24px, 4vw, 60px);
+			margin-bottom: clamp(44px, 6vw, 90px);
+		}
+		.contact_head_4701002120 {
+			text-align: left;
+			.contact_eng_wrap_4701002120 {
+				display: flex;
+				align-items: center;
+				gap: clamp(12px, 1.4vw, 20px);
+				margin: 0 0 clamp(12px, 1.6vw, 22px);
+			}
+			.contact_eng_bar_4701002120 {
+				display: inline-block;
+				width: clamp(30px, 3.4vw, 52px);
+				height: 1px;
+				background: $base_color;
+				flex-shrink: 0;
+			}
+			.contact_eng_4701002120 {
+				font-size: clamp(44px, 6.4vw, 92px);
+				letter-spacing: 0.04em;
+				color: $pw_text;
+				line-height: 1;
+				font-weight: 600;
+			}
+			.contact_title_ja_4701002120 {
+				font-size: clamp(13px, 1vw, 15px);
+				letter-spacing: 0.4em;
+				color: $pw_text_mute;
+				margin: 0 0 0 clamp(44px, 5vw, 72px);
+				line-height: 1;
+			}
+		}
+		.contact_lead_4701002120 {
+			font-size: clamp(13px, 1vw, 15px);
+			line-height: 2.1;
+			letter-spacing: 0.14em;
+			color: $pw_text_mute;
+			margin: 0;
+			text-align: right;
+			justify-self: end;
+			max-width: 520px;
+		}
+
+		// ---- Bottom: 2カラム (TEL + CTA) ----
+		.contact_grid_4701002120 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: clamp(32px, 5vw, 80px);
+			align-items: center;
+		}
+		.contact_col_4701002120 {
+			padding: 0;
+		}
+		.contact_col_label_4701002120 {
+			display: flex;
+			align-items: center;
+			gap: clamp(10px, 1.2vw, 16px);
+			font-size: clamp(12px, 0.95vw, 14px);
+			letter-spacing: 0.26em;
+			color: $pw_text_mute;
+			margin: 0 0 clamp(14px, 1.8vw, 22px);
+
+			.contact_col_bar_4701002120 {
+				display: inline-block;
+				width: clamp(22px, 2.2vw, 32px);
+				height: 1px;
+				background: $base_color;
+				flex-shrink: 0;
+			}
+		}
+
+		// TEL column
+		.contact_tel_no_4701002120 {
+			font-size: clamp(32px, 4.4vw, 58px);
+			letter-spacing: 0.04em;
+			color: $base_color;
+			margin: 0 0 clamp(10px, 1.2vw, 14px);
+			line-height: 1.05;
+			display: inline-flex;
+			align-items: baseline;
+			gap: 0.12em;
+
+			.contact_tel_mark_4701002120 {
+				color: $base_color;
+				letter-spacing: 0.08em;
+			}
+			a {
+				color: $base_color;
+				transition: filter 0.3s ease;
+				&:hover {
+					filter: brightness(1.15);
+				}
+			}
+		}
+		.contact_hours_4701002120 {
+			font-size: clamp(12px, 0.9vw, 13px);
+			color: $pw_text_weak;
+			margin: 0;
+			letter-spacing: 0.18em;
+		}
+
+		// CTA wide pill
+		.btn_contact_wide_4701002120 {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.9em;
+			width: 100%;
+			max-width: 460px;
+			padding: 28px 34px;
+			color: $pw_text;
+			font-size: clamp(13px, 1.05vw, 16px);
+			letter-spacing: 0.36em;
+			line-height: 1;
+			@include bg_grd;
+			border-radius: 999px;
+			position: relative;
+			overflow: hidden;
+			transition:
+				transform 0.3s ease,
+				box-shadow 0.3s ease;
+			box-shadow: 0 14px 36px rgba($base_color, 0.35);
+
+			> * {
+				position: relative;
+				z-index: 1;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				@include bg_grd;
+				opacity: 0;
+				transition: opacity 0.4s ease;
+			}
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 20px 46px rgba($base_color, 0.5);
+				&::before {
+					opacity: 1;
+				}
+			}
+			i {
+				font-size: 1.1em;
+			}
+			.contact_chevron_4701002120 {
+				margin-left: auto;
+				font-size: 1em;
+				opacity: 0.9;
+			}
+		}
+	}
+
+	// ======================================================================
+	// Footer — reference: 上段 中央ブランド + 右 SNS / copper divider / 下段 TEL + nav
+	// ======================================================================
+	.footer_4701002120 {
+		background: $pw_footer_bg;
+		padding: clamp(60px, 7vw, 110px) 0 clamp(30px, 3.5vw, 46px);
+		color: $pw_text_mute;
+		position: relative;
+
+		.footer_inner_4701002120 {
+			@include pw_inner;
+		}
+
+		// ---- Upper: brand (centered) + SNS (absolute right) ----
+		.footer_upper_4701002120 {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 clamp(0px, 2vw, 40px) clamp(30px, 4vw, 56px);
+		}
+
+		.footer_brand_4701002120 {
+			text-align: center;
+
+			.footer_logo_wrap_4701002120 {
+				margin: 0 0 clamp(14px, 2vw, 22px);
+				line-height: 1;
+			}
+			.footer_logo_4701002120 {
+				display: inline-block;
+				width: auto;
+				max-width: clamp(90px, 10vw, 140px);
+				height: auto;
+				filter: brightness(0) invert(1);
+				opacity: 0.95;
+			}
+
+			.footer_catch_4701002120 {
+				font-size: clamp(11px, 0.9vw, 13px);
+				letter-spacing: 0.3em;
+				margin: 0 0 clamp(12px, 1.6vw, 22px);
+				color: $pw_text_mute;
+			}
+			.footer_addr_4701002120 {
+				font-size: clamp(11px, 0.9vw, 13px);
+				letter-spacing: 0.14em;
+				line-height: 1.9;
+				color: $pw_text_mute;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+			}
+		}
+
+		.footer_sns_4701002120 {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			gap: 10px;
+
+			li a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border: 1px solid $pw_border;
+				border-radius: 50%;
+				color: $pw_text;
+				font-size: 15px;
+				transition:
+					background 0.3s ease,
+					border-color 0.3s ease,
+					color 0.3s ease,
+					transform 0.3s ease;
+
+				&:hover {
+					@include bg_grd;
+					border-color: transparent;
+					color: $pw_text;
+					transform: translateY(-2px);
+				}
+			}
+		}
+
+		// ---- Copper divider ----
+		.footer_divider_4701002120 {
+			border: 0;
+			height: 1px;
+			background: linear-gradient(
+				90deg,
+				rgba($base_color, 0) 0%,
+				rgba($base_color, 0.8) 20%,
+				$base_color 50%,
+				rgba($base_color, 0.8) 80%,
+				rgba($base_color, 0) 100%
+			);
+			margin: 0;
+		}
+
+		// ---- Lower: TEL block + nav columns ----
+		.footer_lower_4701002120 {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: clamp(28px, 4vw, 60px);
+			padding: clamp(30px, 4vw, 52px) 0 clamp(24px, 3vw, 36px);
+			align-items: start;
+		}
+
+		.footer_tel_block_4701002120 {
+			.footer_tel_label_4701002120 {
+				font-size: clamp(11px, 0.9vw, 13px);
+				letter-spacing: 0.4em;
+				color: $base_color;
+				margin: 0 0 clamp(6px, 0.8vw, 10px);
+				line-height: 1;
+			}
+			.footer_tel_no_4701002120 {
+				font-size: clamp(22px, 2.4vw, 32px);
+				letter-spacing: 0.06em;
+				color: $pw_text;
+				margin: 0 0 clamp(8px, 1vw, 12px);
+				line-height: 1.1;
+
+				a {
+					color: $pw_text;
+					transition: color 0.3s ease;
+					&:hover {
+						color: $base_color;
+					}
+				}
+			}
+			.footer_tel_hours_4701002120 {
+				font-size: clamp(11px, 0.88vw, 13px);
+				color: $pw_text_mute;
+				letter-spacing: 0.16em;
+				margin: 0;
+			}
+		}
+
+		.footer_nav_4701002120 {
+			grid-column: 2 / 4;
+			display: block;
+			grid-template-columns: 1fr 1fr;
+			gap: clamp(20px, 3vw, 44px);
+
+			.footer_nav_col_4701002120 {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: clamp(8px, 1vw, 12px);
+				ul {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+				}
+				li a {
+					font-size: clamp(12px, 0.92vw, 13px);
+					letter-spacing: 0.18em;
+					color: $pw_text_mute;
+					position: relative;
+					padding-left: 16px;
+					transition:
+						color 0.3s ease,
+						padding-left 0.3s ease;
+
+					&::before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 50%;
+						width: 6px;
+						height: 1px;
+						background: $base_color;
+						transform: translateY(-50%);
+						transition: width 0.3s ease;
+					}
+					&:hover {
+						color: $pw_text;
+						padding-left: 22px;
+						&::before {
+							width: 12px;
+						}
+					}
+				}
+			}
+		}
+
+		// ---- Copyright ----
+		.footer_copy_4701002120 {
+			text-align: center;
+			font-size: 11px;
+			letter-spacing: 0.3em;
+			color: $pw_text_weak;
+			margin: clamp(12px, 2vw, 24px) 0 0;
+			padding-top: clamp(16px, 2vw, 24px);
+			border-top: 1px solid rgba($pw_border, 0.6);
+		}
+	}
+
+	// ======================================================================
+	// Coating (施工の流れ)
+	// ======================================================================
+	.coating_4701002120 {
+		position: relative;
+		background: $pw_bg;
+		color: $pw_text;
+		@include pw_section_pad;
+		padding-top: clamp(90px, 12vw, 160px);
+		padding-bottom: clamp(70px, 10vw, 140px);
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0 auto 0 0;
+			width: clamp(180px, 26vw, 360px);
+			background: linear-gradient(90deg, rgba($base_color, 0.06) 0%, rgba($base_color, 0) 100%);
+			pointer-events: none;
+		}
+
+		.coating_inner_4701002120 {
+			@include pw_inner;
+			position: relative;
+			z-index: 2;
+		}
+
+		.coating_head_4701002120 {
+			margin-bottom: clamp(40px, 6vw, 80px);
+		}
+
+		.coating_eng_wrap_4701002120 {
+			display: inline-flex;
+			align-items: center;
+			gap: clamp(14px, 1.6vw, 22px);
+			margin-bottom: clamp(16px, 2vw, 24px);
+
+			.coating_eng_bar_4701002120 {
+				display: block;
+				width: clamp(44px, 6vw, 72px);
+				height: 1px;
+				@include bg_grd;
+			}
+
+			.coating_eng_4701002120 {
+				@include pw_eng_label;
+				font-size: clamp(13px, 1.2vw, 16px);
+				letter-spacing: 0.46em;
+			}
+		}
+
+		.coating_title_ja_4701002120 {
+			@include pw_title_ja;
+			margin-bottom: clamp(14px, 1.8vw, 22px);
+		}
+
+		.coating_lead_4701002120 {
+			color: $pw_text_mute;
+			font-size: clamp(14px, 1.1vw, 16px);
+			letter-spacing: 0.08em;
+			line-height: 2.1;
+			max-width: 620px;
+		}
+
+		.flow_list_4701002120 {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: clamp(24px, 3vw, 44px);
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: clamp(64px, 7vw, 100px);
+				width: 1px;
+				background: linear-gradient(
+					180deg,
+					rgba($base_color, 0) 0%,
+					rgba($base_color, 0.5) 12%,
+					rgba($base_color, 0.5) 88%,
+					rgba($base_color, 0) 100%
+				);
+				pointer-events: none;
+			}
+		}
+
+		.flow_step_4701002120 {
+			position: relative;
+			display: grid;
+			grid-template-columns: clamp(130px, 14vw, 200px) 1fr;
+			gap: clamp(24px, 3vw, 56px);
+			align-items: flex-start;
+			padding: clamp(22px, 2.6vw, 36px) 0;
+			border-bottom: 1px solid rgba($pw_border, 0.8);
+
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		.flow_step_num_4701002120 {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: clamp(8px, 1vw, 14px);
+			padding-left: clamp(0px, 1.2vw, 18px);
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: clamp(60px, 6.8vw, 96px);
+				transform: translate(0, -50%);
+				width: clamp(28px, 3vw, 48px);
+				height: 1px;
+				@include bg_grd;
+				opacity: 0.8;
+			}
+
+			.flow_step_num_val_4701002120 {
+				display: block;
+				font-size: clamp(40px, 5.4vw, 78px);
+				line-height: 1;
+				letter-spacing: 0.02em;
+				color: $pw_text;
+				font-weight: 400;
+			}
+
+			.flow_step_num_label_4701002120 {
+				display: block;
+				font-size: clamp(10px, 0.95vw, 12px);
+				letter-spacing: 0.46em;
+				color: $base_color;
+				text-transform: uppercase;
+				padding-left: 2px;
+			}
+		}
+
+		.flow_step_body_4701002120 {
+			padding-top: clamp(4px, 0.6vw, 10px);
+		}
+
+		.flow_step_title_4701002120 {
+			font-size: clamp(18px, 1.9vw, 26px);
+			letter-spacing: 0.1em;
+			line-height: 1.7;
+			color: $pw_text;
+			font-weight: 600;
+			margin-bottom: clamp(10px, 1.4vw, 16px);
+		}
+
+		.flow_step_lead_4701002120 {
+			color: $base_color;
+			font-size: clamp(13px, 1vw, 15px);
+			letter-spacing: 0.1em;
+			line-height: 1.9;
+			margin-bottom: clamp(10px, 1.2vw, 16px);
+		}
+
+		.flow_step_desc_4701002120 {
+			color: $pw_text_mute;
+			font-size: clamp(13px, 1vw, 15px);
+			letter-spacing: 0.08em;
+			line-height: 2.05;
+		}
+
+		.coating_delivery_4701002120 {
+			margin-top: clamp(50px, 7vw, 100px);
+			padding: clamp(32px, 4.4vw, 60px) clamp(28px, 4vw, 56px);
+			background: $pw_panel;
+			border: 1px solid rgba($pw_border, 0.9);
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: clamp(60px, 8vw, 120px);
+				height: 2px;
+				@include bg_grd;
+			}
+		}
+
+		.coating_delivery_head_4701002120 {
+			margin-bottom: clamp(18px, 2.4vw, 30px);
+		}
+
+		.coating_delivery_eng_wrap_4701002120 {
+			display: inline-flex;
+			align-items: center;
+			gap: clamp(12px, 1.4vw, 20px);
+			margin-bottom: clamp(10px, 1.3vw, 16px);
+
+			.coating_delivery_bar_4701002120 {
+				display: block;
+				width: clamp(36px, 5vw, 60px);
+				height: 1px;
+				@include bg_grd;
+			}
+
+			.coating_delivery_eng_4701002120 {
+				@include pw_eng_label;
+				font-size: clamp(12px, 1.1vw, 14px);
+				letter-spacing: 0.46em;
+			}
+		}
+
+		.coating_delivery_title_4701002120 {
+			font-size: clamp(20px, 2.2vw, 30px);
+			letter-spacing: 0.12em;
+			line-height: 1.7;
+			color: $pw_text;
+			font-weight: 600;
+		}
+
+		.coating_delivery_body_4701002120 {
+			p {
+				color: $pw_text_mute;
+				font-size: clamp(13px, 1vw, 15px);
+				letter-spacing: 0.08em;
+				line-height: 2.1;
+
+				& + p {
+					margin-top: clamp(10px, 1.4vw, 18px);
+				}
+			}
+		}
+	}
+
+	// ======================================================================
+	// Shop (店舗情報)
+	// ======================================================================
+	.shop_4701002120 {
+		position: relative;
+		background: $pw_footer_bg;
+		color: $pw_text;
+		padding-bottom: clamp(70px, 10vw, 140px);
+
+		.shop_hero_4701002120 {
+			position: relative;
+			width: 100%;
+			height: clamp(220px, 32vw, 440px);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.35) 0%,
+					rgba(0, 0, 0, 0.65) 60%,
+					rgba($pw_footer_bg, 1) 100%
+				);
+			}
+		}
+
+		.shop_inner_4701002120 {
+			@include pw_inner;
+			position: relative;
+			z-index: 2;
+			margin-top: clamp(-110px, -10vw, -60px);
+		}
+
+		.shop_head_4701002120 {
+			text-align: center;
+			padding: clamp(36px, 5vw, 72px) clamp(20px, 3vw, 40px) clamp(36px, 5vw, 68px);
+			background: $pw_panel;
+			border: 1px solid rgba($pw_border, 0.9);
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: clamp(60px, 8vw, 120px);
+				height: 2px;
+				@include bg_grd;
+			}
+		}
+
+		.shop_eng_wrap_4701002120 {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: clamp(14px, 1.6vw, 22px);
+			margin-bottom: clamp(16px, 2vw, 24px);
+
+			.shop_eng_bar_4701002120 {
+				display: block;
+				width: clamp(44px, 6vw, 72px);
+				height: 1px;
+				@include bg_grd;
+			}
+
+			.shop_eng_4701002120 {
+				@include pw_eng_label;
+				font-size: clamp(13px, 1.2vw, 16px);
+				letter-spacing: 0.46em;
+			}
+		}
+
+		.shop_title_ja_4701002120 {
+			@include pw_title_ja;
+			margin-bottom: clamp(14px, 1.8vw, 22px);
+		}
+
+		.shop_lead_4701002120 {
+			color: $pw_text_mute;
+			font-size: clamp(14px, 1.1vw, 16px);
+			letter-spacing: 0.1em;
+			line-height: 2.1;
+			max-width: 680px;
+			margin-inline: auto;
+		}
+
+		.shop_commits_4701002120 {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: clamp(22px, 3vw, 44px);
+			margin-top: clamp(48px, 7vw, 96px);
+		}
+
+		.shop_commit_4701002120 {
+			position: relative;
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+			gap: 0;
+			align-items: stretch;
+			background: $pw_panel_soft;
+			border: 1px solid rgba($pw_border, 0.85);
+			overflow: hidden;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: clamp(80px, 10vw, 150px);
+				height: 2px;
+				@include bg_grd;
+				z-index: 3;
+			}
+		}
+
+		.shop_commit_visual_4701002120 {
+			position: relative;
+			min-height: clamp(240px, 32vw, 380px);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(160deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.35) 100%);
+				pointer-events: none;
+			}
+		}
+
+		.shop_commit_text_4701002120 {
+			padding: clamp(30px, 4vw, 56px) clamp(26px, 4vw, 56px);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.shop_commit_img_left_4701002120 {
+			.shop_commit_visual_4701002120 {
+				order: 1;
+			}
+			.shop_commit_text_4701002120 {
+				order: 2;
+			}
+		}
+
+		.shop_commit_img_right_4701002120 {
+			.shop_commit_visual_4701002120 {
+				order: 2;
+			}
+			.shop_commit_text_4701002120 {
+				order: 1;
+			}
+		}
+
+		.shop_commit_num_4701002120 {
+			display: flex;
+			align-items: baseline;
+			gap: clamp(12px, 1.4vw, 20px);
+			margin-bottom: clamp(14px, 1.8vw, 22px);
+
+			.shop_commit_num_bar_4701002120 {
+				display: block;
+				width: clamp(24px, 3vw, 36px);
+				height: 1px;
+				@include bg_grd;
+				align-self: center;
+			}
+
+			.shop_commit_num_val_4701002120 {
+				font-size: clamp(28px, 3.4vw, 48px);
+				line-height: 1;
+				letter-spacing: 0.04em;
+				color: $pw_text;
+				font-weight: 400;
+			}
+
+			.shop_commit_num_eng_4701002120 {
+				font-size: clamp(11px, 1vw, 13px);
+				letter-spacing: 0.44em;
+				color: $base_color;
+				text-transform: uppercase;
+			}
+		}
+
+		.shop_commit_title_4701002120 {
+			font-size: clamp(18px, 2vw, 26px);
+			letter-spacing: 0.12em;
+			line-height: 1.8;
+			color: $pw_text;
+			font-weight: 600;
+			margin-bottom: clamp(14px, 1.8vw, 22px);
+		}
+
+		.shop_commit_body_4701002120 {
+			p {
+				color: $pw_text_mute;
+				font-size: clamp(13px, 1vw, 15px);
+				letter-spacing: 0.08em;
+				line-height: 2.1;
+
+				& + p {
+					margin-top: clamp(10px, 1.2vw, 16px);
+				}
+			}
+		}
+
+		.shop_overview_4701002120 {
+			margin-top: clamp(50px, 7vw, 100px);
+			padding: clamp(32px, 4.4vw, 60px) clamp(28px, 4vw, 56px);
+			background: $pw_panel;
+			border: 1px solid rgba($pw_border, 0.9);
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: clamp(60px, 8vw, 120px);
+				height: 2px;
+				@include bg_grd;
+			}
+		}
+
+		.shop_overview_head_4701002120 {
+			text-align: left;
+			margin-bottom: clamp(24px, 3vw, 38px);
+			padding-bottom: clamp(18px, 2.4vw, 28px);
+			border-bottom: 1px solid rgba($pw_border, 0.8);
+		}
+
+		.shop_overview_eng_wrap_4701002120 {
+			display: inline-flex;
+			align-items: center;
+			gap: clamp(12px, 1.4vw, 20px);
+			margin-bottom: clamp(10px, 1.3vw, 16px);
+
+			.shop_overview_bar_4701002120 {
+				display: block;
+				width: clamp(36px, 5vw, 60px);
+				height: 1px;
+				@include bg_grd;
+			}
+
+			.shop_overview_eng_4701002120 {
+				@include pw_eng_label;
+				font-size: clamp(12px, 1.1vw, 14px);
+				letter-spacing: 0.46em;
+			}
+		}
+
+		.shop_overview_title_4701002120 {
+			font-size: clamp(20px, 2.2vw, 30px);
+			letter-spacing: 0.12em;
+			line-height: 1.7;
+			color: $pw_text;
+			font-weight: 600;
+		}
+
+		.shop_overview_list_4701002120 {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 0;
+		}
+
+		.shop_overview_row_4701002120 {
+			display: grid;
+			grid-template-columns: clamp(120px, 14vw, 180px) 1fr;
+			gap: clamp(16px, 2vw, 28px);
+			align-items: baseline;
+			padding: clamp(14px, 1.8vw, 22px) 0;
+			border-bottom: 1px dashed rgba($pw_border, 0.8);
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			dt {
+				color: $base_color;
+				font-size: clamp(12px, 1vw, 14px);
+				letter-spacing: 0.22em;
+				line-height: 1.8;
+			}
+
+			dd {
+				color: $pw_text;
+				font-size: clamp(13px, 1vw, 15px);
+				letter-spacing: 0.1em;
+				line-height: 2;
+			}
+		}
+	}
+
+	// ======================================================================
+	// Price (コーティングメニュー料金表)
+	// ======================================================================
+	.price_4701002120 {
+		position: relative;
+		background: $pw_bg;
+		color: $pw_text;
+		@include pw_section_pad;
+		padding-top: clamp(70px, 10vw, 140px);
+		padding-bottom: clamp(80px, 11vw, 160px);
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0 0 auto auto;
+			width: clamp(180px, 26vw, 360px);
+			height: 100%;
+			background: linear-gradient(270deg, rgba($base_color, 0.06) 0%, rgba($base_color, 0) 100%);
+			pointer-events: none;
+		}
+
+		.price_inner_4701002120 {
+			@include pw_inner;
+			position: relative;
+			z-index: 2;
+		}
+
+		.price_head_4701002120 {
+			text-align: center;
+			margin-bottom: clamp(48px, 7vw, 96px);
+		}
+
+		.price_eng_wrap_4701002120 {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: clamp(14px, 1.6vw, 22px);
+			margin-bottom: clamp(16px, 2vw, 24px);
+
+			.price_eng_bar_4701002120 {
+				display: block;
+				width: clamp(44px, 6vw, 72px);
+				height: 1px;
+				@include bg_grd;
+			}
+
+			.price_eng_4701002120 {
+				@include pw_eng_label;
+				font-size: clamp(13px, 1.2vw, 16px);
+				letter-spacing: 0.46em;
+			}
+		}
+
+		.price_title_ja_4701002120 {
+			@include pw_title_ja;
+			margin-bottom: clamp(14px, 1.8vw, 22px);
+		}
+
+		.price_lead_4701002120 {
+			color: $pw_text_mute;
+			font-size: clamp(14px, 1.1vw, 16px);
+			letter-spacing: 0.1em;
+			line-height: 2.1;
+			max-width: 640px;
+			margin-inline: auto;
+		}
+
+		.price_groups_4701002120 {
+			display: flex;
+			flex-direction: column;
+			gap: clamp(40px, 6vw, 72px);
+		}
+
+		.price_group_4701002120 {
+			position: relative;
+			padding: clamp(28px, 3.6vw, 48px) clamp(24px, 3.4vw, 44px) clamp(28px, 3.6vw, 48px);
+			background: $pw_panel;
+			border: 1px solid rgba($pw_border, 0.85);
+		}
+
+		.price_group_head_4701002120 {
+			position: relative;
+			display: flex;
+			align-items: baseline;
+			flex-wrap: wrap;
+			gap: clamp(12px, 1.6vw, 22px);
+			padding-bottom: clamp(16px, 2vw, 24px);
+			margin-bottom: clamp(20px, 2.6vw, 32px);
+			border-bottom: 1px solid rgba($pw_border, 0.7);
+
+			.price_group_mark_4701002120 {
+				display: block;
+				width: clamp(28px, 3.4vw, 44px);
+				height: 2px;
+				@include bg_grd;
+				align-self: center;
+			}
+
+			.price_group_title_4701002120 {
+				font-size: clamp(20px, 2.2vw, 30px);
+				letter-spacing: 0.14em;
+				line-height: 1.6;
+				color: $pw_text;
+				font-weight: 600;
+			}
+
+			.price_group_eng_4701002120 {
+				font-size: clamp(11px, 1vw, 13px);
+				letter-spacing: 0.44em;
+				color: $base_color;
+				text-transform: uppercase;
+			}
+		}
+
+		.price_group_intro_4701002120 {
+			margin-bottom: clamp(28px, 4vw, 48px);
+		}
+
+		.price_group_catch_4701002120 {
+			text-align: center;
+			padding: clamp(18px, 2.4vw, 28px) 0 clamp(18px, 2.4vw, 28px);
+
+			.price_group_catch_main_4701002120 {
+				font-size: clamp(20px, 2.4vw, 32px);
+				letter-spacing: 0.16em;
+				line-height: 1.7;
+				color: $pw_text;
+				font-weight: 600;
+				margin-bottom: clamp(8px, 1vw, 14px);
+			}
+
+			.price_group_catch_sub_4701002120 {
+				font-size: clamp(13px, 1.1vw, 16px);
+				letter-spacing: 0.16em;
+				line-height: 1.8;
+				color: $base_color;
+				font-weight: 400;
+			}
+		}
+
+		.price_group_lead_4701002120 {
+			text-align: center;
+			color: $pw_text_mute;
+			font-size: clamp(13px, 1.05vw, 15px);
+			letter-spacing: 0.1em;
+			line-height: 2.15;
+			max-width: 760px;
+			margin: 0 auto clamp(28px, 3.6vw, 44px);
+			padding: clamp(18px, 2.2vw, 28px) 0 0;
+			border-top: 1px solid rgba($pw_border, 0.55);
+		}
+
+		.price_feature_block_4701002120 {
+			margin-top: clamp(24px, 3.2vw, 40px);
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+
+		.price_feature_title_4701002120 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: clamp(12px, 1.6vw, 20px);
+			margin-bottom: clamp(16px, 2.2vw, 26px);
+
+			.price_feature_bar_4701002120 {
+				display: block;
+				flex: 0 0 auto;
+				width: clamp(24px, 3.4vw, 50px);
+				height: 1px;
+				@include bg_grd;
+				opacity: 0.85;
+			}
+
+			.price_feature_title_text_4701002120 {
+				flex: 0 0 auto;
+				font-size: clamp(14px, 1.4vw, 18px);
+				letter-spacing: 0.18em;
+				line-height: 1.6;
+				color: $pw_text;
+				font-weight: 600;
+				text-align: center;
+			}
+		}
+
+		.price_feature_body_4701002120 {
+			max-width: 820px;
+			margin-inline: auto;
+
+			p {
+				color: $pw_text_mute;
+				font-size: clamp(13px, 1vw, 15px);
+				letter-spacing: 0.08em;
+				line-height: 2.15;
+
+				& + p {
+					margin-top: clamp(10px, 1.2vw, 16px);
+				}
+			}
+
+			.price_inline_note_4701002120 {
+				margin-top: clamp(14px, 1.8vw, 22px);
+				padding-top: clamp(10px, 1.2vw, 14px);
+				border-top: 1px dashed rgba($pw_border, 0.6);
+				font-size: clamp(11px, 0.9vw, 13px);
+				color: $pw_text_weak;
+				letter-spacing: 0.08em;
+			}
+		}
+
+		// --- Layer diagram (ジャムセラー) ---
+		.price_layer_diagram_4701002120 {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: clamp(6px, 0.8vw, 10px);
+			max-width: 420px;
+			margin: clamp(20px, 2.8vw, 32px) auto clamp(14px, 1.8vw, 22px);
+			padding: clamp(14px, 1.8vw, 22px) clamp(14px, 1.8vw, 22px) 0;
+			background: rgba($pw_panel_soft, 0.8);
+			border: 1px solid rgba($pw_border, 0.6);
+		}
+
+		.price_layer_row_4701002120 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: clamp(10px, 1.4vw, 20px);
+			padding: clamp(12px, 1.6vw, 18px) clamp(14px, 2vw, 22px);
+			border: 1px solid rgba($base_color, 0.35);
+			background: rgba($pw_bg, 0.6);
+
+			.price_layer_ja_4701002120 {
+				font-size: clamp(13px, 1.1vw, 15px);
+				letter-spacing: 0.16em;
+				line-height: 1.5;
+				color: $pw_text;
+				font-weight: 500;
+			}
+
+			.price_layer_type_4701002120 {
+				font-size: clamp(11px, 0.9vw, 12px);
+				letter-spacing: 0.2em;
+				color: $base_color;
+			}
+		}
+
+		.price_layer_over_4701002120 {
+			background: linear-gradient(180deg, rgba($base_color, 0.28) 0%, rgba($base_color, 0.14) 100%);
+			border-color: rgba($base_color, 0.55);
+		}
+
+		.price_layer_top_4701002120 {
+			background: linear-gradient(180deg, rgba($base_color, 0.18) 0%, rgba($base_color, 0.08) 100%);
+		}
+
+		.price_layer_base_4701002120 {
+			background: linear-gradient(180deg, rgba($base_color, 0.1) 0%, rgba($base_color, 0.04) 100%);
+		}
+
+		.price_layer_paint_4701002120 {
+			margin: clamp(4px, 0.6vw, 8px) -1px -1px;
+			padding: clamp(10px, 1.4vw, 14px) clamp(14px, 2vw, 22px);
+			background: rgba(#000, 0.5);
+			border-top: 1px dashed rgba($pw_border, 0.6);
+			text-align: center;
+
+			.price_layer_paint_label_4701002120 {
+				font-size: clamp(11px, 0.95vw, 13px);
+				letter-spacing: 0.24em;
+				color: $pw_text_weak;
+			}
+		}
+
+		.price_table_wrap_4701002120 {
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+
+			// thin scrollbar styling (webkit)
+			&::-webkit-scrollbar {
+				height: 6px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: rgba($base_color, 0.4);
+				border-radius: 3px;
+			}
+			&::-webkit-scrollbar-track {
+				background: rgba(#ffffff, 0.04);
+			}
+		}
+
+		.price_table_4701002120 {
+			width: 100%;
+			min-width: 820px;
+			border-collapse: collapse;
+			border-spacing: 0;
+			table-layout: fixed;
+
+			thead {
+				th {
+					background: $pw_panel_soft;
+					color: $pw_text;
+					font-size: clamp(12px, 1vw, 14px);
+					letter-spacing: 0.14em;
+					line-height: 1.4;
+					padding: clamp(12px, 1.4vw, 18px) clamp(8px, 1vw, 14px);
+					text-align: center;
+					font-weight: 500;
+					border: 1px solid rgba($pw_border, 0.8);
+					position: relative;
+
+					&.price_th_menu_4701002120 {
+						text-align: left;
+						min-width: clamp(150px, 18vw, 220px);
+						color: $base_color;
+						letter-spacing: 0.16em;
+						font-size: clamp(11px, 0.95vw, 13px);
+					}
+				}
+			}
+
+			tbody {
+				th,
+				td {
+					border: 1px solid rgba($pw_border, 0.7);
+					padding: clamp(12px, 1.4vw, 18px) clamp(8px, 1vw, 14px);
+					vertical-align: middle;
+					font-size: clamp(12px, 1vw, 14px);
+					line-height: 1.5;
+				}
+
+				.price_row_label_4701002120 {
+					background: rgba($pw_panel_soft, 0.6);
+					color: $pw_text;
+					text-align: left;
+					font-weight: 500;
+					letter-spacing: 0.12em;
+					font-size: clamp(12px, 1vw, 14px);
+					min-width: clamp(150px, 18vw, 220px);
+				}
+
+				td {
+					background: transparent;
+					color: $pw_text;
+					text-align: center;
+
+					.price_main_4701002120 {
+						display: block;
+						font-size: clamp(13px, 1.1vw, 15px);
+						letter-spacing: 0.04em;
+						color: $pw_text;
+						font-weight: 500;
+					}
+
+					.price_before_4701002120 {
+						display: block;
+						margin-top: 3px;
+						font-size: clamp(10px, 0.8vw, 11px);
+						letter-spacing: 0.05em;
+						color: $pw_text_weak;
+						font-weight: 400;
+					}
+				}
+
+				tr:nth-child(even) td,
+				tr:nth-child(even) .price_row_label_4701002120 {
+					background: rgba(#ffffff, 0.015);
+				}
+				tr:nth-child(even) .price_row_label_4701002120 {
+					background: rgba($pw_panel_soft, 0.8);
+				}
+			}
+		}
+
+		.price_note_4701002120 {
+			margin-top: clamp(28px, 4vw, 48px);
+			font-size: clamp(12px, 1vw, 14px);
+			letter-spacing: 0.1em;
+			line-height: 1.9;
+			color: $pw_text_mute;
+			text-align: right;
+		}
+
+		.price_note_sub_4701002120 {
+			margin-top: 6px;
+			font-size: clamp(11px, 0.9vw, 13px);
+			letter-spacing: 0.08em;
+			line-height: 1.8;
+			color: $pw_text_weak;
+			text-align: right;
+		}
+	}
+
+	// ======================================================================
+	// Tablet (<= 896px)
+	// ======================================================================
+	@media screen and (max-width: 896px) {
+		.header_4701002120 {
+			padding: 10px 0;
+			.header_inner_4701002120 {
+				padding-left: 16px;
+				gap: 10px;
+			}
+			.header_nav_4701002120 {
+				display: none;
+			}
+			.header_cta_4701002120 {
+				height: 64px;
+				padding: 0 18px;
+				font-size: 11px;
+			}
+		}
+
+		.kv_4701002120 {
+			min-height: 620px;
+			height: 100vh;
+
+			.kv_grad_left_4701002120 {
+				bottom: 6%;
+				width: 28vw;
+				height: 20vh;
+			}
+			.kv_grad_right_4701002120 {
+				top: 10%;
+				width: 22vw;
+				height: 16vh;
+			}
+			.kv_img_left_4701002120 {
+				left: 0;
+				top: 16%;
+				width: 28vw;
+				height: 28vh;
+				opacity: 0.7;
+			}
+			.kv_img_center_4701002120 {
+				left: 10%;
+				top: 18%;
+				width: 70vw;
+				height: 78vh;
+				max-height: 640px;
+			}
+			.kv_img_right_top_4701002120 {
+				right: 4vw;
+				top: 14%;
+				width: 24vw;
+				height: 16vh;
+				opacity: 0.85;
+			}
+			.kv_img_right_4701002120 {
+				right: 0;
+				top: 46%;
+				width: 32vw;
+				height: 32vh;
+				opacity: 0.85;
+			}
+			.kv_copy_4701002120 {
+				right: 4vw;
+				width: 70%;
+				.kv_sub_4701002120 {
+					font-size: 12px;
+					letter-spacing: 0.3em;
+				}
+				.kv_main_4701002120 .kv_main_line_4701002120 {
+					font-size: clamp(44px, 11vw, 80px);
+				}
+				.kv_main_4701002120 .kv_main_line_small_4701002120 {
+					font-size: clamp(15px, 3vw, 24px);
+				}
+			}
+		}
+
+		.about_4701002120 {
+			.about_inner_4701002120 {
+				grid-template-columns: 1fr;
+				gap: 40px;
+			}
+			.about_map_4701002120 {
+				margin-top: 0;
+				max-height: 360px;
+			}
+			.about_hero_4701002120 {
+				height: clamp(180px, 22vh, 240px);
+			}
+		}
+
+		.news_4701002120 .news_body_4701002120 {
+			grid-template-columns: 1fr;
+		}
+
+		.contact_4701002120 {
+			.contact_top_4701002120 {
+				grid-template-columns: 1fr;
+				align-items: start;
+				gap: 24px;
+			}
+			.contact_lead_4701002120 {
+				text-align: left;
+				justify-self: start;
+				max-width: 100%;
+			}
+			.contact_head_4701002120 {
+				.contact_eng_4701002120 {
+					font-size: clamp(38px, 8vw, 64px);
+				}
+				.contact_title_ja_4701002120 {
+					margin-left: 36px;
+				}
+			}
+			.contact_grid_4701002120 {
+				grid-template-columns: 1fr;
+				gap: 36px;
+			}
+			.btn_contact_wide_4701002120 {
+				max-width: 100%;
+			}
+		}
+
+		.footer_4701002120 {
+			.footer_upper_4701002120 {
+				flex-direction: column;
+				gap: 28px;
+				padding-bottom: 32px;
+			}
+			.footer_sns_4701002120 {
+				position: static;
+				transform: none;
+				justify-content: center;
+			}
+			.footer_lower_4701002120 {
+				grid-template-columns: 1fr;
+				gap: 28px;
+				text-align: center;
+			}
+			.footer_tel_block_4701002120 {
+				text-align: center;
+			}
+			.footer_nav_4701002120 {
+				grid-column: 1;
+				grid-template-columns: 1fr 1fr;
+				.footer_nav_col_4701002120 {
+					align-items: flex-start;
+					li a {
+						padding-left: 0;
+						&::before {
+							display: none;
+						}
+						&:hover {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.feature_4701002120 {
+			.feature_head_inner_4701002120 {
+				align-items: flex-start;
+				flex-direction: column;
+			}
+			.feature_block_4701002120,
+			.feature_block_left_4701002120,
+			.feature_block_right_4701002120 {
+				grid-template-columns: 1fr;
+				gap: 28px;
+				min-height: auto;
+			}
+			.feature_block_right_4701002120 {
+				.feature_visual_4701002120 {
+					order: 1;
+				}
+				.feature_text_wrap_4701002120 {
+					order: 2;
+				}
+			}
+			.feature_visual_4701002120 {
+				height: clamp(300px, 52vw, 440px);
+			}
+			.feature_block_left_4701002120 {
+				.feature_panel_4701002120 {
+					left: 15%;
+					right: -4%;
+					top: -4%;
+					bottom: -2%;
+				}
+				.feature_image_4701002120 {
+					left: 0;
+					right: 16%;
+				}
+			}
+			.feature_block_right_4701002120 {
+				.feature_panel_4701002120 {
+					left: -4%;
+					right: 15%;
+					top: -4%;
+					bottom: -2%;
+				}
+				.feature_image_4701002120 {
+					left: 16%;
+					right: 0;
+				}
+			}
+			.feature_text_wrap_4701002120 {
+				padding: 0 !important;
+				justify-content: flex-start !important;
+			}
+			.feature_text_4701002120,
+			.feature_block_left_4701002120 .feature_text_4701002120,
+			.feature_block_right_4701002120 .feature_text_4701002120 {
+				max-width: 100%;
+				padding: 0 clamp(16px, 4vw, 32px);
+			}
+		}
+
+		.footer_4701002120 .footer_inner_4701002120 {
+			grid-template-columns: 1fr 1fr;
+			.footer_brand_4701002120 {
+				grid-column: 1 / -1;
+				text-align: center;
+				.footer_logo_4701002120 {
+					margin-inline: auto;
+				}
+			}
+			.footer_sns_4701002120 {
+				grid-column: 1 / -1;
+				justify-content: center;
+				margin-top: 14px;
+			}
+		}
+
+		.coating_4701002120 {
+			.flow_list_4701002120 {
+				&::before {
+					left: clamp(52px, 10vw, 72px);
+				}
+			}
+			.flow_step_4701002120 {
+				grid-template-columns: clamp(100px, 18vw, 140px) 1fr;
+				gap: clamp(18px, 3vw, 32px);
+			}
+			.flow_step_num_4701002120 {
+				&::before {
+					left: clamp(48px, 9vw, 68px);
+					width: clamp(20px, 4vw, 32px);
+				}
+				.flow_step_num_val_4701002120 {
+					font-size: clamp(34px, 7vw, 56px);
+				}
+			}
+			.coating_delivery_4701002120 {
+				padding: clamp(24px, 4vw, 36px) clamp(20px, 3.4vw, 32px);
+			}
+		}
+
+		.shop_4701002120 {
+			.shop_inner_4701002120 {
+				margin-top: clamp(-80px, -9vw, -48px);
+			}
+			.shop_hero_4701002120 {
+				height: clamp(200px, 36vw, 320px);
+			}
+			.shop_head_4701002120 {
+				padding: clamp(32px, 5vw, 48px) clamp(20px, 3vw, 32px) clamp(32px, 5vw, 48px);
+			}
+			.shop_commit_4701002120 {
+				grid-template-columns: 1fr;
+			}
+			.shop_commit_visual_4701002120 {
+				min-height: clamp(180px, 36vw, 280px);
+			}
+			.shop_commit_text_4701002120 {
+				padding: clamp(26px, 4vw, 36px) clamp(22px, 3.4vw, 32px);
+			}
+			.shop_commit_img_left_4701002120,
+			.shop_commit_img_right_4701002120 {
+				.shop_commit_visual_4701002120 {
+					order: 1;
+				}
+				.shop_commit_text_4701002120 {
+					order: 2;
+				}
+			}
+			.shop_overview_4701002120 {
+				padding: clamp(24px, 4vw, 36px) clamp(20px, 3.4vw, 32px);
+			}
+			.shop_overview_row_4701002120 {
+				grid-template-columns: clamp(100px, 18vw, 140px) 1fr;
+				gap: clamp(14px, 2.4vw, 22px);
+			}
+		}
+
+		.price_4701002120 {
+			.price_group_4701002120 {
+				padding: clamp(24px, 3.6vw, 36px) clamp(18px, 3vw, 28px);
+			}
+			.price_group_head_4701002120 {
+				gap: clamp(10px, 1.6vw, 18px);
+			}
+			.price_table_4701002120 {
+				min-width: 720px;
+
+				thead th {
+					padding: clamp(10px, 1.6vw, 14px) clamp(6px, 1vw, 10px);
+				}
+				tbody th,
+				tbody td {
+					padding: clamp(10px, 1.6vw, 14px) clamp(6px, 1vw, 10px);
+				}
+			}
+			.price_note_4701002120,
+			.price_note_sub_4701002120 {
+				text-align: left;
+			}
+		}
+	}
+
+	// ======================================================================
+	// Mobile (<= 500px)
+	// ======================================================================
+	@media screen and (max-width: 500px) {
+		.header_4701002120 {
+			.header_logo_4701002120 {
+				.header_logo_img_4701002120 {
+					height: 32px;
+					max-width: 110px;
+				}
+			}
+			.header_cta_4701002120 {
+				height: 52px;
+				padding: 0 14px;
+				letter-spacing: 0.2em;
+				font-size: 10px;
+			}
+		}
+
+		.kv_4701002120 {
+			min-height: 560px;
+			height: 92vh;
+
+			.kv_grad_left_4701002120 {
+				bottom: 4%;
+				width: 34vw;
+				height: 18vh;
+			}
+			.kv_grad_right_4701002120 {
+				top: 8%;
+				width: 28vw;
+				height: 14vh;
+			}
+			.kv_img_left_4701002120 {
+				left: 0;
+				top: 14%;
+				width: 32vw;
+				height: 22vh;
+				opacity: 0.6;
+			}
+			.kv_img_center_4701002120 {
+				left: 6%;
+				top: 16%;
+				width: 68vw;
+				height: 58vh;
+			}
+			.kv_img_right_top_4701002120 {
+				right: 3vw;
+				top: 10%;
+				width: 28vw;
+				height: 14vh;
+				opacity: 0.75;
+			}
+			.kv_img_right_4701002120 {
+				right: 0;
+				top: 50%;
+				width: 36vw;
+				height: 22vh;
+				opacity: 0.75;
+			}
+			.kv_copy_4701002120 {
+				right: 5vw;
+				width: 80%;
+				top: 52%;
+				.kv_sub_4701002120 {
+					font-size: 11px;
+					letter-spacing: 0.24em;
+				}
+				.kv_main_4701002120 {
+					.kv_main_line_4701002120 {
+						font-size: 46px;
+						letter-spacing: 0.18em;
+					}
+					.kv_main_line_small_4701002120 {
+						font-size: 14px;
+						letter-spacing: 0.18em;
+					}
+				}
+			}
+		}
+
+		.sec_title_4701002120 {
+			font-size: 20px;
+			letter-spacing: 0.1em;
+		}
+
+		.btn_viewmore_4701002120,
+		.btn_contact_4701002120 {
+			width: 100%;
+			max-width: 280px;
+			justify-content: center;
+		}
+
+		.about_4701002120 {
+			.about_text_4701002120 {
+				.about_eng_wrap_4701002120 .about_eng_4701002120 {
+					font-size: 44px;
+				}
+				.about_lead_4701002120 {
+					font-size: 16px;
+					letter-spacing: 0.14em;
+				}
+				.btn_viewmore_wide_4701002120 {
+					width: 100%;
+					padding: 22px 24px;
+					letter-spacing: 0.32em;
+				}
+			}
+		}
+
+		.feature_4701002120 {
+			.feature_head_title_4701002120 {
+				font-size: 38px !important;
+			}
+			.feature_num_wrap_4701002120 .feature_num_4701002120 {
+				font-size: 32px;
+			}
+			.feature_title_4701002120 {
+				font-size: 18px;
+				letter-spacing: 0.14em;
+			}
+			.feature_eng_4701002120 {
+				font-size: 12px;
+				letter-spacing: 0.18em;
+			}
+		}
+
+		.news_4701002120 .news_inner_4701002120 {
+			padding: 28px 18px;
+		}
+
+		.contact_4701002120 {
+			.contact_head_4701002120 {
+				.contact_eng_4701002120 {
+					font-size: 42px;
+				}
+				.contact_title_ja_4701002120 {
+					margin-left: 26px;
+					letter-spacing: 0.3em;
+				}
+			}
+			.contact_tel_no_4701002120 {
+				font-size: 28px;
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 0.1em;
+			}
+			.btn_contact_wide_4701002120 {
+				padding: 22px 24px;
+				letter-spacing: 0.3em;
+			}
+		}
+
+		.footer_4701002120 {
+			.footer_brand_4701002120 .footer_logo_4701002120 {
+				max-width: 100px;
+			}
+			.footer_nav_4701002120 {
+				grid-template-columns: 1fr;
+				gap: 10px;
+				.footer_nav_col_4701002120 {
+					align-items: center;
+				}
+			}
+		}
+
+		.coating_4701002120 {
+			padding-top: clamp(56px, 14vw, 80px);
+			padding-bottom: clamp(48px, 12vw, 72px);
+
+			.coating_head_4701002120 {
+				margin-bottom: 32px;
+			}
+			.flow_list_4701002120 {
+				&::before {
+					display: none;
+				}
+				gap: 0;
+			}
+			.flow_step_4701002120 {
+				grid-template-columns: 1fr;
+				gap: 12px;
+				padding: 22px 0;
+			}
+			.flow_step_num_4701002120 {
+				flex-direction: row;
+				align-items: baseline;
+				gap: 14px;
+				padding-left: 0;
+				&::before {
+					display: none;
+				}
+				.flow_step_num_val_4701002120 {
+					font-size: 38px;
+				}
+				.flow_step_num_label_4701002120 {
+					font-size: 10px;
+					letter-spacing: 0.4em;
+				}
+			}
+			.flow_step_title_4701002120 {
+				font-size: 17px;
+				letter-spacing: 0.08em;
+				line-height: 1.6;
+			}
+			.flow_step_lead_4701002120,
+			.flow_step_desc_4701002120 {
+				font-size: 13px;
+				line-height: 1.95;
+			}
+
+			.coating_delivery_4701002120 {
+				margin-top: 40px;
+				padding: 24px 20px;
+			}
+			.coating_delivery_title_4701002120 {
+				font-size: 18px;
+				letter-spacing: 0.08em;
+			}
+			.coating_delivery_body_4701002120 p {
+				font-size: 13px;
+				line-height: 2;
+			}
+		}
+
+		.shop_4701002120 {
+			padding-bottom: clamp(48px, 12vw, 72px);
+
+			.shop_inner_4701002120 {
+				margin-top: -50px;
+			}
+			.shop_hero_4701002120 {
+				height: 180px;
+			}
+			.shop_head_4701002120 {
+				padding: 30px 18px 30px;
+			}
+			.shop_title_ja_4701002120 {
+				font-size: 20px;
+				letter-spacing: 0.08em;
+			}
+			.shop_lead_4701002120 {
+				font-size: 13px;
+				line-height: 2;
+			}
+
+			.shop_commits_4701002120 {
+				margin-top: 36px;
+				gap: 20px;
+			}
+			.shop_commit_visual_4701002120 {
+				min-height: 160px;
+			}
+			.shop_commit_text_4701002120 {
+				padding: 24px 20px;
+			}
+			.shop_commit_num_4701002120 {
+				gap: 12px;
+				.shop_commit_num_val_4701002120 {
+					font-size: 26px;
+				}
+				.shop_commit_num_eng_4701002120 {
+					font-size: 10px;
+					letter-spacing: 0.4em;
+				}
+			}
+			.shop_commit_title_4701002120 {
+				font-size: 16px;
+				letter-spacing: 0.08em;
+				line-height: 1.7;
+			}
+			.shop_commit_body_4701002120 p {
+				font-size: 13px;
+				line-height: 2;
+			}
+
+			.shop_overview_4701002120 {
+				margin-top: 36px;
+				padding: 24px 18px;
+			}
+			.shop_overview_title_4701002120 {
+				font-size: 18px;
+				letter-spacing: 0.08em;
+			}
+			.shop_overview_row_4701002120 {
+				grid-template-columns: 1fr;
+				gap: 4px;
+				padding: 14px 0;
+				dt {
+					font-size: 11px;
+					letter-spacing: 0.3em;
+				}
+				dd {
+					font-size: 13px;
+					line-height: 1.95;
+				}
+			}
+		}
+
+		.price_4701002120 {
+			padding-top: clamp(56px, 14vw, 80px);
+			padding-bottom: clamp(56px, 14vw, 88px);
+
+			.price_head_4701002120 {
+				margin-bottom: 36px;
+			}
+			.price_title_ja_4701002120 {
+				font-size: 20px;
+				letter-spacing: 0.08em;
+			}
+			.price_lead_4701002120 {
+				font-size: 13px;
+				line-height: 2;
+			}
+			.price_groups_4701002120 {
+				gap: 28px;
+			}
+			.price_group_4701002120 {
+				padding: 20px 14px;
+			}
+			.price_group_head_4701002120 {
+				gap: 10px;
+				padding-bottom: 14px;
+				margin-bottom: 16px;
+
+				.price_group_title_4701002120 {
+					font-size: 18px;
+					letter-spacing: 0.1em;
+				}
+				.price_group_eng_4701002120 {
+					font-size: 10px;
+					letter-spacing: 0.38em;
+				}
+			}
+			.price_group_intro_4701002120 {
+				margin-bottom: 24px;
+			}
+			.price_group_catch_4701002120 {
+				padding: 14px 0 16px;
+				.price_group_catch_main_4701002120 {
+					font-size: 18px;
+					letter-spacing: 0.1em;
+					line-height: 1.6;
+				}
+				.price_group_catch_sub_4701002120 {
+					font-size: 12px;
+					letter-spacing: 0.12em;
+				}
+			}
+			.price_group_lead_4701002120 {
+				font-size: 12px;
+				line-height: 2;
+				letter-spacing: 0.06em;
+				padding-top: 16px;
+				margin-bottom: 24px;
+				text-align: left;
+			}
+			.price_feature_block_4701002120 {
+				margin-top: 22px;
+			}
+			.price_feature_title_4701002120 {
+				gap: 10px;
+				margin-bottom: 14px;
+				.price_feature_bar_4701002120 {
+					width: 20px;
+				}
+				.price_feature_title_text_4701002120 {
+					font-size: 13px;
+					letter-spacing: 0.12em;
+				}
+			}
+			.price_feature_body_4701002120 {
+				p {
+					font-size: 12px;
+					line-height: 2;
+					letter-spacing: 0.05em;
+				}
+				.price_inline_note_4701002120 {
+					font-size: 10px;
+				}
+			}
+			.price_layer_diagram_4701002120 {
+				padding: 12px 12px 0;
+				gap: 6px;
+				margin: 18px auto 12px;
+			}
+			.price_layer_row_4701002120 {
+				flex-direction: column;
+				align-items: stretch;
+				gap: 4px;
+				padding: 12px 14px;
+				text-align: center;
+				.price_layer_ja_4701002120 {
+					font-size: 12px;
+				}
+				.price_layer_type_4701002120 {
+					font-size: 10px;
+					letter-spacing: 0.18em;
+				}
+			}
+			.price_layer_paint_4701002120 {
+				padding: 10px 14px;
+				.price_layer_paint_label_4701002120 {
+					font-size: 10px;
+					letter-spacing: 0.22em;
+				}
+			}
+			.price_table_4701002120 {
+				min-width: 620px;
+
+				thead th {
+					padding: 10px 6px;
+					font-size: 11px;
+					letter-spacing: 0.1em;
+					&.price_th_menu_4701002120 {
+						font-size: 10px;
+						letter-spacing: 0.14em;
+						min-width: 130px;
+					}
+				}
+				tbody th,
+				tbody td {
+					padding: 10px 6px;
+				}
+				tbody {
+					.price_row_label_4701002120 {
+						font-size: 11px;
+						letter-spacing: 0.08em;
+						min-width: 130px;
+					}
+					td {
+						.price_main_4701002120 {
+							font-size: 12px;
+						}
+						.price_before_4701002120 {
+							font-size: 10px;
+						}
+					}
+				}
+			}
+			.price_note_4701002120 {
+				font-size: 11px;
+				line-height: 1.85;
+			}
+			.price_note_sub_4701002120 {
+				font-size: 10px;
+				line-height: 1.8;
+			}
+		}
+	}
+}

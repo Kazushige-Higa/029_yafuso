@@ -1,0 +1,19 @@
+.list_check {
+    &.sub {
+        li {
+            &:before {
+                color: $sub_color;
+            }
+        }
+    }
+    li {
+        padding: 0.3em;
+        &:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 8px;
+            color: $base_color;
+        }
+    }
+}

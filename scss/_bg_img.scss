@@ -1,0 +1,100 @@
+.bg_img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    @include bg_img;
+    @include bg_color;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &.bg_grd {
+        background: none;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            background: rgb(0, 0, 0);
+            @include bg_grd;
+            background-position: center center;
+            background-size: cover;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+    }
+    &.top {
+        &:before,
+        &:after {
+            height: 50%;
+            top: 0;
+            bottom: inherit;
+        }
+    }
+    &.left {
+        &:before,
+        &:after {
+            width: 50%;
+            left: 0;
+            right: inherit;
+        }
+    }
+    &.right {
+        &:before,
+        &:after {
+            width: 50%;
+            left: inherit;
+            right: 0;
+        }
+    }
+    &.bottom {
+        &:before,
+        &:after {
+            height: 50%;
+            top: inherit;
+            bottom: 0;
+        }
+    }
+    &.repeat {
+        &:before {
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-position: center bottom;
+        }
+    }
+    &.fixed {
+        &:before {
+            background-attachment: fixed !important;
+            object-fit: cover;
+            @include for-size(phone-only) {
+                background-attachment: inherit;
+            }
+        }
+    }
+    &.monochrome {
+        &:before {
+            filter: grayscale(100%);
+        }
+    }
+    &.sepia {
+        &:before {
+            filter: sepia(100%);
+        }
+    }
+}

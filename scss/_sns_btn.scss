@@ -1,0 +1,154 @@
+.sns_btn {
+    display: flex;
+    gap: 0.2em 0.2em;
+    @include for-size(phone-only) {
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    &.center {
+        align-items: center;
+        justify-content: center;
+    }
+    &.right {
+        align-items: right;
+        justify-content: right;
+    }
+    li {
+        display: grid;
+        place-items: center;
+        width: 3em;
+        height: 3em;
+        border-radius: 100%;
+        position: relative;
+        &:hover {
+            opacity: 0.8;
+        }
+        a {
+            z-index: 1;
+            text-align: center;
+            fill: #fff;
+            line-height: 1;
+        }
+        img {
+            width: 1.5em;
+            height: 1.5em;
+        }
+        div {
+            font-size: 70%;
+            display: block;
+            position: absolute;
+            bottom: -2em;
+            width: 11em;
+            text-align: center;
+        }
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+        }
+        @include for-size(phone-only) {
+            width: 3em;
+            height: 3em;
+            svg {
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+        &.tel {
+            background: $base_color;
+        }
+        &.cart {
+            background: $base_color;
+        }
+        &.mail {
+            background: $base_color;
+        }
+        &.youtube {
+            background: #e61f19;
+        }
+        &.facebook {
+            background: #315096;
+        }
+        &.twitter {
+            background: #55acee;
+        }
+        &.twitter {
+            background: #111;
+        }
+        &.instagram {
+            background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat !important;
+            background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat !important;
+        }
+        &.hatena {
+            background: #008fde;
+        }
+        &.poket {
+            background: #dc3d50;
+        }
+        &.feedly {
+            background: #6cc655;
+        }
+        &.line {
+            background: #50cc1a;
+        }
+        &.tiktok {
+            background: #111;
+        }
+        &.x {
+            background: #111;
+        }
+        &.pc {
+            background: #111;
+        }
+    }
+    &.white {
+        li {
+            &.facebook,
+            &.twitter,
+            &.instagram,
+            &.hatena,
+            &.poket,
+            &.feedly,
+            &.tiktok,
+            &.line {
+                background: #fff !important;
+                box-shadow: rgba(#888, 0.1) 0 0 2px 2px;
+                fill: #fff;
+                stroke-miterlimit: 5;
+                stroke-width: 2;
+            }
+
+            &.facebook {
+                stroke: #315096;
+            }
+
+            &.twitter {
+                stroke: #55acee;
+            }
+
+            &.instagram {
+                stroke: #f13f79 !important;
+            }
+
+            &.hatena {
+                stroke: #008fde;
+            }
+
+            &.poket {
+                stroke: #dc3d50;
+            }
+
+            &.feedly {
+                stroke: #6cc655;
+            }
+
+            &.line {
+                stroke: #50cc1a;
+            }
+
+            &.tiktok {
+                stroke: #111;
+            }
+        }
+    }
+}

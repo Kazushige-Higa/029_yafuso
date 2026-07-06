@@ -1,0 +1,2352 @@
+@charset "utf-8";
+
+$shalom_base: #888807;
+$shalom_sub: #84cee4;
+$shalom_bg: #f7fcf6;
+$shalom_deep: #1f5f54;
+$shalom_text: #273f39;
+$shalom_muted: #64756f;
+$shalom_white: #fffefa;
+$shalom_line: rgba(136, 136, 7, 0.18);
+$shalom_shadow: 0 18px 45px rgba(68, 92, 67, 0.13);
+
+@mixin shalom_inner_4701002140 {
+  width: min(88%, 1180px);
+  margin-inline: auto;
+}
+
+.shalom_page_4701002140 {
+  --shalom_base: #{$shalom_base};
+  --shalom_sub: #{$shalom_sub};
+  color: $shalom_text;
+  background:
+    radial-gradient(circle at 8% 12%, rgba($shalom_sub, 0.16), transparent 24%),
+    linear-gradient(180deg, $shalom_bg 0%, #fff 32%, $shalom_bg 100%);
+  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.shalom_inner_4701002140 {
+  @include shalom_inner_4701002140;
+}
+
+.shalom_header_4701002140 {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 19999;
+  padding: 20px 0 12px;
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(136, 136, 7, 0.08);
+  backdrop-filter: blur(14px);
+  transition:
+    padding 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+  &.is_scrolled_4701002140 {
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 28px rgba(31, 95, 84, 0.08);
+  }
+}
+
+.shalom_page_4701002140 #nav_slide_toggle {
+  background: linear-gradient(135deg, $shalom_base, #a4a41d);
+  box-shadow: 0 12px 26px rgba($shalom_base, 0.24);
+}
+
+.shalom_header_inner_4701002140 {
+  width: min(92%, 1280px);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 44px);
+}
+
+.shalom_logo_4701002140 {
+  width: clamp(76px, 400px, 232px);
+  margin: 0;
+  line-height: 1;
+
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+}
+
+.shalom_nav_4701002140 {
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2vw, 32px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: #253c37;
+    font-size: clamp(12px, 0.92vw, 14px);
+    font-weight: 700;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      height: 2px;
+      border-radius: 999px;
+      background: $shalom_base;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.24s ease;
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.shalom_header_contact_4701002140,
+.shalom_sp_contact_4701002140 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, $shalom_base, #a0a019);
+  box-shadow: 0 12px 22px rgba($shalom_base, 0.22);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.shalom_sp_contact_4701002140 {
+  width: min(82%, 320px);
+  margin: 0 auto;
+}
+
+.shalom_hero_4701002140 {
+  position: relative;
+  min-height: clamp(650px, 58vw, 820px);
+  padding: clamp(118px, 10vw, 160px) 0 120px;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.shalom_hero_bg_4701002140 {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 76% 28%, rgba(255, 255, 255, 0.42), transparent 21%),
+    radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.32), transparent 28%),
+    linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.58) 0 39%,
+      rgba(247, 252, 246, 0.28) 50%,
+      rgba(132, 206, 228, 0.08) 100%
+    ),
+    url(#{$img}/bg_top.webp);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.04);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.62) 0%,
+        rgba(255, 255, 255, 0.42) 42%,
+        rgba(255, 255, 255, 0.02) 100%
+      ),
+      radial-gradient(circle at 8% 90%, rgba($shalom_sub, 0.12), transparent 24%);
+  }
+}
+
+.shalom_hero_inner_4701002140 {
+  @include shalom_inner_4701002140;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(330px, 0.78fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 88px);
+}
+
+.shalom_hero_copy_4701002140 {
+  position: relative;
+  z-index: 2;
+  padding-top: 26px;
+
+  h2 {
+    margin: 0;
+    color: #24493f;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    line-height: 1.72;
+    text-shadow: 0 2px 18px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.shalom_hero_label_4701002140 {
+  width: fit-content;
+  margin: 0 0 22px;
+  padding: 9px 18px;
+  border: 1px solid rgba($shalom_base, 0.24);
+  border-radius: 999px;
+  color: $shalom_base;
+  background: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.shalom_hero_lead_4701002140 {
+  margin: 22px 0 0;
+  color: #365a52;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.shalom_hero_buttons_4701002140 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 22px;
+  margin-top: 42px;
+}
+
+.shalom_btn_4701002140 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-width: 170px;
+  min-height: 58px;
+  padding: 0 30px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 15px 34px rgba(31, 95, 84, 0.16);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 38px rgba(31, 95, 84, 0.22);
+  }
+}
+
+.shalom_btn_base_4701002140 {
+  background: linear-gradient(135deg, $shalom_base, #a1a019);
+}
+
+.shalom_btn_sub_4701002140 {
+  background: linear-gradient(135deg, $shalom_sub, #68bfd8);
+}
+
+.shalom_hero_photo_4701002140 {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 490px);
+  margin: 18px 0 0 auto;
+  border-radius: 56% 44% 47% 53% / 44% 48% 52% 56%;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(48, 79, 59, 0.18);
+  background: radial-gradient(circle at 50% 45%, rgba($shalom_sub, 0.16), transparent 44%), rgba(255, 255, 255, 0.86);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.shalom_hero_slider_4701002140 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shalom_hero_slide_4701002140 {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+
+  &.is_active_4701002140 {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  img {
+    animation: shalom_hero_zoom_4701002140 20s ease-in-out infinite;
+    transform-origin: center center;
+  }
+
+  &:not(:first-child) {
+    padding: clamp(28px, 4vw, 54px);
+    background: radial-gradient(
+      circle at 50% 48%,
+      rgba(255, 255, 255, 0.96),
+      rgba(247, 252, 246, 0.8) 58%,
+      rgba($shalom_sub, 0.1) 100%
+    );
+
+    img {
+      object-fit: contain;
+      filter: drop-shadow(0 18px 22px rgba(48, 79, 59, 0.12));
+    }
+  }
+}
+
+@keyframes shalom_hero_zoom_4701002140 {
+  0% {
+    transform: scale(1.04);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.04);
+  }
+}
+
+.shalom_flower {
+  position: absolute;
+  z-index: 1;
+  width: clamp(180px, 22vw, 340px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.shalom_flower_hero_4701002140 {
+  right: max(-52px, -4vw);
+  bottom: 100px;
+}
+
+.shalom_wave_4701002140 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 2;
+  height: 150px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  path:first-child {
+    fill: $shalom_bg;
+  }
+}
+
+.shalom_wave_line_4701002140 {
+  fill: none;
+  stroke: rgba($shalom_sub, 0.48);
+  stroke-width: 2;
+}
+
+.shalom_section_4701002140 {
+  position: relative;
+  padding: clamp(72px, 9vw, 128px) 0;
+}
+
+.shalom_section_head_4701002140 {
+  margin-bottom: clamp(32px, 5vw, 56px);
+  text-align: center;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 18px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    line-height: 1.4;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 78px;
+      height: 13px;
+      background:
+        radial-gradient(circle at 11px 6px, rgba($shalom_base, 0.8) 0 2px, transparent 3px),
+        linear-gradient(110deg, transparent 0 12px, rgba($shalom_base, 0.68) 13px 14px, transparent 15px 100%);
+      border-bottom: 2px solid rgba($shalom_base, 0.45);
+      border-radius: 999px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.shalom_section_head_left_4701002140 {
+  text-align: left;
+
+  h2::after {
+    left: 0;
+    transform: none;
+  }
+}
+
+.shalom_section_en_4701002140 {
+  margin: 0 0 8px;
+  color: rgba($shalom_base, 0.72);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(15px, 1.4vw, 20px);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.shalom_greeting_4701002140 {
+  background: radial-gradient(circle at 86% 28%, rgba($shalom_sub, 0.12), transparent 25%), $shalom_bg;
+}
+
+.shalom_greeting_grid_4701002140 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, 0.86fr);
+  align-items: center;
+  gap: clamp(42px, 8vw, 110px);
+}
+
+.shalom_body_4701002140 {
+  color: #334941;
+  line-height: 2.2;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 1.45em;
+  }
+}
+
+.shalom_greeting_photo_4701002140 {
+  position: relative;
+  margin: 0;
+
+  &::before {
+    content: none;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.shalom_news_4701002140 {
+  position: relative;
+  padding: clamp(58px, 7vw, 88px) 0;
+  background:
+    linear-gradient(90deg, rgba(247, 252, 246, 0.78), rgba(132, 206, 228, 0.25), rgba(247, 252, 246, 0.92)), #eef9fb;
+  overflow: hidden;
+}
+
+.shalom_flower_news_left_4701002140 {
+  left: -150px;
+  bottom: 16px;
+  transform: rotate(10deg);
+  opacity: 0.58;
+}
+
+.shalom_flower_news_right_4701002140 {
+  right: -130px;
+  bottom: 12px;
+  transform: scaleX(-1) rotate(8deg);
+  opacity: 0.62;
+}
+
+.shalom_news_head_4701002140 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+
+  .shalom_section_head_4701002140 {
+    margin-bottom: 0;
+  }
+}
+
+.shalom_news_more_4701002140 {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: $shalom_base;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.shalom_news_list_4701002140 {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 26px rgba(78, 103, 105, 0.08);
+}
+
+.shalom_news_item_4701002140 {
+  display: grid;
+  grid-template-columns: 120px 104px minmax(0, 1fr) 20px;
+  align-items: center;
+  gap: 22px;
+  min-height: 70px;
+  padding: 0 28px;
+  border-bottom: 1px solid rgba(100, 117, 111, 0.12);
+  color: $shalom_text;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  time {
+    color: $shalom_muted;
+    font-family: "Jost", sans-serif;
+  }
+
+  > i {
+    color: rgba($shalom_base, 0.7);
+  }
+}
+
+.shalom_news_badge_4701002140 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25px;
+  border-radius: 999px;
+  color: #fff;
+  background: $shalom_sub;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.shalom_news_badge_base_4701002140 {
+  background: $shalom_base;
+}
+
+.shalom_news_title_4701002140 {
+  overflow: hidden;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.shalom_feature_4701002140 {
+  background: linear-gradient(180deg, #fff 0%, $shalom_bg 100%);
+}
+
+.shalom_feature_grid_4701002140 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 3vw, 34px);
+}
+
+.shalom_feature_card_4701002140 {
+  position: relative;
+  min-height: 280px;
+  padding: 34px 30px 32px 128px;
+  border: 1px solid $shalom_line;
+  border-radius: 8px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 242, 0.84)), $shalom_white;
+  box-shadow: 0 12px 32px rgba(75, 94, 74, 0.1);
+
+  h3 {
+    margin: 0 0 18px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    line-height: 1.75;
+  }
+
+  p {
+    margin: 0;
+    color: #445b54;
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
+.shalom_feature_num_4701002140 {
+  position: absolute;
+  left: 28px;
+  top: 32px;
+  color: $shalom_base;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.shalom_feature_icon_4701002140 {
+  position: absolute;
+  left: 24px;
+  top: 86px;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 142px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 20px rgba(75, 94, 74, 0.08);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.shalom_links_4701002140 {
+  background: radial-gradient(circle at 92% 88%, rgba($shalom_sub, 0.14), transparent 22%), $shalom_bg;
+}
+
+.shalom_link_grid_4701002140 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.5vw, 28px);
+}
+
+.shalom_link_card_4701002140 {
+  position: relative;
+  overflow: hidden;
+  min-height: 292px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 36px rgba(78, 99, 78, 0.12);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 44px rgba(78, 99, 78, 0.17);
+  }
+}
+
+.shalom_link_img_4701002140 {
+  display: block;
+  height: 145px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+.shalom_link_card_4701002140:hover .shalom_link_img_4701002140 img {
+  transform: scale(1.05);
+}
+
+.shalom_link_icon_4701002140 {
+  position: absolute;
+  top: 92px;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  color: $shalom_deep;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 28px rgba(62, 90, 71, 0.11);
+  font-size: 28px;
+  transform: translateX(-50%);
+}
+
+.shalom_link_title_4701002140 {
+  display: block;
+  padding: 54px 18px 48px;
+  color: #283f39;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.shalom_link_arrow_4701002140 {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  color: rgba($shalom_base, 0.78);
+  transform: translateX(-50%);
+}
+
+.shalom_contact_band_4701002140 {
+  position: relative;
+  overflow: hidden;
+  padding: 38px 0;
+  background:
+    linear-gradient(90deg, rgba($shalom_sub, 0.24), rgba(255, 255, 255, 0.86) 48%, rgba($shalom_sub, 0.24)), $shalom_bg;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 4vw;
+    bottom: -28px;
+    width: 230px;
+    height: 120px;
+    background: url("#{$img}/flowers.png") center / contain no-repeat;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+  }
+}
+
+.shalom_contact_inner_4701002140 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+
+  p {
+    margin: 0;
+    color: #2c4e46;
+    font-weight: 700;
+    line-height: 1.9;
+  }
+}
+
+.shalom_contact_btn_4701002140 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: min(100%, 410px);
+  min-height: 62px;
+  padding: 0 28px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, $shalom_base, #a5a51e);
+  box-shadow: 0 18px 34px rgba($shalom_base, 0.24);
+  font-weight: 800;
+}
+
+.shalom_footer_4701002140 {
+  padding: 42px 0 30px;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(31, 95, 84, 0.98), rgba(93, 116, 47, 0.98)), $shalom_deep;
+}
+
+.shalom_footer_inner_4701002140 {
+  width: min(92%, 1240px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  align-items: center;
+  gap: 28px 46px;
+}
+
+.shalom_footer_brand_4701002140 {
+  display: inline-flex;
+  align-items: center;
+
+  img {
+    width: clamp(96px,200vw,228px);
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    object-fit: contain;
+  }
+}
+
+.shalom_footer_nav_4701002140 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px 26px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shalom_copy_4701002140 {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.shalom_about_page_4701002140 {
+  scroll-margin-top: 110px;
+  color: $shalom_text;
+  background:
+    radial-gradient(circle at 10% 22%, rgba($shalom_sub, 0.1), transparent 22%),
+    linear-gradient(180deg, #fff 0%, $shalom_bg 54%, #fff 100%);
+}
+
+.shalom_about_inner_4701002140 {
+  width: min(88%, 1180px);
+  margin-inline: auto;
+}
+
+.shalom_about_kv_4701002140 {
+  position: relative;
+  min-height: clamp(560px, 50vw, 720px);
+  padding: clamp(86px, 8vw, 126px) 0 120px;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.42)),
+    url("#{$img}/forest_path.webp") center / cover no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(circle at 22% 24%, rgba(255, 255, 255, 0.94), transparent 30%),
+      linear-gradient(90deg, rgba(247, 252, 246, 0.92) 0 48%, rgba(247, 252, 246, 0.2) 100%);
+  }
+}
+
+.shalom_about_kv_inner_4701002140 {
+  @include shalom_inner_4701002140;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.82fr);
+  align-items: center;
+  gap: clamp(38px, 6vw, 92px);
+}
+
+.shalom_about_breadcrumb_4701002140 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  color: #38564f;
+  font-size: 13px;
+  font-weight: 700;
+
+  i {
+    color: rgba($shalom_base, 0.65);
+    font-size: 10px;
+  }
+}
+
+.shalom_about_page_title_4701002140 {
+  position: relative;
+  width: fit-content;
+  margin: 0 0 38px;
+  padding-bottom: 18px;
+  color: #24493f;
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.35;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 90px;
+    height: 12px;
+    border-bottom: 2px solid rgba($shalom_base, 0.5);
+    border-radius: 999px;
+  }
+}
+
+.shalom_about_kv_copy_4701002140 {
+  h2 {
+    margin: 0;
+    color: #24493f;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    line-height: 1.72;
+  }
+}
+
+.shalom_about_kv_lead_4701002140 {
+  margin: 28px 0 0;
+  color: #365a52;
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 700;
+  line-height: 2;
+}
+
+.shalom_about_kv_photo_4701002140 {
+  position: relative;
+  margin: 0;
+  border-radius: 52% 48% 46% 54% / 45% 46% 54% 55%;
+  overflow: hidden;
+  box-shadow: 0 24px 72px rgba(48, 79, 59, 0.16);
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1.08;
+    object-fit: cover;
+  }
+}
+
+.shalom_about_kv_flower_4701002140 {
+  position: absolute;
+  right: max(-54px, -3vw);
+  bottom: 104px;
+  z-index: 2;
+  width: clamp(200px, 23vw, 350px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.shalom_about_wave_4701002140 {
+  position: absolute;
+  inset: auto 0 -1px;
+  z-index: 3;
+  height: 150px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  path {
+    fill: #fff;
+  }
+}
+
+.shalom_about_message_4701002140,
+.shalom_about_business_4701002140,
+.shalom_about_company_4701002140 {
+  position: relative;
+  padding: clamp(78px, 9vw, 130px) 0;
+}
+
+.shalom_about_message_4701002140 {
+  background: #fff;
+}
+
+.shalom_about_message_grid_4701002140 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+  align-items: center;
+  gap: clamp(42px, 7vw, 96px);
+}
+
+.shalom_about_message_text_4701002140 {
+  h3 {
+    margin: 0 0 28px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    line-height: 1.8;
+  }
+}
+
+.shalom_about_text_4701002140 {
+  color: #334941;
+  line-height: 2.25;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 1.35em;
+  }
+}
+
+.shalom_about_message_visual_4701002140 {
+  position: relative;
+  padding-bottom: 82px;
+
+  figure {
+    width: min(100%, 470px);
+    margin: 0 auto;
+    border-radius: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  }
+}
+
+.shalom_about_quote_4701002140 {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+  width: min(86%, 380px);
+  padding: 24px 30px;
+  border: 1px solid rgba($shalom_base, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 254, 250, 0.95);
+  box-shadow: 0 14px 34px rgba(68, 92, 67, 0.13);
+
+  p {
+    margin: 0;
+    color: #253c37;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    line-height: 1.8;
+  }
+}
+
+.shalom_about_message_flower_4701002140 {
+  position: absolute;
+  right: -72px;
+  bottom: 28px;
+  z-index: -1;
+  width: 240px;
+  mix-blend-mode: multiply;
+}
+
+.shalom_about_business_4701002140 {
+  background:
+    radial-gradient(circle at 82% 18%, rgba($shalom_sub, 0.12), transparent 22%),
+    linear-gradient(180deg, $shalom_bg 0%, #fff 100%);
+}
+
+.shalom_about_business_lead_4701002140 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.52fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 78px);
+  margin-bottom: clamp(36px, 5vw, 66px);
+
+  h3 {
+    margin: 0 0 22px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    line-height: 1.65;
+  }
+
+  p {
+    margin: 0;
+    line-height: 2.15;
+  }
+
+  p + p {
+    margin-top: 1.1em;
+  }
+
+  figure {
+    margin: 0;
+    padding: 22px;
+    border-radius: 8px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(247, 252, 246, 0.74)), #fff;
+    box-shadow: 0 16px 42px rgba(68, 92, 67, 0.11);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1.28 / 1;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+.shalom_about_business_cards_4701002140 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 3vw, 34px);
+
+  article {
+    position: relative;
+    min-height: 260px;
+    padding: 34px 28px 30px 120px;
+    border: 1px solid $shalom_line;
+    border-radius: 8px;
+    background: rgba(255, 254, 250, 0.94);
+    box-shadow: 0 12px 32px rgba(75, 94, 74, 0.09);
+  }
+
+  img {
+    position: absolute;
+    left: 26px;
+    top: 92px;
+    width: 70px;
+    height: 132px;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(75, 94, 74, 0.08);
+  }
+
+  h3 {
+    margin: 0 0 16px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.75;
+  }
+
+  p {
+    margin: 0;
+    color: #445b54;
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
+.shalom_about_card_num_4701002140 {
+  position: absolute;
+  left: 26px;
+  top: 34px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  background: $shalom_base;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.shalom_about_company_4701002140 {
+  background: #fff;
+}
+
+.shalom_about_table_4701002140 {
+  overflow: hidden;
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  border: 1px solid rgba($shalom_base, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 34px rgba(68, 92, 67, 0.08);
+
+  div {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    min-height: 76px;
+    border-bottom: 1px solid rgba($shalom_base, 0.13);
+  }
+
+  div:last-child {
+    border-bottom: 0;
+  }
+
+  dt,
+  dd {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 18px 34px;
+  }
+
+  dt {
+    justify-content: center;
+    color: $shalom_base;
+    background: rgba(247, 252, 246, 0.88);
+    border-right: 1px solid rgba($shalom_base, 0.13);
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+  }
+
+  dd {
+    color: #253c37;
+    font-weight: 700;
+  }
+}
+
+.shalom_about_cta_4701002140 {
+  position: relative;
+  overflow: hidden;
+  padding: 42px 0;
+  background:
+    linear-gradient(90deg, rgba($shalom_sub, 0.25), rgba(255, 255, 255, 0.86), rgba($shalom_sub, 0.23)), $shalom_bg;
+}
+
+.shalom_about_cta_flower_4701002140 {
+  position: absolute;
+  left: 3vw;
+  bottom: -26px;
+  width: clamp(170px, 18vw, 270px);
+  mix-blend-mode: multiply;
+  opacity: 0.64;
+}
+
+.shalom_about_cta_inner_4701002140 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+
+  p {
+    margin: 0;
+    color: #2c4e46;
+    font-weight: 700;
+    line-height: 1.9;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-width: min(100%, 410px);
+    min-height: 62px;
+    padding: 0 28px;
+    border-radius: 999px;
+    color: #fff;
+    background: linear-gradient(135deg, $shalom_base, #a5a51e);
+    box-shadow: 0 18px 34px rgba($shalom_base, 0.24);
+    font-weight: 800;
+  }
+}
+
+.shalom_content_page_4701002140 {
+  scroll-margin-top: 110px;
+  color: $shalom_text;
+  background: #fff;
+}
+
+.shalom_content_inner_4701002140 {
+  width: min(88%, 1180px);
+  margin-inline: auto;
+}
+
+.shalom_content_kv_4701002140 {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(86px, 8vw, 126px) 0 clamp(74px, 8vw, 116px);
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 83% 22%, rgba($shalom_sub, 0.16), transparent 24%),
+    linear-gradient(135deg, rgba(247, 252, 246, 0.96), rgba(255, 255, 255, 0.78)),
+    url("#{$img}/forest_path.webp") center / cover no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(247, 252, 246, 0.96) 0 52%, rgba(247, 252, 246, 0.58) 100%),
+      radial-gradient(circle at 18% 28%, rgba(255, 255, 255, 0.95), transparent 32%);
+  }
+}
+
+.shalom_content_kv_inner_4701002140 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(340px, 0.84fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 86px);
+}
+
+.shalom_content_kv_text_4701002140 {
+  h2 {
+    margin: 0;
+    color: #24493f;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.72;
+  }
+
+  > p:last-child {
+    margin: 28px 0 0;
+    color: #365a52;
+    font-size: clamp(16px, 1.28vw, 18px);
+    font-weight: 700;
+    line-height: 2;
+  }
+}
+
+.shalom_content_kv_photo_4701002140 {
+  margin: 0;
+  padding: 18px;
+  border-radius: 52% 48% 46% 54% / 45% 46% 54% 55%;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 24px 72px rgba(48, 79, 59, 0.15);
+
+  img {
+    width: 100%;
+    aspect-ratio: 1.05 / 1;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+}
+
+.shalom_content_kv_flower_4701002140 {
+  position: absolute;
+  right: -34px;
+  bottom: -18px;
+  z-index: 1;
+  width: clamp(190px, 22vw, 330px);
+  mix-blend-mode: multiply;
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.shalom_content_text_4701002140 {
+  color: #334941;
+  line-height: 2.25;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 1.25em;
+  }
+}
+
+.shalom_products_kv_items_4701002140 {
+  position: relative;
+  min-height: 420px;
+
+  figure {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    border: 1px solid rgba($shalom_base, 0.14);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 48px rgba(68, 92, 67, 0.13);
+  }
+
+  figure:nth-child(1) {
+    right: 158px;
+    top: 0;
+    width: 236px;
+    height: 236px;
+  }
+
+  figure:nth-child(2) {
+    left: 0;
+    bottom: 34px;
+    width: 210px;
+    height: 210px;
+  }
+
+  figure:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    height: 250px;
+  }
+
+  img {
+    max-width: 78%;
+    max-height: 82%;
+    object-fit: contain;
+  }
+}
+
+.shalom_products_concept_4701002140,
+.shalom_products_list_4701002140,
+.shalom_business_intro_4701002140,
+.shalom_recommend_4701002140,
+.shalom_merit_flow_4701002140,
+.shalom_individual_lead_4701002140,
+.shalom_individual_recommend_4701002140,
+.shalom_individual_policy_4701002140 {
+  position: relative;
+  padding: clamp(78px, 9vw, 126px) 0;
+}
+
+.shalom_products_concept_4701002140,
+.shalom_recommend_4701002140,
+.shalom_individual_recommend_4701002140 {
+  background: #fff;
+}
+
+.shalom_products_list_4701002140,
+.shalom_business_intro_4701002140,
+.shalom_merit_flow_4701002140,
+.shalom_individual_lead_4701002140,
+.shalom_individual_policy_4701002140 {
+  background:
+    radial-gradient(circle at 88% 12%, rgba($shalom_sub, 0.11), transparent 24%),
+    linear-gradient(180deg, $shalom_bg 0%, #fff 100%);
+}
+
+.shalom_products_concept_grid_4701002140,
+.shalom_split_4701002140 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.58fr);
+  align-items: center;
+  gap: clamp(38px, 7vw, 88px);
+
+  figure {
+    margin: 0;
+    padding: 22px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: $shalom_shadow;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1.22 / 1;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+.shalom_product_grid_4701002140 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 3vw, 34px);
+
+  article {
+    overflow: hidden;
+    border: 1px solid $shalom_line;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 14px 36px rgba(68, 92, 67, 0.1);
+  }
+
+  figure {
+    display: grid;
+    place-items: center;
+    min-height: 300px;
+    margin: 0;
+    padding: 28px;
+    background: radial-gradient(circle at 50% 42%, rgba($shalom_sub, 0.18), transparent 34%), rgba(247, 252, 246, 0.9);
+  }
+
+  img {
+    max-width: 84%;
+    height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 22px rgba(48, 79, 59, 0.12));
+  }
+}
+
+.shalom_product_body_4701002140 {
+  padding: 30px 28px 32px;
+
+  h3 {
+    margin: 0 0 16px;
+    color: #24493f;
+    font-family: "Noto Serif JP", serif;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0;
+    color: #445b54;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  dl {
+    display: grid;
+    gap: 8px;
+    margin: 24px 0 0;
+  }
+
+  dl div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: rgba($shalom_bg, 0.9);
+  }
+
+  dt,
+  dd {
+    margin: 0;
+  }
+
+  dt {
+    color: #52675f;
+    font-weight: 700;
+  }
+
+  dd {
+    color: $shalom_base;
+    font-weight: 800;
+  }
+}
+
+.shalom_product_label_4701002140 {
+  width: fit-content;
+  margin-bottom: 12px !important;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #2d5d56 !important;
+  background: rgba($shalom_sub, 0.22);
+  font-size: 12px !important;
+  font-weight: 800;
+}
+
+.shalom_price_note_4701002140 {
+  margin: 26px 0 0;
+  color: #52675f;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.shalom_result_panel_4701002140,
+.shalom_flow_panel_4701002140,
+.shalom_policy_grid_4701002140 article {
+  border: 1px solid rgba($shalom_base, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 36px rgba(68, 92, 67, 0.1);
+}
+
+.shalom_result_panel_4701002140 {
+  padding: 34px;
+
+  h3 {
+    margin: 0 0 20px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  ul {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba($shalom_base, 0.11);
+  }
+
+  li:last-child {
+    border-bottom: 0;
+  }
+
+  span {
+    color: #445b54;
+    font-weight: 700;
+  }
+
+  strong {
+    color: $shalom_base;
+    font-size: 22px;
+  }
+}
+
+.shalom_check_grid_4701002140,
+.shalom_merit_grid_4701002140 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 28px);
+}
+
+.shalom_check_grid_4701002140 article {
+  min-height: 150px;
+  padding: 34px 24px 30px;
+  border: 1px solid $shalom_line;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 30px rgba(75, 94, 74, 0.08);
+
+  p {
+    margin: 0;
+    color: #2e4740;
+    font-weight: 800;
+    line-height: 1.9;
+  }
+
+  span {
+    display: inline-block;
+    margin-top: 16px;
+    color: #668078;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+.shalom_merit_grid_4701002140 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: clamp(42px, 5vw, 68px);
+
+  article {
+    min-height: 200px;
+    padding: 34px 28px;
+    border: 1px solid $shalom_line;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 12px 30px rgba(75, 94, 74, 0.08);
+  }
+
+  h3 {
+    margin: 0 0 16px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+
+  p {
+    margin: 0;
+    color: #445b54;
+    line-height: 2;
+  }
+}
+
+.shalom_flow_panel_4701002140 {
+  padding: clamp(28px, 4vw, 48px);
+
+  ol {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+    counter-reset: flow;
+  }
+
+  li {
+    position: relative;
+    min-height: 86px;
+    padding: 20px 14px 16px;
+    border-radius: 8px;
+    color: #2e4740;
+    background: rgba($shalom_bg, 0.92);
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.6;
+    counter-increment: flow;
+
+    &::before {
+      content: counter(flow, decimal-leading-zero);
+      display: block;
+      margin-bottom: 8px;
+      color: $shalom_base;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #445b54;
+    line-height: 2;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    margin-top: 24px;
+    padding: 0 28px;
+    border-radius: 999px;
+    color: #fff;
+    background: linear-gradient(135deg, $shalom_base, #a5a51e);
+    font-weight: 800;
+  }
+}
+
+.shalom_center_note_4701002140 {
+  width: fit-content;
+  margin: 34px auto 0;
+  padding: 16px 26px;
+  border: 1px solid rgba($shalom_base, 0.15);
+  border-radius: 999px;
+  color: #2e4740;
+  background: rgba(255, 255, 255, 0.92);
+  font-weight: 800;
+  text-align: center;
+}
+
+.shalom_policy_grid_4701002140 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(22px, 4vw, 42px);
+
+  article {
+    padding: clamp(30px, 4vw, 48px);
+  }
+
+  span {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: rgba($shalom_base, 0.72);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    margin: 0 0 22px;
+    color: $shalom_base;
+    font-family: "Noto Serif JP", serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.7;
+  }
+
+  p,
+  li {
+    color: #445b54;
+    line-height: 2.1;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    padding-left: 28px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.86em;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $shalom_sub;
+    }
+  }
+}
+
+.shalom_line_cta_4701002140 {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(56px, 7vw, 82px) 0;
+  background:
+    linear-gradient(90deg, rgba($shalom_sub, 0.28), rgba(255, 255, 255, 0.88), rgba($shalom_sub, 0.22)), $shalom_bg;
+
+  > img {
+    position: absolute;
+    left: 3vw;
+    bottom: -26px;
+    width: clamp(180px, 20vw, 300px);
+    mix-blend-mode: multiply;
+    opacity: 0.64;
+  }
+}
+
+.shalom_line_cta_inner_4701002140 {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(28px, 5vw, 66px);
+
+  h2 {
+    margin-bottom: 18px;
+    color: #24493f;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 0;
+    color: #365a52;
+    font-weight: 700;
+    line-height: 2;
+  }
+}
+
+.shalom_line_buttons_4701002140 {
+  display: grid;
+  gap: 14px;
+  min-width: min(100%, 360px);
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 58px;
+    padding: 0 26px;
+    border-radius: 999px;
+    color: #fff;
+    background: linear-gradient(135deg, $shalom_base, #a5a51e);
+    box-shadow: 0 18px 34px rgba($shalom_base, 0.22);
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 1100px) {
+  .shalom_nav_4701002140 ul {
+    gap: 14px;
+  }
+
+  .shalom_header_contact_4701002140 {
+    padding-inline: 16px;
+  }
+
+  .shalom_feature_card_4701002140 {
+    padding-right: 22px;
+  }
+
+  .shalom_about_business_cards_4701002140 article {
+    padding-right: 22px;
+  }
+
+  .shalom_product_grid_4701002140,
+  .shalom_check_grid_4701002140 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shalom_flow_panel_4701002140 ol {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 896px) {
+  .shalom_header_4701002140 {
+    padding: 10px 0;
+  }
+
+  .shalom_header_inner_4701002140 {
+    justify-content: center;
+  }
+
+  .shalom_logo_4701002140 {
+    width: 230px;
+  }
+
+  .shalom_hero_4701002140 {
+    min-height: auto;
+    padding: 94px 0 88px;
+  }
+
+  .shalom_hero_inner_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_hero_photo_4701002140 {
+    width: min(72%, 360px);
+    margin: 0 auto;
+    order: -1;
+  }
+
+  .shalom_hero_copy_4701002140 {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .shalom_hero_label_4701002140,
+  .shalom_hero_buttons_4701002140 {
+    margin-inline: auto;
+    justify-content: center;
+  }
+
+  .shalom_flower_hero_4701002140 {
+    right: -110px;
+    bottom: 72px;
+    opacity: 0.72;
+  }
+
+  .shalom_greeting_grid_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_section_head_left_4701002140 {
+    text-align: center;
+
+    h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .shalom_greeting_photo_4701002140 {
+    width: min(88%, 430px);
+    margin-inline: auto;
+  }
+
+  .shalom_news_head_4701002140,
+  .shalom_contact_inner_4701002140 {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .shalom_news_item_4701002140 {
+    grid-template-columns: 100px 88px minmax(0, 1fr) 16px;
+    gap: 12px;
+    padding-inline: 18px;
+  }
+
+  .shalom_feature_grid_4701002140,
+  .shalom_link_grid_4701002140 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shalom_footer_inner_4701002140 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .shalom_footer_nav_4701002140 {
+    justify-content: center;
+  }
+
+  .shalom_about_kv_4701002140 {
+    padding: 88px 0 96px;
+  }
+
+  .shalom_about_kv_inner_4701002140,
+  .shalom_about_message_grid_4701002140,
+  .shalom_about_business_lead_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_about_kv_copy_4701002140,
+  .shalom_about_breadcrumb_4701002140,
+  .shalom_about_page_title_4701002140,
+  .shalom_about_message_text_4701002140,
+  .shalom_about_business_lead_4701002140 {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .shalom_about_page_title_4701002140,
+  .shalom_about_breadcrumb_4701002140 {
+    margin-inline: auto;
+  }
+
+  .shalom_about_page_title_4701002140::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .shalom_about_kv_photo_4701002140 {
+    width: min(76%, 410px);
+    margin: 0 auto;
+    order: -1;
+  }
+
+  .shalom_about_business_lead_4701002140 figure {
+    width: min(86%, 420px);
+    margin-inline: auto;
+  }
+
+  .shalom_about_business_cards_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_about_cta_inner_4701002140 {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .shalom_content_kv_inner_4701002140,
+  .shalom_products_concept_grid_4701002140,
+  .shalom_split_4701002140,
+  .shalom_line_cta_inner_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_content_kv_text_4701002140,
+  .shalom_content_kv_text_4701002140 .shalom_about_breadcrumb_4701002140,
+  .shalom_content_kv_text_4701002140 .shalom_about_page_title_4701002140,
+  .shalom_line_cta_inner_4701002140 {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .shalom_content_kv_text_4701002140 .shalom_about_breadcrumb_4701002140,
+  .shalom_content_kv_text_4701002140 .shalom_about_page_title_4701002140 {
+    margin-inline: auto;
+  }
+
+  .shalom_content_kv_photo_4701002140 {
+    width: min(82%, 430px);
+    margin-inline: auto;
+    order: -1;
+  }
+
+  .shalom_products_kv_items_4701002140 {
+    width: min(100%, 430px);
+    min-height: 330px;
+    margin-inline: auto;
+    order: -1;
+  }
+
+  .shalom_products_kv_items_4701002140 figure:nth-child(1) {
+    right: 120px;
+    width: 190px;
+    height: 190px;
+  }
+
+  .shalom_products_kv_items_4701002140 figure:nth-child(2) {
+    width: 160px;
+    height: 160px;
+  }
+
+  .shalom_products_kv_items_4701002140 figure:nth-child(3) {
+    width: 196px;
+    height: 196px;
+  }
+
+  .shalom_merit_grid_4701002140,
+  .shalom_policy_grid_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_line_buttons_4701002140 {
+    width: min(100%, 360px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .shalom_hero_copy_4701002140 h2 {
+    line-height: 1.55;
+  }
+
+  .shalom_hero_lead_4701002140 {
+    line-height: 1.8;
+  }
+
+  .shalom_btn_4701002140 {
+    width: min(100%, 250px);
+    min-height: 54px;
+    font-size: 14px;
+  }
+
+  .shalom_section_4701002140 {
+    padding: 64px 0;
+  }
+
+  .shalom_body_4701002140 {
+    line-height: 2;
+  }
+
+  .shalom_news_item_4701002140 {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    padding: 16px;
+
+    time,
+    .shalom_news_badge_4701002140,
+    .shalom_news_title_4701002140 {
+      grid-column: 1 / 2;
+    }
+
+    > i {
+      grid-column: 2 / 3;
+      grid-row: 1 / 4;
+      align-self: center;
+    }
+  }
+
+  .shalom_news_title_4701002140 {
+    white-space: normal;
+  }
+
+  .shalom_feature_grid_4701002140,
+  .shalom_link_grid_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_feature_card_4701002140 {
+    min-height: 0;
+    padding: 30px 24px 28px 112px;
+
+    h3 {
+      font-size: 17px !important;
+      line-height: 1.6;
+    }
+  }
+
+  .shalom_feature_num_4701002140 {
+    left: 24px;
+  }
+
+  .shalom_feature_icon_4701002140 {
+    left: 20px;
+    width: 72px;
+    height: 134px;
+  }
+
+  .shalom_wave_4701002140 {
+    bottom: -72px;
+    height: 130px;
+  }
+
+  .shalom_contact_btn_4701002140 {
+    min-width: 0;
+    width: min(100%, 320px);
+    margin-inline: auto;
+    padding-inline: 18px;
+  }
+
+  .shalom_contact_inner_4701002140 {
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .shalom_about_kv_4701002140 {
+    min-height: auto;
+    padding: 84px 0 82px;
+  }
+
+  .shalom_about_wave_4701002140 {
+    inset: auto 0 -72px;
+    height: 130px;
+  }
+
+  .shalom_about_breadcrumb_4701002140 {
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .shalom_about_kv_photo_4701002140 {
+    width: min(74%, 320px);
+  }
+
+  .shalom_about_message_4701002140,
+  .shalom_about_business_4701002140,
+  .shalom_about_company_4701002140 {
+    padding: 64px 0;
+  }
+
+  .shalom_about_message_visual_4701002140 {
+    padding-bottom: 124px;
+  }
+
+  .shalom_about_quote_4701002140 {
+    right: 50%;
+    bottom: 18px;
+    width: min(94%, 340px);
+    padding: 20px;
+    text-align: center;
+    transform: translateX(50%);
+  }
+
+  .shalom_about_business_cards_4701002140 article {
+    min-height: 0;
+    padding: 30px 24px 28px 112px;
+  }
+
+  .shalom_about_business_cards_4701002140 img {
+    left: 20px;
+    width: 72px;
+    height: 134px;
+  }
+
+  .shalom_about_card_num_4701002140 {
+    left: 24px;
+  }
+
+  .shalom_about_table_4701002140 div {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_about_table_4701002140 dt {
+    justify-content: flex-start;
+    border-right: 0;
+    border-bottom: 1px solid rgba($shalom_base, 0.13);
+  }
+
+  .shalom_about_table_4701002140 dt,
+  .shalom_about_table_4701002140 dd {
+    padding: 15px 20px;
+  }
+
+  .shalom_about_cta_inner_4701002140 a {
+    min-width: 0;
+    width: 100%;
+    padding-inline: 18px;
+  }
+
+  .shalom_content_kv_4701002140 {
+    padding: 84px 0 72px;
+  }
+
+  .shalom_content_kv_flower_4701002140 {
+    right: -90px;
+    width: 230px;
+  }
+
+  .shalom_content_kv_photo_4701002140 {
+    width: min(80%, 320px);
+    padding: 12px;
+  }
+
+  .shalom_products_kv_items_4701002140 {
+    min-height: 300px;
+  }
+
+  .shalom_products_kv_items_4701002140 figure:nth-child(1) {
+    right: 120px;
+    width: 164px;
+    height: 164px;
+  }
+
+  .shalom_products_kv_items_4701002140 figure:nth-child(2) {
+    bottom: 42px;
+    width: 132px;
+    height: 132px;
+  }
+
+  .shalom_products_kv_items_4701002140 figure:nth-child(3) {
+    width: 164px;
+    height: 164px;
+  }
+
+  .shalom_products_concept_4701002140,
+  .shalom_products_list_4701002140,
+  .shalom_business_intro_4701002140,
+  .shalom_recommend_4701002140,
+  .shalom_merit_flow_4701002140,
+  .shalom_individual_lead_4701002140,
+  .shalom_individual_recommend_4701002140,
+  .shalom_individual_policy_4701002140 {
+    padding: 64px 0;
+  }
+
+  .shalom_product_grid_4701002140,
+  .shalom_check_grid_4701002140 {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_product_grid_4701002140 figure {
+    min-height: 250px;
+  }
+
+  .shalom_product_grid_4701002140 img {
+    height: 214px;
+  }
+
+  .shalom_price_note_4701002140 {
+    text-align: center;
+  }
+
+  .shalom_result_panel_4701002140 {
+    padding: 26px 22px;
+  }
+
+  .shalom_check_grid_4701002140 article,
+  .shalom_merit_grid_4701002140 article {
+    min-height: 0;
+    padding: 28px 22px;
+  }
+
+  .shalom_flow_panel_4701002140 ol {
+    grid-template-columns: 1fr;
+  }
+
+  .shalom_flow_panel_4701002140 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px auto;
+  }
+
+  .shalom_center_note_4701002140 {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .shalom_line_cta_inner_4701002140 {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .shalom_line_buttons_4701002140 {
+    width: 100%;
+  }
+
+  .shalom_line_buttons_4701002140 a {
+    padding-inline: 18px;
+  }
+}

@@ -1,0 +1,62 @@
+.price_txt {
+    display: flex;
+    align-items: center;
+
+    &.center {
+        justify-content: center;
+    }
+
+    .circle {
+        background: $base_color;
+        color: #fff;
+        width: 80px;
+        height: 80px;
+        font-size: 85% !important;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 10px;
+
+        > span {
+            display: grid;
+            place-items: center;
+            line-height: 1.1;
+            height: 100%;
+            margin: auto;
+            width: 100%;
+        }
+    }
+
+    .price {
+        b {
+            font-size: 3.6rem;
+            color: $base_color;
+            margin-right: 0.2rem;
+        }
+
+        > span {
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    @include for-size(phone-only) {
+        .icn_circle {
+            width: 50px;
+            height: 50px;
+            font-size: 1rem;
+        }
+
+        .price {
+            line-height: 1.2;
+
+            b {
+                font-size: 2.2rem;
+            }
+
+            > span {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

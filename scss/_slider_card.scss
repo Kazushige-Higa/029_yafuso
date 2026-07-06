@@ -1,0 +1,336 @@
+.slider_card {
+    padding: 72px 0 80px;
+    background: linear-gradient(180deg, rgba($base_color, 0.1) 0%, rgba(#fff, 1) 100%);
+}
+
+.slider_card_head {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.slider_card_ttl {
+    margin: 0;
+    color: #6b4f12;
+    font-size: clamp(2.6rem, 3vw, 4.4rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+}
+
+.slider_card_score {
+    margin: 8px 0 0;
+    color: $base_color;
+    font-size: clamp(1.6rem, 1.8vw, 2.2rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+
+    strong {
+        font-weight: 700;
+    }
+
+    .slider_card_divider {
+        margin: 0 6px;
+        opacity: 0.7;
+    }
+}
+
+.slider_card_slider {
+    position: relative;
+    padding: 0 56px;
+}
+
+.slider_card_viewport {
+    overflow: hidden;
+}
+
+.slider_card_track {
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.slider_card_item {
+    flex: 0 0 calc((100% - 36px) / 3);
+    min-width: 0;
+    list-style: none;
+}
+
+//
+
+.slider_card_card {
+    background: #fff;
+    border: 1.5px solid rgba($base_color, 0.32);
+    border-radius: 14px;
+    padding: 18px 20px 16px;
+    box-shadow: 0 6px 16px rgba(#000, 0.06);
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+}
+
+.slider_card_card_head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.slider_card_avatar {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    overflow: hidden;
+    background: $base_color;
+
+    i {
+        font-size: 200%;
+        color: #fff;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    svg {
+        width: 22px;
+        height: 22px;
+        color: #fff;
+    }
+}
+
+.slider_card_name {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.slider_card_stars {
+    color: #f5b400;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    margin-bottom: 10px;
+
+    span {
+        display: inline-block;
+    }
+}
+
+.slider_card_text {
+    margin: 0;
+    color: #353535;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.slider_card_card.is-expanded .slider_card_text {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+}
+
+.slider_card_more {
+    display: block;
+    margin: 8px 0 0 auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #8a8a8a;
+    font-size: 1.3rem;
+    font-family: inherit;
+    line-height: 1.4;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $base_color;
+        text-decoration: underline;
+    }
+
+    &[aria-expanded="true"] {
+        color: $base_color;
+        font-weight: 600;
+    }
+
+    &[hidden] {
+        display: none;
+    }
+}
+//
+
+//slider_card_dots
+.slider_card_dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+    padding: 0;
+}
+
+.slider_card_dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #d8d2c0;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+
+    &:hover {
+        background: $base_color;
+    }
+
+    &.is-active {
+        background: $base_color;
+        transform: scale(1.35);
+    }
+}
+
+.slider_card_date {
+    margin: 14px 0 0;
+    color: #8a8a8a;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.slider_card_arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(#000, 0.16);
+    transform: translateY(-50%);
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        opacity 0.25s ease;
+    cursor: pointer;
+    padding: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 9px;
+        height: 9px;
+        border-top: 2px solid $base_color;
+        border-right: 2px solid $base_color;
+    }
+
+    &:hover:not(:disabled) {
+        transform: translateY(-50%) scale(1.06);
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+}
+
+.slider_card_arrow_prev {
+    left: 4px;
+    &::before {
+        transform: translate(-30%, -50%) rotate(-135deg);
+    }
+}
+
+.slider_card_arrow_next {
+    right: 4px;
+    &::before {
+        transform: translate(-70%, -50%) rotate(45deg);
+    }
+}
+
+@include for-size(phone-only) {
+    .slider_card {
+        padding: 48px 0 56px;
+    }
+
+    .slider_card_head {
+        margin-bottom: 24px;
+    }
+
+    .slider_card_slider {
+        padding: 0 36px;
+    }
+
+    .slider_card_track {
+        gap: 12px;
+    }
+
+    .slider_card_item {
+        flex-basis: 100%;
+    }
+
+    .slider_card_arrow {
+        width: 32px;
+        height: 32px;
+
+        &::before {
+            width: 8px;
+            height: 8px;
+            border-top-width: 2px;
+            border-right-width: 2px;
+        }
+    }
+
+    .slider_card_arrow_prev {
+        left: 0;
+    }
+
+    .slider_card_arrow_next {
+        right: 0;
+    }
+
+    .slider_card_text {
+        font-size: 1.45rem;
+        line-height: 1.7;
+    }
+
+    .slider_card_dots {
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .slider_card_dot {
+        width: 7px;
+        height: 7px;
+    }
+}

@@ -1,0 +1,37 @@
+.btn_tel_normal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20px;
+    > .tel {
+        font-size: 4rem;
+        color: $base_color;
+        i {
+            font-size: 120%;
+        }
+        @include for-size(phone-only) {
+            font-size: 2.9rem;
+            i {
+                font-size: 2.0rem;
+            }
+        }
+    }
+    > .btn {
+        font-size: 120%;
+        display: grid;
+        place-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $base_color;
+        color: #fff;
+        a i {
+            color: #fff;
+        }
+        @include for-size(phone-only) {
+            width: 40px;
+            height: 40px;
+            font-size: 2.0rem;
+        }
+    }
+}

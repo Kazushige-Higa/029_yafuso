@@ -1,0 +1,162 @@
+.picture {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s;
+    z-index: 0;
+    @include bg_color;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        z-index: 0 !important;
+    }
+    &.bg_grd {
+        background: none;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            background: rgb(0, 0, 0);
+            @include bg_grd;
+            background-position: center center;
+            background-size: cover;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+    }
+    img {
+        transition: 0.8s;
+    }
+    &.icon {
+        text-align: center;
+        display: grid;
+        place-items: center;
+        padding: 20px 0;
+        background: #f2f2f2;
+        border: 1px solid #ddd;
+        img {
+            width: 120px;
+        }
+    }
+    &.radius {
+        border-radius: 2em;
+    }
+    &.contain {
+        img {
+            object-fit: contain;
+            margin: auto;
+        }
+    }
+    @include for-size(phone-only) {
+        height: auto;
+    }
+    a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: 0.8s;
+        background-color: rgba($base_color, 0.2);
+        img {
+            opacity: 0.8;
+        }
+        .link_ttl {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 110%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.8s;
+            .eng {
+                @include eng;
+            }
+            .small {
+                font-size: 80%;
+            }
+            @include for-size(phone-only) {
+                opacity: 1;
+                visibility: visible;
+                font-size: 1.6rem;
+            }
+        }
+        .link_icon {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            display: block;
+            color: #fff;
+            i {
+                border: #fff solid 2px;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                margin: auto;
+                font-size: 2.3rem;
+                transition: 0.8s;
+                display: grid;
+                place-items: center;
+            }
+            .text {
+                text-align: center;
+                font-size: 1.6rem;
+            }
+            @include for-size(phone-only) {
+                opacity: 1;
+                visibility: visible;
+                font-size: 1.6rem;
+            }
+        }
+        &:hover {
+            transition: 0.8s;
+            .link_ttl {
+                opacity: 1;
+                visibility: visible;
+                transition: 0.8s;
+            }
+            img {
+                transform: scale(1.05);
+                transition: 0.8s;
+                opacity: 0.6;
+            }
+            .link_icon {
+                i {
+                    background-color: #fff;
+                    color: $base_color;
+                }
+            }
+        }
+    }
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

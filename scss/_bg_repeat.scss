@@ -1,0 +1,16 @@
+.bg_repeat {
+    position: relative;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-position: top top;
+    @include bg_repeat;
+    &.center {
+        background-position: center center;
+    }
+    &.bottom {
+        background-position: bottom bottom;
+    }
+    @include for-size(phone-only) {
+        background-size: 50%;
+    }
+}

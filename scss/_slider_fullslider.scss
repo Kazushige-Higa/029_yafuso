@@ -1,0 +1,116 @@
+.slider_fullslider_wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    @include bg_img;
+    @include bg_color;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        z-index: 0 !important;
+    }
+}
+
+.curve {
+    -webkit-clip-path: ellipse(100% 100% at top);
+    clip-path: ellipse(100% 100% at top);
+    overflow: hidden;
+}
+
+.slider_fullslider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 0;
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        z-index: 0;
+
+        &.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            animation: zoom 20s ease-in-out infinite;
+            transform-origin: center center;
+        }
+
+        &.scale_none {
+            img {
+                animation: scale_none 20s ease-in-out infinite !important;
+            }
+        }
+    }
+    &.contain {
+        .slide {
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+    &.radius {
+        .slide {
+            img {
+                border-radius: 2em;
+                overflow: hidden;
+                display: inline-block;
+                padding: 0;
+                margin: auto;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+@keyframes scale_none {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,33 @@
+.breadcrumb {
+    padding: 20px 30px;
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 80%;
+    text-align: left;
+    &.white {
+        a {
+            color: #fff;
+        }
+    }
+    &.tcenter {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    li {
+        display: inline-block;
+        a {
+            color: darken($base_color, 10%);
+        }
+
+        + li:before {
+            margin: 0 10px;
+            content: ">";
+        }
+    }
+    @include for-size(pro) {
+        padding: 10px 0px;
+    }
+}

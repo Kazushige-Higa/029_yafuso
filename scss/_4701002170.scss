@@ -1,0 +1,1735 @@
+.sagami_page_4701002170 {
+  --sagami_base_4701002170: #112A6C;
+  --sagami_sub_4701002170: #F6611A;
+  --sagami_bg_4701002170: #BEDFED;
+  --sagami_light_4701002170: #eef8fc;
+  --sagami_text_4701002170: #102044;
+  color: var(--sagami_text_4701002170);
+  background: linear-gradient(180deg, #fff 0%, #eef8fc 54%, #dff2fa 100%);
+  font-family: "Noto Sans JP", "YakuHanJP", sans-serif;
+  overflow: hidden;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  dd {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+.sagami_single_4701002170 {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sagami_header_4701002170 {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 24px rgba(17, 42, 108, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.sagami_header_inner_4701002170 {
+  width: min(1320px, calc(100% - 48px));
+  min-height: 92px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.sagami_logo_4701002170 {
+  display: block;
+
+  img {
+    width: min(410px, 100%);
+    max-height: 72px;
+    object-fit: contain;
+  }
+}
+
+.sagami_nav_4701002170 {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: clamp(16px, 1.8vw, 30px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    color: var(--sagami_base_4701002170);
+    font-size: clamp(0.88rem, 1vw, 1rem);
+    font-weight: 900;
+    line-height: 1.3;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      left: 0;
+      height: 3px;
+      background: var(--sagami_sub_4701002170);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover::after,
+    &.is_current::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.sagami_header_contact_4701002170 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 24px;
+  color: #fff !important;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  background: var(--sagami_sub_4701002170);
+  border-radius: 4px;
+  box-shadow: 0 12px 24px rgba(246, 97, 26, 0.25);
+}
+
+.sagami_hero_4701002170 {
+  position: relative;
+  min-height: clamp(560px, 53vw, 760px);
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--sagami_bg_4701002170);
+}
+
+.sagami_hero_bg_4701002170,
+.sagami_hero_photo_4701002170 {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sagami_hero_bg_4701002170 {
+  width: 58%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 43%, rgba(190, 223, 237, 0.42) 100%);
+  }
+}
+
+.sagami_hero_photo_4701002170 {
+  left: 45%;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  height: auto;
+  background: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2 !important;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 28%);
+  }
+}
+
+.sagami_hero_photo_4701002170.slider_fullslider_wrap {
+  width: auto;
+  height: auto;
+}
+
+.sagami_hero_slider_4701002170 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sagami_hero_copy_4701002170 {
+  width: min(640px, 56%);
+  padding: clamp(80px, 8vw, 130px) 0 clamp(64px, 7vw, 100px);
+
+  h1 {
+    margin: 0;
+    color: var(--sagami_base_4701002170);
+    font-family: "Noto Serif JP", "Zen Antique", serif;
+    font-size: clamp(2.6rem, 5.1vw, 5.2rem);
+    font-weight: 900;
+    line-height: 1.24;
+    letter-spacing: 0;
+    text-shadow: 0 3px 0 rgba(255, 255, 255, 0.9);
+
+    span,
+    strong {
+      display: block;
+    }
+
+    strong {
+      margin-top: 0.04em;
+      color: var(--sagami_sub_4701002170);
+      font-size: 1.08em;
+      line-height: 1.08;
+    }
+  }
+
+  p {
+    width: min(560px, 100%);
+    margin: clamp(24px, 3vw, 36px) 0 0;
+    padding: 12px 18px;
+    color: var(--sagami_base_4701002170);
+    font-size: clamp(1.06rem, 1.6vw, 1.36rem);
+    font-weight: 900;
+    line-height: 1.75;
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-width: 290px;
+    min-height: 76px;
+    margin-top: clamp(30px, 4vw, 48px);
+    color: #fff;
+    font-size: 1.22rem;
+    font-weight: 900;
+    background: var(--sagami_sub_4701002170);
+    border-radius: 4px;
+    box-shadow: 0 18px 32px rgba(246, 97, 26, 0.28);
+  }
+}
+
+.sagami_about_4701002170,
+.sagami_services_4701002170,
+.sagami_consult_4701002170 {
+  padding: clamp(70px, 7vw, 110px) 0;
+}
+
+.sagami_about_4701002170 {
+  background:
+    radial-gradient(circle at 8% 20%, rgba(190, 223, 237, 0.55), transparent 26%),
+    linear-gradient(180deg, #f7fcff 0%, #eef8fc 100%);
+}
+
+.sagami_about_grid_4701002170 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(430px, 1fr);
+  gap: clamp(48px, 6vw, 86px);
+  align-items: center;
+}
+
+.sagami_section_head_4701002170 {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 34px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+    width: 4px;
+    background: var(--sagami_sub_4701002170);
+  }
+
+  span {
+    display: block;
+    color: var(--sagami_sub_4701002170);
+    font-size: clamp(1.28rem, 2vw, 1.9rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h2 {
+    margin: 10px 0 0;
+    color: var(--sagami_base_4701002170);
+    font-size: clamp(2rem, 3.2vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+}
+
+.sagami_about_text_4701002170 {
+  p {
+    margin: 0 0 24px;
+    color: var(--sagami_text_4701002170);
+    font-size: clamp(1rem, 1.18vw, 1.12rem);
+    font-weight: 700;
+    line-height: 2.05;
+  }
+}
+
+.sagami_about_photo_4701002170 {
+  margin: 0;
+  overflow: hidden;
+  border: 10px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 24px 54px rgba(17, 42, 108, 0.16);
+
+  img {
+    aspect-ratio: 1.37;
+    object-fit: cover;
+  }
+}
+
+.sagami_services_4701002170 {
+  padding-top: 0;
+  background: linear-gradient(180deg, #eef8fc 0%, #dff2fa 100%);
+}
+
+.sagami_service_groups_4701002170 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.sagami_service_group_4701002170 {
+  --group_color_4701002170: var(--sagami_base_4701002170);
+}
+
+.sagami_service_group_orange_4701002170 {
+  --group_color_4701002170: var(--sagami_sub_4701002170);
+}
+
+.sagami_group_title_4701002170 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 64px;
+  padding: 0 22px 0 28px;
+  color: #fff !important;
+  background: var(--group_color_4701002170);
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 12px 24px rgba(17, 42, 108, 0.14);
+
+  span {
+    font-size: clamp(1.22rem, 1.8vw, 1.72rem);
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  small {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.86rem;
+    font-weight: 900;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
+.sagami_card_grid_4701002170 {
+  display: grid;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.sagami_card_grid_two_4701002170 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sagami_card_grid_three_4701002170 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sagami_service_card_4701002170 {
+  a {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    column-gap: 12px;
+    min-height: 100%;
+    padding: 18px 16px 16px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 14px 28px rgba(17, 42, 108, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(17, 42, 108, 0.14);
+    }
+  }
+
+  h3 {
+    grid-column: 2;
+    align-self: center;
+    margin: 0;
+    color: var(--sagami_base_4701002170);
+    font-size: clamp(1.18rem, 1.55vw, 1.54rem);
+    font-weight: 900;
+    line-height: 1.28;
+  }
+
+  p {
+    grid-column: 1 / -1;
+    margin: 0 0 18px;
+    color: var(--sagami_text_4701002170);
+    font-size: clamp(0.92rem, 1.04vw, 1rem);
+    font-weight: 800;
+    line-height: 1.85;
+  }
+
+  img {
+    grid-column: 1 / -1;
+    aspect-ratio: 1.06;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  small {
+    grid-column: 1 / -1;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 18px;
+    color: var(--sagami_base_4701002170);
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1.2;
+    word-break: break-all;
+  }
+}
+
+.sagami_card_no_4701002170 {
+  display: grid;
+  width: 48px;
+  aspect-ratio: 1;
+  place-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 1;
+  background: var(--sagami_base_4701002170);
+  border-radius: 4px;
+}
+
+.sagami_consult_4701002170 {
+  padding-top: 20px;
+  background: linear-gradient(180deg, #dff2fa 0%, #eef8fc 100%);
+  text-align: center;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin: 0 0 36px;
+    color: var(--sagami_base_4701002170);
+    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.35;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 0 1 72px;
+      height: 2px;
+      background: var(--sagami_base_4701002170);
+      opacity: 0.65;
+    }
+  }
+}
+
+.sagami_consult_grid_4701002170 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.sagami_consult_card_4701002170 {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 22px;
+  align-items: center;
+  min-height: 142px;
+  padding: 28px;
+  text-align: left;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(17, 42, 108, 0.08);
+
+  i {
+    color: var(--sagami_base_4701002170);
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0;
+    color: var(--sagami_base_4701002170);
+    font-size: clamp(1.1rem, 1.4vw, 1.38rem);
+    font-weight: 900;
+    line-height: 1.72;
+  }
+}
+
+.sagami_consult_lead_4701002170 {
+  margin: 36px 0 0;
+  color: var(--sagami_base_4701002170);
+  font-size: clamp(1.06rem, 1.42vw, 1.42rem);
+  font-weight: 900;
+  line-height: 1.85;
+}
+
+.sagami_footer_4701002170 {
+  padding: clamp(56px, 6vw, 86px) 0;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 40%),
+    var(--sagami_base_4701002170);
+}
+
+.sagami_footer_grid_4701002170 {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(42px, 6vw, 78px);
+  align-items: center;
+}
+
+.sagami_footer_info_4701002170 {
+  img {
+    width: min(420px, 100%);
+    margin-bottom: 30px;
+    filter: brightness(0) invert(1);
+  }
+
+  dl {
+    display: grid;
+    gap: 11px;
+    margin: 0;
+  }
+
+  dl > div {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    font-size: clamp(1rem, 1.2vw, 1.16rem);
+    font-weight: 900;
+    line-height: 1.6;
+  }
+
+  dt {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.92;
+  }
+
+  dd,
+  a {
+    color: #fff;
+  }
+}
+
+.sagami_footer_map_4701002170 {
+  overflow: hidden;
+  min-height: 360px;
+  background: #fff;
+  border: 8px solid rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22);
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: 0;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .sagami_header_inner_4701002170 {
+    grid-template-columns: minmax(220px, 330px) 1fr auto;
+    gap: 18px;
+  }
+
+  .sagami_nav_4701002170 {
+    display: none;
+  }
+
+  .sagami_service_groups_4701002170 {
+    grid-template-columns: 1fr;
+  }
+
+  .sagami_card_grid_two_4701002170,
+  .sagami_card_grid_three_4701002170 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .sagami_header_inner_4701002170 {
+    width: min(100% - 30px, 1200px);
+    min-height: 78px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .sagami_logo_4701002170 img {
+    width: min(300px, 56vw);
+  }
+
+  .sagami_hero_4701002170 {
+    min-height: auto;
+    display: block;
+    padding: 0 0 54px;
+  }
+
+  .sagami_hero_bg_4701002170 {
+    position: relative;
+    width: 100%;
+    height: 260px;
+  }
+
+  .sagami_hero_photo_4701002170 {
+    position: relative;
+    left: auto;
+    height: 360px;
+    clip-path: none;
+  }
+
+  .sagami_hero_photo_4701002170.slider_fullslider_wrap {
+    height: 360px;
+  }
+
+  .sagami_hero_copy_4701002170 {
+    width: 100%;
+    padding: 44px 0 0;
+  }
+
+  .sagami_about_grid_4701002170,
+  .sagami_footer_grid_4701002170 {
+    grid-template-columns: 1fr;
+  }
+
+  .sagami_consult_grid_4701002170,
+  .sagami_card_grid_two_4701002170,
+  .sagami_card_grid_three_4701002170 {
+    grid-template-columns: 1fr;
+  }
+
+  .sagami_service_card_4701002170 a {
+    grid-template-columns: 70px minmax(0, 1fr) minmax(180px, 0.45fr);
+    grid-template-rows: auto auto 1fr;
+    gap: 6px 18px;
+    align-items: start;
+  }
+
+  .sagami_service_card_4701002170 {
+    h3 {
+      grid-column: 2;
+      margin: 0;
+    }
+
+    p {
+      grid-column: 1 / span 2;
+      margin-bottom: 0;
+    }
+
+    img {
+      grid-column: 3;
+      grid-row: 1 / span 4;
+      aspect-ratio: 1.25;
+    }
+
+    small {
+      grid-column: 1 / span 2;
+      margin-top: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sagami_single_4701002170 {
+    width: calc(100% - 28px);
+  }
+
+  .sagami_header_contact_4701002170 {
+    display: none;
+  }
+
+  .sagami_hero_bg_4701002170 {
+    height: 190px;
+  }
+
+  .sagami_hero_photo_4701002170 {
+    height: 270px;
+  }
+
+  .sagami_hero_photo_4701002170.slider_fullslider_wrap {
+    height: 270px;
+  }
+
+  .sagami_hero_copy_4701002170 {
+    h1 {
+      font-size: clamp(2.22rem, 10.6vw, 3.04rem);
+      line-height: 1.28;
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
+
+    p {
+      padding: 12px 0;
+      background: transparent;
+      font-size: 1.02rem;
+    }
+
+    > a {
+      width: 100%;
+      min-width: 0;
+      min-height: 64px;
+    }
+  }
+
+  .sagami_about_4701002170,
+  .sagami_services_4701002170,
+  .sagami_consult_4701002170 {
+    padding: 58px 0;
+  }
+
+  .sagami_about_grid_4701002170 {
+    gap: 30px;
+  }
+
+  .sagami_section_head_4701002170 {
+    margin-bottom: 24px;
+  }
+
+  .sagami_group_title_4701002170 {
+    display: grid;
+    gap: 8px;
+    min-height: auto;
+    padding: 18px 16px;
+
+    small {
+      justify-content: flex-start;
+    }
+  }
+
+  .sagami_service_card_4701002170 a {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 16px;
+  }
+
+  .sagami_service_card_4701002170 {
+    h3 {
+      grid-column: 2;
+      align-self: center;
+    }
+
+    p,
+    img,
+    small {
+      grid-column: 1 / -1;
+    }
+
+    img {
+      grid-row: auto;
+      aspect-ratio: 1.42;
+    }
+  }
+
+  .sagami_card_no_4701002170 {
+    width: 44px;
+  }
+
+  .sagami_consult_4701002170 h2 {
+    display: block;
+    font-size: 1.78rem;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .sagami_consult_card_4701002170 {
+    grid-template-columns: 58px 1fr;
+    min-height: 112px;
+    padding: 22px 20px;
+
+    i {
+      font-size: 3rem;
+    }
+  }
+
+  .sagami_consult_lead_4701002170 {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .sagami_footer_info_4701002170 {
+    dl > div {
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .sagami_footer_map_4701002170 {
+    min-height: 300px;
+
+    iframe {
+      height: 300px;
+    }
+  }
+}
+
+.sagami_lower_pages_4701002170_lower {
+  --sagami_base_4701002170_lower: #112A6C;
+  --sagami_sub_4701002170_lower: #F6611A;
+  --sagami_bg_4701002170_lower: #BEDFED;
+  --sagami_text_4701002170_lower: #102044;
+  color: var(--sagami_text_4701002170_lower);
+  background: #fff;
+  font-family: "Noto Sans JP", "YakuHanJP", sans-serif;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  th,
+  td,
+  dd {
+    max-width: 100%;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+.sagami_single_4701002170_lower {
+  position: relative;
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+  z-index: 1;
+}
+
+.sagami_base_footer_4701002170_lower {
+  padding: clamp(48px, 5vw, 74px) 0;
+  color: #fff;
+  background: var(--sagami_base_4701002170_lower);
+}
+
+.sagami_footer_grid_4701002170_lower {
+  display: grid;
+  grid-template-columns: minmax(340px, .8fr) minmax(0, 1.2fr);
+  gap: clamp(36px, 5vw, 70px);
+  align-items: center;
+}
+
+.sagami_footer_logo_4701002170_lower {
+  width: min(410px, 100%);
+  margin-bottom: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.sagami_footer_info_4701002170_lower {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+
+  > div {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 16px;
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1rem, 1.15vw, 1.12rem);
+    font-weight: 900;
+    line-height: 1.6;
+  }
+}
+
+.sagami_footer_map_4701002170_lower,
+.sagami_access_map_4701002170_lower {
+  overflow: hidden;
+  min-height: 340px;
+  border: 8px solid rgba(255, 255, 255, .9);
+  border-radius: 8px;
+  background: #fff;
+
+  iframe {
+    display: block;
+    width: 100% !important;
+    height: 340px !important;
+    border: 0;
+  }
+}
+
+.sagami_lower_page_4701002170_lower {
+  background: linear-gradient(180deg, #fff 0%, #eef8fc 48%, #fff 100%);
+
+  p,
+  li {
+    font-size: clamp(1rem, 1.1vw, 1.12rem);
+    font-weight: 700;
+    line-height: 1.9;
+  }
+}
+
+.sagami_lower_hero_4701002170_lower {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(76px, 7vw, 118px) 0;
+  background:
+    linear-gradient(112deg, rgba(255, 255, 255, .94) 0 49%, rgba(255, 255, 255, 0) 49%),
+    linear-gradient(180deg, rgba(190, 223, 237, .62), rgba(238, 248, 252, .28));
+}
+
+.sagami_lower_hero_grid_4701002170_lower,
+.sagami_solar_hero_grid_4701002170_lower,
+.sagami_split_4701002170_lower,
+.sagami_company_grid_4701002170_lower,
+.sagami_access_grid_4701002170_lower {
+  display: grid;
+  grid-template-columns: minmax(0, .86fr) minmax(420px, 1fr);
+  gap: clamp(42px, 6vw, 80px);
+  align-items: center;
+}
+
+.sagami_lower_hero_4701002170_lower h1,
+.sagami_solar_hero_4701002170_lower h1 {
+  margin: 18px 0 22px;
+  color: var(--sagami_base_4701002170_lower);
+  font-family: "Noto Serif JP", "Zen Antique", serif;
+  font-size: clamp(3rem, 5vw, 4.3rem);
+  font-weight: 900;
+  line-height: 1.25;
+  text-shadow: 0 3px 0 rgba(255, 255, 255, .9);
+}
+
+.sagami_lower_hero_4701002170_lower p,
+.sagami_solar_hero_4701002170_lower p {
+  width: min(640px, 100%);
+  color: var(--sagami_base_4701002170_lower);
+  font-size: clamp(1.1rem, 1.5vw, 1.34rem);
+  font-weight: 900;
+}
+
+.sagami_lower_kicker_4701002170_lower,
+.sagami_en_4701002170_lower {
+  display: inline-block;
+  padding-bottom: 12px;
+  color: var(--sagami_base_4701002170_lower);
+  font-size: clamp(1.05rem, 1.35vw, 1.24rem);
+  font-weight: 900;
+  border-bottom: 4px solid var(--sagami_sub_4701002170_lower);
+}
+
+.sagami_lower_hero_photo_grid_4701002170_lower {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 14px;
+
+  img {
+    height: clamp(360px, 38vw, 540px);
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 0 18px 42px rgba(17, 42, 108, .15);
+  }
+
+  img:first-child {
+    clip-path: polygon(11% 0, 100% 0, 89% 100%, 0 100%);
+  }
+}
+
+.sagami_lower_hero_grid_4701002170_lower figure,
+.sagami_split_4701002170_lower figure,
+.sagami_company_grid_4701002170_lower figure {
+  margin: 0;
+  overflow: hidden;
+  border: 8px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 22px 52px rgba(17, 42, 108, .14);
+
+  img {
+    aspect-ratio: 1.45;
+    object-fit: cover;
+  }
+}
+
+.sagami_lower_intro_4701002170_lower,
+.sagami_feature_area_4701002170_lower,
+.sagami_work_section_4701002170_lower,
+.sagami_diagnosis_4701002170_lower,
+.sagami_service_showcase_4701002170_lower,
+.sagami_gallery_4701002170_lower,
+.sagami_voice_4701002170_lower,
+.sagami_company_4701002170_lower,
+.sagami_business_4701002170_lower,
+.sagami_access_4701002170_lower {
+  padding: clamp(72px, 7vw, 110px) 0;
+}
+
+.sagami_lower_intro_4701002170_lower {
+  background: #fff;
+
+  h2 {
+    margin: 22px 0 26px;
+    color: var(--sagami_base_4701002170_lower);
+    font-size: clamp(2.1rem, 3.2vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.34;
+  }
+}
+
+.sagami_center_head_4701002170_lower {
+  display: grid;
+  justify-items: center;
+  margin-bottom: clamp(28px, 4vw, 46px);
+  text-align: center;
+
+  span {
+    color: var(--sagami_base_4701002170_lower);
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: .18em;
+  }
+
+  h2 {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    color: var(--sagami_base_4701002170_lower);
+    font-family: "Noto Serif JP", "Zen Antique", serif;
+    font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.25;
+  }
+
+  h2::before,
+  h2::after {
+    content: "";
+    width: 72px;
+    height: 3px;
+    background: var(--sagami_sub_4701002170_lower);
+  }
+}
+
+.sagami_feature_area_4701002170_lower,
+.sagami_diagnosis_4701002170_lower,
+.sagami_service_showcase_4701002170_lower,
+.sagami_gallery_4701002170_lower,
+.sagami_business_4701002170_lower {
+  background: linear-gradient(180deg, #eef8fc, #dff2fa);
+}
+
+.sagami_feature_grid_4701002170_lower,
+.sagami_showcase_grid_4701002170_lower,
+.sagami_voice_grid_4701002170_lower {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.sagami_feature_grid_4701002170_lower article,
+.sagami_showcase_grid_4701002170_lower article,
+.sagami_voice_grid_4701002170_lower article {
+  position: relative;
+  padding: 28px 24px;
+  background: #fff;
+  border: 2px solid rgba(17, 42, 108, .18);
+  border-radius: 8px;
+  box-shadow: 0 14px 30px rgba(17, 42, 108, .07);
+}
+
+.sagami_feature_grid_4701002170_lower i,
+.sagami_showcase_grid_4701002170_lower i,
+.sagami_voice_grid_4701002170_lower i {
+  display: grid;
+  width: 74px;
+  aspect-ratio: 1;
+  margin: 0 auto 18px;
+  place-items: center;
+  color: #fff;
+  font-size: 2.6rem;
+  background: var(--sagami_base_4701002170_lower);
+  border-radius: 50%;
+}
+
+.sagami_feature_grid_4701002170_lower h3,
+.sagami_showcase_grid_4701002170_lower h3,
+.sagami_voice_grid_4701002170_lower h3 {
+  margin: 0 0 12px;
+  color: var(--sagami_base_4701002170_lower);
+  font-size: clamp(1.24rem, 1.5vw, 1.48rem);
+  font-weight: 900;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.sagami_work_section_4701002170_lower {
+  padding-top: 0;
+  background: #fff;
+}
+
+.sagami_work_block_4701002170_lower {
+  display: grid;
+  grid-template-columns: minmax(380px, .9fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 70px);
+  align-items: stretch;
+  padding: clamp(40px, 5vw, 64px) 0;
+  border-top: 2px solid rgba(17, 42, 108, .18);
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  figure img {
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+  }
+
+  h2 {
+    margin: 12px 0 18px;
+    color: var(--sagami_base_4701002170_lower);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(2.3rem, 3.8vw, 3.7rem);
+    font-weight: 900;
+    line-height: 1.25;
+  }
+
+  h3 {
+    display: inline-flex;
+    margin: 18px 0 14px;
+    padding: 6px 18px;
+    color: #fff;
+    font-weight: 900;
+    background: var(--sagami_base_4701002170_lower);
+    border-radius: 4px;
+  }
+}
+
+.sagami_work_block_reverse_4701002170_lower {
+  figure {
+    order: 2;
+  }
+}
+
+.sagami_anchor_label_4701002170_lower {
+  display: inline-flex;
+  min-width: 82px;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+  background: var(--sagami_base_4701002170_lower);
+}
+
+.sagami_check_list_4701002170_lower {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.6em;
+    color: var(--sagami_base_4701002170_lower);
+    font-weight: 900;
+  }
+
+  li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--sagami_base_4701002170_lower);
+    font-weight: 900;
+  }
+}
+
+.sagami_energy_strip_4701002170_lower,
+.sagami_cta_4701002170_lower {
+  padding: clamp(48px, 5vw, 76px) 0;
+}
+
+.sagami_energy_strip_4701002170_lower {
+  background: linear-gradient(90deg, #fff3ea 0%, #fff 100%);
+}
+
+.sagami_energy_strip_grid_4701002170_lower {
+  display: grid;
+  grid-template-columns: minmax(260px, .9fr) repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 16px;
+    color: #fff;
+    font-weight: 900;
+    background: var(--sagami_sub_4701002170_lower);
+  }
+
+  h2 {
+    color: var(--sagami_sub_4701002170_lower);
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    font-weight: 900;
+  }
+
+  img {
+    aspect-ratio: 1.45;
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 0 12px 26px rgba(17, 42, 108, .08);
+  }
+}
+
+.sagami_cta_4701002170_lower {
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #eef8fc);
+
+  h2 {
+    margin: 0 0 28px;
+    color: var(--sagami_base_4701002170_lower);
+    font-size: clamp(2rem, 3.1vw, 3rem);
+    font-weight: 900;
+  }
+}
+
+.sagami_quote_grid_4701002170_lower,
+.sagami_cta_btns_4701002170_lower {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.sagami_quote_grid_4701002170_lower {
+  margin-bottom: 26px;
+
+  p {
+    min-width: min(320px, 100%);
+    margin: 0;
+    padding: 18px 24px;
+    color: var(--sagami_base_4701002170_lower);
+    font-weight: 900;
+    background: #fff;
+    border: 2px solid rgba(17, 42, 108, .25);
+  }
+}
+
+.sagami_cta_btns_4701002170_lower a,
+.sagami_center_btn_4701002170_lower a,
+.sagami_access_grid_4701002170_lower a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 0 30px;
+  color: #fff;
+  font-size: 1.14rem;
+  font-weight: 900;
+  line-height: 1;
+  background: var(--sagami_sub_4701002170_lower);
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(246, 97, 26, .22);
+}
+
+.sagami_cta_btns_4701002170_lower a:nth-child(even),
+.sagami_center_btn_4701002170_lower a:nth-child(even) {
+  background: var(--sagami_base_4701002170_lower);
+}
+
+.sagami_solar_page_4701002170_lower {
+  background: linear-gradient(180deg, #eff9fd 0%, #fff 32%, #dff2fa 100%);
+}
+
+.sagami_solar_hero_4701002170_lower {
+  overflow: hidden;
+  padding: clamp(74px, 7vw, 112px) 0 0;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .88) 45%, rgba(190, 223, 237, .35) 100%);
+
+  h1 strong {
+    color: var(--sagami_sub_4701002170_lower);
+  }
+
+  h2 {
+    margin: 0 0 18px;
+    color: var(--sagami_base_4701002170_lower);
+    font-size: clamp(1.8rem, 3vw, 2.9rem);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+  }
+
+  figure img {
+    aspect-ratio: 1.56;
+    object-fit: cover;
+  }
+}
+
+.sagami_solar_slide_row_4701002170_lower {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: clamp(42px, 5vw, 68px);
+
+  img {
+    aspect-ratio: 1.7;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+}
+
+.sagami_subsidy_4701002170_lower {
+  padding: clamp(46px, 5vw, 70px) 0;
+  background: linear-gradient(180deg, #dff2fa, #f8fdff);
+}
+
+.sagami_subsidy_grid_4701002170_lower {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, minmax(0, .9fr));
+  gap: 18px;
+  align-items: stretch;
+
+  h2,
+  article,
+  > div {
+    margin: 0;
+    padding: 28px 20px;
+    text-align: center;
+    background: #fff;
+    border: 3px solid rgba(17, 42, 108, .18);
+    border-radius: 8px;
+  }
+
+  h2 {
+    display: grid;
+    place-items: center;
+    color: var(--sagami_base_4701002170_lower);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 900;
+  }
+
+  span,
+  p {
+    display: block;
+    margin: 0;
+    color: var(--sagami_base_4701002170_lower);
+    font-weight: 900;
+  }
+
+  strong {
+    display: block;
+    color: var(--sagami_sub_4701002170_lower);
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  small {
+    font-size: .42em;
+  }
+
+  > div {
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.24rem;
+    font-weight: 900;
+    background: var(--sagami_sub_4701002170_lower);
+    border-color: var(--sagami_sub_4701002170_lower);
+
+    strong {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.sagami_center_btn_4701002170_lower {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.sagami_showcase_grid_4701002170_lower article {
+  padding: 12px 12px 28px;
+
+  > i {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 1;
+    width: 56px;
+    font-size: 2rem;
+    border-radius: 6px;
+  }
+
+  img {
+    aspect-ratio: 1.35;
+    object-fit: cover;
+    margin-bottom: 18px;
+    border-radius: 5px;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--sagami_sub_4701002170_lower);
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1.45;
+    text-align: center;
+  }
+}
+
+.sagami_gallery_grid_4701002170_lower {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 4px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 10px 22px rgba(17, 42, 108, .08);
+  }
+
+  img {
+    aspect-ratio: 1.45;
+    object-fit: cover;
+  }
+
+  figcaption {
+    padding: 8px 8px 10px;
+    color: var(--sagami_base_4701002170_lower);
+    font-size: .9rem;
+    font-weight: 900;
+    line-height: 1.35;
+    text-align: center;
+  }
+}
+
+.sagami_voice_grid_4701002170_lower {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sagami_about_page_4701002170_lower {
+  background: #fff;
+}
+
+.sagami_company_grid_4701002170_lower {
+  grid-template-columns: minmax(0, .9fr) minmax(430px, 1fr);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid rgba(17, 42, 108, .24);
+    border-radius: 8px;
+  }
+
+  th,
+  td {
+    padding: 22px 24px;
+    border-bottom: 1px solid rgba(17, 42, 108, .2);
+    font-size: clamp(1rem, 1.16vw, 1.14rem);
+    line-height: 1.7;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    width: 170px;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    background: var(--sagami_base_4701002170_lower);
+  }
+
+  td {
+    color: var(--sagami_text_4701002170_lower);
+    font-weight: 700;
+  }
+
+  tr:last-child th,
+  tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+.sagami_access_4701002170_lower {
+  background: #fff;
+}
+
+.sagami_access_grid_4701002170_lower {
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr);
+  padding: 24px;
+  border: 4px solid var(--sagami_base_4701002170_lower);
+  border-radius: 8px;
+  background: #fff;
+
+  h3 {
+    margin: 0 0 16px;
+    color: var(--sagami_base_4701002170_lower);
+    font-size: 1.55rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin-bottom: 28px;
+    color: var(--sagami_text_4701002170_lower);
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .sagami_feature_grid_4701002170_lower,
+  .sagami_showcase_grid_4701002170_lower {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sagami_subsidy_grid_4701002170_lower {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sagami_gallery_grid_4701002170_lower {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .sagami_footer_grid_4701002170_lower,
+  .sagami_lower_hero_grid_4701002170_lower,
+  .sagami_solar_hero_grid_4701002170_lower,
+  .sagami_split_4701002170_lower,
+  .sagami_company_grid_4701002170_lower,
+  .sagami_access_grid_4701002170_lower,
+  .sagami_work_block_4701002170_lower,
+  .sagami_energy_strip_grid_4701002170_lower {
+    grid-template-columns: 1fr;
+  }
+
+  .sagami_work_block_reverse_4701002170_lower figure {
+    order: 0;
+  }
+
+  .sagami_solar_slide_row_4701002170_lower {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sagami_voice_grid_4701002170_lower {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sagami_single_4701002170_lower {
+    width: calc(100% - 28px);
+  }
+
+  .sagami_lower_pages_4701002170_lower {
+    h1,
+    h2,
+    h3,
+    p,
+    li,
+    th,
+    td,
+    dd,
+    a {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  .sagami_footer_info_4701002170_lower > div,
+  .sagami_check_list_4701002170_lower,
+  .sagami_feature_grid_4701002170_lower,
+  .sagami_showcase_grid_4701002170_lower,
+  .sagami_subsidy_grid_4701002170_lower,
+  .sagami_gallery_grid_4701002170_lower {
+    grid-template-columns: 1fr;
+  }
+
+  .sagami_lower_hero_4701002170_lower,
+  .sagami_solar_hero_4701002170_lower {
+    padding: 58px 0 0;
+  }
+
+  .sagami_lower_hero_4701002170_lower h1,
+  .sagami_solar_hero_4701002170_lower h1 {
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
+  }
+
+  .sagami_lower_hero_photo_grid_4701002170_lower {
+    grid-template-columns: 1fr;
+
+    img {
+      height: auto;
+      aspect-ratio: 1.25;
+      clip-path: none !important;
+    }
+  }
+
+  .sagami_center_head_4701002170_lower h2 {
+    display: block;
+    font-size: 2.1rem;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .sagami_company_grid_4701002170_lower th,
+  .sagami_company_grid_4701002170_lower td {
+    display: block;
+    width: 100%;
+  }
+
+  .sagami_access_grid_4701002170_lower {
+    padding: 14px;
+  }
+}
+
+.sagami_page_4701002170 {
+  .sagami_header_4701002170 {
+    :where(a, span) {
+      font-size: 110%;
+    }
+  }
+
+  main,
+  .sagami_footer_4701002170 {
+    :where(p, li, dt, dd, th, td, figcaption, small) {
+      font-size: 110%;
+    }
+  }
+}
+
+.sagami_lower_pages_4701002170_lower {
+  .sagami_lower_page_4701002170_lower {
+    :is(p, li, dt, dd, th, td, figcaption, a, small) {
+      font-size: 110%;
+    }
+  }
+}

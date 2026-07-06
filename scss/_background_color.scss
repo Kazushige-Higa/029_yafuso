@@ -1,0 +1,131 @@
+.bg_base_color {
+    background-color: rgba($base_color, 1) !important;
+}
+.bg_sub_color {
+    background-color: rgba($sub_color, 1) !important;
+}
+.bg_color {
+    background-color: $bg_color !important;
+}
+.bg_gold {
+    background: $gold !important;
+}
+.bg_grd {
+    @include bg_grd;
+}
+.bg_orange {
+    background-color: $bg_orange !important;
+}
+.bg_pink {
+    background-color: $bg_pink !important;
+}
+.bg_red {
+    background-color: $bg_red !important;
+}
+.bg_sky {
+    background-color: $bg_sky !important;
+}
+.bg_blue {
+    background-color: $bg_blue !important;
+}
+.bg_green {
+    background-color: $bg_green !important;
+}
+.bg_yellow {
+    background-color: $bg_yellow !important;
+}
+.bg_beige {
+    background-color: $bg_beige !important;
+}
+.bg_brown {
+    background-color: $bg_brown !important;
+}
+.bg_gray {
+    background-color: $bg_gray !important;
+}
+.bg_white {
+    background-color: rgba(#fff, 1) !important;
+}
+.bg_dark {
+    background-color: rgba(#111, 0.8) !important;
+    backdrop-filter: saturate(180%) blur(2px);
+}
+.bg_glass {
+    background-color: rgba(#fff, 0.8) !important;
+    backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.bg_glass_8 {
+    background-color: rgba(#fff, 0.8) !important;
+    backdrop-filter: saturate(180%) blur(2px);
+}
+.bg_glass_base {
+    background-color: rgba(darken($base_color, 10%), 0.5) !important;
+    backdrop-filter: saturate(180%) blur(2px);
+}
+.bg_glass_sub {
+    background-color: rgba($sub_color, 0.4) !important;
+    backdrop-filter: saturate(180%) blur(2px);
+}
+.bg_black {
+    background-color: rgba(#111, 1) !important;
+}
+.bg_111 {
+    background-color: #111 !important;
+}
+.bg_222 {
+    background-color: #222 !important;
+}
+.bg_333 {
+    background-color: #333 !important;
+}
+.bg_aaa {
+    background-color: #aaa !important;
+}
+.bg_bbb {
+    background-color: #bbb !important;
+}
+.bg_ccc {
+    background-color: #ccc !important;
+}
+.bg_ddd {
+    background-color: #ddd !important;
+}
+.bg_eee {
+    background-color: #eee !important;
+}
+.bg_f2 {
+    background-color: #f2f2f2 !important;
+}
+.bg_transparent {
+    background: transparent !important;
+}
+.bg_shadow {
+    box-shadow: rgba(#111, 0.1) 3px 3px 3px 3px;
+}
+// SNS_color
+.bg_line {
+    background-color: #2bac38 !important;
+}
+.bg_facebook {
+    background-color: #365491 !important;
+}
+.bg_x {
+    background-color: #3596d4 !important;
+}
+.bg_insta {
+    background-color: #f13f79;
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat !important;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat !important;
+}
+.bg_grd_anime {
+    @include bg_grd_anime;
+    animation: bg_grd_anime 7s linear infinite;
+    z-index: 1;
+}
+@keyframes bg_grd_anime {
+    0% {
+        background-position-x: 200%;
+    }
+}

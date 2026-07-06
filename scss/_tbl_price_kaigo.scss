@@ -1,0 +1,46 @@
+.tbl_price_kaigo {
+    width: 100%;
+    th,
+    td {
+        padding: 15px;
+        vertical-align: middle;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #fff;
+        .small {
+            font-weight: normal;
+        }
+    }
+    tr {
+        background-color: #e1edc5;
+        &:nth-child(even) {
+            td {
+                background-color: #e1edc5;
+            }
+        }
+    }
+    th {
+        background: #c1db80;
+    }
+    td {
+        background-color: #eff4dd;
+    }
+    .th-1 {
+        background-color: #fff !important;
+        padding: 5px;
+    }
+    @include for-size(phone-only) {
+        th {
+        }
+        th,
+        td {
+            padding: 10px 5px;
+            font-size: 10px;
+            span {
+                font-size: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,327 @@
+.bnrbox01 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    > a {
+        display: block;
+        text-align: center;
+        padding: 20px 5px 3px;
+        transition: all 0.4s ease;
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, $base_color, $base_color);
+            background-size: 180% auto;
+            background-position: right center;
+            border-radius: 10px;
+            z-index: 0;
+            transition: all 0.4s ease-in;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            background: #fff;
+            border-radius: 5px;
+            z-index: 0;
+        }
+        > .inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            //background: url(../img/pattern/bottom02.png) bottom repeat-x;
+            background-size: auto 50%;
+            @include for-size(tablet){
+                align-items: flex-end;
+            }
+            > .child {
+                width: 25%;
+                padding-bottom: 2px;
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+            > .child-txt {
+                width: 40%;
+                padding: 0 20px;
+                align-items: center;
+            }
+            .top-bnr-title {
+                font-size: 120%;
+                span {
+                    color: lighten($sub_color, 15%);
+                    font-size: 3.2rem;
+                }
+            }
+            .top-bnr-txt {
+                color: #fff;
+                background: $base_color;
+                border: 1px solid $base_color;
+                padding: 10px 34px;
+                max-width: 300px;
+                font-size: 1.5rem;
+                border-radius: 30px;
+                margin: 20px auto;
+                transition: all 0.4s ease-in;
+            }
+        }
+        &:hover {
+            transform: translateY(-5px);
+            filter: drop-shadow(0px 5px 5px rgba(#000, 0.2));
+            &::before {
+                background-position: left center;
+            }
+            .top-bnr-txt {
+                color: $base_color;
+                background: #fefefe;
+            }
+        }/* 
+        @include for-size(pro) {
+            padding: 10px 20px 0;
+            > .inner {
+                > .child {
+                    width: 15%;
+                }
+                > .child-txt {
+                    width: 70%;
+                }
+                .top-bnr-title {
+                    font-size: 110%;
+
+                    span {
+                        font-size: 2.8rem;
+                    }
+                }
+
+                .top-bnr-txt {
+                    font-size: 1.4rem;
+                    margin-top: 15px;
+                }
+            }
+        } */
+        @include for-size(tablet) {
+            > .inner {
+                .top-bnr-title {
+                    font-size: 1.5rem;
+                    letter-spacing: 0.1em;
+
+                    span {
+                        font-size: 2.4rem;
+                        letter-spacing: 0.2em;
+                    }
+                }
+
+                .top-bnr-txt {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        @include for-size(phone-only) {
+            border-radius: 5px;
+            padding: 5px;
+            .inner {
+                margin: auto;
+                background-size: auto 30%;
+
+                > .child {
+                    width: 50%;
+                    order: 3;
+                }
+
+                .child-txt {
+                    width: 100%;
+                    padding: 20px 0 0;
+                    order: 1;
+                }
+                .top-bnr-txt {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+.bnrbox02 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    &.reversal {
+        > .inner {
+            flex-direction: row-reverse;
+        }
+    }
+    &.sub {
+        > a {
+            &::before {
+                background: linear-gradient(to right, $sub_color, $sub_color);
+            }
+            &::after {
+                background: $sub_color;
+            }
+            > .inner {
+                background: none;
+            }
+        }
+    }
+    > a {
+        display: block;
+        text-align: center;
+        padding: 5px 5px 5px;
+        transition: all 0.4s ease;
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, $base_color, $base_color);
+            background-size: 180% auto;
+            background-position: right center;
+            border-radius: 0;
+            z-index: -1;
+            transition: all 0.4s ease-in;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            background: $base_color;
+            border-radius: 5px;
+            z-index: -1;
+        }
+        > .inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            z-index: 1;
+            width: 100%;
+            position: relative;
+            background: url(../img/pattern/bottom02.png) bottom repeat-x #fff;
+            background-size: auto 50%;
+            > .child {
+                width: 400px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            > .child-txt {
+                width: calc(100% - 400px);
+                padding: 2% 8% 1%;
+                align-items: center;
+                &.center {
+                    margin: auto;
+                }
+            }
+            .top-bnr-title {
+                font-size: 120%;
+
+                span {
+                    color: lighten($sub_color, 15%);
+                    font-size: 3.2rem;
+                }
+            }
+
+            .top-bnr-txt {
+                color: #fff;
+                background: $gold;
+                border: 1px solid $gold;
+                padding: 10px 34px;
+                max-width: 300px;
+                font-size: 1.5rem;
+                border-radius: 0;
+                margin: 20px auto;
+                transition: all 0.4s ease-in;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            filter: drop-shadow(0px 5px 5px rgba(#000, 0.2));
+
+            &::before {
+                background-position: left center;
+            }
+
+            .top-bnr-txt {
+                color: $gold;
+                background: #fff;
+            }
+        }
+
+        @include for-size(tablet) {
+            border-radius: 5px;
+            padding: 5px;
+            .inner {
+                margin: auto;
+                background-size: auto 30%;
+
+                > .child {
+                    width: 100%;
+                    order: 1;
+                }
+
+                .child-txt {
+                    width: 100%;
+                    padding: 3% 5%;
+                    order: 2;
+                }
+                .top-bnr-txt {
+                    font-size: 85% !important;
+                }
+            }
+        }
+    }
+}
+.main_content {
+    @media screen and (max-width: 1040px) {
+        .bnrbox02 {
+            > a {
+                display: block;
+                text-align: center;
+                padding: 5px 5px 5px;
+                transition: all 0.4s ease;
+                border-radius: 5px;
+                padding: 5px;
+                .inner {
+                    margin: auto;
+                    background-size: auto 30%;
+
+                    > .child {
+                        width: 100%;
+                        order: 1;
+                    }
+
+                    .child-txt {
+                        width: 100%;
+                        padding: 3% 5%;
+                        order: 2;
+                    }
+                    .top-bnr-txt {
+                        font-size: 85% !important;
+                    }
+                }
+            }
+        }
+    }
+}

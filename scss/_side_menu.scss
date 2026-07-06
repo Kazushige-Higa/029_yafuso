@@ -1,0 +1,139 @@
+.side_menu {
+    display: flex;
+    > header {
+        width: 20%;
+        height: 100vh;
+        background-color: $base_color;
+        text-align: center;
+        padding: 2em 1.5em;
+        color: #fff;
+        position: sticky; // Keep header sticky
+        top: 0; // Stick to the very top of viewport when scrolling
+        left: 0;
+        z-index: 10;
+        overflow: hidden;
+        /* 
+         * This ensures the header stays fixed to the left side
+         * and follows as you scroll down, without being obscured.
+         */
+
+        nav {
+            &.white {
+                a,
+                span {
+                    color: #fff;
+                    &:hover {
+                        color: rgba(#fff, 0.8);
+                        &:before {
+                            content: "";
+                            width: 100%;
+                            border-bottom: 1px solid #fff;
+                        }
+                    }
+                }
+            }
+            a {
+                color: #333;
+                position: relative;
+                display: block;
+                width: 100%;
+                padding: 0.3em 0;
+                span {
+                    display: block;
+                    color: $base_color;
+                    line-height: 1;
+                    font-weight: 400;
+                    font-size: 90%;
+                    @include eng;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    width: 0;
+                    margin: 0;
+                    border-bottom: 1px solid rgba($base_color, 0.5);
+                    -webkit-transition: all 0.5s 0s ease;
+                    transition: all 0.5s 0s ease;
+                }
+                &:hover {
+                    color: $base_color;
+                    &:before {
+                        content: "";
+                        bottom: 0px;
+                        width: 100%;
+                        border-bottom: 1px solid $base_color;
+                    }
+                }
+            }
+            > ul {
+                transition: 0.3s;
+                text-align: center;
+                > li {
+                    -webkit-column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                    display: block;
+                    padding: 0.5em 0;
+                    line-height: 1.4;
+                    .icon {
+                        transform: translateY(0px) rotate(0deg);
+                        transition: 0.3s;
+                        padding-bottom: 4px;
+                    }
+                    &:hover {
+                        .icon {
+                            transform: translateY(-5px) rotate(20deg);
+                            transition: 0.3s;
+                        }
+                    }
+                    &.none {
+                        display: block;
+                    }
+                    > ul {
+                        border-left: 1px solid rgba(#fff, 0.2);
+                        padding: 0.5em 0 0 5px;
+                        column-count: 1;
+                        li {
+                            padding: 2px 0.5em;
+                            margin-bottom: 3px;
+                            position: relative;
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                left: 0px;
+                                width: 0.5em;
+                                height: 100%;
+                                display: grid;
+                                place-items: center;
+                                content: "\f0da";
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                @include transition;
+                            }
+                        }
+                    }
+                }
+                @include for-size(phone-only) {
+                    > li {
+                        font-size: 85% !important;
+                        padding: 0 8px;
+                    }
+                }
+            }
+        }
+    }
+    > main {
+        width: 80%;
+        overflow: hidden;
+    }
+    @include for-size(phone-only) {
+        > header {
+            display: none;
+        }
+        > main {
+            width: 100%;
+        }
+    }
+}

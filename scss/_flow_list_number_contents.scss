@@ -1,0 +1,167 @@
+.flow_list_number_contents {
+    > li {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        &:after {
+            content: "";
+            border-left: 2px dashed #9d9d9d;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            z-index: -1;
+            @include for-size(phone-only) {
+                border-left: 2px dashed #f2f2f2;
+            }
+        }
+        .number {
+            z-index: 1;
+            font-weight: bold;
+            margin: 0 auto;
+            background-color: $base_color;
+            border-radius: 50%;
+            width: 7em;
+            height: 7em;
+            font-size: 80%;
+            letter-spacing: 0;
+            display: block;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            line-height: 1.4;
+            position: relative;
+            transition: all 0.3s 0s ease;
+            text-transform: uppercase;
+            color: #fff;
+            span {
+                line-height: 1;
+            }
+            .num {
+                font-size: 280%;
+                line-height: 1;
+                margin-right: 0;
+                @include for-size(phone-only) {
+                    font-size: 300%;
+                }
+            }
+            .title {
+                display: none;
+            }
+            @include for-size(phone-only) {
+                width: 100%;
+                height: auto;
+                padding: 2em 0;
+                border-radius: 0px;
+                display: grid;
+                grid-template-columns: 60px 1fr;
+                grid-template-rows: 1fr auto;
+                &.radius {
+                    border-radius: 2em !important;
+                }
+                span {
+                    grid-column: 1 / 1;
+                    grid-row: 1 / 1;
+                }
+                .num {
+                    grid-column: 1 / 1;
+                    grid-row: 2 / 2;
+                }
+                .title {
+                    display: block;
+                    text-align: left;
+                    grid-column: 2 / 2;
+                    grid-row: 1 / 3;
+                    font-size: 150%;
+                }
+            }
+        }
+        .title_area {
+            padding: 6px 12px;
+            margin-bottom: 15px;
+            background: $base_color;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+            letter-spacing: 0.1em;
+            width: 100%;
+            span {
+                border: 1px solid #fff;
+                border-radius: 10px;
+                padding: 3px 10px;
+                font-size: 80%;
+                letter-spacing: 0em;
+                font-weight: normal;
+            }
+            &.sp {
+                @include for-size(phone-only) {
+                    display: block !important;
+                }
+            }
+            @include for-size(phone-only) {
+                display: none;
+            }
+        }
+        .contents {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            gap: 30px;
+            &.a_center {
+                align-items: center;
+            }
+            .picture,
+            .textarea {
+                width: 50%;
+                padding: 60px 20px;
+            }
+            .picture {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                &.contain {
+                    text-align: center;
+                    img {
+                        width: auto !important;
+                        max-width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+        @include for-size(phone-only) {
+            &:after {
+                //display: none;
+            }
+            .contents {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0px;
+                .picture,
+                .textarea {
+                    width: 100%;
+                    padding: 0 0;
+                }
+                .textarea {
+                    padding: 1em 0 3em;
+                }
+                .picture {
+                    padding: 2em 0 0;
+                }
+            }
+        }
+    }
+}

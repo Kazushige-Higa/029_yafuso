@@ -1,0 +1,86 @@
+.arrow-line {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    width: 40%;
+    bottom: 20px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    @include for-size(tablet) {
+        width: 40%;
+        bottom: 20px;
+    }
+    @include for-size(phone-only) {
+        width: 50%;
+        bottom: 20px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 200px;
+        height: 1px;
+        background: #fff;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        right: -300px;
+        width: 21px;
+        height: 11px;
+        border-top: 1px solid #fff;
+        transform: rotate(45deg);
+        @include for-size(phone-only) {
+            bottom: -3px;
+            width: 18px;
+        }
+    }
+    &:before {
+        animation: arrowlong01 2s ease infinite;
+    }
+    &:after {
+        animation: arrowlong02 2s ease infinite;
+    }
+}
+
+@keyframes arrowlong01 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    20% {
+        width: 0;
+        opacity: 1;
+    }
+    80% {
+        width: 105%;
+        opacity: 1;
+    }
+    100% {
+        width: 105%;
+        opacity: 0;
+    }
+}
+
+@keyframes arrowlong02 {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    20% {
+        left: 0;
+        opacity: 1;
+    }
+    80% {
+        left: 100%;
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}

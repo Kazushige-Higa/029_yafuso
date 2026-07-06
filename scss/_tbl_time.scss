@@ -1,0 +1,116 @@
+.tbl_time {
+    .box {
+        background: #fff;
+        padding: 15px 0px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+    &.blue {
+        .box {
+            background: rgba(41, 126, 222, 0.1);
+        }
+        tbody td {
+            color: #297ede;
+        }
+    }
+    &.white {
+        table {
+            color: #fff;
+        }
+        thead th {
+            font-weight: normal;
+            line-height: 1.5;
+            padding: 18px 0 9px;
+            background-color: #fff;
+            color: $base_color;
+            border-bottom: 1px solid #fff;
+            text-align: center;
+        }
+        th,
+        td {
+            padding: 15px 2px;
+            color: #fff;
+        }
+        tr {
+            border-bottom: 1px solid #fff;
+        }
+    }
+    table {
+        color: #333;
+    }
+    th {
+        font-weight: 500;
+        font-weight: 500;
+    }
+    tbody td {
+        color: $base_color;
+    }
+    table {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    &.day8 table {
+        max-width: 470px;
+    }
+    thead th {
+        font-weight: normal;
+        line-height: 1.5;
+        padding: 9px 0 9px;
+        border-bottom: 1px solid #aaa;
+        text-align: center;
+        &:first-child {
+            width: 36%;
+        }
+    }
+    tbody th {
+        width: 36%;
+        text-align: center;
+    }
+    &.day8 {
+        thead th:first-child,
+        tbody th {
+            width: 33%;
+        }
+    }
+    tbody {
+        th,
+        td {
+            padding: 4px 0;
+            line-height: 1.5;
+        }
+        th {
+            font-weight: normal;
+            padding-right: 13px;
+        }
+    }
+    thead th:not(:first-child),
+    tbody td {
+        width: calc(49% / 6);
+        text-align: left;
+    }
+    &.day8 {
+        tbody th {
+            padding-right: 10px;
+        }
+        thead th:not(:first-child),
+        tbody td {
+            width: calc(53% / 7);
+        }
+    }
+    &.day8 {
+        thead th:last-child,
+        tbody td:last-child {
+            width: 11%;
+        }
+    }
+    tbody {
+        td {
+            font-size: 77.78%;
+            padding-left: 0.05em;
+        }
+        tr:first-child th {
+            padding-left: 0.6em;
+        }
+    }
+}

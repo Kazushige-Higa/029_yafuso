@@ -1,0 +1,94 @@
+.tabbtn {
+    overflow: hidden;
+    position: relative;
+    background-color: $base_color;
+    margin-top: 20px;
+    &:before {
+        background-color: rgba(#fff, 0.3);
+        content: "";
+        display: block;
+        transform: rotate(48deg);
+        position: absolute;
+        top: -125px;
+        right: -160px;
+        width: 300px;
+        height: 280px;
+    }
+    .actab {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 1px;
+        transition: 0.5s;
+        > input {
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        label {
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            line-height: 1.2;
+            position: relative;
+            display: block;
+            margin: 0 0 0 0;
+            padding: 1em 2em 1em 1em;
+            cursor: pointer;
+            @include for-size(phone-only) {
+                font-size: 1.4rem;
+            }
+            span {
+                font-size: 1.6rem;
+                font-weight: normal;
+                @include for-size(phone-only) {
+                    font-size: 1.1rem;
+                }
+            }
+            &:hover {
+                color: #fff;
+            }
+        }
+        .content {
+            overflow: hidden;
+            max-height: 0;
+            transition: 0.5s;
+            .bx {
+                padding: 0 20px 20px;
+                @include for-size(phone-only) {
+                    padding: 0;
+                }
+            }
+        }
+        input:checked ~ {
+            label {
+                color: #fff;
+            }
+            .content {
+                max-height: 300em;
+            }
+        }
+        label::after {
+            line-height: 1.6;
+            position: absolute;
+            right: 0;
+            display: block;
+            width: 3em;
+            margin-top: -20.5px;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            text-align: center;
+        }
+        input[type="checkbox"] {
+            + label::after {
+                content: "＋";
+            }
+
+            &:checked + label::after {
+                -webkit-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+                content: "－";
+            }
+        }
+    }
+}

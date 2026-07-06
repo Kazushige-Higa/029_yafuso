@@ -1,0 +1,8 @@
+$font_chewy: "Chewy", system-ui;
+@mixin font_chewy {
+    font-family: $font_chewy;
+}
+.font_chewy {
+    @include font_chewy;
+    font-weight: 300;
+}

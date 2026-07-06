@@ -1,0 +1,86 @@
+.list_products {
+    > li {
+        padding-bottom: 50px;
+        position: relative;
+        box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+        a {
+            color: inherit;
+        }
+        @include for-size(phone-only) {
+            padding: 0 0 50px;
+        }
+        table {
+            width: calc(100% - 30px);
+            font-size: 80%;
+            margin: 0 15px !important;
+            th,
+            td {
+                padding: 10px 5px !important;
+                font-weight: normal !important;
+            }
+        }
+        .text {
+            padding: 15px;
+            .title {
+                color: $base_color;
+                font-size: 1.6rem;
+                margin: 10px 0;
+            }
+        }
+        .btn {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            font-size: 85% !important;
+            font-weight: normal;
+        }
+        .figure,
+        figure {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background-color: #fff;
+            &:before {
+                content: "";
+                padding-top: 80%;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .category span {
+            color: $base_color;
+            border: 1px solid $base_color;
+            padding: 5px 15px;
+            line-height: 1;
+            display: inline-block;
+            border-radius: 10px;
+            &.white span {
+                color: #fff;
+                border: 1px solid #fff;
+                padding: 5px 15px;
+                line-height: 1;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        .title {
+            margin: 1em 0;
+            font-size: 120%;
+            text-align: center;
+            color: $base_color;
+            font-weight: bold;
+        }
+        .price {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+
+.caption {
+    position: relative;
+    margin: 0 auto;
+    padding: 0px 30px;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    @include for-size(phone-only) {
+        padding: 4em 0px;
+        margin: 0;
+        display: block;
+    }
+    > figure {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: auto;
+        line-height: 0;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @include for-size(tablet) {
+            width: 80%;
+            height: auto;
+        }
+        @include for-size(phone-only) {
+            width: 100%;
+            height: auto;
+        }
+    }
+    > .box {
+        position: absolute;
+        right: 2em;
+        width: 30em;
+        height: 100%;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        &.bottom {
+            top: inherit !important;
+            bottom: 0 !important;
+        }
+        > .text {
+            padding: 2em;
+            background: rgba(#fff, 0.9);
+        }
+        @include for-size(tablet) {
+            bottom: 0;
+        }
+        @include for-size(phone-only) {
+            display: block;
+            position: relative;
+            margin-top: 1em;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            right: 0;
+        }
+    }
+
+    &.reversal {
+        right: inherit;
+        margin-right: auto;
+        flex-direction: row-reverse;
+
+        figure {
+            left: auto;
+            right: 0%;
+            margin-left: auto;
+        }
+        > .box {
+            top: 0;
+            bottom: 0;
+            right: inherit;
+            left: 30px;
+            margin-right: auto;
+            @include for-size(phone-only){
+                left: 0px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.total_bx {
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #aaa;
+    padding: 16px 0;
+    margin-bottom: 16px;
+    margin-top: 50px;
+    b {
+        font-size: 120%;
+    }
+    &.sub {
+        border: 2px solid $sub_color;
+        input#total {
+            color: $sub_color;
+        }
+    }
+    input#total {
+        border: 0px solid #fff;
+        font-size: 3.0rem;
+        width: 8em;
+        color: $red;
+        background: #fff;
+        text-align: right;
+    }
+}
+.price_select {
+    position: relative;
+    width: 100px;
+    height: auto;
+    padding: 5px 10px 5px 5px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.comment {
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    padding: 0 5px;
+    color: #333;
+    @include for-size(phone-only) {
+        font-size: 12px;
+    }
+}

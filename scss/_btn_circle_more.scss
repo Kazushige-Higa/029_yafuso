@@ -1,0 +1,118 @@
+.btn_circle_more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 33rem;
+    height: auto;
+    border-radius: 1.8rem;
+    overflow: hidden;
+    display: block;
+    &.center {
+        margin: 0 auto;
+    }
+    @include for-size(phone-only){
+        margin: 0 auto;
+    }
+    &.white {
+        .text {
+            color: #fff;
+        }
+        .circle {
+            background: #fff;
+            border: 2px solid #fff;
+            .icon {
+                &.arrow {
+                    &::before {
+                        border-top: 0.25rem solid $base_color;
+                        border-right: 0.25rem solid $base_color;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .text {
+                color: $base_color !important;
+            }
+        }
+    }
+    &:hover {
+        .circle {
+            width: 100%;
+            border-radius: 20rem;
+            .icon.arrow {
+                background: #fff;
+                transform: translate(0.5rem, 0);
+            }
+        }
+
+        .text {
+            color: #fff;
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        transition-duration: 0.1s;
+    }
+    .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 4rem;
+        height: 4rem;
+        background: $base_color;
+        border-radius: 50%;
+
+        .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            &.arrow {
+                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                left: 1.0125rem;
+                width: 1.0625rem;
+                height: 0.25rem;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: -0.23rem;
+                    right: 0.03125rem;
+                    width: 0.7125rem;
+                    height: 0.7125rem;
+                    border-top: 0.25rem solid #fff;
+                    border-right: 0.25rem solid #fff;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        margin: 0 0 0 0.325rem;
+        color: $base_color;
+        font-weight: 600;
+        line-height: 1.6;
+        text-align: center;
+        font-size: 120%;
+        letter-spacing: 0.5px;
+    }
+}

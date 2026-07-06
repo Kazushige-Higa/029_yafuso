@@ -1,0 +1,9 @@
+$font_josefin: "Josefin Sans", sans-serif;
+
+@mixin font_josefin {
+	font-family: $font_josefin !important;
+}
+.font_josefin {
+	@include font_josefin;
+	font-weight: 500;
+}

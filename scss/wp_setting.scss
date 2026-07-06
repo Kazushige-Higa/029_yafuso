@@ -1,0 +1,546 @@
+@charset "utf-8";
+@import "_vars.scss";
+@import "_wordpress_editor.scss";
+
+:root,
+.editor-styles-wrapper {
+    --font-family-kiwi-maru: "Kiwi Maru", serif;
+    --font-family-noto-serif-jp: "Noto Serif JP", serif;
+}
+.wp-singular {
+    &.single {
+        max-width: 100% !important;
+        padding: 0em !important;
+    }
+}
+
+//記事内のcss調整
+#countPost,
+.editor-styles-wrapper {
+    p {
+        line-height: 2;
+    }
+    h2 {
+        font-size: 140%;
+        line-height: 1.2;
+        margin: 0.5em 0;
+        font-weight: bold;
+        color: $base_color;
+        padding: 0.3em 0.5em 0.3em 0.5em;
+        strong {
+            font-size: 150%;
+        }
+    }
+    /*  下矢印
+　　h2 {
+        font-size: 120%;
+        margin: 1.5em 0;
+        font-weight: bold;
+        color: #fff;
+        background-color: $base_color;
+        padding: 0.8em 1em 0.8em 1em;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 10%;
+            bottom: -11px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 12px solid $base_color;
+        }
+    }
+ */
+    h3 {
+        font-size: 120%;
+        margin: 1.5em 0;
+        font-weight: bold;
+        color: $base_color;
+        padding: 0.3em 0.5em 0.3em 0.5em;
+        border-left: 3px solid $base_color;
+    }
+    h4 {
+        font-size: 120%;
+        margin: 1.5em 0;
+        font-weight: bold;
+        color: $base_color;
+        padding: 0.3em 0.5em 0.3em 0.5em;
+        border-left: 3px solid $base_color;
+    }
+    h5 {
+        font-size: 120%;
+        margin: 1.5em 0;
+        font-weight: bold;
+        color: $base_color;
+        padding: 0.3em 0.5em 0.3em 0.5em;
+        border-left: 3px solid #fff;
+    }
+    .has-inline-color {
+        background: linear-gradient(#fff 85%, transparent 30%);
+        z-index: 0;
+        padding: 0 0.1em;
+    }
+    figure {
+        margin: 1.5em auto;
+    }
+    video {
+        vertical-align: middle;
+        width: 100%;
+        height: 30em;
+        background: #111;
+    }
+    .wp-block-list {
+        border: solid 2px #eee;
+        border-radius: 3px;
+        margin-bottom: 2em;
+        padding: 1em 1em 1em 1em;
+    }
+    ul,
+    ol li {
+        a {
+            text-decoration: none;
+        }
+    }
+    ul.wp-block-list {
+        list-style: none;
+        li {
+            position: relative;
+            line-height: 1.8;
+            padding: 0.5em 0 0.5em 1.5em;
+            margin-bottom: 0.3em;
+            //border-bottom: 1px solid #aaa;
+            &:before {
+                content: "●";
+                color: $base_color;
+                position: absolute;
+                top: 0.5em;
+                left: 0;
+            }
+        }
+    }
+    ol.wp-block-list {
+        counter-reset: number;
+        list-style: none;
+        li {
+            line-height: 1.8em;
+            padding: 0.5em 0 0.5em 2.8em;
+            margin-bottom: 5px;
+            position: relative;
+            span {
+                font-weight: normal;
+                padding: 10px;
+                line-height: 1.6;
+                font-size: 80%;
+            }
+            &:before {
+                counter-increment: number;
+                content: counter(number);
+                background: rgba($base_color, 0.6);
+                color: $base_color;
+                position: absolute;
+                top: 0.5em;
+                left: 0;
+                width: 2em;
+                height: 2em;
+                text-align: center;
+                color: #fff;
+                margin-right: 0.1em;
+                border-radius: 100%;
+                display: grid;
+                place-items: center;
+            }
+
+            @include for-size(phone-only) {
+                span {
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
+//記事内のcss調整
+
+// 吹き出し
+.speech-bubble {
+    display: flex;
+    align-items: flex-start;
+    margin: 1em 0;
+    gap: 1em;
+
+    &.left {
+        flex-direction: row;
+    }
+    &.right {
+        flex-direction: row-reverse;
+    }
+
+    .speaker-avatar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-width: 80px;
+        @include for-size(phone-only) {
+            min-width: 60px;
+        }
+    }
+
+    .speaker-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e0e0e0;
+        color: #555;
+        font-weight: bold;
+        font-size: 1.2em;
+        flex-shrink: 0;
+        @include for-size(phone-only) {
+            width: 60px;
+            height: 60px;
+        }
+        &__initial {
+            font-size: 1.4em;
+        }
+
+        &--placeholder {
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .speaker-name {
+        margin-top: 6px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
+    .bubble-content {
+        background: #b0ec88;
+        border-radius: 10px;
+        padding: 1em;
+        position: relative;
+        max-width: 75%;
+        width: 75%;
+        p {
+            margin: 0 !important;
+        }
+    }
+
+    &.left .bubble-content {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 1em;
+            left: -1.2em;
+            border: 10px solid transparent;
+            border-right-color: #b0ec88;
+        }
+    }
+    &.right .bubble-content {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 1em;
+            right: -1.2em;
+            border: 10px solid transparent;
+            border-left-color: #b0ec88;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .speech-bubble {
+        &.left .bubble-content::before {
+            left: -1.6em;
+        }
+        &.right .bubble-content::before {
+            right: -1.6em;
+        }
+    }
+}
+.speaker {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+// 吹き出し
+
+// メッセージボックス
+$message-box-variants: (
+    info: (
+        #3a8dde,
+        #f0f6ff
+    ),
+    check: (
+        #16a34a,
+        #f1fbf3
+    ),
+    alert: (
+        #f97316,
+        #fff5ec
+    ),
+    point: (
+        #8c4bff,
+        #f6f0ff
+    )
+);
+
+.message-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75em;
+    padding: 1em 1.1em;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    line-height: 1.8;
+
+    .message-box__icon {
+        width: 2em;
+        height: 2em;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 120%;
+        color: #fff;
+        flex-shrink: 0;
+    }
+
+    .message-box__body {
+        flex: 1;
+    }
+
+    .message-box__title {
+        font-weight: 700;
+        font-size: 120%;
+        margin: 0 0 0.35em 0;
+        letter-spacing: 0.01em;
+    }
+
+    .message-box__content {
+        margin: 0;
+        p {
+            margin: 0 0 0.4em 0;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@each $name, $colors in $message-box-variants {
+    $accent: nth($colors, 1);
+    $background: nth($colors, 2);
+
+    .message-box--#{$name} {
+        border-color: rgba($accent, 0.25);
+        background: $background;
+    }
+
+    .message-box--#{$name} .message-box__icon {
+        background: $accent;
+    }
+
+    .message-box--#{$name} .message-box__title {
+        color: $accent;
+    }
+}
+// メッセージボックス
+
+//table
+.wp-block-table {
+    overflow-x: auto;
+    margin-bottom: 2.5em !important;
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+
+        thead {
+            border-bottom: 0px solid;
+            background-color: $base_color;
+            color: #fff;
+        }
+
+        tfoot {
+            border-top: 3px solid;
+        }
+
+        td,
+        th {
+            border: 2px solid #ccc;
+            padding: 0.5em;
+            &.heading {
+                background-color: #eee;
+            }
+        }
+
+        &[style*="border-top-color"] {
+            tr:first-child,
+            tr:first-child td,
+            tr:first-child th,
+            > *,
+            > * td,
+            > * th {
+                border-top-color: inherit;
+            }
+            tr:not(:first-child) {
+                border-top-color: initial;
+            }
+        }
+
+        &[style*="border-right-color"] {
+            td:last-child,
+            th,
+            tr,
+            > * {
+                border-right-color: inherit;
+            }
+        }
+
+        &[style*="border-bottom-color"] {
+            tr:last-child,
+            tr:last-child td,
+            tr:last-child th,
+            > *,
+            > * td,
+            > * th {
+                border-bottom-color: inherit;
+            }
+            tr:not(:last-child) {
+                border-bottom-color: initial;
+            }
+        }
+
+        &[style*="border-left-color"] {
+            td:first-child,
+            th,
+            tr,
+            > * {
+                border-left-color: inherit;
+            }
+        }
+
+        &[style*="border-style"] {
+            td,
+            th,
+            tr,
+            > * {
+                border-style: inherit;
+            }
+        }
+
+        &[style*="border-width"] {
+            td,
+            th,
+            tr,
+            > * {
+                border-style: inherit;
+                border-width: inherit;
+            }
+        }
+    }
+
+    .has-fixed-layout {
+        table-layout: fixed;
+        width: 100%;
+
+        td,
+        th {
+            word-break: break-word;
+        }
+    }
+
+    &.aligncenter,
+    &.alignleft,
+    &.alignright {
+        display: table;
+        width: auto;
+
+        td,
+        th {
+            word-break: break-word;
+        }
+    }
+
+    .has-subtle-light-gray-background-color {
+        background-color: #f3f4f5;
+    }
+    .has-subtle-pale-green-background-color {
+        background-color: #e9fbe5;
+    }
+    .has-subtle-pale-blue-background-color {
+        background-color: #e7f5fe;
+    }
+    .has-subtle-pale-pink-background-color {
+        background-color: #fcf0ef;
+    }
+
+    &.is-style-stripes {
+        background-color: initial;
+        border-bottom: 1px solid rgba($base_color, 0.2);
+        border-collapse: inherit;
+        border-spacing: 0;
+
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background-color: rgba($base_color, 0.2);
+                }
+                td:first-child {
+                    width: 25%;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &.has-subtle-light-gray-background-color {
+            tbody tr:nth-child(odd) {
+                background-color: #f3f4f5;
+            }
+        }
+        &.has-subtle-pale-green-background-color {
+            tbody tr:nth-child(odd) {
+                background-color: #e9fbe5;
+            }
+        }
+        &.has-subtle-pale-blue-background-color {
+            tbody tr:nth-child(odd) {
+                background-color: #e7f5fe;
+            }
+        }
+        &.has-subtle-pale-pink-background-color {
+            tbody tr:nth-child(odd) {
+                background-color: #fcf0ef;
+            }
+        }
+
+        td,
+        th {
+            border-color: #0000;
+        }
+    }
+
+    .has-border-color {
+        td,
+        th,
+        tr,
+        > * {
+            border-color: inherit;
+        }
+    }
+}
+//table

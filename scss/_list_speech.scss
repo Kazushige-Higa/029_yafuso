@@ -1,0 +1,32 @@
+.list_speech {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: #fff;
+    font-weight: normal;
+    line-height: 1;
+    padding: 1.5em 1em;
+    border-radius: 30px;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+    //border:1px solid #aaa;
+    margin-bottom: 10px;
+    @include for-size(phone-only){
+        margin-bottom: 1.0em;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom:-7px;
+        left:0;
+        right:0;
+        margin: 0 auto 0;
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        //box-shadow: #aaa 1px 1px 0 0;
+        transform: rotate(45deg);
+    }
+}

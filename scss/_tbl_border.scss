@@ -1,0 +1,53 @@
+.tbl_border {
+    width: 100%;
+    .t-right {
+        text-align: right;
+    }
+    th,
+    td {
+        padding: 15px;
+        border-bottom: 2px solid $gray;
+        vertical-align: middle;
+        @include for-size(phone-only) {
+            padding: 10px;
+            font-size: 85% !important;
+        }
+    }
+    th {
+        width: 30%;
+        text-align: left;
+        font-weight: 600;
+        border-bottom-color: $base_color;
+        @include for-size(phone-only) {
+            //  width: 30%;
+        }
+    }
+}
+.tbl_border_s {
+    width: 100%;
+    font-size: 80%;
+    .t-right {
+        text-align: right;
+    }
+    th,
+    td {
+        padding: 0.1em 0.3em;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        vertical-align: middle;
+        @include for-size(phone-only) {
+            font-size: 85% !important;
+        }
+    }
+    th {
+        width: 7em;
+        text-align: left;
+        font-weight: normal;
+        font-weight: 600;
+        border-top-color: $base_color;
+        border-bottom-color: $base_color;
+        background-color: rgba($base_color, 0.1);
+        color: $base_color;
+        text-align: center;
+    }
+}

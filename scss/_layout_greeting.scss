@@ -1,0 +1,114 @@
+.layout_greeting {
+    position: relative;
+    margin: 0 auto;
+    padding: 100px 0;
+    z-index: 1;
+    @include for-size(tablet) {
+        padding: 60px 0;
+    }
+
+    /*  &:before {
+        position: absolute;
+        content: "";
+        width: 711px;
+        height: 711px;
+        top: -140px;
+        left: -100px;
+        background: $bg_base;
+        z-index: -1;
+        opacity: 0.6;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 520px;
+        height: 540px;
+        bottom: -200px;
+        right: -100px;
+        background: url(../img/mandara.png) no-repeat;
+        background-size: cover;
+        z-index: -1;
+        opacity: 0.6;
+    } */
+
+    > .wrap {
+        position: relative;
+        margin: 0 auto;
+        @include for-size(tablet) {
+            width: 95%;
+        }
+    }
+
+    .subphoto {
+        position: absolute;
+        left: 100px;
+        top: 150px;
+        z-index: 2;
+        width: 32%;
+        .photo {
+            img {
+                width: 80%;
+            }
+        }
+        @include for-size(tablet) {
+            top: 5%;
+            left: 0;
+            width: 34%;
+        }
+        &.sp_wide {
+            @include for-size(phone-only) {
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+
+    .mainwrap {
+        width: 76%;
+        margin: 0 10% 0 auto;
+        display: flex;
+        position: relative;
+        @include for-size(tablet) {
+            width: 100%;
+            margin: 0 0 0 auto;
+            display: flex;
+            position: relative;
+        }
+    }
+
+    .subwrap {
+        width: 48%;
+        margin: 0px 10% 0 auto;
+        position: relative;
+        padding: 20px 0;
+        z-index: 1;
+        @include for-size(tablet) {
+            margin: 14% auto;
+            width: 90%;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            height: 100%;
+            left: -230px;
+            top: 0;
+            background: $bg_base;
+            //background-size: contain;
+            opacity: 0.6;
+        }
+    }
+
+    .txtarea {
+        width: 63%;
+        margin: 0 0 0 auto;
+        position: relative;
+        z-index: 1;
+        &.size_s {
+            width: 63%;
+            margin: 0 0 0 auto;
+        }
+    }
+}

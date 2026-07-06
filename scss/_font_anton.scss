@@ -1,0 +1,9 @@
+$font_anton: "Anton", sans-serif;
+
+@mixin font_anton {
+	font-family: $font_anton;
+}
+.font_anton {
+	@include font_anton;
+	font-weight: 500;
+}

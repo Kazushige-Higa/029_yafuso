@@ -1,0 +1,10 @@
+$font_archivo: "Archivo Black", sans-serif;
+
+@mixin font_archivo {
+	font-family: $font_archivo !important;
+}
+.font_archivo {
+	@include font_archivo;
+	font-weight: 400;
+    font-style: normal;
+}

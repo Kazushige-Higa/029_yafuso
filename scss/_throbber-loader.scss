@@ -1,0 +1,78 @@
+@-moz-keyframes throbber-loader {
+    0% {
+        background: #e9e9e9;
+    }
+
+    10% {
+        background: $base_color;
+    }
+
+    40% {
+        background: #e9e9e9;
+    }
+}
+
+@-webkit-keyframes throbber-loader {
+    0% {
+        background: #e9e9e9;
+    }
+
+    10% {
+        background: $base_color;
+    }
+
+    40% {
+        background: #e9e9e9;
+    }
+}
+
+@keyframes throbber-loader {
+    0% {
+        background: #e9e9e9;
+    }
+
+    10% {
+        background: $base_color;
+    }
+
+    40% {
+        background: #e9e9e9;
+    }
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+
+.throbber-loader:not(:required) {
+    -moz-animation: throbber-loader 2000ms 300ms infinite ease-out;
+    -webkit-animation: throbber-loader 2000ms 300ms infinite ease-out;
+    animation: throbber-loader 2000ms 300ms infinite ease-out;
+    background: #e9e9e9;
+    display: inline-block;
+    position: relative;
+    text-indent: -9999px;
+    width: 0.9em;
+    height: 1.5em;
+    margin: 0 1.6em;
+    &:before,
+    &:after {
+        background: #e9e9e9;
+        content: "\x200B";
+        display: inline-block;
+        width: 0.9em;
+        height: 1.5em;
+        position: absolute;
+        top: 0;
+    }
+    &:before {
+        -moz-animation: throbber-loader 2000ms 150ms infinite ease-out;
+        -webkit-animation: throbber-loader 2000ms 150ms infinite ease-out;
+        animation: throbber-loader 2000ms 150ms infinite ease-out;
+        left: -1.6em;
+    }
+    &:after {
+        -moz-animation: throbber-loader 2000ms 450ms infinite ease-out;
+        -webkit-animation: throbber-loader 2000ms 450ms infinite ease-out;
+        animation: throbber-loader 2000ms 450ms infinite ease-out;
+        right: -1.6em;
+    }
+}

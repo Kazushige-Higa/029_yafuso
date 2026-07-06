@@ -1,0 +1,21 @@
+#fixed_header {
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+    &.view {
+        position: fixed;
+        width: 100%;
+        background: rgba(#fff, 0.8);
+        transition: 1s;
+        .header_main {
+            display: block;
+            padding: 0;
+        }
+        .logo_area {
+            display: none;
+        }
+        .contact_wrap {
+            display: none;
+        }
+    }
+}

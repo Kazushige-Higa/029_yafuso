@@ -1,0 +1,178 @@
+.slider_arrows {
+    &.radius {
+        .slide_box {
+            border-radius: 2em;
+        }
+    }
+    .slider {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    .arrows_slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        gap: 0;
+        padding: 0;
+    }
+    .arrows_list {
+        flex: 0 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        min-width: 32.33%;
+        position: relative;
+        border-radius: 1em;
+    }
+    .slide_box {
+        position: relative;
+        height: 100%;
+        margin: 0.5em;
+        padding: 2em;
+        background-color: #fff;
+        .img {
+            width: 100%;
+            height: 300px;
+            border-radius: 2em;
+            overflow: hidden;
+            @include for-size(phone-only) {
+                height: 200px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .detail {
+            text-align: center;
+        }
+    }
+
+    .arrow {
+        background-color: $base_color;
+        border: none;
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 10px;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        outline: none;
+        transition: all 0.3s 0s ease;
+        transform: translateY(-50%) scale3d(1, 1, 1);
+        filter: drop-shadow(0.2em 0.2em 0.3em rgba(17, 17, 17, 0.1));
+
+        &:before {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            content: "";
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            width: 0.5em;
+            height: 0.5em;
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.12s ease-in 0s;
+        }
+
+        &:hover {
+            opacity: 0.6;
+            transition: all 0.3s 0s ease;
+            transform: translateY(-50%) scale3d(0.95, 0.95, 0.95);
+        }
+    }
+
+    .prev {
+        left: -5%;
+
+        &:before {
+            transform: rotate(225deg);
+        }
+    }
+
+    .next {
+        right: -5%;
+
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+
+    .pager {
+        text-align: center;
+        margin: 2em auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            background-color: #aaa;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px;
+            margin: 0 5px;
+            border-radius: 50%;
+            outline: none;
+            width: 10px;
+
+            &.active {
+                background-color: $base_color;
+            }
+        }
+    }
+
+    // メディアクエリ
+    @media (min-width: 600px) {
+        .arrows_list {
+            width: calc(100% / 3); // PCで3枚見せる
+        }
+    }
+
+    @include for-size(phone-only) {
+        .slider {
+            width: 100%;
+            max-width: 100%;
+            margin: 2em auto;
+        }
+
+        .arrows_slides {
+            gap: 0%; // スマホではgapなし
+        }
+
+        .arrows_list {
+            min-width: 100%;
+            max-width: 100%;
+            flex-shrink: 0;
+        }
+
+        .arrow {
+            width: 1em;
+            height: 1em;
+
+            &:before {
+                width: 0.3em;
+                height: 0.3em;
+            }
+        }
+
+        .prev {
+            left: 0em;
+        }
+
+        .next {
+            right: 0em;
+        }
+    }
+}

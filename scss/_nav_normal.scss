@@ -1,0 +1,174 @@
+.nav_normal {
+    &.one {
+        ul > li ul {
+            display: none !important;
+        }
+    }
+    &.left {
+        > ul {
+            margin: 0 auto 0 0;
+            text-align: left;
+            @include for-size(phone-only) {
+                margin: 0 auto 0;
+                text-align: center;
+            }
+        }
+    }
+    &.center {
+        > ul {
+            margin: 0 auto;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+    &.white {
+        a,
+        span {
+            color: #fff;
+            &:hover {
+                color: rgba(#fff, 0.8);
+                &:before {
+                    content: "";
+                    width: 100%;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+    }
+    a {
+        color: #333;
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0.3em 0;
+        span {
+            display: block;
+            color: $base_color;
+            line-height: 1;
+            @include eng;
+            font-weight: 400;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 0;
+            margin: 0;
+            border-bottom: 1px solid rgba($base_color, 0.5);
+            -webkit-transition: all 0.5s 0s ease;
+            transition: all 0.5s 0s ease;
+        }
+        &:hover {
+            color: $base_color;
+            &:before {
+                content: "";
+                bottom: 0px;
+                width: 100%;
+                border-bottom: 1px solid $base_color;
+            }
+        }
+    }
+    &.set1 > ul {
+        column-count: 1 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set2 > ul {
+        column-count: 2 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set3 > ul {
+        column-count: 3 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set4 > ul {
+        column-count: 4 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set5 > ul {
+        column-count: 5 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set6 > ul {
+        column-count: 6 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set7 > ul {
+        column-count: 7 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    > ul {
+        transition: 0.3s;
+        text-align: center;
+        display: flex;
+        > li {
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            display: inline-block;
+            padding: 0 1em;
+            border-right: 1px solid #ccc;
+            line-height: 1.4;
+            &:last-child {
+                border-right: 0px solid #ccc;
+            }
+            .icon {
+                transform: translateY(0px) rotate(0deg);
+                transition: 0.3s;
+                padding-bottom: 4px;
+            }
+            &:hover {
+                .icon {
+                    transform: translateY(-5px) rotate(20deg);
+                    transition: 0.3s;
+                }
+            }
+            &.none {
+                display: block;
+            }
+            > ul {
+                border-left: 1px solid rgba(#fff, 0.2);
+                padding: 0.5em 0 0 5px;
+                column-count: 1;
+                li {
+                    padding: 2px 0.5em;
+                    margin-bottom: 3px;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0px;
+                        width: 0.5em;
+                        height: 100%;
+                        display: grid;
+                        place-items: center;
+                        content: "\f0da";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        @include transition;
+                    }
+                }
+            }
+        }
+        @include for-size(phone-only) {
+            > li {
+                font-size: 85% !important;
+                padding: 0 8px;
+            }
+        }
+    }
+}

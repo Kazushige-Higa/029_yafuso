@@ -1,0 +1,50 @@
+.cover_svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &.z_index {
+        &:before,
+        &:after {
+            z-index: 2;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -2px;
+        margin: 0 0 auto;
+        width: 100%;
+        height: 100%;
+        background: $cover_svg_top top no-repeat;
+        z-index: 1;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        margin: auto 0 0;
+        width: 100%;
+        height: 100%;
+        background: $cover_svg_bottom bottom no-repeat;
+        z-index: 1;
+    }
+    &.top {
+        &:after {
+            background: none;
+        }
+    }
+    &.bottom {
+        &:before {
+            background: none;
+        }
+    }
+    #u-firstview {
+        height: calc(100vh - 0px) !important;
+        @include for-size(phone-only) {
+            height: calc(90vh - 100px) !important;
+        }
+    }
+}

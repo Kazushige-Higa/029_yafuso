@@ -1,0 +1,106 @@
+.tbl_menu {
+    margin: 1em 0 3em;
+    width: 100%;
+    background: none;
+    th {
+        vertical-align: middle;
+        padding: 24px 10px;
+        font-weight: normal;
+        line-height: 1.5;
+        border-top: #aaa 1px solid;
+        border-left: #aaa 0px solid;
+        border-right: #aaa 0px solid;
+        border-bottom: #aaa 1px solid;
+        background: none;
+        text-align: center;
+        p {
+            font-size: 80%;
+            color: #888;
+            padding-top: 8px;
+        }
+        &:nth-child(1) {
+            width: 50%;
+            text-align: left;
+        }
+    }
+    td {
+        font-weight: normal;
+        width: 60px;
+        padding: 0px 0px 0 16px;
+        vertical-align: middle;
+        border-bottom: #aaa 1px solid;
+        border-left: #aaa 0px solid;
+        border-right: #aaa 0px solid;
+        border-top: #aaa 1px solid;
+        text-align: center;
+        &:nth-child(2) {
+            text-align: center;
+        }
+        &:nth-child(3) {
+            text-align: center;
+            font-weight: normal;
+            width: 10em;
+        }
+    }
+    tr {
+        &:hover {
+            background: rgba(#f2f2f2, 0.8);
+        }
+    }
+
+    @include for-size(tablet) {
+        th {
+            padding: 16px 0;
+        }
+        td {
+            text-align: left !important;
+        }
+        tr {
+            &:hover {
+                background: rgba(#eee, 0.5);
+            }
+        }
+    }
+    @include for-size(phone-only) {
+        font-size: 80%;
+    }
+}
+.list_flex {
+    padding: 5px 0;
+    font-weight: normal;
+    overflow: hidden;
+    line-height: 1.5;
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: repeat(2, 1fr);
+    @include for-size(phone-only) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    li {
+        &:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f1b0";
+            margin-right: 8px;
+            font-weight: 600;
+            color: $base_color;
+        }
+        @include for-size(tablet) {
+            width: calc(100% - 0px);
+            padding-left: 0;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            text-align: left;
+        }
+        a {
+            transition: 0.5s;
+            &:link,
+            &:visited {
+                color: $black;
+                text-decoration: none;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}

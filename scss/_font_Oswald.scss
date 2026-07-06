@@ -1,0 +1,8 @@
+$font_Oswald: "Oswald", sans-serif;
+
+@mixin font_Oswald {
+	font-family: $font_Oswald !important;
+}
+.font_Oswald {
+	@include font_Oswald;
+}

@@ -1,0 +1,175 @@
+.tbl {
+    width: 100%;
+    //font-size: 80% !important;
+    margin: 0.8em 0;
+    &.tcenter {
+        th {
+            text-align: center !important;
+        }
+    }
+    &.white {
+        background-color: rgba($base_color, 0);
+        th,
+        td {
+            padding: 0.8em;
+            border: 2px solid #aaa;
+        }
+
+        th {
+            background-color: rgba($base_color, 0);
+            color: #aaa;
+            span {
+                font-size: 100%;
+            }
+        }
+        td {
+            background-color: rgba($base_color, 0);
+        }
+    }
+    &.base {
+        background-color: rgba($base_color, 0.1);
+        border: 1px solid #fff !important;
+        th,
+        td {
+            padding: 0.8em;
+            border: 1px solid #fff !important;
+        }
+        th {
+            background-color: rgba($base_color, 0.8);
+            color: #fff;
+            span {
+                font-size: 100%;
+            }
+        }
+        td {
+            background-color: rgba($base_color, 0.1);
+        }
+    }
+    &.sub {
+        background-color: rgba($sub_color, 0.1);
+        border: 1px solid #fff !important;
+        th,
+        td {
+            padding: 0.8em;
+            border: 1px solid #fff !important;
+        }
+        th {
+            background-color: rgba($sub_color, 0.8);
+            color: #fff;
+            span {
+                font-size: 100%;
+            }
+        }
+        td {
+            background-color: rgba($sub_color, 0.05);
+        }
+    }
+
+    &.green {
+        background-color: rgba($green, 0.1);
+        th,
+        td {
+            padding: 0.8em;
+            border: 2px solid #aaa;
+        }
+
+        th {
+            background-color: rgba($green, 0.8);
+            color: #aaa;
+            span {
+                font-size: 100%;
+            }
+        }
+        td {
+            background-color: rgba($green, 0.1);
+        }
+    }
+    &.orange {
+        background-color: rgba($orange, 0.1);
+        th,
+        td {
+            padding: 0.8em;
+            border: 1px solid #fff !important;
+        }
+
+        th {
+            background-color: rgba($orange, 0.8);
+            color: #fff;
+            span {
+                font-size: 100%;
+            }
+        }
+        td {
+            background-color: rgba($orange, 0.05);
+        }
+    }
+    th,
+    td {
+        padding: 0.8em;
+        vertical-align: middle;
+        border: 1px solid #aaa !important;
+    }
+    th {
+        background: #eee;
+        span {
+            font-size: 100%;
+        }
+        &.top {
+            vertical-align: top;
+            width: 20% !important;
+        }
+    }
+    a {
+        text-decoration: underline;
+    }
+    &.callendar {
+        text-align: center;
+        th {
+            width: calc(100% / 8);
+        }
+
+        td {
+            width: calc(100% / 8);
+        }
+    }
+    @include for-size(phone-only) {
+        padding: 5px;
+
+        th,
+        td {
+            font-size: 80% !important;
+        }
+    }
+    td.price {
+        text-align: right;
+        font-size: 1.2em;
+        font-weight: 600;
+
+        span {
+            font-size: 80%;
+        }
+    }
+    .cell01 {
+        width: 25%;
+    }
+    &.sp {
+        @include for-size(phone-only) {
+            th,
+            td {
+                display: block !important;
+                width: 100% !important;
+                text-align: left;
+            }
+        }
+    }
+    @include for-size(phone-only) {
+        th {
+            width: 35%;
+            text-align: left;
+        }
+        th,
+        td {
+            padding: 0.8em;
+        }
+    }
+}

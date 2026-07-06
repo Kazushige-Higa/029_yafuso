@@ -1,0 +1,9 @@
+$font_maru: "Kosugi Maru", sans-serif;
+
+@mixin font_maru {
+    font-family: $font_maru;
+}
+.font_maru {
+    @include font_maru;
+    font-weight: 900;
+}

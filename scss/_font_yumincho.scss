@@ -1,0 +1,10 @@
+$font_yumincho:
+    "Shippori Mincho", "YakuHanMP", "Noto Serif JP", "游明朝 Medium", "Yu Mincho", YuMincho, "Hiragino Mincho ProN",
+    HGS明朝E, serif;
+@mixin yumincho {
+    font-family: $font_yumincho;
+}
+.yumincho {
+    @include yumincho;
+    font-weight: 900 !important;
+}

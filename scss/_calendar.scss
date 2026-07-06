@@ -1,0 +1,182 @@
+.calendar_head {
+    color: #fefefe;
+    background: #999;
+    text-align: center;
+    padding: 4px;
+}
+
+.calendar-box {
+    #cms-calendar-1-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 2rem;
+        @include for-size(phone-only) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .loading {
+        width: 100%;
+        max-height: 250px;
+        display: block;
+        place-items: center;
+
+        .spinner-loader {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    div.calendar {
+        width: 100%;
+        @include for-size(phone-only) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    table {
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        th,
+        td {
+            width: 14.28%;
+            //border: 1.9px solid #aaa;
+            font-weight: normal;
+            padding: 5px;
+            height: 45px;
+            font-size: 1.3rem;
+            color: #555;
+            background-color: #f2f2f2;
+
+            @include for-size(phone-only) {
+                height: 40px;
+                font-size: 85% !important;
+            }
+        }
+        th {
+            background: #f2f2f2;
+            vertical-align: middle;
+            font-weight: 600;
+            text-align: center;
+        }
+        td {
+            background: #fefefe;
+        }
+    }
+    th.sun,
+    td.sun {
+        color: $red;
+    }
+    th.sat,
+    td.sat {
+        color: $blue;
+    }
+    .item-td {
+        background: lighten($base_color, 30%);
+
+        .days {
+            color: #333;
+        }
+    }
+    .item {
+        font-size: 1.1rem;
+        text-align: center;
+        color: rgba($sub_color, 0.8);
+        background-color: rgba($sub_color, 0.1);
+    }
+    p {
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 5px auto;
+
+        .off {
+            color: rgba($red, 0.2);
+        }
+    }
+}
+.calendar_arrow {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    .arrow-after {
+        background: $base_color;
+        color: #fff;
+        padding: 0 10px;
+        &:after {
+            content: "\f0da";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+            margin-left: 5px;
+        }
+    }
+    .arrow-before {
+        background: $base_color;
+        color: #fff;
+        padding: 0 10px;
+        &:before {
+            content: "\f0d9";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+            margin-right: 5px;
+        }
+    }
+}
+.calendar_info {
+    .off {
+        color: rgba($red, 0.2);
+    }
+    .yotei1 {
+        color: rgba($red, 0.2);
+    }
+    .yotei2 {
+        color: rgba($yellow, 0.2);
+    }
+    .yotei3 {
+        color: rgba($blue, 0.2);
+    }
+}
+.calendar-box td.calendar {
+    .item1,
+    .item2,
+    .item3 {
+        display: none;
+    }
+    &.off {
+        background-color: rgba($red, 0.2) !important;
+    }
+    &.yotei1 {
+        background-color: rgba($red, 0.2) !important;
+    }
+    &.yotei2 {
+        background-color: rgba($yellow, 0.2) !important;
+    }
+    &.yotei3 {
+        background-color: rgba($blue, 0.2) !important;
+    }
+    &.holiday {
+        //background-color: rgba($red, 0.2) !important;
+    }
+    &.sun {
+        //background-color: rgba($red, 0.2);
+    }
+    &.mon {
+        //background-color: rgba($red, 0.2);
+    }
+    &.tue {
+        //background-color: rgba($red, 0.2);
+    }
+    &.wed {
+        //background-color: rgba($red, 0.2);
+    }
+    &.thu {
+        //background-color: rgba($red, 0.2);
+    }
+    &.fri {
+        //background-color: rgba($red, 0.2);
+    }
+    &.sat {
+        //background-color: rgba($red, 0.2);
+    }
+    &.kara {
+        background: none !important;
+    }
+}

@@ -1,0 +1,99 @@
+.tbl_fee {
+    width: 100%;
+    line-height: 1.2;
+    background-color: #fafafa;
+    tr:nth-child(even) {
+        background-color: rgba($base_color, 0.1);
+    }
+    th,
+    td {
+        vertical-align: top;
+        padding: 1.5em 1em;
+        span {
+            font-size: 80%;
+        }
+    }
+    th {
+        text-align: left;
+    }
+    td {
+        text-align: right;
+        color: $base_color;
+        &.price {
+            color: $base_color;
+        }
+        span {
+            font-size: 80%;
+        }
+        b {
+            color: $red;
+            @include for-size(phone-only) {
+                display: block;
+            }
+        }
+    }
+    &.type2 {
+        background-color: #fff;
+        border: 0px solid #333;
+        th,
+        td {
+            padding: 1.5em 0.5em;
+            text-align: center;
+            align-items: center;
+        }
+        th {
+            padding: 1.5em 0.5em;
+            width: 33.33% !important;
+        }
+        td {
+            //color: $red;
+            color: #333;
+            span {
+                margin: 0 0.3em;
+                display: inline-block;
+                @include for-size(phone-only) {
+                    display: block;
+                }
+            }
+            &:nth-child(1) {
+                text-align: left;
+                @include for-size(phone-only) {
+                    line-height: 1.8;
+                }
+            }
+        }
+        tr:nth-child(even) {
+            background-color: rgba(#aaa, 0.1);
+        }
+    }
+    &.type1 {
+        background-color: transparent !important;
+        border: 0px solid #aaa;
+        th,
+        td {
+            vertical-align: top;
+            padding: 15px 0px;
+            border-bottom: 1px solid #aaa;
+        }
+        td {
+            //color: $red;
+            color: $base_color;
+            @include mincho;
+        }
+        tr:nth-child(even) {
+            background-color: rgba($base_color, 0);
+        }
+        &.white {
+            background-color: transparent !important;
+            border: 0px solid #fff;
+        }
+    }
+    &.sub {
+        tr:nth-child(even) {
+            background-color: rgba($sub_color, 0.1);
+        }
+        td {
+            color: $sub_color;
+        }
+    }
+}

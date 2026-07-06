@@ -1,0 +1,24 @@
+.frame_grd_bar {
+	overflow: hidden;
+	position: relative;
+	&:before,
+	&:after {
+		position: fixed;
+		z-index: 10;
+		content: "";
+		top: 0;
+		right: 0;
+		width: 1.5em;
+		height: 100vh;
+		@include bg_grd;
+		@include for-size(phone-only) {
+			width: 0.5em;
+		}
+	}
+	&:before {
+		left: 0;
+	}
+	&:after {
+		right: 0;
+	}
+}

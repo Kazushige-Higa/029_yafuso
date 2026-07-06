@@ -1,0 +1,8 @@
+$font_jost: 'Jost', sans-serif;
+
+@mixin font_jost {
+	font-family: $font_jost !important;
+}
+.font_Oswald {
+	@include font_jost;
+}

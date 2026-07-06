@@ -1,0 +1,25 @@
+.rotate {
+    -webkit-animation: rotate-anime 25s linear infinite;
+    animation: rotate-anime 25s linear infinite;
+    transform-origin: center;
+}
+@-webkit-keyframes rotate-anime {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-anime {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

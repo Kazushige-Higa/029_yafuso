@@ -1,0 +1,63 @@
+.tbl_company {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    th,
+    td {
+        padding: 0.5em 1.5em;
+        vertical-align: middle;
+    }
+    th {
+        text-align: left;
+        width: 25%;
+        position: relative;
+        background: $base_color;
+        color: #fff;
+        font-weight: 600;
+        &::after {
+            left: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: #f9f9f9;
+            border-width: 0.5em;
+            border-left-color: $base_color;
+            margin-top: -0.5em;
+        }
+    }
+    td {
+        background: #f9f9f9;
+        padding-left: 20px;
+    }
+    &.sp {
+        @include for-size(phone-only) {
+            th,
+            td {
+                display: block;
+            }
+            th {
+                width: 100%;
+                &::after {
+                    left: 50%;
+                    top: inherit;
+                    bottom: -20px;
+                    transform: rotate(90deg);
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-color: none;
+                    border-width: 0.5em;
+                    border-left-color: $base_color;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}

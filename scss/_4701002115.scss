@@ -1,0 +1,62 @@
+.clean_logo_4701002115 {
+  display: inline-grid;
+  gap: 0.08em;
+  max-width: 100%;
+  width: fit-content;
+  color: $base_color;
+  font-family: "Noto Sans JP", "YakuHanJP", sans-serif;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: middle;
+
+  .clean_logo_lead_4701002115,
+  .clean_logo_name_4701002115 {
+    display: block;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .clean_logo_lead_4701002115 {
+    color: $sub_color;
+    font-size: clamp(10px, 1.05vw, 16px);
+    font-weight: 900;
+  }
+
+  .clean_logo_name_4701002115 {
+    color: $base_color;
+    font-size: clamp(24px, 2.9vw, 42px);
+    font-weight: 900;
+  }
+
+  &.is_footer_4701002115 {
+    justify-items: center;
+    text-align: center;
+
+    .clean_logo_lead_4701002115 {
+      font-size: clamp(12px, 1.2vw, 18px);
+    }
+
+    .clean_logo_name_4701002115 {
+      font-size: clamp(30px, 3.4vw, 48px);
+    }
+  }
+}
+
+@include for-size(phone-only) {
+  .clean_logo_4701002115 {
+    justify-items: center;
+    text-align: center;
+
+    .clean_logo_lead_4701002115 {
+      font-size: clamp(10px, 3.1vw, 12px);
+      white-space: normal;
+    }
+
+    .clean_logo_name_4701002115 {
+      font-size: clamp(24px, 7vw, 31px);
+      white-space: normal;
+    }
+  }
+}

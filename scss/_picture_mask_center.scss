@@ -1,0 +1,41 @@
+.picture_mask_center {
+    width: 400px;
+    height: 350px;
+    text-align: center;
+    margin: -120px auto 5px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include for-size(phone-only) {
+        width: 270px;
+        height: 200px;
+        margin: -120px auto 10px;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        left: 52%;
+        top: 52%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: $picture_mask02 no-repeat center/contain;
+        opacity: 0.6;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        -webkit-mask-image: $picture_mask02;
+        mask-image: $picture_mask02;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        display: block;
+        @include for-size(phone-only) {
+            object-fit: cover;
+        }
+    }
+}

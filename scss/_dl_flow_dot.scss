@@ -1,0 +1,45 @@
+.dl_flow_dot {
+    padding-left: 30px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1500px;
+    &:before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        border-left: 1px dotted $base_color;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    > dt {
+        position: relative;
+        line-height: 1;
+        margin-bottom: 15px;
+        font-size: 120%;
+        color: $base_color;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $base_color;
+            background-color: $bg_color;
+            border-radius: 50%;
+            left: -37px;
+        }
+    }
+    > dd {
+        //margin-left: 30px;
+        margin-bottom: 15px;
+    }
+    @include for-size(phone-only) {
+        margin: 15px 0 15px 10px;
+        > dt {
+            font-size: 110%;
+        }
+    }
+}

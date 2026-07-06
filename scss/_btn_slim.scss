@@ -1,0 +1,148 @@
+.btn_slim {
+    margin: 15px 0;
+    &.radius {
+        li {
+            border-radius: 50px;
+            overflow: hidden;
+        }
+    }
+    &.base_color {
+        li {
+            a {
+                color: #fff;
+                background-color: $base_color;
+                &:before {
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+                &:hover {
+                    background-color: #fff;
+                    color: $base_color;
+                    &:before {
+                        border-top: 2px solid $base_color;
+                        border-right: 2px solid $base_color;
+                    }
+                }
+            }
+        }
+    }
+    li.orange {
+        border: 1px solid $orange;
+        a {
+            color: $orange;
+            &:before {
+                border-top: 2px solid $orange;
+                border-right: 2px solid $orange;
+            }
+            &:hover {
+                background-color: $orange;
+            }
+        }
+    }
+    li.transparent {
+        border: 1px solid #fff;
+        a {
+            color: #fff;
+            background: transparent;
+            &:before {
+                border-top: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
+            &:hover {
+                background-color: rgba(#fff, 0.4);
+            }
+        }
+    }
+    li.red {
+        border: 1px solid $red;
+        a {
+            color: $red;
+            &:before {
+                border-top: 2px solid $red;
+                border-right: 2px solid $red;
+            }
+            &:hover {
+                background-color: $red;
+            }
+        }
+    }
+    li.blue {
+        border: 1px solid $blue;
+        a {
+            color: $blue;
+            &:before {
+                border-top: 2px solid $blue;
+                border-right: 2px solid $blue;
+            }
+            &:hover {
+                background-color: $blue;
+            }
+        }
+    }
+    li.green {
+        border: 1px solid $green;
+        a {
+            color: $green;
+            &:before {
+                border-top: 2px solid $green;
+                border-right: 2px solid $green;
+            }
+            &:hover {
+                background-color: $green;
+            }
+        }
+    }
+    li {
+        border: 1px solid $base_color;
+        a {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 1.5em 2em;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: $base_color;
+            background-color: #fff;
+            font-weight: 600;
+            line-height: 1.4;
+            text-align: left;
+            transition-duration: 0.3s;
+            @include for-size(phone-only) {
+                font-size: 80%;
+            }
+            &:before {
+                position: absolute;
+                z-index: 2;
+                display: block;
+                content: "";
+                margin: auto;
+                right: 18px;
+                top: 0;
+                bottom: 0;
+                width: 6px;
+                height: 6px;
+                border-top: 2px solid $base_color;
+                border-right: 2px solid $base_color;
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+                -webkit-transition: all 0.12s ease-in 0s;
+                transition: all 0.12s ease-in 0s;
+            }
+            &:hover {
+                background-color: $base_color;
+                color: #fff;
+                transition-duration: 0.3s;
+                &:before {
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+            }
+            span {
+                @include for-size(phone-only) {
+                    display: block;
+                    font-size: 70%;
+                }
+            }
+        }
+    }
+}

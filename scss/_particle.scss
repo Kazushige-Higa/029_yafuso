@@ -1,0 +1,13 @@
+#particle-bg {
+    position: relative;
+    background-color: #fff;
+    background-position: center center;
+    .particle-js-canvas-el {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+}

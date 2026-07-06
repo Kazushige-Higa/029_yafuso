@@ -1,0 +1,8 @@
+$font_Amatic: "Amatic SC", cursive;
+@mixin font_Amatic {
+    font-family: $font_Amatic !important;
+}
+.font_Amatic {
+    @include font_Amatic;
+    font-weight: 500;
+}

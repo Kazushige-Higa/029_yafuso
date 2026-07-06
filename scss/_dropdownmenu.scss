@@ -1,0 +1,155 @@
+.main_nav > ul > li,
+#fixed_nav nav > ul > li {
+    > ul,
+    .menu ul {
+        opacity: 0;
+        visibility: hidden;
+        display: grid;
+        font-size: 90%;
+        position: absolute;
+        z-index: 200;
+        top: 63px;
+        left: 0px;
+        width: 300px;
+        grid-template-columns: repeat(1, 1fr);
+        transition: 0.4s;
+        background-color: #fff;
+        border: 1px solid $base_color;
+        box-shadow: rgba(#aaa, 0.1) 0 0 2px 2px;
+        > li {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            transition-delay: 0.1s;
+            z-index: -300;
+
+            > a {
+                width: 100%;
+                color: #555;
+                display: block;
+                padding: 10px 10px;
+
+                &:hover {
+                    color: #888;
+                    background-color: rgba($base_color, 0.2);
+                }
+            }
+            &:hover > a {
+                color: #888;
+            }
+        }
+    }
+    &:hover {
+        > ul {
+            opacity: 1;
+            visibility: visible;
+            //top: 53px;
+            top: 66px;
+
+            > li {
+                opacity: 1;
+                visibility: visible;
+                z-index: 100;
+            }
+        }
+    }
+    &.set2 {
+        > ul {
+            left: calc(-300px / 3);
+            width: 300px;
+            grid-template-columns: repeat(2, 1fr);
+            > li {
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+    &.set3 {
+        > ul {
+            left: calc(-450px / 3);
+            width: 450px;
+            grid-template-columns: repeat(3, 1fr);
+            > li {
+                border-right: 1px solid #eee;
+            }
+        }
+    }
+}
+
+//type_white
+.main_nav.type_white > ul > li,
+#fixed_nav nav.type_white > ul > li {
+    > ul,
+    .menu ul {
+        opacity: 0;
+        visibility: hidden;
+        display: grid;
+        font-size: 90%;
+        position: absolute;
+        z-index: 100;
+        top: 43px;
+        left: 0px;
+        width: 250px;
+        grid-template-columns: repeat(1, 1fr);
+        transition: 0.5s;
+        background-color: rgba($base_color, 0.9);
+        border: 1px solid rgba($base_color, 0.3);
+        //box-shadow: rgba(#aaa, 0.1) 0 0 2px 2px;
+        > li {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            transition-delay: 0.1s;
+            z-index: -300;
+            border-bottom: 1px solid rgba($base_color, 0.8);
+
+            > a {
+                width: 100%;
+                color: #fff;
+                display: block;
+                padding: 10px 10px;
+                &:hover {
+                    color: #fff;
+                    background-color: rgba($base_color, 0.8);
+                }
+            }
+            &:hover > a {
+                color: #fff;
+            }
+        }
+    }
+    &:hover {
+        > ul {
+            opacity: 1;
+            visibility: visible;
+            //top: 53px;
+            top: 36px;
+
+            > li {
+                opacity: 1;
+                visibility: visible;
+                z-index: 100;
+            }
+        }
+    }
+    &.set2 {
+        > ul {
+            left: calc(-300px / 3);
+            width: 300px;
+            grid-template-columns: repeat(2, 1fr);
+            > li {
+                border-right: 1px solid rgba($base_color, 0.6);
+            }
+        }
+    }
+    &.set3 {
+        > ul {
+            left: calc(-450px / 3);
+            width: 450px;
+            grid-template-columns: repeat(3, 1fr);
+            > li {
+                border-right: 1px solid rgba($base_color, 0.6);
+            }
+        }
+    }
+}

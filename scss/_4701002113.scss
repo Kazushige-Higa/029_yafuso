@@ -1,0 +1,474 @@
+.moro_top {
+    background: #f7f8fb;
+}
+
+.moro_header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 120;
+    padding: 20px 28px;
+
+    @include for-size(phone-only) {
+        padding: 14px 14px 0;
+    }
+}
+
+.moro_header_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 18px 28px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    border-radius: 999px;
+    box-shadow: 0 20px 60px rgba(17, 35, 76, 0.12);
+
+    @include for-size(phone-only) {
+        padding: 14px 18px;
+        border-radius: 22px;
+    }
+}
+
+.moro_header_logo {
+    width: 200px;
+
+    @include for-size(phone-only) {
+        width: 160px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.moro_header_nav {
+    flex: 1;
+
+    .commonnav {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+
+        li a {
+            padding: 10px 14px;
+            border-radius: 999px;
+            color: #102341;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+
+            span {
+                display: block;
+                font-size: 10px;
+                color: #70819e;
+                margin-bottom: 4px;
+            }
+
+            &:hover {
+                background: #edf2fa;
+            }
+        }
+    }
+}
+
+.moro_header_contact {
+    width: 180px;
+}
+
+.moro_header_tel {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 12px 18px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #102341 0%, #254d92 100%);
+    color: #fff;
+    text-align: center;
+
+    .label {
+        font-size: 10px;
+        letter-spacing: 0.14em;
+    }
+
+    .number {
+        font-size: 22px;
+        font-family: $font_anton;
+        line-height: 1;
+    }
+}
+
+.moro_mv {
+    position: relative;
+    min-height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.moro_mv_bg {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 160px 7vw 120px;
+
+    @include for-size(phone-only) {
+        padding: 130px 24px 90px;
+    }
+}
+
+.moro_mv_copy {
+    max-width: 760px;
+
+    h2 {
+        font-size: clamp(42px, 6vw, 92px);
+        line-height: 1.08;
+        letter-spacing: 0.06em;
+        color: #fff;
+        margin-bottom: 26px;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .lead {
+        font-size: 20px;
+        line-height: 2;
+        color: rgba(255, 255, 255, 0.92);
+        max-width: 640px;
+    }
+
+    @include for-size(phone-only) {
+        h2 {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .lead {
+            font-size: 17px;
+            line-height: 1.9;
+        }
+    }
+}
+
+.moro_mv_sub {
+    font-family: $font_anton;
+    letter-spacing: 0.12em;
+    color: #7fc0ff;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.moro_mv_actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+}
+
+.moro_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(16, 35, 65, 0.2);
+    background: rgba(255, 255, 255, 0.86);
+    color: #102341;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px rgba(16, 35, 65, 0.18);
+    }
+
+    &.primary {
+        background: linear-gradient(135deg, #17366d 0%, #2e6ed1 100%);
+        color: #fff;
+        border-color: transparent;
+    }
+
+    &.white_btn {
+        background: #fff;
+        color: #17366d;
+    }
+}
+
+.moro_marquee {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: flex;
+    gap: 60px;
+    padding: 18px 0;
+    background: rgba(255, 255, 255, 0.08);
+    white-space: nowrap;
+    overflow: hidden;
+
+    div {
+        font-family: $font_anton;
+        font-size: clamp(24px, 3vw, 42px);
+        letter-spacing: 0.18em;
+        color: rgba(255, 255, 255, 0.3);
+        animation: moro_marquee 20s linear infinite;
+    }
+}
+
+@keyframes moro_marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.moro_section_inner,
+.moro_services_intro .single03,
+.moro_topics .single02,
+.moro_anchor_head .single03,
+.moro_works_section .single02,
+.moro_company_overview .single03,
+.moro_requirements .single {
+    max-width: 1280px;
+}
+
+.about-us-guide,
+.moro_services_intro,
+.moro_topics,
+.moro_company_overview,
+.moro_works_section,
+.moro_requirements {
+    padding: 110px 0;
+
+    @include for-size(phone-only) {
+        padding: 70px 0;
+    }
+}
+
+.about-us-guide {
+    background: $base_color;
+
+    .moro_section_inner {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        max-width: 1360px;
+        margin: 0 auto;
+        padding: 0 4vw;
+
+        @include for-size(phone-only) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 0 20px;
+        }
+    }
+
+    .imageArea img {
+        width: 100%;
+        border-radius: 28px;
+        box-shadow: 0 30px 80px rgba(16, 35, 65, 0.14);
+    }
+
+    .contentArea {
+        position: relative;
+    }
+
+    .content-l {
+        max-width: 600px;
+    }
+
+    h2 {
+        font-size: clamp(34px, 4vw, 56px);
+        line-height: 1.18;
+        color: #102341;
+        margin-bottom: 24px;
+    }
+
+    .roma {
+        position: absolute;
+        right: -10px;
+        bottom: -40px;
+        font-family: $font_anton;
+        font-size: clamp(56px, 9vw, 160px);
+        color: rgba(16, 35, 65, 0.06);
+        line-height: 1;
+
+        @include for-size(phone-only) {
+            position: static;
+            margin-top: 16px;
+            font-size: 58px;
+        }
+    }
+}
+
+.moro_eyebrow,
+.guide-ttl .roma {
+    font-family: $font_anton;
+    letter-spacing: 0.16em;
+    color: #5679b9;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.guide-ttl {
+    h2 {
+        font-size: clamp(32px, 4vw, 54px);
+        color: #102341;
+        line-height: 1.2;
+    }
+}
+
+.moro_service_summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+
+    @include for-size(phone-only) {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        padding: 34px 30px;
+        border-radius: 26px;
+        background: #fff;
+        box-shadow: 0 20px 60px rgba(16, 35, 65, 0.08);
+    }
+
+    h3 {
+        font-size: 25px;
+        color: #102341;
+        margin-bottom: 14px;
+    }
+}
+
+.block_btn.center {
+    margin: 30px auto;
+}
+
+.moro_topics {
+    background: linear-gradient(180deg, #eef2f8 0%, #f7f8fb 100%);
+}
+
+.moro_topics_box {
+    padding: 36px;
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(16, 35, 65, 0.08);
+
+    @include for-size(phone-only) {
+        padding: 22px;
+    }
+}
+
+.moro_recruit_band {
+    padding: 90px 0;
+}
+
+.moro_anchor_head {
+    padding: 110px 0 30px;
+    background: #fff;
+
+    @include for-size(phone-only) {
+        padding: 80px 0 20px;
+    }
+}
+
+.moro_company_message {
+    padding-bottom: 80px;
+
+    p:first-child {
+        font-weight: 700;
+        color: #102341;
+    }
+}
+
+.moro_company_overview {
+    background: #f7f8fb;
+}
+
+.moro_services_intro,
+.moro_company_overview,
+.moro_requirements {
+    .tbl_border,
+    .tbl.base {
+        background: #fff;
+    }
+}
+
+.white_on_parallax {
+    h2,
+    .roma {
+        color: #fff;
+    }
+}
+
+.moro_works_list {
+    margin-top: 18px;
+
+    li {
+        position: relative;
+        padding-left: 26px;
+        color: #102341;
+        font-weight: 700;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #17366d 0%, #2e6ed1 100%);
+        }
+    }
+}
+
+.moro_recruit_points {
+    li {
+        padding: 28px;
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 18px 55px rgba(16, 35, 65, 0.08);
+    }
+
+    .picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #f4f8ff 0%, #eef3fb 100%);
+        border-radius: 18px;
+    }
+
+}
+
+.moro_requirements {
+    .tbl.base th {
+        white-space: nowrap;
+    }
+}
+
+@include for-size(phone-only) {
+    .moro_btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .moro_mv_actions {
+        flex-direction: column;
+    }
+
+    .moro_header_contact {
+        display: none;
+    }
+
+    .moro_header_tel {
+        margin-top: 12px;
+    }
+
+    .moro_recruit_band {
+        padding: 70px 0;
+    }
+}

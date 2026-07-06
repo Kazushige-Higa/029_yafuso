@@ -1,0 +1,8 @@
+$font_lobster: "Lobster", sans-serif;
+
+@mixin font_lobster {
+	font-family: $font_lobster;
+}
+.font_lobster {
+	@include font_lobster;
+}

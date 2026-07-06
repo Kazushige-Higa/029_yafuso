@@ -1,0 +1,20 @@
+.picture_two {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+    img {
+        width: 50%;
+        &:nth-child(2n) {
+            transform: translateY(1em);
+        }
+    }
+    &.radius {
+        img {
+            border-radius: 30px;
+        }
+    }
+}

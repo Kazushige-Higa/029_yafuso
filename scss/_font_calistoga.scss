@@ -1,0 +1,10 @@
+$font_calistoga: "Calistoga", serif;
+
+@mixin font_calistoga {
+    font-family: $font_calistoga !important;
+}
+.font_archivo {
+    @include font_calistoga;
+    font-weight: 400;
+    font-style: normal;
+}

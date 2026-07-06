@@ -1,0 +1,85 @@
+.btn_mini {
+    &.radius {
+        a {
+            border-radius: 20px;
+        }
+    }
+    &.max {
+        a {
+            border-radius: 20px;
+            width: 100% !important;
+        }
+    }
+    a {
+        background: #fefefe;
+        text-align: center;
+        width: 180px;
+        color: $base_color;
+        display: block;
+        padding: 0.2em 1em;
+        border: 1px solid;
+
+        &:hover {
+            background: $base_color;
+            color: #fefefe;
+        }
+
+        @include for-size(phone-only) {
+            margin: 10px auto;
+        }
+    }
+    &.center a {
+        margin: 0.5em auto;
+    }
+    &.right a {
+        margin: 0.5em 0 0 auto;
+
+        @include for-size(phone-only) {
+            margin: 0.5em auto;
+        }
+    }
+    &.grd {
+        a {
+            @include bg_grd;
+            color: #fff !important;
+            &:hover {
+                background: $base_color;
+            }
+        }
+    }
+    &.base_color {
+        a {
+            background-color: $base_color;
+            color: #fff;
+            &:hover {
+                background: #fff;
+                color: $base_color;
+            }
+        }
+    }
+    &.white {
+        a {
+            background: rgba(#fff, 0);
+            color: #fff;
+            border: #fff 1px solid;
+            &:hover {
+                background: #fff !important;
+                color: $base_color !important;
+            }
+        }
+    }
+    &.simple {
+        a {
+            background: rgba(#fff, 0);
+            color: #111;
+            border: #aaa 1px solid;
+            border-radius: 5px;
+            padding: 1.5em;
+            width: 230px;
+            &:hover {
+                color: #111;
+                background: #f3f3f3 !important;
+            }
+        }
+    }
+}

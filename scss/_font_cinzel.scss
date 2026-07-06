@@ -1,0 +1,10 @@
+$font_cinzel: "Cinzel Decorative";
+@mixin font_cinzel {
+	font-family: $font_cinzel;
+	&:first-letter {
+		text-transform: uppercase !important;
+	}
+}
+.font_parisienne {
+	@include font_cinzel;
+}

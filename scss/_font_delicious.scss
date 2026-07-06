@@ -1,0 +1,9 @@
+$font_delicious: 'Delicious Handrawn', cursive;
+
+@mixin font_delicious {
+    font-family: $font_delicious;
+}
+.font_delicious {
+    @include font_delicious;
+    font-weight: 900;
+}

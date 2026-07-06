@@ -1,0 +1,58 @@
+.faq_list {
+    max-width: 1500px;
+    margin: 30px auto;
+    overflow: hidden;
+    li {
+        margin-bottom: 50px;
+        .q-area {
+            font-size: 120%;
+            position: relative;
+            &:before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $base_color;
+                bottom: 0;
+            }
+            span {
+                font-size: 150%;
+                padding-right: 10px;
+                color: $base_color;
+                //@include eng;
+            }
+            @include for-size(phone-only) {
+                span {
+                    font-size: 120%;
+                    line-height: 2rem;
+                }
+            }
+        }
+        .a-area {
+            position: relative;
+            max-width: 90%;
+            margin: 2em 0 0 auto;
+            background: #f2f2f2;
+            padding: 1em;
+            border-radius: 10px;
+            span {
+                font-size: 200%;
+                position: absolute;
+                top: 0.5em;
+                left: -2em;
+                color: $red;
+                @include eng;
+            }
+            @include for-size(phone-only) {
+                max-width: 85%;
+                padding: 10px;
+                span {
+                    font-size: 120%;
+                    line-height: 2rem;
+                    top: 0px;
+                    left: -35px;
+                }
+            }
+        }
+    }
+}

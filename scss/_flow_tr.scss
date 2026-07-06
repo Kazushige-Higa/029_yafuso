@@ -1,0 +1,84 @@
+.flow_tr {
+    display: grid;
+    max-width: 90%;
+    grid-template-columns: repeat(17, 1fr);
+    gap: 2%;
+    margin: 30px auto;
+    @include for-size(tablet) {
+        display: block;
+        max-width: 100%;
+    }
+    li {
+        position: relative;
+        max-height: 260px;
+        .figure {
+            padding: 10px 5px;
+            border-radius: 3px;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            margin: 0 auto;
+            color: #fff;
+            background-color: rgba($base_color, 0.7);
+            overflow: hidden;
+            font-weight: bold;
+            line-height: 1.2;
+            font-size: 1.4rem;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include for-size(tablet) {
+                font-size: 85% !important;
+                -ms-writing-mode: inherit;
+                writing-mode: inherit;
+                text-align: center;
+            }
+        }
+        .text {
+            font-size: 85% !important;
+            margin-top: 10px;
+        }
+        &:after {
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -37%;
+            margin: auto 0;
+            display: grid;
+            place-items: center;
+            color: $sub_color;
+            font-size: 110%;
+            @include for-size(tablet) {
+                content: "\f107";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                top: 25px;
+                right: 0;
+                left: 0;
+                font-size: 120%;
+            }
+        }
+        &:first-child {
+            .figure {
+                background-color: rgba($base_color, 1);
+            }
+        }
+        &:last-child {
+            .figure {
+                background-color: rgba($base_color, 1);
+            }
+
+            &:after {
+                content: none;
+            }
+        }
+        @include for-size(tablet) {
+            margin-bottom: 21px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.btn_arrow {
+    font-size: 120%;
+    &.sub_color a {
+        background: $sub_color;
+        box-shadow: 0 4px 15px rgba($sub_color, 0.3);
+    }
+    &.right {
+        text-align: right;
+        margin: 0 0 0 auto;
+        @include for-size(phone-only){
+            text-align: center;
+            margin: 0 auto;
+            }
+    }
+    a {
+        background: $base_color;
+        box-shadow: 0 4px 15px rgba($base_color, 0.3);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "→";
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            transform: translateY(-50%);
+            transition: right 0.3s ease;
+        }
+
+        &:hover {
+            padding-right: 50px;
+            background: $sub_color;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba($sub_color, 0.4);
+
+            &::after {
+                right: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+$font_kaisei: "Kaisei Decol", serif;
+@mixin font_kaisei {
+    font-family: $font_kaisei;
+}
+.font_kaisei {
+    @include font_kaisei;
+    font-weight: 500;
+}

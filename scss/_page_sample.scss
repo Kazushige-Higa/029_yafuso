@@ -1,0 +1,107 @@
+// TOP PAGE NAVI
+//////////////////////////////////////////
+#top_navi {
+    ul.commonnav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        //flex-wrap: wrap;
+        gap: 16px 16px;
+        @include for-size(tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include for-size(phone-only) {
+            grid-template-columns: repeat(1, 1fr);
+            font-size: 80% !important;
+        }
+        .title {
+            font-size: 80%;
+            color: $base_color;
+            padding: 0px 0px;
+            border-bottom: 1px solid #ccc;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            position: relative;
+
+            &:before {
+                content: "\f105";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                margin-right: 5px;
+            }
+        }
+
+        > li {
+            width: 100%;
+            margin-bottom: 10px;
+
+            > a {
+                color: #555;
+                display: block;
+                font-weight: bold;
+                position: relative;
+                padding: 10px 0px 10px 25px;
+                font-size: 80%;
+                color: #fff;
+                background-color: darken($base_color, 10%);
+                line-height: 1.2;
+
+                &:before {
+                    border-left: 6px solid #fff;
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    left: 5px;
+                    top: 38%;
+                    border-left: 6px solid $base_color;
+                    border-top: 6px solid transparent;
+                    border-bottom: 6px solid transparent;
+                }
+
+                &:hover {
+                    color: #fff;
+                    background-color: darken($base_color, 20%);
+                }
+
+                @include for-size(phone-only) {
+                    font-size: 80%;
+                }
+            }
+
+            span {
+                color: #fff;
+                display: block;
+                @include eng;
+            }
+        }
+    }
+
+    .dropdown {
+        // display: none;
+        margin-top: 10px;
+
+        .dropdown-li {
+            border-right: 0;
+            margin: 0 0 2px;
+
+            a {
+                display: block;
+                padding: 8px 8px;
+                color: #333;
+                font-size: 80%;
+                background: #f2f2f2;
+
+                &:hover {
+                    background: rgba(#aaa, 0.4);
+                }
+
+                @include for-size(phone-only) {
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////
+// TOP PAGE NAVI

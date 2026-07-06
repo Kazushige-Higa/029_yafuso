@@ -1,0 +1,114 @@
+.flow_list_square {
+    &.circle {
+        > li {
+            .num {
+                border-radius: 50%;
+            }
+        }
+    }
+    > li {
+        width: 100%;
+        position: relative;
+        margin-bottom: 2em;
+        padding: 1em;
+        &:before {
+            content: "";
+            width: 2.5em;
+            position: absolute;
+            top: -2.5em;
+            left: 0;
+            right: 0;
+            display: block;
+            border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto;
+            border-style: solid;
+            border-width: 2em 3em 0 3em;
+            border-color: #ddd transparent transparent transparent;
+            z-index: 1;
+            @include for-size(phone-only) {
+                border-width: 1em 1.5em 1.5em;
+                top: -1.5em;
+            }
+        }
+        &:first-child {
+            //border-top: 0;
+            &:before {
+                display: none;
+            }
+        }
+        .content-area {
+            display: flex;
+            &.type1 {
+                padding-top: 0;
+            }
+        }
+        .num {
+            position: relative;
+            margin-right: 3em;
+            width: 10em;
+            height: 10em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: $base_color;
+            color: #fff;
+            span {
+                font-size: 200%;
+            }
+        }
+        .title {
+            margin-right: 2em;
+            min-width: 12em;
+            font-size: 120%;
+            font-weight: bold;
+            color: $base_color;
+        }
+        .text {
+            flex: 1;
+        }
+        .sttl {
+            color: darken($base_color, 10%);
+            margin-bottom: 10px;
+        }
+        @include for-size(phone-only) {
+            
+            .content-area {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                padding: 1em;
+                flex-wrap: wrap;
+            }
+            .num {
+                margin-right: 1em;
+                width: 5em;
+                height: 5em;
+                span {
+                    font-size: 120%;
+                }
+            }
+            .title {
+                margin-right: 0;
+                max-width: 100%;
+                width: calc(100% - 6em);
+                min-width: 0;
+                flex-basis: auto;
+                font-size: 100%;
+            }
+            .text {
+                margin-top: 1em;
+                margin-left: 0;
+                max-width: 100%;
+                width: 100%;
+                font-weight: normal;
+            }
+            &:last-child {
+                .num {
+                    &:before {
+                        height: 0;
+                    }
+                }
+            }
+        }
+    }
+}

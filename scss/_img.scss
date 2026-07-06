@@ -1,0 +1,115 @@
+img.white {
+    filter: brightness(0) invert(1);
+}
+img.radius {
+    border-radius: 2em !important;
+}
+img.circle {
+    border-radius: 50%;
+}
+img.shadow {
+    filter: drop-shadow(0 0 5px #333);
+}
+img.radius_r {
+    border-radius: 0 20px 20px 0;
+    @include for-size(phone-only) {
+        border-radius: 20px;
+    }
+    &.tablet {
+        @include for-size(tablet) {
+            border-radius: 0px;
+        }
+    }
+    &.tablet_r {
+        @include for-size(tablet) {
+            border-radius: 20px;
+        }
+    }
+}
+img.radius_l {
+    border-radius: 20px 0 0 20px;
+    @include for-size(phone-only) {
+        border-radius: 20px;
+    }
+    &.tablet {
+        @include for-size(tablet) {
+            border-radius: 0px;
+        }
+    }
+    &.tablet_r {
+        @include for-size(tablet) {
+            border-radius: 20px;
+        }
+    }
+}
+img.monochrome {
+    filter: grayscale(100%);
+}
+img.sepia {
+    filter: sepia(100%);
+}
+img.reversal {
+    transform: scale(-1, 1);
+}
+img.reversal_y {
+    transform: scale(1, -1);
+}
+img.reversal_xy {
+    transform: scale(-1, -1);
+}
+//img_edge
+a {
+    .img_edge_pink,
+    .img_edge_orange,
+    .img_edge_blue,
+    .img_edge_green {
+        transition: 0.4s;
+        &:hover {
+            opacity: 0.8;
+            transition: 0.4s;
+        }
+    }
+}
+.img_edge_pink {
+    filter: drop-shadow(8px 8px 0 $pink) drop-shadow(-8px -8px 0 $pink) drop-shadow(8px -8px 0 $pink)
+        drop-shadow(-8px 8px 0 $pink);
+}
+.img_edge_orange {
+    filter: drop-shadow(8px 8px 0 $orange) drop-shadow(-8px -8px 0 $orange) drop-shadow(8px -8px 0 $orange)
+        drop-shadow(-8px 8px 0 $orange);
+}
+.img_edge_blue {
+    filter: drop-shadow(8px 8px 0 $blue) drop-shadow(-8px -8px 0 $blue) drop-shadow(8px -8px 0 $blue)
+        drop-shadow(-8px 8px 0 $blue);
+}
+.img_edge_green {
+    filter: drop-shadow(8px 8px 0 $green) drop-shadow(-8px -8px 0 $green) drop-shadow(8px -8px 0 $green)
+        drop-shadow(-8px 8px 0 $green);
+}
+.img_overlay {
+    position: relative;
+    min-height: 16em;
+    height: 100%;
+    z-index: 10;
+    @include for-size(phone-only) {
+        min-height: 7em;
+    }
+    &.radius {
+        img {
+            border-radius: 20px;
+        }
+    }
+    .figure01 {
+        position: absolute;
+        left: 0;
+        width: 55%;
+        height: 85%;
+    }
+    .figure02 {
+        position: absolute;
+        top: 16%;
+        right: 0;
+        width: 55%;
+        height: 100%;
+    }
+}

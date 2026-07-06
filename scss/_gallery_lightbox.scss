@@ -1,0 +1,413 @@
+.gallery {
+    &.contain {
+        .gallery-item img {
+            object-fit: contain;
+        }
+    }
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        cursor: pointer;
+        background: white;
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: #f2f2f2;
+        overflow: hidden;
+        border-radius: 10px;
+        .title {
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            color: #fff;
+            /* top: 1em; */
+            padding: 0.2em 0.5em;
+            font-size: 80%;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+        &:after {
+            content: "\f00e";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            display: grid;
+            right: 0;
+            bottom: 0;
+            place-items: center;
+            color: #fff;
+            z-index: 2;
+            transition: 0.3s;
+            width: 3em;
+            height: 3em;
+            font-size: 120%;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: all 0.4s ease;
+        }
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+
+            img {
+                transform: scale(1.05);
+            }
+
+            &::before {
+                opacity: 1;
+            }
+
+            .overlay-content {
+                opacity: 1;
+            }
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+            pointer-events: none;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            .search-icon {
+                width: 32px;
+                height: 32px;
+                stroke: white;
+                stroke-width: 2;
+                fill: none;
+            }
+
+            .overlay-text {
+                font-size: 70%;
+                font-weight: 900;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 120px;
+                display: block;
+            }
+        }
+    }
+}
+
+/* Lightbox スタイル */
+.lightbox {
+    /* Use a CSS variable so we can place UI relative to the thumb strip height */
+    --thumb-strip-height: 90px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(220, 220, 220, 0.9);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+
+    &.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .lightbox-media {
+            max-width: 90vw;
+            max-height: 80vh;
+            width: 100%;
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* サムネ列にコントロールが隠れないよう余白を確保 */
+            margin-bottom: calc(var(--thumb-strip-height) + 12px);
+        }
+
+        .lightbox-image,
+        .lightbox-media img,
+        .lightbox-media video,
+        .lightbox-video {
+            max-width: 100%;
+            max-height: 100%;
+            //box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 0.3s ease;
+            //background-color: #000;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .lightbox-controls {
+            position: fixed; /* 固定配置 */
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            color: $base_color;
+            user-select: none;
+            z-index: 1002;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.3);
+                transform: translateY(-50%) scale(1.1);
+            }
+
+            &.prev-btn {
+                left: 16px;
+            }
+            &.next-btn {
+                right: 16px;
+            }
+        }
+
+        .close-btn {
+            position: fixed; /* 右上に固定 */
+            top: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            color: $base_color;
+            user-select: none;
+            z-index: 1002;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(1.1);
+            }
+        }
+
+        .image-counter {
+            position: fixed; /* サムネ列のすぐ上に固定 */
+            bottom: calc(var(--thumb-strip-height) + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(220, 220, 220, 0.5);
+            color: $base_color;
+            padding: 2px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+            z-index: 1002;
+        }
+    }
+
+    /* Filmstrip thumbnails at the bottom */
+    .thumb-strip {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: var(--thumb-strip-height);
+        display: grid;
+        grid-template-columns: 48px 1fr 48px;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        background: linear-gradient(180deg, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0.9) 100%);
+        //backdrop-filter: blur(6px);
+        z-index: 1001;
+
+        .thumbs {
+            overflow: hidden;
+            width: 100%;
+            height: 74px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            scroll-behavior: smooth;
+        }
+
+        .thumb-item {
+            flex: 0 0 auto;
+            width: 100px;
+            height: 66px;
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 0.8;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease,
+                border-color 0.2s ease;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            &.active {
+                opacity: 1;
+                border-color: #ffe56f;
+                transform: translateY(-2px);
+            }
+            &.video::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+                border-left: 14px solid #fff;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+            }
+        }
+
+        .thumb-scroll {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            color: $base_color;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: grid;
+            place-items: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+            user-select: none;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .lightbox {
+        --thumb-strip-height: 80px; /* モバイルのサムネ高さ */
+        .lightbox-content {
+            .lightbox-controls {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                &.prev-btn {
+                    left: 12px;
+                }
+                &.next-btn {
+                    right: 12px;
+                }
+            }
+            .close-btn {
+                top: 12px;
+                right: 12px;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            .image-counter {
+                bottom: calc(var(--thumb-strip-height) + 8px);
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+        .thumb-strip {
+            grid-template-columns: 40px 1fr 40px;
+            height: var(--thumb-strip-height);
+            .thumbs {
+                height: 64px;
+            }
+            .thumb-item {
+                width: 84px;
+                height: 56px;
+            }
+        }
+    }
+}

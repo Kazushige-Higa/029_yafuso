@@ -1,0 +1,17 @@
+.gradient {
+    // 背景gradationアニメーション
+    @include bg_grd;
+    background-size: 600% 600%;
+    animation: anim-gradient 10s ease infinite;
+}
+@keyframes anim-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

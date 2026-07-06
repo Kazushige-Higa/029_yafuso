@@ -1,0 +1,31 @@
+// <div class="tbl_scroll">
+.tbl_scroll {
+    width: 100%;
+    @include for-size(phone-only) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        max-width: 900px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        overflow: auto;
+        white-space: nowrap;
+        table {
+            width: 600px !important;
+        }
+        .sitemap {
+            width: 500px !important;
+        }
+        &::-webkit-scrollbar {
+            height: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #bcbcbc;
+        }
+        &::-webkit-scrollbar-piece {
+            background: #eee;
+        }
+    }
+}

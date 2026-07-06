@@ -1,0 +1,9 @@
+$font_yuji: "Yuji Syuku", serif;
+
+@mixin font_yuji {
+	font-family: $font_yuji;
+}
+.font_yuji {
+	@include font_yuji;
+	font-weight: 400;
+}

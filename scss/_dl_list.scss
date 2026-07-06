@@ -1,0 +1,100 @@
+.dl_list {
+    display: grid;
+    grid-template-columns: minmax(6em, 10em) 1fr;
+    column-gap: 1em;
+    align-items: flex-start;
+    &.radius {
+        border-radius: 0px !important;
+        dt {
+            border-radius: 30px;
+        }
+    }
+    &.orange {
+        dt {
+            background-color: $orange;
+            border-color: $orange;
+        }
+        dd {
+            color: $main_color !important;
+        }
+    }
+    &.red {
+        dt {
+            background-color: $red;
+            border-color: $red;
+        }
+        dd {
+            color: $main_color !important;
+        }
+    }
+    &.blue {
+        dt {
+            background-color: $blue;
+            border-color: $blue;
+        }
+        dd {
+            color: $main_color !important;
+        }
+    }
+    &.green {
+        dt {
+            background-color: $green;
+            border-color: $green;
+        }
+        dd {
+            color: $main_color !important;
+        }
+    }
+    > div,
+    > .dl_row {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    dt {
+        min-width: 6em;
+        max-width: 10em;
+        padding: 0.2em;
+        line-height: 1.4;
+        color: #fff;
+        text-align: center;
+        border: 1px solid $base_color;
+        background: $base_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin: 0 0 0.4em;
+    }
+    dd {
+        flex: 1 1 0;
+        padding: 0.2em 0 0.2em 1em;
+        line-height: 1.6;
+        margin: 0 0 0.4em;
+        a {
+            color: $base_color;
+            background-image: linear-gradient(to right, $base_color, $green);
+            padding-bottom: 0.25em;
+            background-position: 100% 100%;
+            background-size: 0% 1px;
+            background-repeat: no-repeat;
+            transition: background-size 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            font-weight: 700;
+            &:hover {
+                background-position: 0 100%;
+                background-size: 100% 1px;
+            }
+        }
+    }
+    @media screen and (max-width: 500px) {
+        display: block !important;
+        dt {
+            float: none !important;
+        }
+        dd {
+            padding: 4px 5px !important;
+        }
+    }
+}

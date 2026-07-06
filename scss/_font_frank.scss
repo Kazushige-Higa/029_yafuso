@@ -1,0 +1,10 @@
+$font_frank: "Frank Ruhl Libre", serif;
+@mixin font_frank {
+	font-family: $font_frank;
+	&:first-letter {
+		text-transform: uppercase !important;
+	}
+}
+.font_parisienne {
+	@include font_frank;
+}

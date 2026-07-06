@@ -1,0 +1,6 @@
+.picture_arrow {
+    -webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0% 100%, 5% 50%, 0% 0%);
+    clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0% 100%, 5% 50%, 0% 0%);
+    overflow: hidden;
+    position: relative;
+}

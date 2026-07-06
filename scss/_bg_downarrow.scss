@@ -1,0 +1,23 @@
+.bg_downarrow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include bg_img;
+    @include bg_color;
+
+    &:before {
+        content: "";
+        background-image: url(../img/icon/downarrow.jpg);
+        position: absolute;
+        width: 95%;
+        margin: 0 auto;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}

@@ -1,0 +1,120 @@
+.bg_parallax {
+    position: relative;
+    width: 100%;
+    height: calc(100vh + 5%);
+    overflow: hidden;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1px;
+    @include bg_img;
+    @include bg_color;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: -2;
+        top: -10%;
+        left: -10%;
+        right: -10%;
+        bottom: -10%;
+
+        /* パララックス効果 - 画像用に調整 */
+        background-attachment: fixed;
+        /* フォールバック用グラデーション */
+        transform: translateZ(-1px) scale(2);
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+    &.bg_black {
+        background: #333 !important;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.1em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.bg_parallax.js-enhanced:before {
+    background-attachment: scroll;
+    transition: transform 0.1s ease-out;
+}
+
+/* モバイル対応 - パララックス効果を維持 */
+@media (max-width: 768px) {
+    .bg_parallax:before {
+        background-attachment: scroll;
+        /* モバイル用のパララックス効果 */
+        transform: translateY(var(--mobile-parallax-y, 0)) scale(1.1);
+        transition: transform 0.1s ease-out;
+    }
+
+    .content-overlay {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .content-overlay h1 {
+        font-size: 2em;
+    }
+
+    /* モバイル用のスムーズスクロール */
+    .bg_parallax {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+@media (hover: none) and (pointer: coarse) {
+    .bg_parallax:before {
+        background-attachment: scroll;
+        will-change: transform;
+    }
+}
+
+.bg_parallax {
+    contain: layout style paint;
+}
+
+.js-parallax {
+    transition: transform 0.1s ease-out;
+}

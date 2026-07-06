@@ -1,0 +1,330 @@
+.header_vw {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: flex-start;
+    z-index: 200;
+    .logo_area {
+        width: 20%;
+        > a {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: top left;
+            }
+        }
+        @include for-size(phone-only) {
+            width: 100%;
+        }
+    }
+    .nav_area {
+        width: 80%;
+    }
+    // contact_wrap
+    //////////////////////////////////////////
+    .contact_wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0 1em;
+        padding: 0 0 10px;
+        .txtbtn,
+        .linkbtn {
+            line-height: 1.2;
+            margin: 0 0.5em;
+            transition: 0.3s;
+            text-align: center;
+            a {
+                padding: 8px 25px;
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+            span {
+                font-size: 100% !important;
+                display: block;
+                color: #333;
+            }
+        }
+        .dtail {
+            font-size: 100% !important;
+            line-height: 1.6;
+            dl {
+                display: grid;
+                grid-template-columns: 80px 140px;
+                gap: 2px 8px;
+                align-items: center;
+            }
+            dt {
+                border: 1px solid $base_color;
+                border-radius: 20px;
+                color: $base_color;
+                text-align: center;
+                padding: 0px 10px;
+            }
+            dd {
+                flex: 1;
+            }
+        }
+        .txtbtn {
+            a {
+                font-size: 120%;
+            }
+        }
+        .linkbtn {
+            a {
+                background-color: $base_color;
+                color: #fff;
+            }
+            &.transparent {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                a {
+                    background-color: transparent;
+                    padding: 0.5em 1em;
+                    img {
+                        height: 23px;
+                        object-fit: cover;
+                    }
+                }
+            }
+            &.white {
+                a {
+                    background-color: #fff;
+                    color: $base_color;
+                }
+            }
+            &.sub {
+                a {
+                    background-color: $sub_color;
+                }
+            }
+            &.circle {
+                margin: 0 5px;
+                a {
+                    border-radius: 50%;
+                    padding: 0;
+                    width: 45px;
+                    height: 45px;
+                    display: grid;
+                    place-items: center;
+                }
+            }
+            &.radius {
+                a {
+                    border-radius: 20px;
+                }
+            }
+        }
+        @include for-size(phone-only) {
+            display: none;
+        }
+    }
+    &.absolute {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        //background-color: rgba(#fff, 0.8);
+        background: linear-gradient(180deg, rgba(#111, 0.8) 0%, rgba(#111, 0) 100%);
+        @include for-size(phone-only) {
+            max-width: 100%;
+            border-radius: 0;
+        }
+    }
+}
+
+//////////////////////////////////////////
+// header_main
+
+.header_vw_nav {
+    display: flex;
+    gap: 0 1em;
+    &.white {
+        > ul > li > a,
+        > ul > li > a span {
+            color: #fff;
+            &:hover {
+                color: #aaa;
+                opacity: 0.8;
+            }
+        }
+    }
+    &.black {
+        > ul > li:after {
+            background-color: #111;
+        }
+        > ul > li > a,
+        > ul > li > a span {
+            color: #111;
+            &:hover {
+                color: #555;
+                opacity: 0.8;
+            }
+        }
+    }
+    > ul,
+    .menu ul {
+        display: flex;
+        > li {
+            font-weight: bold;
+            padding: 5px 16px;
+            position: relative;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            -webkit-text-orientation: mixed;
+            text-orientation: mixed;
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+            > a {
+                position: relative;
+                line-height: 1.6;
+                color: $main_color;
+                padding: 0 0 10px;
+                font-size: 150%;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 0;
+                    margin: 0 auto;
+                    border-left: 1px solid $base_color;
+                    -webkit-transition: all 0.5s 0s ease;
+                    transition: all 0.5s 0s ease;
+                }
+                span {
+                    @include eng;
+                    color: $base_color;
+                    font-size: 90% !important;
+                    display: block;
+                    position: relative;
+                    letter-spacing: 0.1rem;
+                    font-weight: normal;
+                }
+                &.active {
+                    color: lighten($base_color, 10%);
+                }
+            }
+            &:hover > a,
+            &.active > a {
+                color: $base_color;
+            }
+
+            &:hover > a:before,
+            &.active > a:before {
+                content: "";
+                height: 100%;
+                border-left: 1px solid $sub_color;
+            }
+        }
+    }
+    @include for-size(phone-only) {
+        display: none;
+        > ul {
+            overflow-y: scroll;
+            font-size: 80%;
+            flex-wrap: nowrap;
+            gap: 1em;
+            justify-content: flex-start;
+            margin: 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            > li {
+                padding: 5px 5px;
+            }
+        }
+    }
+}
+
+.header_vw_nav > ul > li {
+    > ul,
+    .menu ul {
+        opacity: 0;
+        visibility: hidden;
+        display: grid;
+        font-size: 90%;
+        position: absolute;
+        z-index: 200;
+        top: 63px;
+        left: 0px;
+        width: 300px;
+        grid-template-columns: repeat(1, 1fr);
+        transition: 0.4s;
+        background-color: #fff;
+        border: 1px solid $base_color;
+        box-shadow: rgba(#aaa, 0.1) 0 0 2px 2px;
+
+        display: none;
+        > li {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            transition-delay: 0.1s;
+            z-index: -300;
+
+            > a {
+                width: 100%;
+                color: #555;
+                display: block;
+                padding: 10px 10px;
+
+                &:hover {
+                    color: #888;
+                    background-color: rgba($base_color, 0.2);
+                }
+            }
+            &:hover > a {
+                color: #888;
+            }
+        }
+    }
+    &:hover {
+        > ul {
+            opacity: 1;
+            visibility: visible;
+            //top: 53px;
+            top: 66px;
+
+            > li {
+                opacity: 1;
+                visibility: visible;
+                z-index: 100;
+            }
+        }
+    }
+    &.set2 {
+        > ul {
+            left: calc(-300px / 3);
+            width: 300px;
+            grid-template-columns: repeat(2, 1fr);
+            > li {
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+    &.set3 {
+        > ul {
+            left: calc(-450px / 3);
+            width: 450px;
+            grid-template-columns: repeat(3, 1fr);
+            > li {
+                border-right: 1px solid #eee;
+            }
+        }
+    }
+}

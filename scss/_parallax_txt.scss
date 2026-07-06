@@ -1,0 +1,56 @@
+.parallax_txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    @include eng;
+    span {
+        display: block;
+        padding-left: 15%;
+        -webkit-animation: animate-banner 20s linear infinite;
+        animation: animate-banner 20s linear infinite;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 20rem;
+        font-weight: 600;
+        color: rgba(#fff, 0.8);
+        text-align: center;
+        line-height: 1;
+        white-space: nowrap;
+        @include for-size(phone-only){
+            font-size: 15rem;
+        }
+    }
+    &.base_color {
+        span {
+            color: rgba($base_color, 0.1);
+        }
+    }
+    &.gray {
+        span {
+            color: rgba($gray, 0.1);
+        }
+    }
+}
+@-webkit-keyframes animate-banner {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-115%);
+        transform: translateX(-115%);
+    }
+}
+@keyframes animate-banner {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-115%);
+        transform: translateX(-115%);
+    }
+}

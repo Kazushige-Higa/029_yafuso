@@ -1,0 +1,26 @@
+.link_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 75px;
+    height: 75px;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+    text-align: center;
+    background-color: rgba($base_color, 0.7);
+    //border: 1px solid #fff;
+    a {
+        color: #fff;
+        font-size: 0.7rem;
+        line-height: 1.5;
+        i {
+            display: block;
+            font-size: 120%;
+        }
+    }
+    @include for-size(phone-only) {
+        display: none;
+    }
+}

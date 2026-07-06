@@ -1,0 +1,64 @@
+.bg_stripe {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(25%, $bg_stripe02),
+            color-stop(25%, $bg_stripe),
+            color-stop(50%, $bg_stripe),
+            color-stop(50%, $bg_stripe02),
+            color-stop(75%, $bg_stripe02),
+            color-stop(75%, $bg_stripe),
+            to($bg_stripe)
+        );
+        background-image: linear-gradient(
+            90deg,
+            $bg_stripe02 25%,
+            $bg_stripe 25%,
+            $bg_stripe 50%,
+            $bg_stripe02 50%,
+            $bg_stripe02 75%,
+            $bg_stripe 75%,
+            $bg_stripe
+        );
+        background-size: 100px 100px;
+    }
+    &.type1 {
+        &:before {
+            background-image: linear-gradient(
+                45deg,
+                $bg_stripe02 25%,
+                $bg_stripe 25%,
+                $bg_stripe 50%,
+                $bg_stripe02 50%,
+                $bg_stripe02 75%,
+                $bg_stripe 75%,
+                $bg_stripe
+            );
+        }
+    }
+    &.type2 {
+        &:before {
+            background-image: linear-gradient(
+                -45deg,
+                $bg_stripe02 25%,
+                $bg_stripe 25%,
+                $bg_stripe 50%,
+                $bg_stripe02 50%,
+                $bg_stripe02 75%,
+                $bg_stripe 75%,
+                $bg_stripe
+            );
+        }
+    }
+}

@@ -1,0 +1,9 @@
+$font_squada: "Squada One", cursive;
+
+@mixin font_squada {
+	font-family: $font_squada;
+}
+.font_squada {
+	@include font_squada;
+	font-weight: 500;
+}

@@ -1,0 +1,38 @@
+.kirari {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    &:before {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        top: -180px;
+        left: 0;
+        width: 30px;
+        height: 100%;
+        background-color: #fff;
+        animation: kirari 3s ease-in-out infinite;
+    }
+}
+
+@keyframes kirari {
+    0% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+    81% {
+        transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}

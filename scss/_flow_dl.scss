@@ -1,0 +1,87 @@
+.flow_dl {
+    position: relative;
+
+    &.sub .inner {
+        &:before {
+            background: rgba($sub_color, 0.6);
+        }
+
+        dt {
+            background: $sub_color;
+        }
+
+        dd {
+            background: rgba($sub_color, 0.1);
+        }
+    }
+
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 2em;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 125%;
+            width: 8px;
+            top: 1em;
+            left: 2.2em;
+            background: rgba($base_color, 0.6);
+        }
+
+        &:last-child:before {
+            display: none;
+        }
+
+        dt {
+            position: relative;
+            width: 4em;
+            height: 4em;
+            line-height: 4em;
+            background: $base_color;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            z-index: 4;
+            font-family: "Sofia Sans Condensed", sans-serif;
+            font-weight: 1000;
+            letter-spacing: 0.025em !important;
+            font-size: 120%;
+
+            &.line2 {
+                padding-top: 20px;
+                line-height: 1;
+            }
+
+            &.big {
+                font-size: 3rem;
+            }
+        }
+
+        dd {
+            flex: 1;
+            position: relative;
+            left: -10px;
+            margin-top: 10px;
+            padding: 15px 10px 15px 25px;
+            z-index: 2;
+            background: rgba($base_color, 0.1);
+            border-radius: 3px;
+
+            table {
+                th,
+                td {
+                    font-weight: 500;
+                }
+
+                th {
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
+}

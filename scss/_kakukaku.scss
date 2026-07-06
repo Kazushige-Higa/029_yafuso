@@ -1,0 +1,11 @@
+.kakukaku {
+    animation: kakukaku 1s steps(2, start) infinite;
+}
+@keyframes kakukaku {
+    0% {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}

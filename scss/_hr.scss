@@ -1,0 +1,288 @@
+.hr_deco {
+    display: block;
+    margin: 2em auto;
+    border-top: 0px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 0.7rem;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent 0,
+        transparent 0.3rem,
+        rgba(#aaa, 0.2) 0.3rem,
+        rgba(#aaa, 0.2) 0.7rem
+    );
+    &.sub {
+        background: repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 0.3rem,
+            rgba($sub_color, 0.2) 0.3rem,
+            rgba($sub_color, 0.2) 0.7rem
+        );
+    }
+    &.base {
+        background: repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 0.3rem,
+            rgba($base_color, 0.2) 0.3rem,
+            rgba($base_color, 0.2) 0.7rem
+        );
+    }
+    &.white {
+        background: repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 0.3rem,
+            rgba(#fff, 0.2) 0.3rem,
+            rgba(#fff, 0.2) 0.7rem
+        );
+    }
+}
+.hr_ten {
+    position: relative;
+    margin: 1em auto;
+    &:after {
+        content: "●●●";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 50%;
+        bottom: -2em;
+        font-size: 60%;
+        letter-spacing: 0.5em;
+        color: $base_color;
+        text-align: center;
+    }
+    &.white {
+        &:after {
+            color: #fff;
+        }
+    }
+    &.sub_color {
+        &:after {
+            color: $sub_color;
+        }
+    }
+}
+.hr_dot {
+    position: relative;
+    margin: 1em auto;
+    &:after {
+        content: "■■■";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 50%;
+        bottom: -2em;
+        font-size: 60%;
+        letter-spacing: 0.5em;
+        color: $base_color;
+        text-align: center;
+    }
+    &.white {
+        &:after {
+            color: #fff;
+        }
+    }
+    &.sub_color {
+        &:after {
+            color: $sub_color;
+        }
+    }
+}
+.hr_vline {
+    display: block;
+    width: 1px;
+    margin: 0.5em auto;
+    text-align: center;
+    position: relative;
+    border-left: 1px solid #ccc;
+    height: 80px;
+}
+
+.hr_border {
+    display: block;
+    margin: 0.5em auto;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 2px;
+    background: $base_color;
+    margin: 2rem auto;
+    &.white {
+        background: #fff;
+    }
+    &.black {
+        background: #111;
+    }
+    &.sub_color {
+        background: $sub_color;
+    }
+    &.left {
+        margin-left: 0 !important;
+    }
+}
+
+.hr_bar {
+    display: block;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 1em;
+    margin: 1em auto;
+    text-align: center;
+    position: relative;
+    &:before {
+        content: "";
+        background-color: $base_color;
+        background-size: contain;
+        background-image: linear-gradient(to right, $base_color 50%, #aaa 50%);
+        z-index: 1;
+        width: 12em;
+        height: 3px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+.hr_bar_white {
+    display: block;
+    border-bottom: 0px solid rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 1em;
+    margin: 1em auto;
+    text-align: center;
+    position: relative;
+    &:before {
+        content: "";
+        background-color: #fff;
+        background-size: contain;
+        background-image: linear-gradient(to right, #fff 50%, #aaa 50%);
+        z-index: 1;
+        width: 12em;
+        height: 3px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+.hr_bar_grd {
+    display: block;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 1em;
+    margin: 1em auto;
+    text-align: center;
+    position: relative;
+    &:before {
+        content: "";
+        @include grd_color;
+        z-index: 1;
+        width: 12em;
+        height: 4px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        @include for-size(phone-only) {
+            width: 80px;
+            height: 4px;
+        }
+    }
+    &.size_m {
+        margin: 1em auto;
+        &:before {
+            height: 8px;
+            @include for-size(phone-only) {
+                width: 80px;
+                height: 4px;
+            }
+        }
+    }
+    &.left {
+        &:before {
+            right: auto;
+        }
+    }
+}
+.hr_dotted {
+    margin: 2em 0;
+    border-bottom: 0.3em dotted $base_color;
+}
+
+.hr_down_arrow {
+    display: block;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 300px 0 300px;
+    border-color: #f2f2f2 transparent transparent transparent;
+    @include for-size(phone-only) {
+        border-width: 50px 150px 0 150px;
+    }
+    &.base_color {
+        border-color: $base_color transparent transparent transparent !important;
+    }
+    &.bg_base {
+        background: none !important;
+        border-color: $bg_base transparent transparent transparent !important;
+    }
+    &.bg_gray {
+        background: none !important;
+        border-color: $bg_gray transparent transparent transparent !important;
+    }
+    &.white {
+        border-color: #fff transparent transparent transparent !important;
+    }
+    &.size_s {
+        border-width: 1.5em 1.8em 0 1.8em;
+    }
+    &.size_m {
+        border-width: 3px 3.6px 0 3.6px;
+    }
+}
+
+.hr_img {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 2em;
+    margin: 2em auto;
+    &:before {
+        content: "";
+        background-size: auto 2em;
+        width: 100%;
+        height: 2em;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        @include for-size(phone-only) {
+            background-size: auto 10px;
+            height: 10px;
+        }
+    }
+    &.type1 {
+        &:before {
+            content: "";
+            background: $hr_img01 repeat-x center center;
+        }
+    }
+    &.type2 {
+        &:before {
+            content: "";
+            background: $hr_img02 repeat-x center center;
+        }
+    }
+}

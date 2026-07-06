@@ -1,0 +1,177 @@
+.nav_icon {
+    &.one {
+        ul > li ul {
+            display: none !important;
+        }
+    }
+    &.sub_color {
+        a,
+        span {
+            color: $sub_color;
+            &:hover {
+                color: rgba($sub_color, 0.8);
+                &:before {
+                    content: "";
+                    width: 100%;
+                    border-bottom: 1px solid $sub_color;
+                }
+            }
+        }
+    }
+    &.white {
+        a,
+        span {
+            color: #fff;
+            &:hover {
+                color: rgba(#fff, 0.8);
+                &:before {
+                    content: "";
+                    width: 100%;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+        > ul > li > ul {
+            border-left: 1px solid #ddd;
+        }
+    }
+    &.eng {
+        > ul > li {
+            text-align: center;
+            a {
+                font-size: 100% !important;
+                font-weight: bold !important;
+                font-family: $font_ja;
+                line-height: 1.6 !important;
+                span {
+                    font-size: 130% !important;
+                }
+            }
+        }
+    }
+    a {
+        color: $main_color;
+        position: relative;
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        span {
+            display: block;
+            color: $base_color;
+            line-height: 1;
+            @include eng;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 0;
+            margin: 0;
+            border-bottom: 1px solid rgba($base_color, 0.5);
+            -webkit-transition: all 0.5s 0s ease;
+            transition: all 0.5s 0s ease;
+        }
+        &:hover {
+            color: $base_color;
+            &:before {
+                content: "";
+                bottom: 0px;
+                width: 100%;
+                border-bottom: 1px solid $base_color;
+            }
+        }
+    }
+    &.set1 > ul {
+        column-count: 1 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set2 > ul {
+        column-count: 2 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set3 > ul {
+        column-count: 3 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set4 > ul {
+        column-count: 4 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set5 > ul {
+        column-count: 5 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set6 > ul {
+        column-count: 6 !important;
+        @include for-size(tablet) {
+            font-size: 1rem;
+        }
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    &.set7 > ul {
+        column-count: 7 !important;
+        @include for-size(phone-only) {
+            column-count: 2;
+        }
+    }
+    > ul {
+        > li {
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            margin-bottom: 1em;
+            .icon {
+                transform: translateY(0px) rotate(0deg);
+                transition: 0.3s;
+                padding-bottom: 4px;
+            }
+            &:hover {
+                .icon {
+                    transform: translateY(-5px) rotate(20deg);
+                    transition: 0.3s;
+                }
+            }
+            &.none {
+                display: block;
+            }
+            > ul {
+                border-left: 1px solid rgba(#aaa, 1);
+                padding: 0.5em 0 0 0.5em;
+                column-count: 1;
+                li {
+                    a {
+                        font-size: 80%;
+                        padding: 0.3em 0.2em;
+                        position: relative;
+                        font-size: normal !important;
+                    }
+                }
+            }
+        }
+        @include for-size(phone-only) {
+            column-count: 2;
+            > li {
+                font-size: 85% !important;
+                > ul {
+                    padding: 10px 0 0 8px;
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+$font_train: 'Train One', cursive;
+
+@mixin font_train {
+	font-family: $font_train !important;
+}
+.font_train {
+	@include font_train;
+}

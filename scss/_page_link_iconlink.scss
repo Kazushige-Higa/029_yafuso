@@ -1,0 +1,103 @@
+.page_link_iconlink {
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em 1.5em;
+        background: $bg_base;
+        border-radius: 16px;
+        text-decoration: none;
+        color: #333;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, $base_color, $sub_color);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba($base_color, 0.12);
+            &::before {
+                transform: scaleX(1);
+            }
+            .treatment_card_icon {
+                background: $base_color;
+                i {
+                    color: #fff;
+                }
+            }
+            .treatment_card_arrow {
+                background: $base_color;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: $base_color;
+            margin-bottom: 0.8em;
+        }
+        p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.7;
+            flex: 1;
+        }
+        .card_icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2em;
+            border: 2px solid $sub_color;
+            transition: all 0.3s;
+            i {
+                font-size: 30px;
+                color: $base_color;
+                transition: color 0.3s;
+            }
+        }
+        .card_img {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2em;
+            transition: all 0.3s;
+        }
+        .card_arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: $bg_base;
+            border: 1px solid $sub_color;
+            margin: 1.2em auto 0;
+            transition: all 0.3s;
+            i {
+                font-size: 12px;
+                color: $base_color;
+                transition: color 0.3s;
+            }
+        }
+    }
+}

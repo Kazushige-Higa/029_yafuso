@@ -1,0 +1,48 @@
+.product_list_shadow {
+    li {
+        max-width: 242px;
+        padding: 0 0 10px;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        @include for-size(phone-only) {
+            max-width: 100%;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: -10px;
+            left: -20px;
+            background-color: #ededee;
+            width: 247px;
+            height: 212px;
+        }
+        h3 {
+            background-color: $base_color;
+            color: #fff;
+            font-size: 18px;
+            padding: 6px0;
+            text-align: center;
+        }
+        .picture {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.8s;
+            z-index: 0;
+            margin-bottom: 15px;
+            @include for-size(phone-only) {
+                height: 100px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

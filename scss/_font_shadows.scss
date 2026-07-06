@@ -1,0 +1,9 @@
+$font_shadows: 'Shadows Into Light', cursive;
+
+@mixin font_shadows {
+    font-family: $font_shadows;
+}
+.font_shadows {
+    @include font_shadows;
+    font-weight: 500 !important;
+}

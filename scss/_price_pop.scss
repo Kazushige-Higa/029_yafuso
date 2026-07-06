@@ -1,0 +1,131 @@
+.price_pop {
+    li {
+        background: #ffffff;
+        padding: 1em;
+        border: 1.5px solid #ccc;
+        position: relative;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-color: $base_color;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            border-color: $base_color;
+            box-shadow: 0 20px 60px rgba(#333, 0.15);
+            transform: translateY(-4px);
+
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+
+        &.featured {
+            background: $base_color;
+            border-color: transparent;
+            color: #ffffff;
+
+            .label,
+            .unit {
+                color: #fff;
+            }
+
+            .price {
+                color: #ffffff;
+            }
+
+            .note {
+                color: #fff;
+                border-top-color: #fff;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            .popular {
+                display: inline-block;
+            }
+        }
+
+        .popular {
+            display: none;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #fef08a;
+            color: #713f12;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 100px;
+            letter-spacing: 0.05em;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0f2fe;
+            color: $base_color;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+        .label {
+            font-weight: 700;
+            color: #475569;
+            letter-spacing: 0.02em;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .price {
+            font-size: 225%;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 4px;
+            color: $red;
+        }
+        .unit {
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+        .note {
+            color: #64748b;
+            line-height: 1.6;
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
+        }
+    }
+}
+
+.options_list {
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 18px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        transition: all 0.2s ease;
+        .opt_name {
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .opt_price {
+            font-weight: 700;
+            color: $base_color;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+    }
+}

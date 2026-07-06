@@ -1,0 +1,54 @@
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto
+}
+
+ol {
+    padding-left: 2em
+}
+
+#main section, #main aside {
+    margin-bottom: 20px
+}
+
+article, aside, footer, header, nav, section, main {
+    display: block
+}
+
+* {
+    box-sizing: border-box
+}
+
+*:before, *:after {
+    box-sizing: inherit
+}
+
+button {
+    display: block;
+    padding: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+    width: 100%
+}
+
+button:focus-visible {
+    outline: 1px solid var(--your-color)
+}
+
+small {
+    display: block
+}
+
+@media screen and (max-width: 500px) {
+    *:focus {
+        outline: none
+    }
+}

@@ -1,0 +1,38 @@
+.cover_color1 {
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($base_color, 0.6);
+        z-index: 2;
+        transform: translateX(-50%) translateY(50%) rotate(45deg);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($sub_color, 0.6);
+        z-index: 2;
+        transform: translateX(50%) translateY(-50%) rotate(45deg);
+    }
+    @include for-size(phone-only){
+        &:before {
+            width: 150%;
+            height: 150%;
+            transform: translateX(-95%) translateY(70%) rotate(45deg);
+        }
+        &:after {
+            width: 150%;
+            height: 150%;
+            transform: translateX(100%) translateY(-70%) rotate(45deg);
+        }
+    }
+}

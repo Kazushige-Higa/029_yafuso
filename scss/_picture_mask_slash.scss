@@ -1,0 +1,39 @@
+.picture_mask_slash {
+    margin: -5% 0 -5%;
+    z-index: 2;
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+    &.reversal {
+        -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include for-size(pro) {
+        max-width: 50% !important;
+        margin: -5% 0 -5%;
+    }
+    @include for-size(tablet) {
+        max-width: 50% !important;
+        margin: -5% 0 -5%;
+    }
+    @include for-size(phone-only) {
+        -webkit-clip-path: none;
+        clip-path: none;
+        left: 0;
+        right: 0;
+        margin: 15px auto;
+        max-width: 100% !important;
+        &.reversal {
+            -webkit-clip-path: none;
+            clip-path: none;
+        }
+    }
+}

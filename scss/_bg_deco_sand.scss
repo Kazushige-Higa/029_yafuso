@@ -1,0 +1,15 @@
+.bg_deco_sand {
+    background-image: $bg_deco_top, $bg_deco_bottom;
+    background-position: top, bottom;
+    background-repeat: repeat-x;
+}
+.bg_deco_top {
+    background-image: $bg_deco_top;
+    background-position: top;
+    background-repeat: repeat-x;
+}
+.bg_deco_bottom {
+    background-image: $bg_deco_bottom;
+    background-position: bottom;
+    background-repeat: repeat-x;
+}

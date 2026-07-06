@@ -1,0 +1,99 @@
+.menu_list {
+    margin: 0 0 0;
+    width: 100%;
+    display: inline-table;
+
+    &:nth-child(2n) {
+        margin-right: 0%;
+
+        @include for-size(phone-only) {
+            margin-left: 0;
+        }
+    }
+
+    @include for-size(phone-only) {
+        width: 100%;
+        margin: 0 auto 0;
+    }
+
+    &.sp {
+        @include for-size(phone-only){
+            li {
+                display: flex;
+                padding: 0;
+                margin-bottom: 1.5em;
+                &::before {
+                    display: none;
+                }
+                .left,
+                .right {
+                    max-width: 100%;
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 8px 4px;
+
+        &::before {
+            background: radial-gradient(#aaa 20%, transparent 0) center center/8px 8px;
+            content: "";
+            display: inline-block;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            height: 4px;
+            margin: 0 1.2em;
+
+            @include for-size(phone-only) {
+                margin: 0 5px;
+            }
+        }
+
+        p {
+            display: inline-block;
+            line-height: 1.5;
+        }
+
+        .left {
+            -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+            order: -1;
+            max-width: 65%;
+            letter-spacing: 0.1rem;
+            position: relative;
+
+            &:before {
+                content: "\f219";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: $base_color;
+                margin-right: 3px;
+            }
+
+            span {
+                font-size: 90%;
+                font-weight: normal;
+            }
+
+            @include for-size(phone-only) {
+                max-width: 100%;
+            }
+        }
+
+        .right {
+            max-width: 55%;
+            text-align: right;
+            color: $base_color;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    }
+}

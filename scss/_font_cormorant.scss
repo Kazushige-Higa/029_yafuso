@@ -1,0 +1,7 @@
+$font_cormorant: "Cormorant Garamond", serif;
+@mixin font_cormorant {
+	font-family: $font_cormorant;
+}
+.font_cormorant {
+	@include font_cormorant;
+}

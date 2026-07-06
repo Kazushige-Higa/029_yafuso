@@ -1,0 +1,84 @@
+.faq_list li .a-area {
+    background: #333 !important;
+}
+.faq_list li .q-area:before {
+    background-color: #fff;
+}
+.faq_list li .a-area span {
+    color: #fff;
+}
+.access_area > .info {
+    background-color: #222;
+}
+.tbl_fee {
+    background-color: rgba(0, 0, 0, 0);
+}
+.tbl_fee tr:nth-child(even) {
+    background-color: rgba(50, 50, 50, 0.4);
+}
+.tbl_fee td {
+    color: #fff;
+}
+.form dl dt span {
+    color: #111 !important;
+    border-radius: 0 !important;
+}
+.slider_swiper_card .swiper > ul > li .detail {
+    background-color: #000 !important;
+}
+.slider_swiper_card .swiper > ul > li .title {
+    color: #fff !important;
+}
+.blog_article {
+    border: 1px solid #333 !important;
+}
+#main .blog_list > li a,
+.mainwrap .blog_list > li a,
+.list-area .blog_list > li a {
+    border: 1px solid #aaa !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.sidewrap .blog_list > li,
+#side .blog_list > li {
+    background-color: #111 !important;
+}
+.sidewrap .blog_list > li a,
+#side .blog_list > li a {
+    color: #fff !important;
+}
+.blog_month ul li a {
+    color: #fff !important;
+    background: #111 !important;
+    border: 1px solid #aaa !important;
+}
+.blog_article .blog_category {
+    color: #111 !important;
+}
+.card_size_s > li {
+    background: #111 !important;
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) !important;
+    .detail {
+        background: #111;
+    }
+    .title {
+        color: #fff;
+    }
+}
+.nav_menu .nav_menu_wrap .nav_area nav > ul > li > a {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.nav_menu {
+    background-color: rgba(17, 17, 17, 1);
+}
+.nav_menu .nav_menu_wrap .closebtn:hover {
+    background-color: #111 !important;
+}
+.nav_menu .nav_menu_wrap .closebtn {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #111;
+}
+.form dl dt span.nini {
+    background: none !important;
+    color: #fff !important;
+}

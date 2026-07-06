@@ -1,0 +1,46 @@
+.tbl_price_calc {
+    width: 100%;
+    th,
+    td {
+        font-size: 1.4rem;
+        padding: 15px;
+        vertical-align: middle;
+        line-height: 1.5;
+        font-weight: bold;
+        text-align: center;
+        span.price {
+            font-size: 120%;
+            color: $base_color;
+            @include for-size(phone-only) {
+                font-size: 1.4rem;
+            }
+        }
+        .small {
+            font-weight: normal;
+        }
+    }
+    th {
+        background: rgba($base_color, 0.1);
+        border: 2px solid $base_color;
+    }
+    td {
+        background-color: #eff4dd;
+    }
+    .th-1 {
+        background-color: #fff !important;
+        padding: 5px;
+        font-weight: 3.2rem;
+    }
+    @include for-size(phone-only) {
+        th {
+        }
+        th,
+        td {
+            padding: 10px 5px;
+            font-size: 10px;
+            span {
+                font-size: 10px;
+            }
+        }
+    }
+}

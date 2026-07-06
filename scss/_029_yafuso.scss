@@ -1,0 +1,5366 @@
+.yafuso_page_029 {
+  --yafuso_yellow: #ffe500;
+  --yafuso_yellow_deep: #ffc400;
+  --yafuso_red: #e71313;
+  --yafuso_red_dark: #b50000;
+  --yafuso_black: #1b1207;
+  --yafuso_cream: #fff8d5;
+  --yafuso_line: #f0a900;
+  --yafuso_shadow: 0 16px 36px rgba(104, 50, 0, 0.18);
+  background:
+    radial-gradient(circle at 10% 0, rgba(255, 255, 255, 0.72), transparent 28rem),
+    linear-gradient(180deg, #ffe900 0%, #ffd600 52%, #ffc400 100%);
+  color: var(--yafuso_black);
+  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  overflow: hidden;
+
+  :where(a, h1, h2, h3, h4, p, li, dt, dd, span, small, strong, b) {
+    color: inherit;
+    letter-spacing: 0;
+  }
+
+  :where(h1, h2, h3, h4, p, figure, ul, dl, dd) {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.yafuso_modal_open_029 {
+  overflow: hidden;
+}
+
+.yafuso_single_029 {
+  width: min(94vw, 1480px);
+  margin: 0 auto;
+}
+
+.yafuso_header_029 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 80;
+  background: linear-gradient(180deg, #ffe900, #ffd800);
+  border-bottom: 4px solid var(--yafuso_red);
+  box-shadow: 0 8px 22px rgba(119, 56, 0, 0.12);
+}
+
+.yafuso_header_inner_029 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 18px;
+  width: min(96vw, 1480px);
+  min-height: 78px;
+  margin: 0 auto;
+}
+
+.yafuso_logo_029 {
+  display: block;
+  width: clamp(150px, 17vw, 230px);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.yafuso_lantern_mark_029 {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 38px;
+  border: 2px solid #760000;
+  border-radius: 48% 48% 42% 42%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 18%,
+      rgba(128, 0, 0, 0.22) 18% 21%,
+      transparent 21% 50%,
+      rgba(128, 0, 0, 0.22) 50% 53%,
+      transparent 53% 79%,
+      rgba(128, 0, 0, 0.22) 79% 82%,
+      transparent 82%
+    ),
+    linear-gradient(180deg, #ff2a1b, #d90000);
+  box-shadow: 0 4px 0 #6c0000;
+  flex: 0 0 auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 4px;
+    border-radius: 4px;
+    background: #6c0000;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: -6px;
+  }
+
+  &::after {
+    bottom: -7px;
+  }
+}
+
+.yafuso_nav_029 ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 28px);
+}
+
+.yafuso_nav_029 a {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  font-size: clamp(20px, 1.45vw, 20px);
+  font-weight: 900;
+  line-height: 1.28;
+  white-space: nowrap;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 3px;
+    background: var(--yafuso_red);
+    border-radius: 999px;
+    transition:
+      width 0.2s ease,
+      left 0.2s ease;
+  }
+
+  &:hover::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.yafuso_menu_toggle_029 {
+  top: 4px;
+  right: 9px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: var(--yafuso_red);
+  box-shadow: 0 6px 0 var(--yafuso_red_dark);
+
+  .hamburger_icon {
+    width: 24px;
+    gap: 6px;
+
+    span {
+      width: 24px;
+      height: 3px;
+      background: #fff;
+
+      &:nth-child(2) {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.nav_open .yafuso_menu_toggle_029 {
+  .hamburger_icon {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    gap: 0;
+  }
+
+  .hamburger_icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    margin: 0;
+    transform-origin: center;
+
+    &:nth-child(1) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transform: translate(-50%, -50%) scaleX(0);
+    }
+
+    &:nth-child(3) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.yafuso_slide_nav_029 {
+  .nav_slide_container {
+    width: min(86vw, 340px);
+    background: #fff8d6;
+  }
+
+  .nav_menu_area {
+    width: 100%;
+    padding: 74px 24px 32px;
+    background: radial-gradient(circle at 18% 12%, rgba(255, 229, 0, 0.65), transparent 8rem), #fff8d6;
+  }
+
+  .nav_close_btn {
+    top: 20px;
+    right: 20px;
+    background: var(--yafuso_red);
+    color: #fff;
+  }
+
+  .nav_menu_content {
+    display: grid;
+    gap: 10px;
+
+    > a:not(.yafuso_slide_nav_logo_029) {
+      display: block;
+      padding: 14px 16px;
+      border: 2px solid var(--yafuso_line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--yafuso_black);
+      font-size: 18px;
+      font-weight: 900;
+    }
+    ul li a span {
+      display: block;
+      font-size: 100%;
+      font-weight: bold;
+      line-height: 1.2;
+      margin: 8px 0 5px;
+      color: #111;
+      font-weight: 400 !important;
+      letter-spacing: 0em;
+      line-height: 1;
+    }
+  }
+}
+
+.yafuso_slide_nav_logo_029 {
+  display: block;
+  width: min(100%, 230px);
+  margin: 0 auto 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.yafuso_slide_nav_029 .nav_menu_content .yafuso_slide_nav_sns_029 {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 2px dashed var(--yafuso_line);
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: var(--yafuso_red);
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  li {
+    border-bottom: 0;
+  }
+
+  a {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 6px;
+    min-height: 126px;
+    padding: 10px 6px;
+    border: 2px solid rgba(240, 169, 0, 0.64);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--yafuso_black);
+    text-align: center;
+
+    &:hover {
+      color: var(--yafuso_black);
+      padding-left: 6px;
+    }
+  }
+
+  img {
+    justify-self: center;
+    width: 58px;
+    height: 58px;
+    margin-inline: auto;
+    border: 2px solid var(--yafuso_yellow);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  span,
+  small {
+    display: block;
+    min-width: 0;
+    font-weight: 900;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  span {
+    display: block;
+    font-size: 110%;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    color: #111;
+    /* font-family: "Josefin Sans", sans-serif; */
+    font-weight: 400 !important;
+    letter-spacing: 0em;
+    line-height: 1;
+  }
+
+  small {
+    color: var(--yafuso_red);
+    font-size: 10px;
+  }
+
+  li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc((100% - 8px) / 2);
+    justify-self: center;
+  }
+}
+
+.yafuso_hero_029 {
+  position: relative;
+  min-height: calc(100vh - 78px);
+  min-height: calc(100svh - 78px);
+  isolation: isolate;
+  overflow: hidden;
+  background: #1b1207;
+}
+
+.yafuso_hero_photo_029 {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  &.slider_fullslider_wrap,
+  .slider_fullslider,
+  .slider_fullslider .slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 58% center;
+    filter: saturate(1.08) contrast(1.04);
+    transform: scale(1.04);
+  }
+}
+
+.yafuso_hero_029::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 83% 36%, rgba(255, 224, 0, 0.2), transparent 24rem),
+    linear-gradient(
+      90deg,
+      rgba(21, 10, 0, 0.88) 0%,
+      rgba(21, 10, 0, 0.76) 41%,
+      rgba(21, 10, 0, 0.24) 72%,
+      rgba(21, 10, 0, 0.38) 100%
+    );
+}
+
+.yafuso_hero_inner_029 {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: min(92vw, 1480px);
+  min-height: calc(100vh - 78px);
+  min-height: calc(100svh - 78px);
+  margin: 0 auto;
+  padding: clamp(54px, 8vw, 92px) 0 clamp(28px, 5vw, 44px);
+}
+
+.yafuso_hero_kicker_029 {
+  width: fit-content;
+  margin-bottom: 12px;
+  padding: 8px 32px 8px 16px;
+  background: var(--yafuso_red);
+  color: #fff;
+  font-size: clamp(17px, 2.4vw, 25px);
+  font-weight: 900;
+  line-height: 1.25;
+  clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+}
+
+.yafuso_hero_inner_029 h1 {
+  color: #fff;
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: clamp(44px, 9vw, 96px);
+  font-weight: 900;
+  line-height: 1.06;
+  text-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.35),
+    0 0 16px rgba(0, 0, 0, 0.72);
+
+  span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: clamp(21px, 4vw, 38px);
+  }
+}
+
+.yafuso_hero_lead_029 {
+  margin-top: 18px;
+  color: #fff;
+  font-size: clamp(17px, 2.5vw, 29px);
+  font-weight: 900;
+  line-height: 1.65;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.yafuso_hero_buttons_029 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: min(100%, 210px);
+    min-height: 58px;
+    padding: 0 24px;
+    border-radius: 7px;
+    background: var(--yafuso_red);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+    box-shadow: 0 7px 0 var(--yafuso_red_dark);
+
+    &:nth-child(2) {
+      background: var(--yafuso_yellow);
+      color: var(--yafuso_black);
+      box-shadow: 0 7px 0 #c08d00;
+    }
+  }
+}
+
+.yafuso_hero_status_029 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: min(100%, 610px);
+  margin-top: 28px;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 8px 10px;
+    border: 2px solid rgba(255, 210, 0, 0.58);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.93);
+    font-size: 13px;
+    font-weight: 900;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+
+    i {
+      color: var(--yafuso_black);
+    }
+  }
+}
+
+.yafuso_hero_badge_029 {
+  position: absolute;
+  right: clamp(16px, 5vw, 70px);
+  bottom: clamp(18px, 7vw, 58px);
+  display: grid;
+  place-items: center;
+  width: clamp(104px, 17vw, 146px);
+  height: clamp(104px, 17vw, 146px);
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: var(--yafuso_red);
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.18;
+  text-align: center;
+  transform: rotate(-8deg);
+  box-shadow:
+    0 0 0 4px var(--yafuso_red),
+    0 14px 26px rgba(0, 0, 0, 0.26);
+
+  span {
+    display: block;
+    font-size: clamp(13px, 2.5vw, 18px);
+  }
+
+  b {
+    display: block;
+    color: #fff;
+    font-size: clamp(27px, 5vw, 42px);
+  }
+}
+
+.yafuso_concept_029 {
+  padding: clamp(34px, 5vw, 56px) 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.3)), var(--yafuso_cream);
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+
+.yafuso_concept_grid_029 {
+  display: grid;
+  gap: 22px;
+}
+
+.yafuso_section_title_029 {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  margin-bottom: 20px;
+
+  > span {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: url("#{$img}/chouchin.webp") center / contain no-repeat;
+    filter: drop-shadow(0 4px 0 rgba(128, 0, 0, 0.28));
+    flex: 0 0 auto;
+  }
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.25;
+  }
+}
+
+.yafuso_concept_text_029 {
+  display: grid;
+  gap: 10px;
+  font-weight: 900;
+  line-height: 1.72;
+}
+
+.yafuso_concept_photo_029 {
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  box-shadow: var(--yafuso_shadow);
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+  }
+}
+
+.yafuso_top_gallery_029,
+.yafuso_reason_029,
+.yafuso_shops_029,
+.yafuso_scene_029,
+.yafuso_price_029,
+.yafuso_sns_029 {
+  padding: clamp(34px, 5vw, 58px) 0;
+  background:
+    radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.45), transparent 18rem),
+    linear-gradient(180deg, #ffe500, #ffd100);
+}
+
+.yafuso_top_gallery_029 {
+  overflow: hidden;
+  padding: clamp(18px, 3vw, 34px) 0 0;
+}
+
+.yafuso_top_gallery_slider_029 {
+  border-top: 4px solid rgba(255, 255, 255, 0.65);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.65);
+}
+
+.yafuso_reason_heading_029 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.yafuso_reason_grid_029 {
+  display: grid;
+  gap: 14px;
+
+  li {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 9px;
+    min-height: 172px;
+    padding: 22px 18px;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--yafuso_shadow);
+
+    figure {
+      width: clamp(118px, 30vw, 250px);
+      overflow: hidden;
+      border: 3px solid var(--yafuso_yellow);
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(154, 81, 0, 0.16);
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    h3 {
+      color: var(--yafuso_red);
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    p {
+      font-weight: 800;
+      line-height: 1.65;
+      text-align: center;
+    }
+  }
+}
+
+.yafuso_shops_029 {
+  background: #fff5b8;
+}
+
+.yafuso_section_title_red_029 {
+  margin-bottom: 22px;
+}
+
+.yafuso_shops_029 .yafuso_section_title_029 h2::after,
+.yafuso_scene_029 .yafuso_section_title_029 h2::after,
+.yafuso_price_029 .yafuso_section_title_029 h2::after,
+.yafuso_sns_029 .yafuso_section_title_029 h2::after {
+  display: none;
+}
+
+.yafuso_shop_list_029 {
+  display: grid;
+  gap: 14px;
+}
+
+.yafuso_shop_card_029 {
+  position: relative;
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+  border: 3px solid var(--yafuso_line);
+  border-radius: 8px;
+  background: linear-gradient(90deg, #fff9d8, #fffdf0);
+  box-shadow: 0 8px 0 rgba(222, 161, 0, 0.35);
+}
+
+.yafuso_shop_body_029 {
+  display: grid;
+  gap: 9px;
+  padding: 18px;
+}
+
+.yafuso_shop_sns_icon_029 {
+  width: 76px;
+  height: 76px;
+  border: 3px solid var(--yafuso_yellow);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 7px 0 rgba(184, 104, 0, 0.15);
+  object-fit: cover;
+}
+
+.yafuso_shop_label_029 {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.yafuso_shop_body_029 h3 {
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: clamp(27px, 6vw, 42px);
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.yafuso_shop_lead_029 {
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.yafuso_shop_points_029 {
+  display: grid;
+  gap: 5px;
+
+  li {
+    display: flex;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.5;
+
+    i {
+      margin-top: 4px;
+      color: var(--yafuso_red);
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.yafuso_shop_meta_029 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding-top: 3px;
+
+  :where(span, a) {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  a {
+    color: var(--yafuso_red);
+  }
+}
+
+.yafuso_shop_detail_button_029 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--yafuso_red);
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 5px 0 var(--yafuso_red_dark);
+}
+
+.yafuso_shop_visual_029 {
+  min-height: 144px;
+  background: #111;
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 144px;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.yafuso_scene_029 {
+  background: linear-gradient(180deg, #fff5b8, #ffe100);
+}
+
+.yafuso_scene_grid_029 {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+
+  li {
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background: #fff9df;
+    box-shadow: var(--yafuso_shadow);
+  }
+
+  figure {
+    overflow: hidden;
+    background: #6e2600;
+
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 2.8;
+      object-fit: cover;
+    }
+  }
+
+  div {
+    display: grid;
+    gap: 8px;
+    padding: 15px;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--yafuso_red);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.35;
+
+    span {
+      color: var(--yafuso_red);
+      font-family: "Oswald", sans-serif;
+      font-size: 26px;
+      line-height: 1;
+    }
+  }
+
+  p {
+    font-weight: 800;
+    line-height: 1.65;
+  }
+}
+
+.yafuso_price_029 {
+  background: linear-gradient(180deg, #ffe500, #ffd000), var(--yafuso_yellow);
+}
+
+.yafuso_price_grid_029 {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+
+  article {
+    position: relative;
+    display: grid;
+    gap: 8px;
+    min-height: 230px;
+    padding: 24px 20px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    border-radius: 9px;
+    background:
+      radial-gradient(circle at 18% 28%, rgba(255, 255, 255, 0.95), transparent 5.5rem),
+      linear-gradient(135deg, #fff9d3, #ffffff);
+    box-shadow: var(--yafuso_shadow);
+    text-align: center;
+
+    &:nth-child(2) {
+      background:
+        radial-gradient(circle at 18% 28%, rgba(255, 232, 96, 0.72), transparent 6rem),
+        linear-gradient(135deg, #fff, #fff8d3);
+    }
+
+    &:nth-child(3) {
+      background:
+        radial-gradient(circle at 20% 24%, rgba(255, 255, 255, 0.18), transparent 6rem),
+        linear-gradient(135deg, #d90000, #ff2c1f);
+      color: #fff;
+    }
+
+    figure {
+      width: min(100%, 155px);
+      margin: 0 auto 4px;
+      overflow: hidden;
+      border: 3px solid rgba(255, 229, 0, 0.7);
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 9px 18px rgba(130, 65, 0, 0.14);
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    h3 {
+      color: var(--yafuso_red);
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    &:nth-child(3) h3,
+    &:nth-child(3) strong,
+    &:nth-child(3) small,
+    &:nth-child(3) p {
+      color: #fff;
+    }
+
+    p {
+      font-weight: 900;
+    }
+
+    strong {
+      color: var(--yafuso_red);
+      font-family: "Oswald", "Noto Sans JP", sans-serif;
+      font-size: clamp(34px, 8vw, 56px);
+      font-weight: 900;
+      line-height: 1.05;
+    }
+
+    small {
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+  }
+}
+
+.yafuso_price_note_029 {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(145, 72, 0, 0.14);
+  font-weight: 900;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.yafuso_sns_029 {
+  background: #ffde00;
+}
+
+.yafuso_sns_lead_029 {
+  margin-top: 22px;
+  font-weight: 900;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.yafuso_section_title_center_029 {
+  justify-content: center;
+  text-align: center;
+}
+
+.yafuso_sns_mark_029 {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 14px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 110%, #fdf497 0 22%, #fd5949 48%, #d6249f 68%, #285aeb 100%);
+  color: #fff;
+  font-size: 36px;
+  box-shadow: var(--yafuso_shadow);
+}
+
+.yafuso_sns_grid_029 {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+
+  a {
+    display: grid;
+    gap: 7px;
+    min-height: 184px;
+    padding: 18px 14px;
+    border: 3px solid #fff;
+    border-radius: 9px;
+    background: #fff8d6;
+    color: var(--yafuso_black);
+    box-shadow: var(--yafuso_shadow);
+    text-align: center;
+  }
+
+  .yafuso_sns_account_icon_029 {
+    width: 182px;
+    height: 182px;
+    margin: 0 auto 3px;
+    border: 3px solid var(--yafuso_yellow);
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+  }
+
+  span {
+    display: grid;
+    place-items: center;
+    min-height: 46px;
+    padding: 10px 0;
+    color: var(--yafuso_black);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.25;
+  }
+
+  small {
+    color: #5f3a00;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  b {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: fit-content;
+    min-height: 34px;
+    margin: 2px auto 0;
+    padding: 0 13px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+  }
+}
+
+.yafuso_access_029 {
+  padding: clamp(34px, 5vw, 58px) 0;
+  color: #fff;
+}
+
+.yafuso_access_029 .yafuso_section_title_029 h2::after {
+  display: none;
+}
+
+.yafuso_access_029 .yafuso_section_title_029 {
+  justify-content: center;
+}
+
+.yafuso_access_grid_029 {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.yafuso_access_panel_029,
+.yafuso_map_panel_029,
+.yafuso_parking_panel_029 {
+  border: 1px solid rgba(255, 229, 0, 0.38);
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+.yafuso_access_panel_029 {
+  padding: 18px;
+
+  dl {
+    display: grid;
+    gap: 14px;
+  }
+
+  div {
+    display: grid;
+    gap: 5px;
+  }
+
+  dt {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--yafuso_yellow);
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  dd {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.6;
+  }
+}
+
+.yafuso_map_panel_029 {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  grid-column: 1 / -1;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    border-radius: 6px;
+    background: var(--yafuso_yellow);
+    color: var(--yafuso_black);
+    font-size: 14px;
+    font-weight: 900;
+  }
+}
+
+.yafuso_map_embed_029 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #262626;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: clamp(360px, 52vw, 560px);
+    border: 0;
+  }
+}
+
+.yafuso_parking_panel_029 {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+
+  figure {
+    overflow: hidden;
+    margin: -18px -18px 6px;
+    border-radius: 9px 9px 0 0;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 8.2;
+    object-fit: cover;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--yafuso_yellow);
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  p {
+    font-weight: 800;
+    line-height: 1.7;
+  }
+
+  strong {
+    display: block;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 7px;
+    background: rgba(231, 19, 19, 0.28);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+  }
+}
+
+.yafuso_footer_029 {
+  padding: 34px 0 30px;
+  background: var(--yafuso_yellow);
+  color: var(--yafuso_black);
+  text-align: center;
+
+  p {
+    margin-top: 20px;
+    font-weight: 900;
+  }
+}
+
+.yafuso_footer_logo_029 {
+  display: block;
+  width: min(72vw, 300px);
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.yafuso_footer_nav_029 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 18px;
+  width: min(92vw, 980px);
+  margin: 22px auto 0;
+
+  a {
+    color: var(--yafuso_black);
+    font-weight: 900;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (min-width: 560px) {
+  .yafuso_reason_grid_029,
+  .yafuso_scene_grid_029,
+  .yafuso_sns_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yafuso_price_grid_029 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 820px) {
+  .yafuso_header_inner_029 {
+    grid-template-columns: auto 1fr;
+    min-height: 88px;
+  }
+
+  .yafuso_reason_grid_029 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .yafuso_concept_grid_029 {
+    grid-template-columns: minmax(280px, 0.88fr) minmax(420px, 1.12fr);
+    align-items: center;
+  }
+
+  .yafuso_concept_grid_029 .yafuso_section_title_029 {
+    grid-column: 1 / -1;
+  }
+
+  .yafuso_shop_card_029 {
+    grid-template-columns: minmax(330px, 0.86fr) minmax(430px, 1.14fr);
+    align-items: stretch;
+  }
+
+  .yafuso_shop_body_029 {
+    padding: 22px 24px;
+  }
+
+  .yafuso_shop_visual_029 {
+    min-height: 0;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+
+    img {
+      height: 100%;
+      min-height: 0;
+    }
+  }
+
+  .yafuso_scene_grid_029 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .yafuso_sns_grid_029 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .yafuso_access_grid_029 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1180px) {
+  .yafuso_hero_photo_029 img {
+    object-position: center center;
+  }
+}
+
+@media (max-width: 819px) {
+  .yafuso_nav_029 {
+    display: none !important;
+  }
+
+  .yafuso_menu_toggle_029.sponly {
+    display: flex !important;
+  }
+
+  .yafuso_sns_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yafuso_hero_badge_029 {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: -18px 18px 24px auto;
+  }
+}
+
+@media (max-width: 559px) {
+  .yafuso_header_inner_029 {
+    min-height: 58px;
+  }
+
+  .yafuso_logo_029 b {
+    font-size: 20px;
+  }
+
+  .yafuso_logo_029 small {
+    font-size: 9px;
+  }
+
+  .yafuso_lantern_mark_029 {
+    width: 21px;
+    height: 33px;
+  }
+
+  .yafuso_hero_029 {
+    display: grid;
+    min-height: auto;
+    background: #1b1207;
+  }
+
+  .yafuso_hero_photo_029 {
+    position: relative;
+    inset: auto;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #1b1207;
+
+    &.slider_fullslider_wrap {
+      height: auto;
+      min-height: 0;
+    }
+
+    .slider_fullslider {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+
+        &:first-child {
+          position: absolute;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain !important;
+      object-position: center center;
+      animation: none !important;
+      transform: none;
+    }
+  }
+
+  .yafuso_hero_inner_029 {
+    min-height: auto;
+    padding: 28px 0 34px;
+  }
+
+  .yafuso_hero_029::before {
+    display: none;
+  }
+
+  .yafuso_section_title_029,
+  .yafuso_section_title_center_029 {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .yafuso_section_title_029 h2,
+  .yafuso_section_title_center_029 h2 {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .yafuso_section_title_029 h2::after,
+  .yafuso_section_title_center_029 h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .yafuso_hero_status_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .yafuso_hero_buttons_029 a {
+    width: 100%;
+  }
+
+  .yafuso_concept_photo_029 img {
+    aspect-ratio: 4 / 2.5;
+  }
+
+  .yafuso_shop_visual_029 {
+    min-height: 300px;
+    background: #111;
+  }
+
+  .yafuso_shop_visual_029 img {
+    min-height: 300px;
+    aspect-ratio: 16 / 7;
+  }
+
+  .yafuso_shop_sns_icon_029 {
+    margin-inline: auto;
+  }
+
+  .yafuso_shop_body_029 h3 {
+    margin-bottom: 0.5em;
+    font-size: clamp(24px, 6vw, 42px);
+    text-align: center;
+  }
+
+  .yafuso_shop_detail_button_029 {
+    margin: 0.5em auto;
+  }
+
+  .yafuso_sns_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .yafuso_sns_grid_029 a {
+    min-height: 168px;
+    padding: 14px 8px;
+  }
+
+  .yafuso_sns_grid_029 .yafuso_sns_account_icon_029 {
+    width: 166px;
+    height: 166px;
+  }
+
+  .yafuso_sns_grid_029 span {
+    min-height: 42px;
+    font-size: 10px;
+  }
+
+  .yafuso_price_grid_029 article {
+    min-height: 210px;
+  }
+}
+
+.yafuso_lower_concept_029 {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(255, 255, 255, 0.75), transparent 320px),
+    linear-gradient(180deg, #fff8df 0%, #fff1b6 42%, #ffe100 100%);
+  color: var(--yafuso_black);
+}
+
+.yafuso_lower_hero_029 {
+  position: relative;
+  min-height: 700px;
+  overflow: hidden;
+  border-top: 8px solid var(--yafuso_red_dark);
+  background: #170b02;
+}
+
+.yafuso_lower_hero_photo_029 {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.92;
+  }
+}
+
+.yafuso_lower_hero_029::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 3, 0, 0.93) 0%,
+      rgba(9, 3, 0, 0.74) 42%,
+      rgba(9, 3, 0, 0.28) 74%,
+      rgba(9, 3, 0, 0.58) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5));
+}
+
+.yafuso_lower_hero_inner_029 {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 1480px);
+  margin: 0 auto;
+  padding: 168px 0 96px;
+  color: #fff;
+  text-shadow: 0 5px 22px rgba(0, 0, 0, 0.8);
+
+  h2 {
+    margin-bottom: 22px;
+    color: #fff;
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+  }
+}
+
+.yafuso_lower_kicker_029 {
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 7px 16px 8px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: rgba(231, 19, 19, 0.86);
+  color: #fff;
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.yafuso_lower_copy_029 {
+  max-width: 760px;
+  margin-bottom: 28px;
+  color: var(--yafuso_yellow);
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.yafuso_lower_intro_029 {
+  max-width: 600px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 2.05;
+}
+
+.yafuso_lower_side_lantern_029 {
+  position: absolute;
+  z-index: 3;
+  right: max(28px, calc((100vw - 1480px) / 2));
+  top: 96px;
+  width: clamp(92px, 12vw, 142px);
+  filter: drop-shadow(0 16px 18px rgba(0, 0, 0, 0.34));
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.yafuso_lower_story_029,
+.yafuso_lower_karaoke_029 {
+  background:
+    linear-gradient(90deg, rgba(231, 19, 19, 0.08) 0 1px, transparent 1px 100%) 0 0 / 54px 54px,
+    linear-gradient(180deg, #fffbe9, #fff3c7);
+}
+
+.yafuso_lower_variety_029,
+.yafuso_lower_parking_029 {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(255, 229, 0, 0.35), transparent 260px),
+    linear-gradient(180deg, #fff5cf, #fff8e7);
+}
+
+.yafuso_lower_story_grid_029,
+.yafuso_lower_variety_grid_029,
+.yafuso_lower_karaoke_grid_029,
+.yafuso_lower_parking_grid_029 {
+  display: grid;
+  gap: 28px;
+  padding: 58px 0;
+}
+
+.yafuso_lower_story_text_029,
+.yafuso_lower_variety_text_029,
+.yafuso_lower_karaoke_text_029,
+.yafuso_lower_parking_text_029 {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+
+  h3 {
+    color: var(--yafuso_red);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.5;
+  }
+
+  h3::first-line {
+    color: var(--yafuso_black);
+  }
+
+  p {
+    color: #3d2a12;
+    font-weight: 800;
+    line-height: 1.95;
+  }
+
+  ul {
+    display: grid;
+    gap: 11px;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: 9px;
+    color: #2f1d09;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.75;
+
+    i {
+      margin-top: 4px;
+      color: var(--yafuso_red);
+      font-size: 17px;
+    }
+  }
+}
+
+.yafuso_lower_lantern_icon_029 {
+  display: block;
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  color: transparent;
+  background: url("#{$img}/chouchin.webp") center / contain no-repeat;
+  filter: drop-shadow(0 5px 0 rgba(126, 0, 0, 0.34));
+}
+
+.yafuso_lower_story_photo_029,
+.yafuso_lower_food_mosaic_029 figure,
+.yafuso_lower_karaoke_photos_029 figure {
+  overflow: hidden;
+  border: 4px solid var(--yafuso_line);
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: var(--yafuso_shadow);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.yafuso_lower_story_photo_029 img {
+  aspect-ratio: 16 / 10;
+}
+
+.yafuso_lower_food_mosaic_029 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 180px;
+  gap: 10px;
+
+  figure:first-child {
+    grid-row: span 2;
+  }
+}
+
+.yafuso_lower_karaoke_text_029 {
+  position: relative;
+}
+
+.yafuso_lower_round_cta_029 {
+  display: grid;
+  place-items: center;
+  width: 156px;
+  height: 156px;
+  margin-top: 4px;
+  border: 6px solid rgba(255, 255, 255, 0.78);
+  border-radius: 50%;
+  background: linear-gradient(180deg, #e71313, #b70000);
+  color: #fff;
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.45;
+  text-align: center;
+  box-shadow: 0 12px 22px rgba(115, 0, 0, 0.25);
+  transform: rotate(-4deg);
+}
+
+.yafuso_lower_karaoke_photos_029 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.yafuso_lower_karaoke_main_029 {
+  grid-column: 1 / -1;
+}
+
+.yafuso_lower_karaoke_main_029 img {
+  aspect-ratio: 16 / 8.4;
+}
+
+.yafuso_lower_karaoke_photos_029 figure:not(.yafuso_lower_karaoke_main_029) img {
+  aspect-ratio: 4 / 3;
+}
+
+.yafuso_lower_parking_visual_029 {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  border: 4px solid #30220e;
+  border-radius: 8px;
+  background: #111;
+  box-shadow: var(--yafuso_shadow);
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 330px;
+    object-fit: cover;
+  }
+}
+
+.yafuso_lower_quote_029 {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  background: #160b04;
+}
+
+.yafuso_lower_quote_bg_029 {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.58;
+    filter: saturate(1.05) contrast(1.05);
+  }
+}
+
+.yafuso_lower_quote_029::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 15% 50%, rgba(255, 206, 0, 0.22), transparent 250px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.84));
+}
+
+.yafuso_lower_quote_inner_029 {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  min-height: 430px;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 56px 0;
+  color: #fff;
+  text-align: center;
+
+  .yafuso_lower_quote_catch_029 {
+    color: #fff;
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: clamp(30px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 1.28;
+    text-shadow: 0 5px 18px rgba(0, 0, 0, 0.86);
+  }
+
+  span {
+    display: block;
+    max-width: 720px;
+    margin: 22px auto 0;
+    color: #fff8dd;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 2;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.82);
+  }
+}
+
+.yafuso_lower_lantern_footer_029 {
+  height: 44px;
+  background:
+    radial-gradient(ellipse at center, #ffcf63 0 32%, #ff4a22 34% 55%, transparent 57%) 0 6px / 46px 32px repeat-x,
+    linear-gradient(180deg, #ffe500, #ffd000);
+  border-top: 4px solid var(--yafuso_red);
+}
+
+@media (min-width: 760px) {
+  .yafuso_lower_story_grid_029,
+  .yafuso_lower_variety_grid_029,
+  .yafuso_lower_karaoke_grid_029,
+  .yafuso_lower_parking_grid_029 {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+  }
+
+  .yafuso_lower_story_grid_029,
+  .yafuso_lower_karaoke_grid_029,
+  .yafuso_lower_parking_grid_029 {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  }
+
+  .yafuso_lower_variety_grid_029 {
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .yafuso_lower_side_lantern_029 {
+    right: 20px;
+    top: 78px;
+    width: 104px;
+    min-height: 310px;
+
+    b {
+      font-size: 24px;
+    }
+  }
+
+  .yafuso_lower_hero_inner_029 {
+    padding-right: 128px;
+
+    h2 {
+      font-size: 58px;
+    }
+  }
+
+  .yafuso_lower_copy_029 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 759px) {
+  .yafuso_lower_hero_029 {
+    min-height: 620px;
+  }
+
+  .yafuso_lower_hero_029::before {
+    background:
+      linear-gradient(180deg, rgba(9, 3, 0, 0.64), rgba(9, 3, 0, 0.46)),
+      linear-gradient(90deg, rgba(9, 3, 0, 0.58), rgba(9, 3, 0, 0.22));
+  }
+
+  .yafuso_lower_hero_photo_029 img {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .yafuso_lower_hero_inner_029 {
+    padding: 138px 0 42px;
+
+    h2 {
+      font-size: 46px;
+    }
+  }
+
+  .yafuso_lower_copy_029 {
+    font-size: 24px;
+  }
+
+  .yafuso_lower_intro_029 {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .yafuso_lower_lantern_icon_029 {
+    margin-inline: auto;
+  }
+
+  .yafuso_lower_story_text_029,
+  .yafuso_lower_variety_text_029,
+  .yafuso_lower_karaoke_text_029,
+  .yafuso_lower_parking_text_029 {
+    justify-items: center;
+    text-align: center;
+
+    h3 {
+      font-size: clamp(26px, 7vw, 34px);
+      text-align: center;
+    }
+
+    ul {
+      justify-self: stretch;
+      text-align: left;
+    }
+  }
+
+  .yafuso_lower_side_lantern_029 {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: min(86vw, 320px);
+    min-height: auto;
+    margin: -26px auto 28px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    writing-mode: horizontal-tb;
+
+    span {
+      font-size: 12px;
+    }
+
+    b {
+      font-size: 22px;
+    }
+  }
+
+  .yafuso_lower_story_grid_029,
+  .yafuso_lower_variety_grid_029,
+  .yafuso_lower_karaoke_grid_029,
+  .yafuso_lower_parking_grid_029 {
+    padding: 42px 0;
+  }
+
+  .yafuso_lower_variety_text_029 {
+    order: -1;
+  }
+
+  .yafuso_lower_story_text_029 h3,
+  .yafuso_lower_variety_text_029 h3,
+  .yafuso_lower_karaoke_text_029 h3,
+  .yafuso_lower_parking_text_029 h3 {
+    font-size: 25px;
+  }
+
+  .yafuso_lower_food_mosaic_029 {
+    grid-auto-rows: 145px;
+  }
+
+  .yafuso_lower_karaoke_photos_029 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .yafuso_lower_karaoke_main_029 {
+    grid-column: 1 / -1;
+  }
+
+  .yafuso_lower_quote_catch_029 {
+    color: #fff;
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: clamp(30px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 1.28;
+    text-shadow: 0 5px 18px rgba(0, 0, 0, 0.86);
+  }
+}
+
+@media (max-width: 520px) {
+  .yafuso_lower_hero_inner_029 {
+    padding-right: 0;
+  }
+
+  .yafuso_lower_kicker_029 {
+    font-size: 15px;
+  }
+
+  .yafuso_lower_hero_inner_029 h2 {
+    font-size: 40px;
+  }
+
+  .yafuso_lower_copy_029 {
+    font-size: 21px;
+  }
+
+  .yafuso_lower_story_text_029,
+  .yafuso_lower_variety_text_029,
+  .yafuso_lower_karaoke_text_029,
+  .yafuso_lower_parking_text_029 {
+    h3 {
+      font-size: 26px;
+    }
+
+    p,
+    li {
+    }
+  }
+
+  .yafuso_lower_food_mosaic_029 {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+
+    figure:first-child {
+      grid-row: auto;
+    }
+
+    img {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  .yafuso_lower_karaoke_photos_029 {
+    grid-template-columns: 1fr;
+  }
+
+  .yafuso_lower_karaoke_main_029 img,
+  .yafuso_lower_karaoke_photos_029 figure:not(.yafuso_lower_karaoke_main_029) img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .yafuso_lower_round_cta_029 {
+    width: 138px;
+    height: 138px;
+    font-size: 14px;
+  }
+
+  .yafuso_lower_parking_visual_029 {
+    min-height: 310px;
+  }
+
+  .yafuso_lower_quote_catch_029 {
+    font-size: clamp(30px, 7vw, 80px);
+  }
+
+  .yafuso_lower_quote_inner_029 span {
+    font-size: 14px;
+  }
+}
+
+.yafuso_market_029 {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 68, 0, 0.08) 0 1px, transparent 1px 42px),
+    linear-gradient(180deg, #fff4b8 0%, #ffe243 34%, #ffd000 100%);
+}
+
+.yafuso_market_hero_029 {
+  position: relative;
+  min-height: 700px;
+  overflow: hidden;
+  border-bottom: 8px solid var(--yafuso_red);
+  background: #1a0e05;
+}
+
+.yafuso_market_hero_photo_029 {
+  position: absolute;
+  inset: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.66) 43%, rgba(0, 0, 0, 0.16) 100%),
+      linear-gradient(180deg, rgba(255, 213, 0, 0.1), rgba(255, 79, 0, 0.36));
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.yafuso_market_hero_inner_029 {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  min-height: 700px;
+  max-width: 760px;
+  padding: 154px 150px 74px 0;
+  color: #fff;
+
+  h2 {
+    margin-top: 10px;
+    color: #fff;
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 78px;
+    font-weight: 900;
+    line-height: 1.08;
+    text-shadow:
+      0 7px 0 rgba(0, 0, 0, 0.54),
+      0 14px 28px rgba(0, 0, 0, 0.68);
+  }
+}
+
+.yafuso_market_kicker_029 {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--yafuso_red);
+  color: #fff;
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 5px 0 var(--yafuso_red_dark);
+}
+
+.yafuso_market_copy_029 {
+  margin-top: 18px;
+  color: var(--yafuso_yellow);
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1.45;
+  text-shadow: 0 5px 16px rgba(0, 0, 0, 0.76);
+}
+
+.yafuso_market_intro_029 {
+  max-width: 670px;
+  margin-top: 18px;
+  color: #fff8d5;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.78);
+}
+
+.yafuso_market_hero_actions_029 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 54px;
+    padding: 0 24px;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background: var(--yafuso_red);
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 900;
+    box-shadow: 0 7px 0 var(--yafuso_red_dark);
+
+    &:nth-child(2) {
+      background: var(--yafuso_yellow);
+      color: var(--yafuso_black) !important;
+      box-shadow: 0 7px 0 #c89500;
+    }
+  }
+}
+
+.yafuso_market_hero_lantern_029 {
+  position: absolute;
+  right: max(24px, calc((100vw - 1480px) / 2));
+  bottom: 52px;
+  z-index: 3;
+  width: clamp(92px, 12vw, 132px);
+  filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.4));
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.yafuso_market_scene_029 {
+  position: relative;
+  padding: 26px 0 30px;
+  border-bottom: 5px solid var(--yafuso_red);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.7), transparent 14rem),
+    linear-gradient(180deg, #fff2a6, #ffe600);
+}
+
+.yafuso_market_scene_head_029,
+.yafuso_market_title_029 {
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  text-align: center;
+
+  > span {
+    width: 200px;
+    height: 120px;
+    background: url("#{$img}/chouchin.webp") center / contain no-repeat;
+    filter: drop-shadow(0 4px 0 rgba(118, 0, 0, 0.28));
+  }
+
+  h2 {
+    color: var(--yafuso_black);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+}
+
+.yafuso_market_scene_grid_029 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.yafuso_market_scene_item_029 {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  min-height: 112px;
+  padding: 18px 10px 16px;
+  border: 3px solid #f0b100;
+  border-radius: 8px;
+  background: #fffbe7;
+  box-shadow: 0 9px 0 rgba(180, 112, 0, 0.16);
+  text-align: center;
+
+  i {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--yafuso_red);
+    color: #fff;
+    font-size: 22px;
+  }
+
+  span {
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+}
+
+.yafuso_market_list_029 {
+  padding: 48px 0 64px;
+  background: linear-gradient(90deg, rgba(231, 19, 19, 0.09) 0 1px, transparent 1px 38px), #fff8cf;
+}
+
+.yafuso_market_title_029 {
+  margin-bottom: 24px;
+
+  p {
+    max-width: 760px;
+    color: #5a3500;
+    font-weight: 800;
+    line-height: 1.85;
+  }
+}
+
+.yafuso_market_shop_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.24fr) minmax(300px, 0.76fr);
+  gap: 0;
+  align-items: stretch;
+  margin-top: 20px;
+  overflow: hidden;
+  border: 4px solid var(--yafuso_line);
+  border-radius: 8px;
+  background: #fffdf0;
+  box-shadow: var(--yafuso_shadow);
+}
+
+.yafuso_market_shop_gallery_029 {
+  grid-row: span 2;
+  min-width: 0;
+  padding: 0;
+  background: linear-gradient(135deg, rgba(255, 229, 0, 0.26), transparent 45%), #fff5b8;
+}
+
+.yafuso_market_gallery_029 {
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+
+  .main-gallery {
+    margin-bottom: 0;
+  }
+
+  .main-gallery .main-slide {
+    height: 650px;
+    background: transparent;
+  }
+
+  .main-gallery .main-slide.cover::before,
+  .main-gallery .main-slide::before {
+    padding-top: 0;
+  }
+
+  .main-gallery .main-slide img {
+    object-fit: cover;
+  }
+
+  .gallery-nav {
+    padding: 0 10px;
+
+    .nav-button {
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      background: rgba(231, 19, 19, 0.92);
+      color: #fff;
+      font-weight: 900;
+    }
+  }
+
+  .thumbnail-gallery-container {
+    padding: 9px 10px 10px;
+    background: transparent;
+  }
+
+  .space_1,
+  .space_sp1 {
+    display: none;
+  }
+
+  .thumbnail-gallery {
+    gap: 10px;
+  }
+
+  .thumbnail-gallery .thumbnail {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 78px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    opacity: 0.62;
+    background: #160c05;
+
+    &.active,
+    &:hover {
+      border-color: var(--yafuso_red);
+      opacity: 1;
+    }
+  }
+
+  .thumbnail-nav {
+    .thumb-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border: 2px solid #fff;
+      background: rgba(0, 0, 0, 0.72);
+      color: #fff;
+      font-size: 0;
+      font-weight: 900;
+      line-height: 1;
+      text-align: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+      }
+
+      &.prev::before {
+        transform: rotate(-135deg);
+      }
+
+      &.next::before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.yafuso_market_shop_body_029 {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  padding: 26px 24px;
+  background: linear-gradient(90deg, rgba(255, 228, 0, 0.42), transparent 54%), #fffdf2;
+
+  h3 {
+    margin-top: 2px;
+    color: var(--yafuso_black);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 33px;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+}
+
+.yafuso_market_sns_icon_029 {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 8px;
+  border: 4px solid var(--yafuso_yellow);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 9px 0 rgba(184, 104, 0, 0.17);
+  object-fit: cover;
+}
+
+.yafuso_market_label_029 {
+  width: fit-content;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: var(--yafuso_red);
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.yafuso_market_lead_029 {
+  margin-top: 12px;
+  color: #4f2d00;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.85;
+}
+
+.yafuso_market_point_list_029 {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px !important;
+
+  li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 8px;
+    color: #2b1a04;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.65;
+  }
+
+  i {
+    margin-top: 4px;
+    color: var(--yafuso_red);
+  }
+}
+
+.yafuso_market_meta_029 {
+  display: grid;
+  align-content: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 22px 18px;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.18), transparent 8rem),
+    linear-gradient(180deg, #2b1608, #140a04);
+  color: #fff8d5;
+
+  dl {
+    display: grid;
+    gap: 10px;
+  }
+
+  dl > div {
+    display: grid;
+    gap: 3px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 226, 97, 0.28);
+  }
+
+  dt {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--yafuso_yellow);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  dd,
+  a {
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+}
+
+.yafuso_market_button_029 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--yafuso_red);
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 900;
+  box-shadow: 0 5px 0 var(--yafuso_red_dark);
+}
+
+.yafuso_market_cta_029 {
+  padding: 46px 0 52px;
+  border-top: 6px solid var(--yafuso_red);
+  background:
+    radial-gradient(circle at 20% 0, rgba(255, 255, 255, 0.72), transparent 18rem),
+    linear-gradient(180deg, #ffe800, #ffc400);
+}
+
+.yafuso_market_cta_inner_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
+  gap: 28px;
+  align-items: center;
+  padding: 26px;
+  border: 4px solid var(--yafuso_red);
+  border-radius: 8px;
+  background: #fff7c9;
+  box-shadow: 0 14px 0 rgba(191, 0, 0, 0.16);
+}
+
+.yafuso_market_cta_text_029 {
+  span {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin-top: 12px;
+    color: var(--yafuso_red);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    margin-top: 12px;
+    color: #4f2d00;
+    font-weight: 800;
+    line-height: 1.9;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    margin-top: 20px;
+    padding: 0 24px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 900;
+    box-shadow: 0 6px 0 var(--yafuso_red_dark);
+  }
+}
+
+.yafuso_market_cta_photo_029 {
+  overflow: hidden;
+  border: 4px solid #d79a00;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(103, 58, 0, 0.22);
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1120px) {
+  .yafuso_market_shop_029 {
+    grid-template-columns: 1fr;
+  }
+
+  .yafuso_market_shop_gallery_029 {
+    grid-row: auto;
+  }
+
+  .yafuso_market_shop_body_029,
+  .yafuso_market_meta_029 {
+    grid-column: auto;
+  }
+
+  .yafuso_market_meta_029 {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+
+    dl {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .yafuso_market_hero_029,
+  .yafuso_market_hero_inner_029 {
+    min-height: 640px;
+  }
+
+  .yafuso_market_hero_inner_029 {
+    padding-right: 132px;
+
+    h2 {
+      font-size: 58px;
+    }
+  }
+
+  .yafuso_market_copy_029 {
+    font-size: 29px;
+  }
+
+  .yafuso_market_hero_lantern_029 {
+    right: 18px;
+    bottom: 38px;
+    width: 104px;
+  }
+
+  .yafuso_market_scene_grid_029 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .yafuso_market_meta_029 {
+    grid-template-columns: 1fr;
+
+    dl {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .yafuso_market_cta_inner_029 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .yafuso_market_gallery_029 {
+    .main-gallery .main-slide {
+      height: 520px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .yafuso_market_hero_029,
+  .yafuso_market_hero_inner_029 {
+    min-height: auto;
+  }
+
+  .yafuso_market_hero_photo_029 img {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .yafuso_market_hero_photo_029::after {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.34)),
+      linear-gradient(180deg, rgba(255, 213, 0, 0.1), rgba(255, 79, 0, 0.2));
+  }
+
+  .yafuso_market_hero_inner_029 {
+    padding: 58px 0 36px;
+
+    h2 {
+      font-size: 41px;
+    }
+  }
+
+  .yafuso_market_copy_029 {
+    font-size: 23px;
+  }
+
+  .yafuso_market_intro_029 {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .yafuso_market_hero_actions_029 {
+    a {
+      width: 100%;
+      min-height: 50px;
+      font-size: 15px;
+    }
+  }
+
+  .yafuso_market_hero_lantern_029 {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(34vw, 120px);
+    margin: 0 auto 30px;
+  }
+
+  .yafuso_market_scene_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yafuso_market_scene_head_029 h2,
+  .yafuso_market_title_029 h2 {
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+  }
+
+  .yafuso_market_shop_029 {
+    grid-template-columns: 1fr;
+    margin-top: 18px;
+  }
+
+  .yafuso_market_shop_body_029,
+  .yafuso_market_meta_029 {
+    grid-column: auto;
+  }
+
+  .yafuso_market_shop_body_029 {
+    justify-items: center;
+    padding: 22px 18px;
+    text-align: center;
+
+    h3 {
+      margin-bottom: 0.5em;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  .yafuso_market_sns_icon_029 {
+    margin-inline: auto;
+  }
+
+  .yafuso_market_point_list_029 {
+    justify-self: stretch;
+    text-align: left;
+  }
+
+  .yafuso_market_meta_029 {
+    dl {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .yafuso_market_cta_inner_029 {
+    padding: 18px;
+  }
+
+  .yafuso_market_cta_text_029 h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 430px) {
+  .yafuso_market_scene_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yafuso_market_shop_gallery_029 {
+    padding: 10px;
+  }
+
+  .yafuso_market_gallery_029 {
+    .main-gallery .main-slide {
+      height: 380px;
+    }
+
+    .thumbnail-gallery .thumbnail {
+      flex-basis: 104px;
+      width: 104px;
+      height: 68px;
+    }
+  }
+
+  .yafuso_market_point_list_029 li,
+  .yafuso_market_lead_029,
+  .yafuso_market_title_029 p,
+  .yafuso_market_cta_text_029 p {
+  }
+}
+
+.yafuso_vendors_029 {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(231, 19, 19, 0.08) 0 1px, transparent 1px 42px),
+    linear-gradient(180deg, #fff7c4 0%, #ffe136 40%, #ffc400 100%);
+  color: var(--yafuso_black);
+}
+
+.yafuso_vendors_hero_029 {
+  position: relative;
+  min-height: 730px;
+  overflow: hidden;
+  border-bottom: 8px solid var(--yafuso_red);
+  background: #1d1007;
+}
+
+.yafuso_vendors_hero_photo_029 {
+  position: absolute;
+  inset: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.68) 45%, rgba(0, 0, 0, 0.22) 100%),
+      linear-gradient(180deg, rgba(255, 214, 0, 0.1), rgba(167, 0, 0, 0.42));
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.yafuso_vendors_hero_inner_029 {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  min-height: 730px;
+  max-width: 790px;
+  padding: 156px 160px 76px 0;
+  color: #fff;
+
+  h2 {
+    margin-top: 12px;
+    color: #fff;
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 1.12;
+    text-shadow:
+      0 7px 0 rgba(0, 0, 0, 0.54),
+      0 14px 28px rgba(0, 0, 0, 0.68);
+  }
+}
+
+.yafuso_vendors_kicker_029 {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--yafuso_red);
+  color: #fff;
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 5px 0 var(--yafuso_red_dark);
+}
+
+.yafuso_vendors_copy_029 {
+  margin-top: 18px;
+  color: var(--yafuso_yellow);
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.45;
+  text-shadow: 0 5px 16px rgba(0, 0, 0, 0.76);
+}
+
+.yafuso_vendors_intro_029 {
+  max-width: 690px;
+  margin-top: 18px;
+  color: #fff8dd;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.78);
+}
+
+.yafuso_vendors_hero_actions_029 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 54px;
+    padding: 0 24px;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background: var(--yafuso_red);
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 900;
+    box-shadow: 0 7px 0 var(--yafuso_red_dark);
+
+    &:nth-child(2) {
+      background: var(--yafuso_yellow);
+      color: var(--yafuso_black) !important;
+      box-shadow: 0 7px 0 #c89500;
+    }
+  }
+}
+
+.yafuso_vendors_hero_badge_029 {
+  position: absolute;
+  right: max(24px, calc((100vw - 1480px) / 2));
+  bottom: 54px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 146px;
+  height: 146px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #fffaaf, #ff2519 44%, #bd0000 100%);
+  box-shadow:
+    0 12px 0 #800000,
+    0 24px 36px rgba(0, 0, 0, 0.42);
+  color: #fff;
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  text-align: center;
+  transform: rotate(-8deg);
+
+  span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  b {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.12;
+    text-shadow: 0 3px 0 #710000;
+  }
+}
+
+.yafuso_vendors_message_029 {
+  padding: 52px 0;
+  border-bottom: 5px solid var(--yafuso_red);
+  background: radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.7), transparent 14rem), #fff3b3;
+}
+
+.yafuso_vendors_message_grid_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.yafuso_vendors_message_text_029,
+.yafuso_vendors_message_panel_029 {
+  border: 4px solid var(--yafuso_line);
+  border-radius: 8px;
+  background: #fffdf0;
+  box-shadow: var(--yafuso_shadow);
+}
+
+.yafuso_vendors_message_text_029 {
+  padding: 34px 36px;
+
+  h3 {
+    margin-top: 12px;
+    color: var(--yafuso_red);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1.42;
+  }
+
+  p {
+    margin-top: 18px;
+    color: #4f2d00;
+    font-weight: 800;
+    line-height: 2;
+  }
+}
+
+.yafuso_vendors_message_panel_029 {
+  display: grid;
+  align-content: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 20% 0, rgba(255, 255, 255, 0.18), transparent 8rem),
+    linear-gradient(180deg, #2b1608, #140a04);
+  color: #fff8d5;
+
+  strong {
+    color: var(--yafuso_yellow);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 1.55;
+  }
+
+  ul {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 9px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.6;
+  }
+
+  i {
+    margin-top: 5px;
+    color: var(--yafuso_yellow);
+  }
+}
+
+.yafuso_vendors_merit_029 {
+  padding: 52px 0 58px;
+  background: linear-gradient(180deg, #ffe500, #ffd000);
+}
+
+.yafuso_vendors_title_029 {
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  text-align: center;
+
+  > span {
+    width: 200px;
+    height: 120px;
+    background: url("#{$img}/chouchin.webp") center / contain no-repeat;
+    filter: drop-shadow(0 4px 0 rgba(118, 0, 0, 0.28));
+  }
+
+  h2 {
+    color: var(--yafuso_black);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    max-width: 780px;
+    color: #5a3500;
+    font-weight: 800;
+    line-height: 1.85;
+  }
+}
+
+.yafuso_vendors_merit_grid_029 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 24px;
+
+  article {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    width: calc((100% - 36px) / 3);
+    min-height: 100%;
+    padding: 16px 16px 22px;
+    border: 3px solid #f0b100;
+    border-radius: 8px;
+    background: #fffbe7;
+    box-shadow: 0 9px 0 rgba(180, 112, 0, 0.16);
+  }
+
+  figure {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #231006;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  h3 {
+    color: var(--yafuso_red);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  p {
+    color: #4f2d00;
+    font-weight: 800;
+    line-height: 1.75;
+  }
+}
+
+.yafuso_vendors_rooms_029 {
+  padding: 58px 0 66px;
+  background: linear-gradient(90deg, rgba(231, 19, 19, 0.08) 0 1px, transparent 1px 38px), #fff8cf;
+}
+
+.yafuso_vendor_room_029 {
+  margin-top: 28px;
+  overflow: hidden;
+  border: 4px solid var(--yafuso_line);
+  border-radius: 8px;
+  background: #fffdf0;
+  box-shadow: var(--yafuso_shadow);
+}
+
+.yafuso_vendor_room_head_029 {
+  position: relative;
+  padding: 28px 32px 24px 114px;
+  background:
+    linear-gradient(90deg, var(--yafuso_red) 0 86px, transparent 86px), linear-gradient(135deg, #fff6b8, #fffdf2 58%);
+
+  &::before {
+    content: "募";
+    position: absolute;
+    left: 19px;
+    top: 24px;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 64px;
+    border: 3px solid #fff;
+    border-radius: 50% 50% 44% 44%;
+    background: #ffe500;
+    color: var(--yafuso_red);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    box-shadow: 0 5px 0 #830000;
+  }
+
+  span {
+    display: inline-flex;
+    padding: 5px 13px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  h3 {
+    margin-top: 9px;
+    color: var(--yafuso_black);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.32;
+  }
+
+  p {
+    max-width: 900px;
+    margin-top: 10px;
+    color: #4f2d00;
+    font-weight: 800;
+    line-height: 1.85;
+  }
+}
+
+.yafuso_vendor_room_body_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(280px, 0.58fr);
+  gap: 0;
+  align-items: stretch;
+}
+
+.yafuso_vendor_room_gallery_029 {
+  min-width: 0;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(255, 229, 0, 0.26), transparent 45%), #fff5b8;
+}
+
+.yafuso_vendor_gallery_029 {
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 3px solid #d79a00;
+  border-radius: 7px;
+  background: #1a0d04;
+
+  .main-gallery {
+    margin-bottom: 0;
+  }
+
+  .main-gallery .main-slide {
+    height: auto;
+    background: #1a0d04;
+  }
+
+  .main-gallery .main-slide.cover::before,
+  .main-gallery .main-slide::before {
+    padding-top: 64%;
+  }
+
+  .main-gallery .main-slide img {
+    object-fit: cover;
+  }
+
+  .gallery-nav {
+    padding: 0 12px;
+
+    .nav-button {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #fff;
+      background: rgba(231, 19, 19, 0.92);
+      color: #fff;
+      font-weight: 900;
+    }
+  }
+
+  .thumbnail-gallery-container {
+    padding: 10px;
+    background: #fff1a0;
+  }
+
+  .space_1,
+  .space_sp1 {
+    display: none;
+  }
+
+  .thumbnail-gallery {
+    gap: 10px;
+  }
+
+  .thumbnail-gallery .thumbnail {
+    flex: 0 0 116px;
+    width: 116px;
+    height: 74px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    opacity: 0.62;
+    background: #160c05;
+
+    &.active,
+    &:hover {
+      border-color: var(--yafuso_red);
+      opacity: 1;
+    }
+  }
+
+  .thumbnail-nav {
+    .thumb-button {
+      width: 30px;
+      height: 30px;
+      border: 2px solid #fff;
+      background: rgba(0, 0, 0, 0.72);
+      font-weight: 900;
+    }
+  }
+}
+
+.yafuso_vendor_room_info_029 {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 24px 20px;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.18), transparent 8rem),
+    linear-gradient(180deg, #2b1608, #140a04);
+  color: #fff8d5;
+
+  dl {
+    display: grid;
+    gap: 10px;
+  }
+
+  dl > div {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 226, 97, 0.28);
+  }
+
+  dt {
+    color: var(--yafuso_yellow);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  dd {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.55;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 18px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 900;
+    box-shadow: 0 5px 0 var(--yafuso_red_dark);
+  }
+}
+
+.yafuso_vendors_conditions_029 {
+  padding: 58px 0;
+  border-top: 6px solid var(--yafuso_red);
+  border-bottom: 6px solid var(--yafuso_red);
+  background:
+    radial-gradient(circle at 20% 0, rgba(255, 255, 255, 0.72), transparent 18rem),
+    linear-gradient(180deg, #ffe800, #ffc400);
+}
+
+.yafuso_vendors_condition_grid_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.75fr);
+  gap: 22px;
+}
+
+.yafuso_vendors_condition_card_029 {
+  padding: 30px;
+  border: 4px solid var(--yafuso_line);
+  border-radius: 8px;
+  background: #fffdf0;
+  box-shadow: var(--yafuso_shadow);
+
+  h2 {
+    color: var(--yafuso_red);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  h3 {
+    margin-top: 16px;
+    color: var(--yafuso_black);
+    font-size: 19px;
+    font-weight: 900;
+  }
+
+  ul,
+  dl {
+    display: grid;
+    gap: 11px;
+    margin-top: 18px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 26px;
+    color: #4f2d00;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.7;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--yafuso_red);
+    }
+  }
+
+  dl > div {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(219, 153, 0, 0.34);
+  }
+
+  dt {
+    color: var(--yafuso_red);
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  dd {
+    color: #4f2d00;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.65;
+  }
+}
+
+.yafuso_vendors_note_029 {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff0a4;
+
+  i {
+    margin-top: 4px;
+    color: var(--yafuso_red);
+  }
+
+  p {
+    color: #4f2d00;
+    font-weight: 800;
+    line-height: 1.7;
+  }
+}
+
+.yafuso_vendors_rules_029 {
+  padding: 58px 0 66px;
+  background: #fff8cf;
+}
+
+.yafuso_vendors_rule_grid_029 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+
+  article {
+    padding: 22px;
+    border: 3px solid #f0b100;
+    border-radius: 8px;
+    background: #fffdf0;
+    box-shadow: 0 9px 0 rgba(180, 112, 0, 0.16);
+  }
+
+  h3 {
+    color: var(--yafuso_red);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  p {
+    margin-top: 8px;
+    color: #4f2d00;
+    font-weight: 800;
+    line-height: 1.75;
+  }
+}
+
+.yafuso_vendors_contact_029 {
+  padding: 58px 0 70px;
+  background:
+    linear-gradient(90deg, rgba(255, 229, 0, 0.08) 0 1px, transparent 1px 42px),
+    linear-gradient(180deg, #271406, #120804);
+  color: #fff;
+}
+
+.yafuso_vendors_contact_grid_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.yafuso_vendors_contact_text_029 {
+  grid-column: 1 / -1;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--yafuso_yellow);
+    color: var(--yafuso_black);
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin-top: 14px;
+    color: #fff;
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    margin-top: 12px;
+    color: #fff8dd;
+    font-weight: 800;
+    line-height: 1.9;
+  }
+}
+
+.yafuso_vendors_company_029 {
+  padding: 24px;
+  border: 3px solid rgba(255, 229, 0, 0.72);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+
+  h3 {
+    color: var(--yafuso_yellow);
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .yafuso_vendors_company_subtitle_029 {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  dl {
+    display: grid;
+    gap: 9px;
+    margin-top: 15px;
+  }
+
+  dl > div {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 10px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  dt {
+    color: var(--yafuso_yellow);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  dd,
+  a {
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.65;
+  }
+
+  > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    margin-top: 16px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    box-shadow: 0 5px 0 var(--yafuso_red_dark);
+  }
+}
+
+.yafuso_vendors_form_029 {
+  display: grid;
+  gap: 16px;
+  padding: 26px;
+  border: 4px solid var(--yafuso_yellow);
+  border-radius: 8px;
+  background: #fffdf0;
+  color: var(--yafuso_black);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+
+  label {
+    display: grid;
+    gap: 8px;
+    color: #4f2d00;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 13px;
+    border: 2px solid #e0a200;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--yafuso_black);
+    font: inherit;
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  button,
+  .yafuso_vendors_phone_029 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    border: 0;
+    border-radius: 999px;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  button {
+    background: var(--yafuso_red);
+    box-shadow: 0 6px 0 var(--yafuso_red_dark);
+
+    &:disabled {
+      background: #9b8d6a;
+      box-shadow: none;
+      cursor: not-allowed;
+      opacity: 0.62;
+    }
+  }
+}
+
+.yafuso_required_badge_029 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 20px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--yafuso_red);
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.yafuso_vendors_agree_029 {
+  grid-template-columns: 22px 1fr;
+  align-items: start;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff0a4;
+
+  input {
+    width: 18px;
+    min-height: 18px;
+    margin-top: 4px;
+    padding: 0;
+    accent-color: var(--yafuso_red);
+  }
+
+  span {
+    color: #4f2d00;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.7;
+  }
+}
+
+.yafuso_vendors_form_grid_029 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.yafuso_form_trap_029 {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.yafuso_form_error_029 {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 2px solid var(--yafuso_red);
+  border-radius: 8px;
+  background: #fff0f0;
+  color: var(--yafuso_red_dark);
+
+  strong,
+  li {
+    color: var(--yafuso_red_dark);
+    font-weight: 900;
+    line-height: 1.65;
+  }
+
+  ul {
+    display: grid;
+    gap: 3px;
+    padding-left: 1.1em;
+    list-style: disc;
+  }
+}
+
+.yafuso_vendors_phone_029 {
+  gap: 8px;
+  background: #211207;
+  box-shadow: 0 6px 0 #000;
+}
+
+@media (max-width: 1120px) {
+  .yafuso_vendors_merit_grid_029 article {
+    width: calc((100% - 18px) / 2);
+  }
+}
+
+@media (max-width: 900px) {
+  .yafuso_vendors_hero_029,
+  .yafuso_vendors_hero_inner_029 {
+    min-height: 660px;
+  }
+
+  .yafuso_vendors_hero_inner_029 {
+    padding-right: 132px;
+
+    h2 {
+      font-size: 54px;
+    }
+  }
+
+  .yafuso_vendors_copy_029 {
+    font-size: 28px;
+  }
+
+  .yafuso_vendors_hero_badge_029 {
+    right: 18px;
+    bottom: 38px;
+    width: 126px;
+    height: 126px;
+
+    b {
+      font-size: 28px;
+    }
+  }
+
+  .yafuso_vendors_message_grid_029,
+  .yafuso_vendor_room_body_029,
+  .yafuso_vendors_condition_grid_029,
+  .yafuso_vendors_contact_grid_029 {
+    grid-template-columns: 1fr;
+  }
+
+  .yafuso_vendors_rule_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .yafuso_vendor_gallery_029 {
+    .main-gallery .main-slide {
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .yafuso_vendors_hero_029,
+  .yafuso_vendors_hero_inner_029 {
+    min-height: auto;
+  }
+
+  .yafuso_vendors_hero_photo_029 img {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .yafuso_vendors_hero_photo_029::after {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.34)),
+      linear-gradient(180deg, rgba(255, 214, 0, 0.1), rgba(167, 0, 0, 0.22));
+  }
+
+  .yafuso_vendors_hero_inner_029 {
+    padding: 58px 0 34px;
+
+    h2 {
+      font-size: 39px;
+    }
+  }
+
+  .yafuso_vendors_copy_029 {
+    font-size: 22px;
+  }
+
+  .yafuso_vendors_intro_029 {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .yafuso_vendors_hero_actions_029 a {
+    width: 100%;
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .yafuso_vendors_hero_badge_029 {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(86vw, 260px);
+    height: auto;
+    min-height: 70px;
+    margin: 0 auto 30px;
+    border-radius: 999px;
+    transform: none;
+
+    b {
+      font-size: 23px;
+    }
+  }
+
+  .yafuso_vendors_message_text_029,
+  .yafuso_vendors_message_panel_029,
+  .yafuso_vendors_condition_card_029,
+  .yafuso_vendors_form_029 {
+    padding: 22px 18px;
+  }
+
+  .yafuso_vendors_message_text_029 h3,
+  .yafuso_vendors_contact_text_029 h2 {
+    font-size: 25px;
+  }
+
+  .yafuso_vendors_message_text_029 h3,
+  .yafuso_vendors_condition_card_029 h2,
+  .yafuso_vendors_contact_text_029 h2 {
+    text-align: center;
+  }
+
+  .yafuso_vendors_contact_text_029 span {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--yafuso_yellow);
+    color: var(--yafuso_black);
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .yafuso_vendors_title_029 h2 {
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+  }
+
+  .yafuso_vendor_room_head_029 h3,
+  .yafuso_vendors_condition_card_029 h2 {
+    font-size: 25px;
+  }
+
+  .yafuso_vendors_rule_grid_029,
+  .yafuso_vendors_form_grid_029 {
+    grid-template-columns: 1fr;
+  }
+
+  .yafuso_vendors_merit_grid_029 article {
+    width: 100%;
+  }
+
+  .yafuso_vendor_room_head_029 {
+    padding: 22px 18px;
+    background: linear-gradient(135deg, #fff6b8, #fffdf2 58%);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .yafuso_vendor_room_gallery_029 {
+    padding: 10px;
+  }
+
+  .yafuso_vendor_room_info_029 dl > div,
+  .yafuso_vendors_condition_card_029 dl > div,
+  .yafuso_vendors_company_029 dl > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .yafuso_vendors_company_029 {
+    padding: 18px;
+  }
+
+  .yafuso_vendors_company_029 > a {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    line-height: 42px;
+    margin: 16px auto 0;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    box-shadow: 0 5px 0 var(--yafuso_red_dark);
+    text-align: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .yafuso_vendor_gallery_029 {
+    .thumbnail-gallery .thumbnail {
+      flex-basis: 104px;
+      width: 104px;
+      height: 68px;
+    }
+  }
+
+  .yafuso_vendors_message_text_029 p,
+  .yafuso_vendors_title_029 p,
+  .yafuso_vendors_merit_grid_029 p,
+  .yafuso_vendors_rule_grid_029 p,
+  .yafuso_vendors_condition_card_029 li,
+  .yafuso_vendors_condition_card_029 dd,
+  .yafuso_vendors_contact_text_029 p {
+  }
+}
+
+.yafuso_karaoke_029 {
+  --yafuso_pink: #ff2ea6;
+  --yafuso_pink_deep: #d60078;
+  background: #fff;
+  color: var(--yafuso_black);
+}
+
+.yafuso_karaoke_029 .yafuso_lower_lantern_icon_029 {
+  display: block;
+  width: 70px;
+  height: 78px;
+  margin: 0 auto 4px;
+  background: url("#{$img}/karaoke_microphone_icon.webp") center / contain no-repeat;
+  color: transparent;
+  filter: drop-shadow(0 7px 0 rgba(255, 46, 166, 0.16));
+  text-indent: -9999px;
+}
+
+.yafuso_karaoke_029 .yafuso_lower_lantern_footer_029 {
+  height: 18px;
+  border-top-color: var(--yafuso_pink);
+  background: linear-gradient(90deg, var(--yafuso_pink), #ffd9ef, var(--yafuso_pink));
+}
+
+.yafuso_karaoke_hero_029 {
+  position: relative;
+  min-height: 730px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--yafuso_black);
+}
+
+.yafuso_karaoke_hero_photo_029 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  &.slider_fullslider_wrap {
+    height: 100%;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  .slider_fullslider {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider_fullslider .slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(1.08) contrast(1.04);
+  }
+}
+
+.yafuso_karaoke_hero_inner_029 {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 18px;
+  width: min(720px, 100%);
+  min-height: 730px;
+  margin: 0 auto;
+  padding: 150px 0 70px;
+  text-align: center;
+
+  h2 {
+    color: var(--yafuso_pink);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 66px;
+    font-weight: 900;
+    line-height: 1.12;
+    text-shadow: none;
+  }
+}
+
+.yafuso_karaoke_kicker_029 {
+  width: fit-content;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--yafuso_red);
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.yafuso_karaoke_copy_029 {
+  color: #fff;
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 1.45;
+  text-shadow:
+    0 4px 0 var(--yafuso_pink_deep),
+    0 8px 18px rgba(0, 0, 0, 0.34);
+}
+
+.yafuso_karaoke_intro_029 {
+  max-width: 650px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 2;
+  text-shadow:
+    0 2px 12px rgba(120, 0, 67, 0.72),
+    0 0 18px rgba(0, 0, 0, 0.28);
+}
+
+.yafuso_karaoke_hero_actions_029 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 8px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 56px;
+    padding: 0 24px;
+    border-radius: 8px;
+    background: var(--yafuso_yellow);
+    color: var(--yafuso_black);
+    font-size: 16px;
+    font-weight: 900;
+    box-shadow: 0 7px 0 #c59400;
+
+    &:first-child {
+      background: var(--yafuso_red);
+      color: #fff;
+      box-shadow: 0 7px 0 var(--yafuso_red_dark);
+    }
+  }
+}
+
+.yafuso_karaoke_hero_badge_029 {
+  position: absolute;
+  right: max(18px, calc((100vw - 1480px) / 2));
+  bottom: 50px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 168px;
+  height: 168px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 20%, rgba(255, 255, 255, 0.9), transparent 4rem), var(--yafuso_red);
+  color: #fff;
+  text-align: center;
+  transform: rotate(-8deg);
+  box-shadow:
+    0 10px 0 var(--yafuso_red_dark),
+    0 18px 36px rgba(0, 0, 0, 0.36);
+
+  span {
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  b {
+    color: #fff;
+    font-family: "Oswald", "Noto Sans JP", sans-serif;
+    font-size: 41px;
+    font-weight: 900;
+    line-height: 0.98;
+  }
+}
+
+.yafuso_karaoke_campaign_029,
+.yafuso_karaoke_food_029,
+.yafuso_karaoke_price_029,
+.yafuso_karaoke_menu_029,
+.yafuso_karaoke_rooms_029,
+.yafuso_karaoke_reservation_029,
+.yafuso_karaoke_info_029 {
+  padding: 58px 0;
+}
+
+.yafuso_karaoke_logo_strip_029 {
+  padding: 30px 0;
+  background: #fff;
+}
+
+.yafuso_karaoke_logo_029 {
+  width: min(86vw, 560px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 4px solid rgba(255, 46, 166, 0.28);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--yafuso_shadow);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.yafuso_karaoke_campaign_029 {
+  background: radial-gradient(circle at 12% 8%, rgba(255, 46, 166, 0.12), transparent 18rem), #fff;
+}
+
+.yafuso_karaoke_campaign_inner_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.yafuso_karaoke_campaign_text_029 {
+  display: grid;
+  gap: 14px;
+  padding: 34px;
+  border: 4px solid var(--yafuso_red);
+  border-radius: 8px;
+  background: #fffbea;
+  box-shadow: 9px 9px 0 rgba(183, 0, 0, 0.15);
+
+  span {
+    display: block;
+    width: fit-content;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: var(--yafuso_pink);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: var(--yafuso_pink_deep);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    font-weight: 900;
+    line-height: 1.9;
+  }
+}
+
+.yafuso_karaoke_campaign_photo_029 {
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--yafuso_shadow);
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+}
+
+.yafuso_karaoke_food_029 {
+  background: #fff7fb;
+}
+
+.yafuso_karaoke_food_grid_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+  align-items: center;
+  gap: 28px;
+}
+
+.yafuso_karaoke_food_text_029 {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  padding: 34px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--yafuso_shadow);
+
+  h2 {
+    color: var(--yafuso_pink_deep);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 900;
+    line-height: 1.36;
+  }
+
+  p {
+    font-weight: 900;
+    line-height: 1.9;
+  }
+
+  ul {
+    display: grid;
+    gap: 10px;
+  }
+
+  li {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.6;
+  }
+
+  i {
+    margin-top: 4px;
+    color: var(--yafuso_red);
+  }
+}
+
+.yafuso_karaoke_food_photos_029 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  figure {
+    overflow: hidden;
+    border: 4px solid var(--yafuso_yellow);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: var(--yafuso_shadow);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 170px;
+    object-fit: cover;
+  }
+}
+
+.yafuso_karaoke_price_029 {
+  background: #fff;
+}
+
+.yafuso_karaoke_title_029 {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  margin-bottom: 28px;
+  text-align: center;
+
+  span {
+    display: block;
+    width: 64px;
+    height: 72px;
+    background: url("#{$img}/karaoke_microphone_icon.webp") center / contain no-repeat;
+    filter: drop-shadow(0 7px 0 rgba(255, 46, 166, 0.18));
+  }
+
+  h2 {
+    color: var(--yafuso_pink_deep);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    max-width: 720px;
+    font-weight: 900;
+    line-height: 1.8;
+  }
+}
+
+.yafuso_karaoke_price_panel_029 {
+  display: grid;
+  grid-template-columns: 600px minmax(0, 1fr);
+  overflow: hidden;
+  border: 5px solid var(--yafuso_red);
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: var(--yafuso_shadow);
+}
+
+.yafuso_karaoke_price_main_029 {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  min-height: 290px;
+  padding: 28px;
+  background: radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.92), transparent 6rem), var(--yafuso_red);
+  color: #fff;
+  text-align: center;
+
+  .yafuso_karaoke_beer_icon_029 {
+    width: clamp(86px, 10vw, 128px);
+    height: auto;
+    aspect-ratio: 966 / 1242;
+    margin-bottom: 2px;
+    filter: drop-shadow(0 8px 0 rgba(120, 0, 0, 0.2));
+    object-fit: contain;
+  }
+
+  span,
+  small {
+    color: #fff;
+    font-weight: 900;
+  }
+
+  span {
+    font-size: 19px;
+  }
+
+  strong {
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 82px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  small {
+    font-size: 14px;
+  }
+}
+
+.yafuso_karaoke_price_table_029 {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 30px;
+
+  p {
+    padding: 13px 16px;
+    border-radius: 7px;
+    background: #fff2a3;
+    color: #4f2d00;
+    font-weight: 900;
+    line-height: 1.7;
+  }
+
+  dl {
+    display: grid;
+    gap: 9px;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 2px dashed #e0a200;
+  }
+
+  dt,
+  dd {
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  dd {
+    color: var(--yafuso_red);
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+  }
+
+  em {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 7px;
+    background: #211207;
+    color: #fff;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.7;
+  }
+}
+
+.yafuso_karaoke_menu_029 {
+  background: #fff7fb;
+}
+
+.yafuso_karaoke_drink_photo_029 {
+  overflow: hidden;
+  margin: 0 0 20px;
+  border: 5px solid #fff;
+  border-radius: 9px;
+  background: #211207;
+  box-shadow: var(--yafuso_shadow);
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 5.4;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.yafuso_karaoke_drink_grid_029 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+
+  article {
+    display: grid;
+    gap: 9px;
+    min-height: 172px;
+    padding: 20px;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background: #fffdf0;
+    box-shadow: 0 9px 0 rgba(181, 0, 0, 0.1);
+  }
+
+  h3 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--yafuso_red);
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.35;
+
+    &::before {
+      content: "\f001";
+      font-family: "Font Awesome 6 Free";
+      font-size: 15px;
+      font-weight: 900;
+    }
+  }
+
+  p {
+    font-weight: 900;
+    line-height: 1.75;
+  }
+}
+
+.yafuso_karaoke_menu_action_029 {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+
+  :where(button, a) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--yafuso_pink);
+    color: #fff;
+    font-weight: 900;
+    box-shadow: 0 6px 0 var(--yafuso_pink_deep);
+    cursor: pointer;
+  }
+}
+
+.yafuso_karaoke_modal_029 {
+  display: none;
+}
+
+.yafuso_karaoke_modal_029:target,
+.yafuso_karaoke_modal_029.is_open_029 {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.yafuso_karaoke_modal_backdrop_029 {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.72);
+  cursor: pointer;
+}
+
+.yafuso_karaoke_modal_body_029 {
+  position: relative;
+  z-index: 1;
+  width: min(94vw, 980px);
+  max-height: 90vh;
+  padding: 16px;
+  overflow: auto;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.yafuso_karaoke_modal_close_029 {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 0 10px auto;
+  border: 0;
+  border-radius: 50%;
+  background: var(--yafuso_pink);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.yafuso_karaoke_food_menu_029 {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 20px 24px;
+  border: 4px solid var(--yafuso_red);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--yafuso_shadow);
+
+  h3 {
+    color: var(--yafuso_red);
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  div {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: #fff2a3;
+  }
+
+  dt,
+  dd,
+  p {
+    font-weight: 900;
+  }
+
+  dd {
+    color: var(--yafuso_red);
+  }
+}
+
+.yafuso_karaoke_rooms_029 {
+  background: radial-gradient(circle at 85% 2%, rgba(255, 46, 166, 0.12), transparent 17rem), #fff;
+  color: var(--yafuso_black);
+}
+
+.yafuso_karaoke_rooms_grid_029 {
+  display: grid;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.yafuso_karaoke_gallery_col_029 {
+  min-width: 0;
+}
+
+.yafuso_karaoke_gallery_029 {
+  padding: 12px;
+  overflow: hidden;
+  border: 4px solid var(--yafuso_pink);
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.34);
+
+  .main-gallery .main-slide {
+    height: auto;
+    border-radius: 7px;
+    background: #190b02;
+  }
+
+  .main-gallery .main-slide.cover::before,
+  .main-gallery .main-slide::before {
+    padding-top: 58%;
+  }
+
+  .gallery-nav .nav-button,
+  .thumbnail-nav .thumb-button {
+    background: var(--yafuso_red);
+    color: #fff;
+  }
+
+  .thumbnail-gallery-container {
+    margin-top: 12px;
+  }
+
+  .thumbnail-gallery {
+    gap: 10px;
+  }
+
+  .thumbnail-gallery .thumbnail {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 78px;
+    border: 3px solid #f2c300;
+    border-radius: 6px;
+    opacity: 1;
+
+    &.active {
+      border-color: var(--yafuso_red);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.yafuso_karaoke_rooms_text_029 {
+  display: grid;
+  justify-items: center;
+  gap: 17px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    color: var(--yafuso_pink_deep);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  > p {
+    color: #3d2a12;
+    font-weight: 900;
+    line-height: 1.9;
+  }
+}
+
+.yafuso_karaoke_feature_grid_029 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+
+  article {
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    min-height: 150px;
+    padding: 18px;
+    border: 2px solid rgba(255, 46, 166, 0.24);
+    border-radius: 8px;
+    background: #fff7fb;
+    text-align: center;
+  }
+
+  i {
+    color: var(--yafuso_pink);
+    font-size: 28px;
+  }
+
+  h3 {
+    color: var(--yafuso_pink_deep);
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  p {
+    color: #4f2d00;
+    font-weight: 900;
+    line-height: 1.6;
+  }
+}
+
+.yafuso_karaoke_info_029 {
+  background: #fff;
+}
+
+.yafuso_karaoke_reservation_029 {
+  background:
+    linear-gradient(90deg, rgba(255, 229, 0, 0.08) 0 1px, transparent 1px 42px),
+    #fff7fb;
+}
+
+.yafuso_karaoke_reservation_grid_029 {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.45fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.yafuso_karaoke_reservation_note_029 {
+  display: grid;
+  gap: 18px;
+  padding: 26px;
+  border: 4px solid var(--yafuso_pink);
+  border-radius: 8px;
+  background: #211207;
+  color: #fff;
+  box-shadow: var(--yafuso_shadow);
+
+  h3 {
+    color: var(--yafuso_yellow);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  ul {
+    display: grid;
+    gap: 12px;
+  }
+
+  li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: #fffdf0;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.7;
+  }
+
+  i {
+    margin-top: 5px;
+    color: var(--yafuso_yellow);
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 50px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    color: #fff !important;
+    font-weight: 900;
+    box-shadow: 0 6px 0 var(--yafuso_red_dark);
+  }
+}
+
+.yafuso_karaoke_reservation_form_029 {
+  border-color: var(--yafuso_pink);
+}
+
+.yafuso_karaoke_info_grid_029 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.48fr);
+  gap: 22px;
+}
+
+.yafuso_karaoke_info_card_029,
+.yafuso_karaoke_contact_card_029 {
+  border: 4px solid var(--yafuso_yellow);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--yafuso_shadow);
+}
+
+.yafuso_karaoke_info_card_029 {
+  padding: 28px;
+
+  h2 {
+    margin-bottom: 18px;
+    color: var(--yafuso_pink_deep);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+  }
+
+  dl {
+    display: grid;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 16px;
+    padding: 13px 0;
+    border-bottom: 2px dashed #e0a200;
+  }
+
+  dt,
+  dd {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.7;
+  }
+
+  dt {
+    color: #8b4b00;
+  }
+}
+
+.yafuso_karaoke_contact_card_029 {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 2.6;
+    object-fit: contain;
+    padding: 14px;
+    background: #fff;
+  }
+
+  h2,
+  p,
+  dl,
+  > a {
+    margin-right: 22px;
+    margin-left: 22px;
+  }
+
+  h2 {
+    margin-top: 22px;
+    color: var(--yafuso_pink_deep);
+    font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 25px);
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  p {
+    margin-top: 8px;
+    font-weight: 900;
+    line-height: 1.7;
+  }
+
+  dl {
+    display: grid;
+    gap: 9px;
+    margin-top: 18px;
+  }
+
+  div {
+    display: grid;
+    gap: 3px;
+    padding-bottom: 9px;
+    border-bottom: 1px dashed #e0a200;
+  }
+
+  dt,
+  dd,
+  a {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.6;
+  }
+
+  dt {
+    color: #8b4b00;
+  }
+
+  dd a {
+    color: var(--yafuso_red);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    border-radius: 999px;
+    background: var(--yafuso_red);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    box-shadow: 0 6px 0 var(--yafuso_red_dark);
+  }
+
+  > .yafuso_karaoke_phone_button_029 {
+    margin-top: 12px;
+    background: #211207;
+    box-shadow: 0 6px 0 #000;
+  }
+}
+
+.yafuso_karaoke_029 h2,
+.yafuso_karaoke_029 h3 {
+  color: var(--yafuso_pink_deep);
+  text-align: center;
+}
+
+.yafuso_karaoke_hero_inner_029 h2 {
+  color: var(--yafuso_pink);
+}
+
+.yafuso_page_029 .gallery_thumbnail .thumbnail-nav {
+  right: 12px;
+  left: 12px;
+  width: auto;
+  padding: 0;
+  pointer-events: none;
+}
+
+.yafuso_page_029 .gallery_thumbnail .thumbnail-nav .thumb-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: #fff;
+  font-size: 0;
+  line-height: 1;
+  pointer-events: auto;
+}
+
+.yafuso_page_029 .gallery_thumbnail .thumbnail-nav .thumb-button::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.yafuso_page_029 .gallery_thumbnail .thumbnail-nav .thumb-button.prev::before {
+  transform: rotate(-135deg);
+}
+
+.yafuso_page_029 .gallery_thumbnail .thumbnail-nav .thumb-button.next::before {
+  transform: rotate(45deg);
+}
+
+.yafuso_page_029 .gallery_thumbnail .main-gallery .main-slide,
+.yafuso_page_029 .gallery_thumbnail .main-gallery .main-slide.cover {
+  background: #1a0d04;
+}
+
+.yafuso_page_029 .gallery_thumbnail .main-gallery .main-slide img,
+.yafuso_page_029 .gallery_thumbnail .main-gallery .main-slide.cover img {
+  object-fit: contain !important;
+  object-position: center center;
+}
+
+@media (max-width: 980px) {
+  .yafuso_karaoke_campaign_inner_029,
+  .yafuso_karaoke_food_grid_029,
+  .yafuso_karaoke_rooms_grid_029,
+  .yafuso_karaoke_reservation_grid_029,
+  .yafuso_karaoke_info_grid_029 {
+    grid-template-columns: 1fr;
+  }
+
+  .yafuso_karaoke_hero_inner_029 {
+    padding-right: 0;
+
+    h2 {
+      font-size: 54px;
+    }
+  }
+
+  .yafuso_karaoke_copy_029 {
+    font-size: 27px;
+  }
+
+  .yafuso_karaoke_price_panel_029 {
+    grid-template-columns: 1fr;
+  }
+
+  .yafuso_karaoke_price_main_029 {
+    min-height: 220px;
+  }
+
+  .yafuso_karaoke_drink_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yafuso_karaoke_rooms_text_029 {
+    order: -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .yafuso_karaoke_gallery_029 {
+    .main-gallery .main-slide {
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .yafuso_karaoke_hero_029 {
+    min-height: auto;
+  }
+
+  .yafuso_karaoke_hero_photo_029 {
+    background: #fff;
+
+    img {
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    .slider_fullslider .slide img {
+      object-fit: contain;
+      object-position: center center;
+      animation: none;
+      transform: none;
+    }
+  }
+
+  .yafuso_karaoke_hero_inner_029 {
+    min-height: auto;
+    padding: 54px 0 26px;
+
+    h2 {
+      font-size: 39px;
+    }
+  }
+
+  .yafuso_karaoke_copy_029 {
+    color: var(--yafuso_pink_deep);
+    font-size: 22px;
+    text-shadow:
+      0 2px 0 #fff,
+      0 8px 18px rgba(255, 46, 166, 0.24);
+  }
+
+  .yafuso_karaoke_intro_029 {
+    color: #2d1a0d;
+    font-size: 14px;
+    line-height: 1.85;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.92);
+  }
+
+  .yafuso_karaoke_hero_actions_029 a {
+    width: 100%;
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .yafuso_karaoke_hero_badge_029 {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 118px;
+    height: 118px;
+    margin: 64px 18px 30px auto;
+    transform: none;
+
+    b {
+      font-size: 29px;
+    }
+  }
+
+  .yafuso_karaoke_campaign_029,
+  .yafuso_karaoke_food_029,
+  .yafuso_karaoke_price_029,
+  .yafuso_karaoke_menu_029,
+  .yafuso_karaoke_rooms_029,
+  .yafuso_karaoke_reservation_029,
+  .yafuso_karaoke_info_029 {
+    padding: 42px 0;
+  }
+
+  .yafuso_karaoke_campaign_text_029,
+  .yafuso_karaoke_food_text_029,
+  .yafuso_karaoke_price_table_029,
+  .yafuso_karaoke_reservation_note_029,
+  .yafuso_karaoke_reservation_form_029,
+  .yafuso_karaoke_info_card_029 {
+    padding: 22px 18px;
+  }
+
+  .yafuso_karaoke_campaign_text_029 h2,
+  .yafuso_karaoke_food_text_029 h2,
+  .yafuso_karaoke_title_029 h2,
+  .yafuso_karaoke_rooms_text_029 h2,
+  .yafuso_karaoke_info_card_029 h2 {
+    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
+  }
+
+  .yafuso_karaoke_food_photos_029,
+  .yafuso_karaoke_drink_grid_029,
+  .yafuso_karaoke_food_menu_029 {
+    grid-template-columns: 1fr;
+  }
+
+  .yafuso_karaoke_feature_grid_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yafuso_karaoke_drink_photo_029 img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .yafuso_karaoke_food_photos_029 figure:first-child {
+    grid-row: auto;
+  }
+
+  .yafuso_karaoke_price_main_029 {
+    min-height: 190px;
+    padding: 24px 18px;
+
+    strong {
+      font-size: 64px;
+    }
+  }
+
+  .yafuso_karaoke_price_table_029 div,
+  .yafuso_karaoke_info_card_029 div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .yafuso_karaoke_price_table_029 dl {
+    display: grid;
+    gap: 9px;
+    text-align: center;
+  }
+
+  .yafuso_karaoke_food_menu_029 {
+    align-items: stretch;
+    padding: 18px;
+  }
+
+  .yafuso_karaoke_gallery_029 {
+    padding: 9px;
+  }
+}
+
+@media (max-width: 430px) {
+  .yafuso_karaoke_campaign_text_029 p,
+  .yafuso_karaoke_food_text_029 p,
+  .yafuso_karaoke_food_text_029 li,
+  .yafuso_karaoke_title_029 p,
+  .yafuso_karaoke_rooms_text_029 > p,
+  .yafuso_karaoke_info_card_029 dt,
+  .yafuso_karaoke_info_card_029 dd,
+  .yafuso_karaoke_contact_card_029 p,
+  .yafuso_karaoke_contact_card_029 dt,
+  .yafuso_karaoke_contact_card_029 dd,
+  .yafuso_karaoke_contact_card_029 a {
+  }
+
+  .yafuso_karaoke_gallery_029 {
+    .thumbnail-gallery .thumbnail {
+      flex-basis: 120px;
+      width: 120px;
+      height: 78px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .yafuso_lower_hero_029,
+  .yafuso_market_hero_029,
+  .yafuso_vendors_hero_029,
+  .yafuso_karaoke_hero_029 {
+    display: grid;
+    min-height: auto;
+    background: linear-gradient(180deg, #211207, #120804);
+  }
+
+  .yafuso_karaoke_hero_029 {
+    background: #fff;
+    color: var(--yafuso_black);
+  }
+
+  .yafuso_lower_hero_029::before {
+    display: none;
+  }
+
+  .yafuso_lower_hero_photo_029,
+  .yafuso_market_hero_photo_029,
+  .yafuso_vendors_hero_photo_029,
+  .yafuso_karaoke_hero_photo_029 {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #140a04;
+  }
+
+  .yafuso_karaoke_hero_photo_029 {
+    background: #fff;
+  }
+
+  .yafuso_karaoke_hero_photo_029.slider_fullslider_wrap {
+    height: auto;
+  }
+
+  .yafuso_karaoke_hero_photo_029 .slider_fullslider,
+  .yafuso_karaoke_hero_photo_029 .slider_fullslider .slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .yafuso_lower_hero_photo_029 img,
+  .yafuso_market_hero_photo_029 img,
+  .yafuso_vendors_hero_photo_029 img,
+  .yafuso_karaoke_hero_photo_029 img,
+  .yafuso_karaoke_hero_photo_029 .slider_fullslider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .yafuso_lower_hero_inner_029,
+  .yafuso_market_hero_inner_029,
+  .yafuso_vendors_hero_inner_029,
+  .yafuso_karaoke_hero_inner_029 {
+    min-height: auto;
+    max-width: none;
+    padding: 80px 0 34px;
+    text-align: center;
+  }
+
+  .yafuso_lower_hero_inner_029,
+  .yafuso_market_hero_inner_029,
+  .yafuso_vendors_hero_inner_029,
+  .yafuso_karaoke_hero_inner_029,
+  .yafuso_market_hero_actions_029,
+  .yafuso_vendors_hero_actions_029,
+  .yafuso_karaoke_hero_actions_029 {
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .yafuso_lower_kicker_029,
+  .yafuso_market_kicker_029,
+  .yafuso_vendors_kicker_029,
+  .yafuso_karaoke_kicker_029 {
+    margin-inline: auto;
+  }
+
+  .yafuso_lower_copy_029,
+  .yafuso_market_copy_029,
+  .yafuso_vendors_copy_029,
+  .yafuso_karaoke_copy_029,
+  .yafuso_lower_intro_029,
+  .yafuso_market_intro_029,
+  .yafuso_vendors_intro_029,
+  .yafuso_karaoke_intro_029 {
+    margin-inline: auto;
+  }
+
+  .yafuso_karaoke_hero_badge_029 {
+    margin-top: 0;
+  }
+}

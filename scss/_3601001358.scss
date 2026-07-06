@@ -1,0 +1,656 @@
+@charset "utf-8";
+
+.top1358 {
+  background: $bg_base;
+  color: #222;
+  overflow-x: hidden;
+}
+
+.top1358 .pochi_head_text .single02,
+.top1358 .pochi_nav .single02,
+.top1358 .pochi_line .single02,
+.top1358 .pochi_news .single02,
+.top1358 .pochi_shop .single02,
+.top1358 .pochi_footer_content .single02 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.top1358 .pochi_head_text {
+  background: #25a9e0;
+}
+
+.top1358 .pochi_head_text p {
+  margin: 0;
+  padding: 4px 0;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top1358 .pochi_hero {
+  position: relative;
+  background-image: url(#{$img}/fv_top_new.webp);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 0;
+  padding-bottom: 70%;
+}
+
+.top1358 .pochi_hero_overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.top1358 .pochi_hero_copy {
+  position: absolute;
+  left: 4%;
+  bottom: 5%;
+  max-width: 92%;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.top1358 .pochi_hero_copy p {
+  margin: 0;
+}
+
+.top1358 .pochi_hero_sub {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(26, 82, 163, 0.92);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+.top1358 .pochi_hero_ttl {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 4vw, 42px);
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.top1358 .pochi_hero_cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff9e2f 0%, $sub_color 100%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.top1358 .pochi_hero_cta:hover {
+  color: #fff;
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+}
+
+.top1358 .pochi_hero_btn {
+  position: absolute;
+  z-index: 2;
+  width: 12%;
+  min-width: 64px;
+  max-width: 112px;
+}
+
+.top1358 .pochi_hero_btn img {
+  width: 100%;
+}
+
+.top1358 .pochi_hero_btn.tamashima {
+  bottom: 16%;
+  right: 45%;
+}
+
+.top1358 .pochi_hero_btn.mizutama {
+  bottom: 15%;
+  right: 30%;
+}
+
+.top1358 .pochi_hero_btn.nakashima {
+  bottom: 25%;
+  right: 18%;
+}
+
+.top1358 .pochi_hero_btn.mabi {
+  bottom: 24%;
+  right: 4%;/* 
+  width: auto;
+  min-width: 72px;
+  max-width: none;
+  border: 3px solid #fff;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff9e2f 0%, $sub_color 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 12px; */
+}
+
+.top1358 .pochi_hero_btn.mabi:hover {
+  color: #fff;
+  filter: brightness(1.06);
+}
+
+.top1358 .pochi_hero_btn.mabi span {
+  display: block;
+  line-height: 1;
+}
+
+.top1358 .pochi_nav {
+  border-top: 4px solid #c7f241;
+  border-bottom: 4px solid #c7f241;
+  background: $base_color;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.top1358 .pochi_nav .single02 {
+  max-width: 1180px;
+}
+
+.top1358 .pochi_nav_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 56px;
+}
+
+.top1358 .pochi_logo {
+  margin: 0;
+  width: 130px;
+}
+
+.top1358 .pochi_logo img {
+  width: 100%;
+}
+
+.top1358 .commonnav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.top1358 .commonnav > li {
+  position: relative;
+}
+
+.top1358 .commonnav > li > a {
+  display: block;
+  padding: 16px 0;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.top1358 .commonnav > li > a:hover {
+  color: #c7f241;
+}
+
+.top1358 .commonnav > li ul {
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: -8px;
+  min-width: 180px;
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #c7f241;
+  background: rgba(26, 82, 163, 0.98);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.top1358 .commonnav > li:hover ul {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.top1358 .commonnav > li ul a {
+  display: block;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.top1358 .commonnav > li ul a:hover {
+  color: #c7f241;
+}
+
+.top1358 #nav_slide_toggle {
+  position: fixed;
+  right: 14px;
+  top: 10px;
+  z-index: 1000;
+}
+
+.top1358 .pochi_line {
+  padding: 28px 0 10px;
+}
+
+.top1358 .pochi_line_box {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #fff;
+  overflow: hidden;
+  align-items: center;
+  @include for-size(phone-only) {
+    background: none;
+  }
+}
+
+.top1358 .pochi_line_left img,
+.top1358 .pochi_line_right img {
+  width: 100%;
+}
+
+.top1358 .pochi_line_right {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.top1358 .pochi_line_btn {
+  display: block;
+  padding: 18px;
+  text-align: center;
+}
+
+.top1358 .pochi_line_btn img {
+  width: 250px;
+  max-width: 100%;
+}
+
+.top1358 .pochi_news {
+  padding: 8px 0 24px;
+}
+
+.top1358 .pochi_news_box {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 20px;
+}
+
+.top1358 .pochi_news_ttl {
+  margin: 0 0 16px;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  color: #3f3f3f;
+}
+
+.top1358 .pochi_news_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.top1358 .pochi_news_list li a {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.top1358 .pochi_news_list time {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.top1358 .pochi_news_list span {
+  font-size: 15px;
+}
+
+.top1358 .pochi_shop {
+  padding-bottom: 42px;
+}
+
+.top1358 .pochi_shop_grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 20px;
+}
+
+.top1358 .pochi_shop_card {
+  position: relative;
+  border-radius: 6px;
+  border: 4px solid $sub_color;
+  background: #bbff8f;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(12, 76, 109, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.top1358 .pochi_shop_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(12, 76, 109, 0.24);
+}
+
+.top1358 .pochi_shop_btn {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84%;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+}
+
+.top1358 .pochi_shop_card:hover .pochi_shop_btn {
+  opacity: 0.72;
+}
+
+.top1358 .pochi_shop_btn img {
+  width: 100%;
+}
+
+.top1358 .pochi_shop_main {
+  width: 89%;
+  margin: 32% auto 0;
+  display: block;
+}
+
+.top1358 .pochi_shop_card h3 {
+  margin: 14px 20px 8px;
+  color: #3f2e21;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.top1358 .pochi_shop_meta {
+  margin: 0 20px 12px;
+  font-size: 15px;
+  color: #303030;
+}
+
+.top1358 .pochi_shop_meta a {
+  color: #1a52a3;
+  font-weight: 700;
+}
+
+.top1358 .pochi_shop_service {
+  width: 89%;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.top1358 .pochi_footer {
+  margin-top: 12px;
+}
+
+.top1358 .pochi_footer_content {
+  background-image: url("https://pochitama.co.jp/wp-content/themes/initializr/img/footer_bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  padding: 40px 0 22px;
+}
+
+.top1358 .pochi_footer_banners {
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.top1358 .pochi_footer_banners img {
+  width: 100%;
+}
+
+.top1358 .pochi_footer_nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  text-align: center;
+}
+
+.top1358 .pochi_footer_nav a {
+  color: #fff;
+  font-size: 16px;
+}
+
+.top1358 .pochi_footer_nav a:hover {
+  color: #c7f241;
+}
+
+.top1358 .pochi_copy {
+  margin: 0;
+  padding: 8px 12px;
+  background: #fff;
+  text-align: center;
+  font-size: 13px;
+}
+
+.top1358 #js_top_scroll {
+  position: fixed;
+  bottom: 16px;
+  right: 14px;
+  width: 72px;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.25s ease;
+}
+
+.top1358 #js_top_scroll.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.top1358 #js_top_scroll img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .top1358 .pochi_hero {
+    padding-bottom: 40%;
+  }
+
+  .top1358 .pochi_hero_copy {
+    left: 5%;
+    bottom: 11%;
+    max-width: 40%;
+  }
+
+  .top1358 .pochi_hero_sub {
+    font-size: 16px;
+    padding: 6px 18px;
+  }
+
+  .top1358 .pochi_hero_cta {
+    font-size: 16px;
+    padding: 13px 24px;
+  }
+
+  .top1358 .pochi_line_box {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .top1358 .pochi_news_box {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    align-items: start;
+    gap: 22px;
+    padding: 24px 30px;
+  }
+
+  .top1358 .pochi_news_ttl {
+    margin: 0;
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  .top1358 .pochi_news_list li a {
+    grid-template-columns: 160px 1fr;
+  }
+
+  .top1358 .pochi_shop_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .top1358 .pochi_footer_banners {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .top1358 .pochi_footer_nav {
+    grid-template-columns: repeat(6, auto);
+    justify-content: center;
+    gap: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .top1358 .pochi_nav {
+    min-height: 62px;
+  }
+
+  .top1358 .pochi_nav .nav_main {
+    display: none;
+  }
+
+  .top1358 .pochi_logo {
+    width: 122px;
+  }
+
+  .top1358 .pochi_nav_inner {
+    justify-content: flex-start;
+  }
+
+  .top1358 .pochi_hero_copy {
+    left: 3%;
+    right: 3%;
+    bottom: 4%;
+  }
+
+  .top1358 .pochi_hero_ttl {
+    margin-bottom: 8px;
+    line-height: 1.25;
+    font-size: 22px;
+  }
+
+  .top1358 .pochi_hero_sub {
+    margin-bottom: 8px;
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .top1358 .pochi_hero_cta {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .top1358 .pochi_hero_btn {
+    width: 18%;
+    min-width: 52px;
+  }
+
+  .top1358 .pochi_hero_btn.tamashima {
+    right: 45%;
+    bottom: 20%;
+  }
+
+  .top1358 .pochi_hero_btn.mizutama {
+    right: 29%;
+    bottom: 18%;
+  }
+
+  .top1358 .pochi_hero_btn.nakashima {
+    right: 16%;
+    bottom: 26%;
+  }
+
+  .top1358 .pochi_hero_btn.mabi {
+    right: 2%;
+    bottom: 33%;
+    min-width: 58px;
+    border-width: 2px;
+    font-size: 12px;
+    padding: 7px 8px;
+  }
+
+  .top1358 .pochi_line_btn {
+    padding: 10px;
+  }
+
+  .top1358 .pochi_news_ttl {
+    font-size: 44px;
+  }
+
+  .top1358 .pochi_news_list li a {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .top1358 .pochi_news_list time {
+    font-size: 14px;
+  }
+
+  .top1358 .pochi_news_list span {
+    font-size: 14px;
+  }
+
+  .top1358 .pochi_shop_main {
+    margin-top: 26%;
+  }
+
+  .top1358 .pochi_shop_card h3 {
+    margin-top: 12px;
+    font-size: 22px;
+  }
+
+  .top1358 .pochi_shop_meta {
+    font-size: 14px;
+  }
+
+  .top1358 .pochi_footer_content {
+    background-image: url("https://pochitama.co.jp/wp-content/themes/initializr/img/footer_bg_sp.png");
+  }
+
+  .top1358 .pochi_footer_nav {
+    text-align: left;
+  }
+}

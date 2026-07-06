@@ -1,0 +1,281 @@
+#countPost {
+	p {
+		margin: 1.3em 0;
+	}
+}
+section {
+	p {
+		a {
+			text-decoration: underline;
+			word-break: break-all;
+			&:hover {
+				text-decoration: inherit;
+			}
+		}
+	}
+}
+
+.description_page {
+	padding: 20px 0;
+}
+
+.wp_copyright {
+	background-color: #f2f2f2;
+	text-align: center;
+	margin: 0 auto 0;
+	padding: 24px 0px 24px;
+	font-size: 1.4rem;
+	position: relative;
+	z-index: 2;
+	color: #555;
+	.logo_area {
+		height: 60px;
+		margin: 0 0 10px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	small {
+		margin-top: 10px;
+	}
+
+	@include for-size(tablet) {
+		font-size: 12px;
+		margin-top: 0;
+		padding: 20px 0 80px;
+	}
+}
+.section {
+	width: 100%;
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 40px 0;
+	@media screen and (max-width: 1200px) {
+		max-width: 1160px;
+		padding: 40px 20px;
+		overflow: hidden;
+	}
+	@include for-size(tablet) {
+		padding: 32px 0;
+		max-width: 780px;
+	}
+	@include for-size(phone-only) {
+		width: 100%;
+		margin-bottom: 30px;
+		display: block;
+	}
+}
+
+////////////////////////
+.customize-support {
+	#wpadminbar {
+		position: fixed;
+	}
+	.dialog_btn {
+		top: 6%;
+	}
+}
+.like-button {
+	display: inline-block;
+	background: white;
+	border: 1px solid #eee;
+	cursor: pointer;
+	border-radius: 2em;
+	transition: 0.3s;
+	margin-bottom: 0.5em;
+	width: 50px;
+	font-size: 80%;
+	text-align: center;
+	padding: 0;
+	i {
+		margin-right: 5px;
+	}
+	&:hover {
+		background: #f8f8f8;
+		color: #ff4e86;
+	}
+	&.liked {
+		background: #ff4e86;
+		border-color: #ff4e86;
+		color: #fff;
+	}
+}
+.access-count {
+	display: inline-block;
+	background: white;
+	border: 1px solid #fff;
+	border-radius: 2em;
+	transition: 0.3s;
+	margin-bottom: 0.5em;
+	width: 80px;
+	font-size: 80%;
+	text-align: center;
+	padding: 0 5px;
+	color: #aaa;
+	i {
+		margin-right: 5px;
+	}
+	@include for-size(phone-only) {
+		padding: 0 0;
+		width: auto;
+	}
+}
+.date-article {
+	display: inline-block;
+	background: white;
+	border: 1px solid #fff;
+	border-radius: 2em;
+	transition: 0.3s;
+	margin-bottom: 0.5em;
+	width: 9em;
+	font-size: 80%;
+	text-align: center;
+	padding: 0;
+	color: #aaa;
+	i {
+		margin-right: 5px;
+		display: inline-block;
+	}
+	@include for-size(phone-only) {
+		padding: 0 0;
+		width: auto;
+	}
+}
+.date-updated {
+	display: inline-block;
+	background: white;
+	border: 1px solid #fff;
+	border-radius: 2em;
+	transition: 0.3s;
+	margin-bottom: 0.5em;
+	width: 9em;
+	font-size: 70%;
+	text-align: center;
+	padding: 0;
+	color: #aaa;
+	i {
+		margin-right: 5px;
+		display: inline-block;
+	}
+	@include for-size(phone-only) {
+		padding: 0 0;
+		width: auto;
+	}
+}
+.author-box {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 1em;
+	.author-img {
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		margin-right: 0.5em;
+		overflow: hidden;
+	}
+	.author-name {
+		font-size: 80%;
+		color: #888;
+		line-height: 1;
+		a {
+			color: #888;
+		}
+	}
+}
+//
+.ib-toc-container {
+	border: 1px solid #eee;
+	background: #f2f2f2;
+	border-radius: 0.3em;
+	margin-bottom: 2em;
+	.ib-toc-separator {
+		height: 2px !important;
+		background-color: #ccc !important;
+	}
+	.ib-toc-header {
+		padding: 0.2em 1em;
+	}
+	.ib-toc-header-right {
+		background: $base_color;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		z-index: 1;
+	}
+	.dashicons-minus:before {
+		color: #fff;
+		z-index: 1;
+	}
+	.ib-toc-header-title {
+		font-size: 130%;
+		margin: 0.8em 0;
+		font-weight: bold;
+		color: $base_color;
+		padding: 0.2em 0;
+		position: relative;
+		padding: 0.2em;
+		/* &:before {
+			@include awesome(\f0c9);
+			color: $base_color;
+			margin-right: 0.3em;
+		} */
+	}
+	.ib-toc-body {
+		padding: 1.5em !important;
+	}
+	.ib-toc-anchors ol {
+		padding-left: 1em !important;
+	}
+	ol > li {
+		position: relative;
+		padding-left: 1.3em;
+		font-size: 100%;
+	}
+	ol > li > ol {
+		padding: 0.6em 0;
+		font-size: 90%;
+	}
+	ol li a:hover {
+		color: $base_color;
+	}
+	ol li:before {
+		content: "●" !important;
+		color: $base_color;
+		position: absolute;
+		left: 0;
+	}
+	ol li > ol > li:before {
+		content: "・" !important;
+		color: $base_color;
+		position: absolute;
+		left: 0;
+	}
+}
+.tagcloud {
+	a {
+		display: inline-block;
+		margin: 0.1em;
+		padding: 0.1em 0.8em;
+		border-radius: 0.5em;
+		background: #f4f4f4;
+		color: #aaa;
+		font-size: 80%;
+		font-weight: bold;
+		&:hover {
+			opacity: 0.6;
+		}
+		&::before {
+			content: "#";
+		}
+		text-align: left;
+		margin: 0.2em;
+	}
+}
+////////////////////////

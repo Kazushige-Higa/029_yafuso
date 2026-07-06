@@ -1,0 +1,90 @@
+.tbl_timetable {
+    width: 100%;
+    &.type1 {
+        border-top: none;
+        th,
+        td {
+            border: none;
+        }
+    }
+    &.radius {
+        border-radius: 2em;
+        border: 2px solid lighten($base_color, 30%);
+        overflow: hidden;
+        td {
+            border-left: 1px solid lighten($base_color, 30%);
+            border-right: 1px solid lighten($base_color, 30%);
+            border-bottom: 2px solid lighten($base_color, 30%);
+            font-size: 140%;
+
+        }
+        th {
+            border-left: 1px solid lighten($base_color, 30%);
+            border-right: 1px solid lighten($base_color, 30%);
+            border-bottom: 2px solid lighten($base_color, 30%);
+        }
+        tr {
+            border-bottom: 2px solid lighten($base_color, 30%);
+        }
+    }
+    &.white {
+        color: #fff;
+        border: 1px solid #fff;
+        th,
+        td {
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+        }
+    }
+    th {
+        &:nth-child(n+2) {
+            width: 4.5em !important;
+            @include for-size(phone-only){
+                width: 3em !important;
+            }
+        }
+    }
+    th,
+    td {
+        border-bottom: 1px solid rgba($base_color, 0.3);
+        padding: 1em 0.1em;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 1.4;
+        font-weight: normal;
+        .text {
+            letter-spacing: 0;
+        }
+    }
+    thead tr {
+        background: rgba($base_color, 1);
+        color: #fff;
+    }
+    .th-1 {
+        width: 35%;
+        //font-weight: 600;
+        text-align: center;
+        font-weight: normal;
+    }
+    .circle,
+    b {
+        color: $sub_color;
+        &.type-brown {
+            color: $base_color;
+        }
+    }
+    .triangle {
+        color: $blue;
+    }
+    @include for-size(phone-only) {
+        padding: 15px 10px;
+        .th-1 {
+            width: 25%;
+        }
+    }
+    &.type2 {
+        .circle {
+            color: $base_color;
+        }
+    }
+}

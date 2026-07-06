@@ -1,0 +1,44 @@
+.list_num {
+    li {
+        padding: 40px 40px 40px 60px;
+        border: 3px solid #eee;
+        position: relative;
+    }
+    .num {
+        @include eng;
+        position: absolute;
+        left: 1%;
+        top: 1%;
+        align-items: center;
+        font-size: 8rem;
+        opacity: 0.2;
+        color: $base_color;
+    }
+    .title {
+        font-size: 120%;
+        font-weight: bold;
+        color: $base_color;
+    }
+    @include for-size(pro) {
+        li {
+            padding: 15px 10px 15px 20px;
+            font-size: 1.4rem;
+        }
+        .num {
+            position: absolute;
+            left: 30px;
+            top: 0;
+            font-size: 4rem;
+        }
+    }
+    @include for-size(phone-only) {
+        .num {
+            font-size: 4rem;
+            left: 3px;
+            top: 3px;
+        }
+        li {
+            padding: 30px 10px 15px 20px;
+        }
+    }
+}

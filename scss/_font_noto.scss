@@ -1,0 +1,9 @@
+$font_noto: "Noto Serif JP", serif;
+
+@mixin font_noto {
+	font-family: $font_noto;
+}
+.font_noto {
+	@include font_noto;
+	font-weight: 500;
+}

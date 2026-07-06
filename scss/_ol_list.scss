@@ -1,0 +1,83 @@
+.ol_list {
+    counter-reset: number;
+    list-style: none;
+    padding-left: 0;
+    &.color1 {
+        li {
+            &:before {
+                background: rgba($bg_green, 1);
+            }
+        }
+    }
+    &.color2 {
+        li {
+            &:before {
+                background: rgba($bg_sky, 1);
+            }
+        }
+    }
+    &.color3 {
+        li {
+            &:before {
+                background: rgba($bg_orange, 1);
+            }
+        }
+    }
+    &.white {
+        li {
+            color: #fff;
+
+            &:before {
+                color: #333;
+                border-left: #f2f2f2;
+                border-top: #f2f2f2;
+                background: #fff;
+            }
+        }
+    }
+    li {
+        line-height: 1.8em;
+        padding: 0.5em 0 0.5em 2.8em;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        span {
+            font-weight: normal;
+            padding: 10px;
+            line-height: 1.6;
+            font-size: 80%;
+        }
+        &:before {
+            @include eng;
+            counter-increment: number;
+            content: counter(number);
+            background: rgba($base_color, 0.6);
+            color: $base_color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2.5em;
+            height: 2.5em;
+            text-align: center;
+            color: #fff;
+            margin-right: 0.5em;
+            border-radius: 100%;
+            display: grid;
+            place-items: center
+        }
+
+        @include for-size(phone-only) {
+            span {
+                font-size: 0.9em;
+            }
+        }
+    }
+    &.square {
+        > li {
+            &:before {
+                border-radius: 0;
+            }
+        }
+    }
+
+}

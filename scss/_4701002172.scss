@@ -1,0 +1,1653 @@
+.marusan_page_4701002172 {
+  --marusan_base_4701002172: #0134a7;
+  --marusan_sub_4701002172: #fed54a;
+  --marusan_bg_4701002172: #d3d7f0;
+  --marusan_dark_4701002172: #061331;
+  --marusan_text_4701002172: #14213d;
+  --marusan_line_4701002172: rgba(1, 52, 167, 0.15);
+  color: var(--marusan_text_4701002172);
+  background: #fff;
+  font-family: "Noto Sans JP", "YakuHanJP", sans-serif;
+  letter-spacing: 0;
+  overflow: hidden;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+.marusan_single_4701002172 {
+  width: min(1600px, calc(100% - 96px));
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.marusan_header_4701002172 {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(1, 52, 167, 0.12);
+  box-shadow: 0 10px 26px rgba(6, 19, 49, 0.08);
+}
+
+.marusan_header_inner_4701002172 {
+  width: min(1680px, calc(100% - 64px));
+  min-height: 104px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 470px) 1fr auto;
+  align-items: center;
+  gap: clamp(20px, 2vw, 32px);
+}
+
+.marusan_logo_4701002172 {
+  display: block;
+
+  img {
+    width: min(470px, 100%);
+    max-height: 78px;
+    object-fit: contain;
+  }
+}
+
+.marusan_nav_4701002172 {
+  .commonnav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(22px, 2.2vw, 40px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 64px;
+    color: #111a34;
+    font-size: clamp(1.18rem, 1.15vw, 1.38rem);
+    font-weight: 900;
+    line-height: 1;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      left: 0;
+      height: 3px;
+      background: var(--marusan_sub_4701002172);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover::after,
+    &.is_current::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.marusan_header_cta_4701002172,
+.marusan_btn_4701002172 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 68px;
+  padding: 0 38px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-weight: 900;
+
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+  i {
+    font-size: 1.12em;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.marusan_header_cta_4701002172,
+.marusan_btn_4701002172.is_yellow_4701002172 {
+  color: #111a34 !important;
+  background: var(--marusan_sub_4701002172);
+  box-shadow: 0 12px 22px rgba(254, 213, 74, 0.26);
+}
+
+.marusan_btn_4701002172.is_outline_4701002172 {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.marusan_btn_4701002172.is_white_4701002172 {
+  color: var(--marusan_base_4701002172) !important;
+  background: #fff;
+  box-shadow: 0 10px 18px rgba(6, 19, 49, 0.18);
+}
+
+.marusan_btn_4701002172.is_blue_4701002172 {
+  color: #fff !important;
+  background: var(--marusan_base_4701002172);
+  box-shadow: 0 12px 20px rgba(1, 52, 167, 0.22);
+}
+
+.marusan_page_4701002172 #nav_slide_toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 1000;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--marusan_base_4701002172);
+  box-shadow: 0 12px 28px rgba(6, 19, 49, 0.28);
+
+  .hamburger_icon {
+    width: 24px;
+    display: grid;
+    gap: 5px;
+  }
+
+  .hamburger_icon span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin-left: 0;
+    background: #fff;
+  }
+
+  .menu_text {
+    color: #fff;
+    font-size: 0.62rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+}
+
+.marusan_page_4701002172 .nav_slide_right .nav_slide_container {
+  background: #fff;
+}
+
+.marusan_page_4701002172 .nav_menu_content .commonnav {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    border-bottom: 1px solid rgba(1, 52, 167, 0.12);
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 1.1em;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    font-weight: 900;
+  }
+}
+
+.marusan_hero_4701002172 {
+  position: relative;
+  min-height: clamp(560px, 52vw, 720px);
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(90deg, #073baa 0%, #0c4bb9 44%, #edf4ff 100%);
+}
+
+.marusan_hero_photo_4701002172 {
+  position: absolute;
+  inset: 0 0 0 38%;
+  z-index: -2;
+  margin: 0;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(1, 52, 167, 0.35) 0%,
+      rgba(1, 52, 167, 0.05) 42%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+.marusan_hero_photo_4701002172.slider_fullslider_wrap {
+  width: auto;
+  height: auto;
+  background: none;
+
+  &::before {
+    display: none;
+  }
+}
+
+.marusan_hero_photo_4701002172 .slider_fullslider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.marusan_hero_photo_4701002172 .slider_fullslider .slide {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.marusan_hero_photo_4701002172 .slider_fullslider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.marusan_hero_panel_4701002172 {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(
+    112deg,
+    var(--marusan_base_4701002172) 0%,
+    rgba(1, 52, 167, 0.96) 43%,
+    rgba(1, 52, 167, 0) 43.2%
+  );
+}
+
+.marusan_hero_copy_4701002172 {
+  width: min(760px, 54%);
+  padding: clamp(72px, 8vw, 110px) 0 clamp(66px, 7vw, 96px);
+  min-width: 0;
+
+  h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(3.9rem, 5.1vw, 6.6rem);
+    font-weight: 900;
+    line-height: 1.34;
+    letter-spacing: 0;
+    text-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+  }
+
+  > p:not(.marusan_kicker_4701002172) {
+    margin: clamp(22px, 2.4vw, 32px) 0 0;
+    color: rgba(255, 255, 255, 0.96);
+    font-size: clamp(1.25rem, 1.55vw, 1.65rem);
+    font-weight: 900;
+    line-height: 1.8;
+  }
+}
+
+.marusan_kicker_4701002172 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  color: var(--marusan_sub_4701002172);
+
+  font-weight: 900;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    width: 44px;
+    height: 3px;
+    background: var(--marusan_sub_4701002172);
+  }
+}
+
+.marusan_hero_buttons_4701002172 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: clamp(34px, 4vw, 46px);
+}
+
+.marusan_speed_lines_4701002172,
+.marusan_company_band_4701002172::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+  width: min(28vw, 420px);
+  height: 72px;
+  background:
+    linear-gradient(166deg, transparent 0 34%, var(--marusan_sub_4701002172) 35% 42%, transparent 43%),
+    linear-gradient(166deg, transparent 0 48%, var(--marusan_sub_4701002172) 49% 56%, transparent 57%),
+    linear-gradient(166deg, transparent 0 62%, var(--marusan_sub_4701002172) 63% 69%, transparent 70%);
+}
+
+.marusan_speed_lines_4701002172 {
+  left: -34px;
+  bottom: 28px;
+  z-index: 2;
+}
+
+.marusan_greeting_4701002172,
+.marusan_recruit_4701002172,
+.marusan_service_contact_4701002172 {
+  padding: clamp(72px, 8vw, 112px) 0;
+  background: #fff;
+}
+
+.marusan_greeting_grid_4701002172,
+.marusan_recruit_grid_4701002172 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
+  align-items: center;
+  gap: clamp(42px, 6vw, 88px);
+}
+
+.marusan_recruit_grid_4701002172 {
+  grid-template-columns: minmax(380px, 1.04fr) minmax(0, 0.96fr);
+}
+
+.marusan_section_head_4701002172 {
+  margin-bottom: clamp(22px, 3vw, 34px);
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--marusan_sub_4701002172);
+    font-size: 1.22rem;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  span::before {
+    content: "";
+    width: 32px;
+    height: 3px;
+    background: var(--marusan_sub_4701002172);
+  }
+
+  h2 {
+    margin: 10px 0 0;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(3rem, 4vw, 5rem);
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+}
+
+.marusan_section_head_4701002172.is_center_4701002172 {
+  text-align: center;
+
+  span {
+    justify-content: center;
+  }
+}
+
+.marusan_text_block_4701002172 {
+  min-width: 0;
+
+  p {
+    margin: 0;
+    font-weight: 800;
+    line-height: 2.1;
+  }
+
+  p + p {
+    margin-top: 1.1em;
+  }
+}
+
+.marusan_greeting_photo_4701002172,
+.marusan_recruit_grid_4701002172 figure,
+.marusan_service_card_4701002172 figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 18px 42px rgba(6, 19, 49, 0.14);
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.marusan_greeting_photo_4701002172 {
+  aspect-ratio: 1.18 / 1;
+}
+
+.marusan_strength_4701002172 {
+  padding: clamp(72px, 8vw, 112px) 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 34%), var(--marusan_bg_4701002172);
+}
+
+.marusan_strength_grid_4701002172 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+  margin-top: clamp(34px, 4vw, 52px);
+}
+
+.marusan_strength_card_4701002172 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0 34px 38px;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 6px;
+  box-shadow: 0 18px 36px rgba(1, 52, 167, 0.12);
+  text-align: center;
+
+  h3 {
+    min-height: 3.25em;
+    margin: 20px 0 16px;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(1.65rem, 1.85vw, 2.05rem);
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  img {
+    aspect-ratio: 1.85 / 1;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  p {
+    margin: 18px 0 0;
+
+    font-weight: 800;
+    line-height: 1.85;
+    text-align: left;
+  }
+}
+
+.marusan_strength_icon_4701002172 {
+  width: 92px;
+  height: 92px;
+  margin: -46px auto 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--marusan_base_4701002172);
+  border: 4px solid var(--marusan_bg_4701002172);
+  border-radius: 50%;
+  font-size: 2.35rem;
+}
+
+.marusan_company_band_4701002172 {
+  position: relative;
+  padding: 28px 0;
+  color: #fff;
+  background: linear-gradient(110deg, #0c4fc2 0%, #0134a7 54%, #001b65 100%);
+  overflow: hidden;
+
+  &::after {
+    right: 3vw;
+    bottom: 24px;
+    opacity: 0.95;
+  }
+}
+
+.marusan_company_grid_4701002172 {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 72px);
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  img {
+    aspect-ratio: 2.68 / 1;
+    object-fit: cover;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(3rem, 4vw, 5rem);
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  p {
+    margin: 14px 0 26px;
+    font-weight: 900;
+    line-height: 1.8;
+  }
+}
+
+.marusan_recruit_grid_4701002172 figure {
+  aspect-ratio: 1.58 / 1;
+}
+
+.marusan_check_list_4701002172 {
+  display: grid;
+  gap: 12px;
+  margin: 26px 0 30px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 42px;
+    font-weight: 900;
+    line-height: 1.7;
+  }
+
+  li::before {
+    content: "\f00c";
+    position: absolute;
+    top: 0.12em;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--marusan_base_4701002172);
+    border-radius: 50%;
+    font-family: "Font Awesome 6 Free";
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+}
+
+.marusan_service_contact_4701002172 {
+  padding-top: 0;
+}
+
+.marusan_service_grid_4701002172 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 54px);
+  padding-top: clamp(36px, 5vw, 64px);
+  border-top: 1px solid var(--marusan_line_4701002172);
+}
+
+.marusan_service_card_4701002172 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.72fr);
+  gap: clamp(22px, 3vw, 34px);
+  align-items: stretch;
+
+  p {
+    margin: 0 0 28px;
+    font-weight: 800;
+    line-height: 2;
+  }
+
+  figure {
+    min-height: 270px;
+  }
+}
+
+.marusan_footer_4701002172 {
+  padding: 42px 0;
+  color: #fff;
+  background: linear-gradient(90deg, #0134a7 0%, #00257b 100%);
+}
+
+.marusan_footer_grid_4701002172 {
+  display: grid;
+  grid-template-columns: minmax(320px, 460px) 1fr auto;
+  align-items: center;
+  gap: clamp(22px, 4vw, 54px);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: #fff;
+    font-size: 1.22rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+.marusan_footer_logo_4701002172 {
+  display: block;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 4px;
+}
+
+.marusan_lower_page_4701002172 {
+  background: #fff;
+
+  .marusan_speed_lines_4701002172 {
+    left: 5vw;
+    bottom: 42px;
+    display: none;
+  }
+}
+
+.marusan_lower_hero_4701002172 {
+  position: relative;
+  min-height: clamp(500px, 43vw, 680px);
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  color: #fff;
+  background: var(--marusan_base_4701002172);
+
+  > figure {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    margin: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      105deg,
+      rgba(1, 52, 167, 0.98) 0%,
+      rgba(1, 52, 167, 0.94) 46%,
+      rgba(1, 52, 167, 0.12) 46.2%,
+      rgba(1, 52, 167, 0.06) 100%
+    );
+  }
+}
+
+.marusan_lower_hero_business_4701002172 > figure img {
+  object-position: center 45%;
+}
+
+.marusan_lower_hero_recruit_4701002172 > figure img {
+  object-position: center 35%;
+}
+
+.marusan_lower_hero_copy_4701002172 {
+  width: min(820px, 56%);
+  padding: clamp(54px, 6vw, 90px) 0;
+
+  span {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--marusan_sub_4701002172);
+    font-size: clamp(1.35rem, 1.7vw, 1.75rem);
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1;
+  }
+
+  h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(4.7rem, 6.1vw, 7.6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 28px 0 0;
+    font-size: clamp(1.38rem, 1.85vw, 1.9rem);
+    font-weight: 900;
+    line-height: 1.8;
+  }
+
+  .marusan_btn_4701002172 {
+    margin-top: 34px;
+  }
+}
+
+.marusan_lower_services_4701002172,
+.marusan_about_intro_4701002172,
+.marusan_profile_4701002172,
+.marusan_recruit_message_4701002172,
+.marusan_candidate_4701002172,
+.marusan_conditions_4701002172,
+.marusan_flow_4701002172 {
+  padding: clamp(72px, 8vw, 112px) 0;
+  background: #fff;
+}
+
+.marusan_lower_head_4701002172 {
+  margin-bottom: clamp(32px, 4vw, 58px);
+  text-align: center;
+
+  span {
+    display: inline-block;
+    color: var(--marusan_sub_4701002172);
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    line-height: 1;
+  }
+
+  h2 {
+    position: relative;
+    margin: 12px 0 0;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(3.05rem, 4.2vw, 5.2rem);
+    font-weight: 900;
+    line-height: 1.32;
+    letter-spacing: 0;
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 6px;
+    margin: 16px auto 0;
+    background: var(--marusan_sub_4701002172);
+    transform: skewX(-18deg);
+  }
+}
+
+.marusan_lower_head_4701002172.is_left_4701002172 {
+  text-align: left;
+
+  h2::after {
+    margin-left: 0;
+  }
+}
+
+.marusan_transport_grid_4701002172 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 36px);
+
+  article {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(260px, 1fr);
+    align-items: stretch;
+    min-height: 320px;
+    padding: clamp(34px, 3.6vw, 54px);
+    background: #fff;
+    border: 2px solid rgba(1, 52, 167, 0.14);
+    border-radius: 6px;
+    box-shadow: 0 22px 44px rgba(6, 19, 49, 0.13);
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.marusan_transport_text_4701002172 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: clamp(18px, 2vw, 30px);
+
+  i {
+    width: 96px;
+    height: 96px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--marusan_base_4701002172);
+    border-radius: 50%;
+    font-size: 2.45rem;
+    @include for-size(phone-only) {
+      text-align: center;
+      margin: auto;
+    }
+  }
+
+  h3 {
+    position: relative;
+    margin: 24px 0 18px;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(2.25rem, 2.7vw, 3rem);
+    font-weight: 900;
+    line-height: 1.25;
+    @include for-size(phone-only) {
+      text-align: center;
+      margin: 24px auto 18px;
+      display: block;
+    }
+  }
+
+  h3::after {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 5px;
+    margin: 14px auto 0;
+    background: var(--marusan_sub_4701002172);
+  }
+
+  p {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.95;
+  }
+}
+
+.marusan_area_4701002172,
+.marusan_recruit_merit_4701002172,
+.marusan_access_4701002172 {
+  padding: clamp(72px, 8vw, 112px) 0;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.78), transparent 34%), var(--marusan_bg_4701002172);
+}
+
+.marusan_area_grid_4701002172 {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.62fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(42px, 6vw, 88px);
+
+  > div:first-child span,
+  .marusan_fleet_grid_4701002172 span {
+    color: var(--marusan_sub_4701002172);
+    font-size: 1.28rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+  }
+
+  h2 {
+    margin: 12px 0 22px;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(3.2rem, 4.2vw, 5.3rem);
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  p {
+    margin: 0 0 1em;
+
+    font-weight: 800;
+    line-height: 2;
+  }
+
+  .marusan_btn_4701002172 {
+    margin-top: 18px;
+  }
+}
+
+.marusan_japan_map_4701002172 {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  border-radius: 6px;
+
+  img {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.marusan_fleet_4701002172 {
+  padding: clamp(72px, 8vw, 112px) 0 48px;
+  background: #fff;
+}
+
+.marusan_fleet_grid_4701002172 {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.4fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 70px);
+  align-items: center;
+
+  span {
+    color: var(--marusan_sub_4701002172);
+    font-size: 1.28rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+  }
+
+  h2 {
+    margin: 12px 0 22px;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(3.2rem, 4.1vw, 5.1rem);
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+
+    font-weight: 800;
+    line-height: 2;
+  }
+
+  figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 18px 42px rgba(6, 19, 49, 0.14);
+  }
+
+  img {
+    aspect-ratio: 2.2 / 1;
+    object-fit: cover;
+  }
+
+  figcaption {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    padding: 8px 16px;
+    color: var(--marusan_dark_4701002172);
+    background: rgba(255, 255, 255, 0.86);
+    font-weight: 900;
+  }
+}
+
+.marusan_fleet_stats_4701002172,
+.marusan_values_grid_4701002172 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+  margin-top: clamp(32px, 4vw, 54px);
+
+  article {
+    padding: 34px;
+    background: #fff;
+    border: 1px solid rgba(1, 52, 167, 0.22);
+    border-radius: 4px;
+  }
+
+  i {
+    color: var(--marusan_base_4701002172);
+    font-size: 3.6rem;
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+
+  h3 {
+    margin: 14px 0 10px;
+    color: var(--marusan_base_4701002172);
+    font-size: 1.95rem;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+
+    font-weight: 800;
+    line-height: 1.8;
+  }
+}
+
+.marusan_about_intro_grid_4701002172 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1fr);
+  gap: clamp(44px, 6vw, 88px);
+  align-items: center;
+
+  p {
+    margin: 0 0 1.1em;
+
+    font-weight: 800;
+    line-height: 2.1;
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 18px 42px rgba(6, 19, 49, 0.14);
+  }
+
+  img {
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+  }
+}
+
+.marusan_profile_table_4701002172 {
+  width: min(1600px, 100%);
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(1, 52, 167, 0.14);
+  box-shadow: 0 18px 34px rgba(6, 19, 49, 0.1);
+
+  div {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    min-height: 92px;
+    border-bottom: 1px solid rgba(1, 52, 167, 0.1);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  dt,
+  dd {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 22px 30px;
+    font-weight: 900;
+
+    line-height: 1.7;
+  }
+
+  dt {
+    justify-content: center;
+    color: #fff;
+    background: var(--marusan_base_4701002172);
+  }
+
+  dd {
+    color: var(--marusan_text_4701002172);
+  }
+}
+
+.marusan_access_grid_4701002172 {
+  display: block;
+
+  aside {
+    padding: clamp(28px, 4vw, 42px);
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 18px 34px rgba(6, 19, 49, 0.12);
+
+    h3 {
+      margin: 0 0 18px;
+      color: var(--marusan_base_4701002172);
+      font-size: 1.95rem;
+      font-weight: 900;
+    }
+
+    p {
+      margin: 0 0 26px;
+
+      font-weight: 900;
+      line-height: 1.8;
+    }
+  }
+}
+
+.marusan_gmap_4701002172,
+.marusan_map_mock_4701002172 {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 48% 52%, var(--marusan_base_4701002172) 0 9px, #fff 10px 16px, transparent 17px),
+    linear-gradient(36deg, transparent 0 44%, rgba(1, 52, 167, 0.18) 44.2% 46%, transparent 46.2%),
+    linear-gradient(144deg, transparent 0 44%, rgba(1, 52, 167, 0.18) 44.2% 46%, transparent 46.2%),
+    linear-gradient(12deg, transparent 0 54%, rgba(254, 213, 74, 0.34) 54.2% 56%, transparent 56.2%),
+    linear-gradient(90deg, #c8edf3, #e9f5df);
+  box-shadow: 0 18px 34px rgba(6, 19, 49, 0.12);
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+    border: 0;
+    filter: saturate(0.95) contrast(1.06);
+  }
+
+  span {
+    position: absolute;
+    top: 48%;
+    left: 51%;
+    padding: 9px 14px;
+    color: var(--marusan_base_4701002172);
+    background: #fff;
+    border-radius: 4px;
+    font-weight: 900;
+    box-shadow: 0 8px 20px rgba(6, 19, 49, 0.16);
+  }
+}
+
+.marusan_values_4701002172 {
+  position: relative;
+  padding: clamp(66px, 7vw, 94px) 0;
+  color: #fff;
+  background: linear-gradient(110deg, #0b4dc2 0%, #0134a7 54%, #001b65 100%);
+  overflow: hidden;
+
+  h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(3rem, 4vw, 5rem);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .marusan_values_grid_4701002172 article {
+    color: #fff;
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.32);
+  }
+
+  .marusan_values_grid_4701002172 i,
+  .marusan_values_grid_4701002172 h3 {
+    color: var(--marusan_sub_4701002172);
+  }
+}
+
+.marusan_merit_grid_4701002172 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 36px);
+
+  article {
+    padding: 34px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 18px 36px rgba(1, 52, 167, 0.12);
+  }
+
+  i {
+    width: 96px;
+    height: 96px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--marusan_base_4701002172);
+    border-radius: 50%;
+    font-size: 2.45rem;
+    margin: auto;
+  }
+
+  h3 {
+    margin: 18px 0;
+    color: var(--marusan_base_4701002172);
+    font-size: clamp(2rem, 2.55vw, 2.85rem);
+    font-weight: 900;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  img {
+    aspect-ratio: 1.5 / 0.78;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  p {
+    margin: 18px 0 0;
+
+    font-weight: 800;
+    line-height: 1.9;
+  }
+}
+
+.marusan_candidate_grid_4701002172 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+
+  article {
+    min-height: 230px;
+    padding: 38px 24px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 18px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid rgba(1, 52, 167, 0.14);
+    border-radius: 6px;
+    box-shadow: 0 14px 28px rgba(6, 19, 49, 0.08);
+  }
+
+  i {
+    color: var(--marusan_base_4701002172);
+    font-size: 4.2rem;
+  }
+
+  p {
+    margin: 0;
+    color: var(--marusan_text_4701002172);
+    font-weight: 900;
+
+    line-height: 1.65;
+  }
+}
+
+.marusan_condition_box_4701002172 {
+  width: min(1600px, 100%);
+  min-height: 96px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  color: rgba(20, 33, 61, 0.72);
+  background: #fff;
+  border: 1px solid rgba(1, 52, 167, 0.2);
+  border-radius: 4px;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.marusan_flow_grid_4701002172 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  counter-reset: flow;
+
+  article {
+    position: relative;
+    padding: 38px 26px;
+    text-align: center;
+    background: #fff;
+    border-top: 5px solid var(--marusan_base_4701002172);
+  }
+
+  span {
+    width: 56px;
+    height: 56px;
+    margin: -68px auto 20px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--marusan_base_4701002172);
+    border-radius: 50%;
+    font-weight: 900;
+  }
+
+  i {
+    color: var(--marusan_base_4701002172);
+    font-size: 3.9rem;
+  }
+
+  h3 {
+    margin: 16px 0 10px;
+    color: var(--marusan_text_4701002172);
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+
+    font-weight: 800;
+    line-height: 1.75;
+  }
+
+  small {
+    margin-top: 10px;
+    color: #d31f1f;
+    font-weight: 900;
+    line-height: 1.6;
+  }
+}
+
+.marusan_recruit_cta_4701002172 {
+  position: relative;
+  padding: clamp(54px, 6vw, 82px) 0;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(110deg, #0b4dc2 0%, #0134a7 54%, #001b65 100%);
+
+  h2 {
+    margin: 0 0 28px;
+    color: #fff;
+    font-size: clamp(2.8rem, 4vw, 5rem);
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .marusan_header_inner_4701002172 {
+    grid-template-columns: minmax(250px, 360px) auto;
+  }
+
+  .marusan_strength_grid_4701002172 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 56px;
+  }
+
+  .marusan_service_grid_4701002172 {
+    grid-template-columns: 1fr;
+  }
+
+  .marusan_transport_grid_4701002172,
+  .marusan_merit_grid_4701002172,
+  .marusan_fleet_stats_4701002172,
+  .marusan_values_grid_4701002172 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .marusan_candidate_grid_4701002172,
+  .marusan_flow_grid_4701002172 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 54px;
+  }
+
+  .marusan_transport_grid_4701002172 article {
+    grid-template-columns: 1fr;
+  }
+
+  .marusan_transport_text_4701002172 {
+    padding-right: 0;
+    padding-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .marusan_single_4701002172 {
+    width: min(100% - 36px, 720px);
+  }
+
+  .marusan_header_inner_4701002172 {
+    width: calc(100% - 92px);
+    min-height: 76px;
+    margin-left: 18px;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .marusan_logo_4701002172 img {
+    width: min(290px, 100%);
+    max-height: 54px;
+  }
+
+  .marusan_hero_4701002172 {
+    min-height: 760px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .marusan_hero_photo_4701002172 {
+    inset: 0;
+    clip-path: none;
+
+    &::after {
+      background: linear-gradient(
+        180deg,
+        rgba(1, 52, 167, 0.08) 0%,
+        rgba(1, 52, 167, 0.42) 42%,
+        rgba(1, 52, 167, 0.94) 100%
+      );
+    }
+  }
+
+  .marusan_hero_panel_4701002172 {
+    width: 100%;
+    min-height: auto;
+    padding-top: 280px;
+    align-items: flex-end;
+    background: linear-gradient(180deg, rgba(1, 52, 167, 0) 0%, rgba(1, 52, 167, 0.96) 36%, #0134a7 100%);
+  }
+
+  .marusan_hero_copy_4701002172 {
+    width: 100%;
+    padding: 0 0 58px;
+
+    h1 {
+      font-size: clamp(2.05rem, 8vw, 2.8rem);
+      line-height: 1.38;
+      overflow-wrap: anywhere;
+      word-break: break-all;
+    }
+
+    > p:not(.marusan_kicker_4701002172) {
+      font-size: 1.05rem;
+      overflow-wrap: anywhere;
+      word-break: break-all;
+    }
+  }
+
+  .marusan_hero_buttons_4701002172 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .marusan_greeting_grid_4701002172,
+  .marusan_recruit_grid_4701002172,
+  .marusan_company_grid_4701002172 {
+    grid-template-columns: 1fr;
+  }
+
+  .marusan_recruit_grid_4701002172 figure {
+    order: 2;
+  }
+
+  .marusan_footer_grid_4701002172 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+
+    p {
+      white-space: normal;
+    }
+  }
+
+  .marusan_lower_hero_4701002172 {
+    min-height: 540px;
+    align-items: flex-end;
+
+    &::before {
+      background: linear-gradient(180deg, rgba(1, 52, 167, 0.2) 0%, rgba(1, 52, 167, 0.92) 58%, #0134a7 100%);
+    }
+  }
+
+  .marusan_lower_hero_copy_4701002172 {
+    width: 100%;
+    padding: 220px 0 54px;
+  }
+
+  .marusan_area_grid_4701002172,
+  .marusan_fleet_grid_4701002172,
+  .marusan_about_intro_grid_4701002172,
+  .marusan_access_grid_4701002172 {
+    grid-template-columns: 1fr;
+  }
+
+  .marusan_profile_table_4701002172 div {
+    grid-template-columns: 180px 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .marusan_header_inner_4701002172 {
+    min-height: 70px;
+  }
+
+  .marusan_logo_4701002172 img {
+    width: min(245px, 100%);
+  }
+
+  .marusan_hero_4701002172 {
+    min-height: 700px;
+  }
+
+  .marusan_hero_panel_4701002172 {
+    padding-top: 238px;
+  }
+
+  .marusan_btn_4701002172 {
+    width: 100%;
+    min-height: 56px;
+    padding-inline: 18px;
+    
+  }
+
+  .marusan_section_head_4701002172 h2 {
+    font-size: clamp(2rem, 8.4vw, 2.6rem);
+  }
+
+  .marusan_text_block_4701002172 p,
+  .marusan_service_card_4701002172 p,
+  .marusan_strength_card_4701002172 p {
+    
+    line-height: 2;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+  }
+
+  .marusan_greeting_grid_4701002172 > *,
+  .marusan_recruit_grid_4701002172 > *,
+  .marusan_service_card_4701002172 > * {
+    min-width: 0;
+  }
+
+  .marusan_strength_grid_4701002172 {
+    grid-template-columns: 1fr;
+  }
+
+  .marusan_service_card_4701002172 {
+    grid-template-columns: 1fr;
+
+    figure {
+      min-height: 0;
+      aspect-ratio: 1.45 / 1;
+    }
+  }
+
+  .marusan_footer_grid_4701002172 ul {
+    display: grid;
+    gap: 12px;
+  }
+
+  .marusan_transport_grid_4701002172,
+  .marusan_merit_grid_4701002172,
+  .marusan_fleet_stats_4701002172,
+  .marusan_values_grid_4701002172,
+  .marusan_candidate_grid_4701002172,
+  .marusan_flow_grid_4701002172 {
+    grid-template-columns: 1fr;
+  }
+
+  .marusan_lower_hero_copy_4701002172 h1 {
+    font-size: clamp(2.4rem, 12vw, 3.2rem);
+  }
+
+  .marusan_profile_table_4701002172 div {
+    grid-template-columns: 1fr;
+  }
+
+  .marusan_profile_table_4701002172 dt {
+    justify-content: flex-start;
+  }
+
+  .marusan_japan_map_4701002172,
+  .marusan_gmap_4701002172,
+  .marusan_map_mock_4701002172 {
+    min-height: 170px;
+  }
+
+  .marusan_gmap_4701002172 iframe {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .marusan_page_4701002172 {
+    max-width: 100vw;
+  }
+
+  .marusan_single_4701002172 {
+    width: min(354px, calc(100% - 36px));
+    margin-left: 18px;
+    margin-right: auto;
+  }
+
+  .marusan_hero_copy_4701002172 h1 {
+    max-width: 354px;
+    font-size: 2rem;
+    line-height: 1.42;
+  }
+
+  .marusan_hero_copy_4701002172 > p:not(.marusan_kicker_4701002172) {
+    max-width: 354px;
+    font-size: 1rem;
+    line-height: 1.85;
+    word-break: break-all;
+  }
+
+  .marusan_text_block_4701002172 p {
+    max-width: 354px;
+  }
+}
