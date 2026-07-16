@@ -16,11 +16,11 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
         <div id="yafuso_top" class="yafuso_hero_029">
             <div class="yafuso_hero_photo_029 slider_fullslider_wrap" aria-hidden="true">
                 <ul class="slider_fullslider yafuso_hero_slider_029">
-                    <li class="slide active"><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケを楽しむグループ" loading="eager"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/03.webp" alt="カラオケと一緒に楽しめるドリンク" loading="lazy"></li>
+                    <li class="slide active"><img src="<?php echo $img; ?>/03.webp" alt="カラオケを楽しむグループ" loading="eager"></li>
+                    <li class="slide"><img src="<?php echo $img; ?>/06.webp" alt="カラオケと一緒に楽しめるドリンク" loading="lazy"></li>
                     <li class="slide"><img src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶの料理イメージ" loading="lazy"></li>
                     <li class="slide"><img src="<?php echo $img; ?>/tebachu_1.webp" alt="屋台村で楽しめる手羽先料理" loading="lazy"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/06.webp" alt="にぎやかで心地よい時間は、ここにある！" loading="lazy"></li>
+                    <li class="slide"><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="にぎやかで心地よい時間は、ここにある！" loading="lazy"></li>
                 </ul>
             </div>
             <div class="yafuso_hero_inner_029 act inup">
