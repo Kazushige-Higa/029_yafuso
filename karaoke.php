@@ -282,11 +282,11 @@ HTML;
                 <div class="yafuso_karaoke_hero_029">
                     <div class="yafuso_karaoke_hero_photo_029 slider_fullslider_wrap" aria-hidden="true">
                         <ul class="slider_fullslider yafuso_karaoke_hero_slider_029">
-                            <li class="slide active"><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうの宴会のイメージ" loading="eager"></li>
-                            <li class="slide"><img src="<?php echo $img; ?>/karaoke_generated_drinks.webp" alt="カラオケワールドももたろうの飲み放題ドリンクイメージ" loading="eager"></li>
-                            <li class="slide"><img src="<?php echo $img; ?>/karaoke_1.webp" alt="屋台村の料理と一緒に楽しむカラオケ利用イメージ" loading="lazy"></li>
-                            <li class="slide"><img src="<?php echo $img; ?>/karaoke_4.webp" alt="カラオケワールドももたろうの大人数向けルーム" loading="lazy"></li>
-                            <li class="slide"><img src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="カラオケワールドももたろうのキッズスペースと畳ルーム" loading="lazy"></li>
+                            <li class="slide active"><img decoding="async" src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうの宴会のイメージ" loading="eager" fetchpriority="high"></li>
+                            <li class="slide"><img decoding="async" src="<?php echo $img; ?>/karaoke_generated_drinks.webp" alt="カラオケワールドももたろうの飲み放題ドリンクイメージ" loading="lazy"></li>
+                            <li class="slide"><img decoding="async" src="<?php echo $img; ?>/karaoke_1.webp" alt="屋台村の料理と一緒に楽しむカラオケ利用イメージ" loading="lazy"></li>
+                            <li class="slide"><img decoding="async" src="<?php echo $img; ?>/karaoke_4.webp" alt="カラオケワールドももたろうの大人数向けルーム" loading="lazy"></li>
+                            <li class="slide"><img decoding="async" src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="カラオケワールドももたろうのキッズスペースと畳ルーム" loading="lazy"></li>
                         </ul>
                     </div>
                     <div class="yafuso_single_029">
@@ -309,7 +309,7 @@ HTML;
                 <div class="yafuso_karaoke_logo_strip_029">
                     <div class="yafuso_single_029">
                         <figure class="yafuso_karaoke_logo_029 act blur">
-                            <img src="<?php echo $img; ?>/momotarou.webp" alt="カラオケするならももたろう" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/momotarou.webp" alt="カラオケするならももたろう" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -325,7 +325,7 @@ HTML;
                                 <p>友達を誘ってちょっと早めに来るだけで、お得な時間のスタートが切れます。仕事終わりの一次会にも、夕食がてら気軽に立ち寄るのにもぴったりです。</p>
                             </div>
                             <figure class="yafuso_karaoke_campaign_photo_029 act inup delay_1">
-                                <img src="<?php echo $img; ?>/karaoke_momotaro16.webp" alt="カラオケワールドももたろうの個室イメージ" loading="lazy">
+                                <img decoding="async" src="<?php echo $img; ?>/karaoke_momotaro16.webp" alt="カラオケワールドももたろうの個室イメージ" loading="lazy">
                             </figure>
                         </div>
                     </div>
@@ -347,10 +347,10 @@ HTML;
                                 </ul>
                             </div>
                             <div class="yafuso_karaoke_food_photos_029 act blur delay_1">
-                                <figure><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="屋台料理を持ち込んでカラオケを楽しむイメージ" loading="lazy"></figure>
-                                <figure><img src="<?php echo $img; ?>/shop_okada.webp" alt="屋台村のホルモン料理イメージ" loading="lazy"></figure>
-                                <figure><img src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメン" loading="lazy"></figure>
-                                <figure><img src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅ〜の手羽先" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="屋台料理を持ち込んでカラオケを楽しむイメージ" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/shop_okada.webp" alt="屋台村のホルモン料理イメージ" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメン" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅ〜の手羽先" loading="lazy"></figure>
                             </div>
                         </div>
                     </div>
@@ -368,7 +368,7 @@ HTML;
                         </div>
                         <div class="yafuso_karaoke_price_panel_029 act inup">
                             <div class="yafuso_karaoke_price_main_029">
-                                <img class="yafuso_karaoke_beer_icon_029" src="<?php echo $img; ?>/karaoke_beer_mug_icon.webp" alt="ビールジョッキのイラスト" loading="eager">
+                                <img decoding="async" class="yafuso_karaoke_beer_icon_029" src="<?php echo $img; ?>/karaoke_beer_mug_icon.webp" alt="ビールジョッキのイラスト" loading="lazy">
                                 <span>飲み放題1時間</span>
                                 <strong>¥990</strong>
                                 <small>税抜 / 室料込み</small>
@@ -410,7 +410,7 @@ HTML;
                                 角ハイボールも飲み放題に含まれます。</p>
                         </div>
                         <figure class="yafuso_karaoke_drink_photo_029 act inup">
-                            <img src="<?php echo $img; ?>/karaoke_generated_drinks.webp" alt="カラオケワールドももたろうの飲み放題ドリンクイメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/karaoke_generated_drinks.webp" alt="カラオケワールドももたろうの飲み放題ドリンクイメージ" loading="lazy">
                         </figure>
                         <div class="yafuso_karaoke_drink_grid_029 act inup delay_1">
                             <article>
@@ -457,7 +457,7 @@ HTML;
                             <a class="yafuso_karaoke_modal_backdrop_029" href="#karaoke_menu_section" data-yafuso-karaoke-menu-close aria-label="閉じる"></a>
                             <div class="yafuso_karaoke_modal_body_029">
                                 <a class="yafuso_karaoke_modal_close_029" href="#karaoke_menu_section" data-yafuso-karaoke-menu-close aria-label="閉じる">×</a>
-                                <img src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="カラオケワールドももたろうの飲み放題メニュー" loading="lazy">
+                                <img decoding="async" src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="カラオケワールドももたろうの飲み放題メニュー" loading="lazy">
                             </div>
                         </div>
                         <div class="yafuso_karaoke_food_menu_029 act blur">
@@ -492,34 +492,34 @@ HTML;
                                 <div class="gallery_thumbnail yafuso_karaoke_gallery_029" data-gallery-id="karaoke_momotaro_gallery">
                                     <div class="main-gallery">
                                         <div class="main-slide cover">
-                                            <img src="<?php echo $img; ?>/karaoke_1.webp" alt="カラオケワールドももたろうの個室" class="active">
+                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_1.webp" alt="カラオケワールドももたろうの個室" class="active">
                                             <div class="overflow">
-                                                <img src="<?php echo $img; ?>/karaoke_2.webp" alt="カラオケワールドももたろうのキッズスペース">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro5.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_4.webp" alt="カラオケワールドももたろうの大人数向け個室">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="カラオケワールドももたろうのダーツマシン">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_2.webp" alt="カラオケワールドももたろうのキッズスペース">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro5.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_4.webp" alt="カラオケワールドももたろうの大人数向け個室">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="カラオケワールドももたろうのダーツマシン">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="カラオケワールドももたろうの店内写真">
                                             </div>
                                             <div class="gallery-nav">
                                                 <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -530,33 +530,33 @@ HTML;
                                         <div class="thumbnail-gallery-container">
                                             <div class='space_1 space_sp1'></div>
                                             <div class="thumbnail-gallery">
-                                                <div class="thumbnail active"><img src="<?php echo $img; ?>/karaoke_1.webp" alt="個室のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_2.webp" alt="キッズスペースのサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro5.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_4.webp" alt="大人数向け個室のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="ダーツマシンのサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="ももたろう店内写真のサムネイル"></div>
-                                                <div class="thumbnail"><img src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail active"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_1.webp" alt="個室のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_2.webp" alt="キッズスペースのサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro5.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_4.webp" alt="大人数向け個室のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="ダーツマシンのサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="ももたろう店内写真のサムネイル"></div>
+                                                <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="ももたろう店内写真のサムネイル"></div>
                                             </div>
                                             <div class="thumbnail-nav">
                                                 <button class="thumb-button prev" type="button" aria-label="前のサムネイル">&#10094;</button>
@@ -705,7 +705,7 @@ HTML;
                                 </dl>
                             </div>
                             <div class="yafuso_karaoke_contact_card_029 act blur delay_1">
-                                <img src="<?php echo $img; ?>/momotarou.webp" alt="カラオケワールドももたろうのロゴ" loading="lazy">
+                                <img decoding="async" src="<?php echo $img; ?>/momotarou.webp" alt="カラオケワールドももたろうのロゴ" loading="lazy">
                                 <h2>ご予約・お問い合わせ</h2>
                                 <p>ご予約はお電話またはオンライン予約フォームから承ります。<br>
                                     お急ぎの場合はお電話ください。</p>

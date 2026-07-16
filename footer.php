@@ -34,7 +34,7 @@
                                             <h3><i class="fa-solid fa-car" aria-hidden="true"></i>駐車場100台完備</h3>
                                             <p>屋台村すぐそばに駐車場100台完備。</p>
                                             <div class="yafuso_drunk_driving_notice_029">
-                                                <img src="<?php echo $img; ?>/stop_icon.webp" alt="飲酒運転禁止" loading="lazy">
+                                                <img decoding="async" src="<?php echo $img; ?>/stop_icon.webp" alt="飲酒運転禁止" loading="lazy">
                                                 <div>
                                                     <h4>飲酒運転禁止</h4>
                                                     <p><strong>飲酒運転は絶対におやめください。</strong><br>
@@ -62,7 +62,7 @@
 
         <div class="yafuso_footer_029">
             <a class="yafuso_footer_logo_029 act inup" href="./" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
-                <img src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="lazy">
+                <img decoding="async" src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="lazy">
             </a>
             <nav class="yafuso_footer_nav_029" aria-label="フッターナビゲーション">
                 <a href="./">トップページ</a>

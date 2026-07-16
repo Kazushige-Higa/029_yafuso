@@ -17,7 +17,7 @@ $use_yafuso_layout = true;
             <section>
                 <div class="yafuso_lower_hero_029">
                     <div class="yafuso_lower_hero_photo_029" aria-hidden="true">
-                        <img src="<?php echo $img; ?>/hero_people.webp" alt="ちょうちん横丁で料理と会話を楽しむ来店客" loading="eager">
+                        <img decoding="async" src="<?php echo $img; ?>/hero_people.webp" alt="ちょうちん横丁で料理と会話を楽しむ来店客" loading="eager" fetchpriority="high">
                     </div>
                     <div class="yafuso_lower_hero_inner_029">
                         <p class="yafuso_lower_kicker_029">CONCEPT</p>
@@ -45,7 +45,7 @@ $use_yafuso_layout = true;
                                 </ul>
                             </div>
                             <figure class="yafuso_lower_story_photo_029">
-                                <img src="<?php echo $img; ?>/concept_scene.webp" alt="提灯が並ぶちょうちん横丁の屋内空間" loading="eager">
+                                <img decoding="async" src="<?php echo $img; ?>/concept_scene.webp" alt="提灯が並ぶちょうちん横丁の屋内空間" loading="lazy">
                             </figure>
                         </div>
                     </div>
@@ -58,13 +58,13 @@ $use_yafuso_layout = true;
                         <div class="yafuso_lower_variety_grid_029">
                             <div class="yafuso_lower_food_mosaic_029">
                                 <figure>
-                                    <img src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅーの手羽先" loading="eager">
+                                    <img decoding="async" src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅーの手羽先" loading="lazy">
                                 </figure>
                                 <figure>
-                                    <img src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメン" loading="eager">
+                                    <img decoding="async" src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメン" loading="lazy">
                                 </figure>
                                 <figure>
-                                    <img src="<?php echo $img; ?>/shop_okada.webp" alt="西成ホルモンおか田のホルモン料理" loading="eager">
+                                    <img decoding="async" src="<?php echo $img; ?>/shop_okada.webp" alt="西成ホルモンおか田のホルモン料理" loading="lazy">
                                 </figure>
                             </div>
                             <div class="yafuso_lower_variety_text_029">
@@ -89,7 +89,7 @@ $use_yafuso_layout = true;
             <section>
                 <div class="yafuso_lower_quote_029">
                     <div class="yafuso_lower_quote_bg_029" aria-hidden="true">
-                        <img src="<?php echo $img; ?>/hero_scene.webp" alt="提灯が灯るやふそ屋台村ちょうちん横丁の店内風景" loading="eager">
+                        <img decoding="async" src="<?php echo $img; ?>/hero_scene.webp" alt="提灯が灯るやふそ屋台村ちょうちん横丁の店内風景" loading="lazy">
                     </div>
                     <div class="yafuso_single_029">
                         <div class="yafuso_lower_quote_inner_029">
@@ -126,16 +126,16 @@ $use_yafuso_layout = true;
                             </div>
                             <div class="yafuso_lower_karaoke_photos_029">
                                 <figure class="yafuso_lower_karaoke_main_029">
-                                    <img src="<?php echo $img; ?>/karaoke_1.webp" alt="カラオケワールドももたろうの個室とカラオケ設備" loading="eager">
+                                    <img decoding="async" src="<?php echo $img; ?>/karaoke_1.webp" alt="カラオケワールドももたろうの個室とカラオケ設備" loading="lazy">
                                 </figure>
                                 <figure>
-                                    <img src="<?php echo $img; ?>/karaoke_2.webp" alt="カラオケワールドももたろうのキッズスペース" loading="eager">
+                                    <img decoding="async" src="<?php echo $img; ?>/karaoke_2.webp" alt="カラオケワールドももたろうのキッズスペース" loading="lazy">
                                 </figure>
                                 <figure>
-                                    <img src="<?php echo $img; ?>/karaoke_3.webp" alt="カラオケワールドももたろうの和室カラオケルーム" loading="eager">
+                                    <img decoding="async" src="<?php echo $img; ?>/karaoke_3.webp" alt="カラオケワールドももたろうの和室カラオケルーム" loading="lazy">
                                 </figure>
                                 <figure>
-                                    <img src="<?php echo $img; ?>/karaoke_4.webp" alt="カラオケワールドももたろうの広いカラオケルーム" loading="eager">
+                                    <img decoding="async" src="<?php echo $img; ?>/karaoke_4.webp" alt="カラオケワールドももたろうの広いカラオケルーム" loading="lazy">
                                 </figure>
                             </div>
                         </div>
@@ -159,7 +159,7 @@ $use_yafuso_layout = true;
                                 </ul>
                             </div>
                             <figure class="yafuso_lower_parking_visual_029">
-                                <img src="<?php echo $img; ?>/hero_scene.webp" alt="駐車場100台完備でアクセスしやすい駐車場" loading="lazy">
+                                <img decoding="async" src="<?php echo $img; ?>/hero_scene.webp" alt="駐車場100台完備でアクセスしやすい駐車場" loading="lazy">
                             </figure>
                         </div>
                     </div>

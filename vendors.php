@@ -49,9 +49,9 @@ HTML;
                 <div class="yafuso_vendors_hero_029">
                     <div class="yafuso_vendors_hero_photo_029 slider_fullslider_wrap" aria-hidden="true">
                         <ul class="slider_fullslider yafuso_vendors_hero_slider_029">
-                            <li class="slide active"><img src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁のにぎわい" loading="eager"></li>
-                            <li class="slide"><img src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁のにぎわい" loading="lazy"></li>
-                            <li class="slide"><img src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶの料理イメージ" loading="lazy"></li>
+                            <li class="slide active"><img decoding="async" src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁のにぎわい" loading="eager" fetchpriority="high"></li>
+                            <li class="slide"><img decoding="async" src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁のにぎわい" loading="lazy"></li>
+                            <li class="slide"><img decoding="async" src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶの料理イメージ" loading="lazy"></li>
                         </ul>
                     </div>
                     <div class="yafuso_single_029">
@@ -101,31 +101,31 @@ HTML;
                         </div>
                         <div class="yafuso_vendors_merit_grid_029">
                             <article>
-                                <figure><img src="<?php echo $img; ?>/vendors_8_6.webp" alt="厨房設備が整った貸し屋台" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/vendors_8_6.webp" alt="厨房設備が整った貸し屋台" loading="lazy"></figure>
                                 <h3>初期費用が抑えられる</h3>
                                 <p>コンロ・シンク・テーブル・カウンター・イス・照明など主要設備を完備。<br>
                                     内装コストをかけず、すぐに営業を開始できます。</p>
                             </article>
                             <article>
-                                <figure><img src="<?php echo $img; ?>/use_solo_v2.webp" alt="にぎわう屋台村の相互集客イメージ" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/use_solo_v2.webp" alt="にぎわう屋台村の相互集客イメージ" loading="lazy"></figure>
                                 <h3>"横丁スタイル"で安定した来客</h3>
                                 <p>横丁全体のお客様が自然とあなたのお店にも注目する・流れてくる仕組み。<br>
                                     開業直後から認知されやすい環境です。</p>
                             </article>
                             <article>
-                                <figure><img src="<?php echo $img; ?>/parking.webp" alt="駐車場100台完備の駐車場" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/parking.webp" alt="駐車場100台完備の駐車場" loading="lazy"></figure>
                                 <h3>駐車場100台完備</h3>
                                 <p>国道58号沿いという好立地に加え、お客様専用駐車場を100台完備。<br>
                                     店主様・従業員の方も1〜2台無料で駐車可能。お客様がお車でお越しになっても安心です。</p>
                             </article>
                             <article>
-                                <figure><img src="<?php echo $img; ?>/concept_scene.webp" alt="屋内型で営業しやすい横丁空間" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/concept_scene.webp" alt="屋内型で営業しやすい横丁空間" loading="lazy"></figure>
                                 <h3>屋内型で通年営業に◎</h3>
                                 <p>屋内型で冷暖房完備の環境のため、<br>
                                     暑い時期や梅雨時も天候に左右されず営業できます。</p>
                             </article>
                             <article>
-                                <figure><img src="<?php echo $img; ?>/vendors_1_4.webp" alt="横丁内で仲間と営業できる貸し屋台区画" loading="lazy"></figure>
+                                <figure><img decoding="async" src="<?php echo $img; ?>/vendors_1_4.webp" alt="横丁内で仲間と営業できる貸し屋台区画" loading="lazy"></figure>
                                 <h3>支えあうお店同士のコミュニティ</h3>
                                 <p>横丁には同じ志を持つ仲間がいます。<br>
                                     情報交換や助け合いができる、横丁ならではのコミュニティがあります。</p>
@@ -156,19 +156,19 @@ HTML;
                                     <div class="gallery_thumbnail yafuso_vendor_gallery_029" data-gallery-id="vendors_room_8_gallery">
                                         <div class="main-gallery">
                                             <div class="main-slide cover">
-                                                <img src="<?php echo $img; ?>/vendors_8_1.webp" alt="丸真本社ビル8号の外観" class="active">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_1.webp" alt="丸真本社ビル8号の外観" class="active">
                                                 <div class="overflow">
-                                                    <img src="<?php echo $img; ?>/vendors_8_2.webp" alt="丸真本社ビル8号の外観写真">
-                                                    <img src="<?php echo $img; ?>/vendors_8_3.webp" alt="丸真本社ビル8号の入口写真">
-                                                    <img src="<?php echo $img; ?>/vendors_8_4.webp" alt="丸真本社ビル8号の屋台区画">
-                                                    <img src="<?php echo $img; ?>/vendors_8_5.webp" alt="丸真本社ビル8号の客席">
-                                                    <img src="<?php echo $img; ?>/vendors_8_6.webp" alt="丸真本社ビル8号の厨房設備">
-                                                    <img src="<?php echo $img; ?>/vendors_8_7.webp" alt="丸真本社ビル8号のシンク設備">
-                                                    <img src="<?php echo $img; ?>/vendors_8_8.webp" alt="丸真本社ビル8号のカウンター">
-                                                    <img src="<?php echo $img; ?>/vendors_8_9.webp" alt="丸真本社ビル8号の照明設備">
-                                                    <img src="<?php echo $img; ?>/vendors_8_10.webp" alt="丸真本社ビル8号の店舗内写真">
-                                                    <img src="<?php echo $img; ?>/vendors_8_11.webp" alt="丸真本社ビル8号の共用部">
-                                                    <img src="<?php echo $img; ?>/vendors_8_12.webp" alt="丸真本社ビル8号の区画写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_2.webp" alt="丸真本社ビル8号の外観写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_3.webp" alt="丸真本社ビル8号の入口写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_4.webp" alt="丸真本社ビル8号の屋台区画">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_5.webp" alt="丸真本社ビル8号の客席">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_6.webp" alt="丸真本社ビル8号の厨房設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_7.webp" alt="丸真本社ビル8号のシンク設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_8.webp" alt="丸真本社ビル8号のカウンター">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_9.webp" alt="丸真本社ビル8号の照明設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_10.webp" alt="丸真本社ビル8号の店舗内写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_11.webp" alt="丸真本社ビル8号の共用部">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_12.webp" alt="丸真本社ビル8号の区画写真">
                                                 </div>
                                                 <div class="gallery-nav">
                                                     <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -178,18 +178,18 @@ HTML;
                                             <div class="thumbnail-gallery-container">
                                                 <div class='space_1 space_sp1'></div>
                                                 <div class="thumbnail-gallery">
-                                                    <div class="thumbnail active"><img src="<?php echo $img; ?>/vendors_8_1.webp" alt="8号外観のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_2.webp" alt="8号外観写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_3.webp" alt="8号入口写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_4.webp" alt="8号屋台区画のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_5.webp" alt="8号客席のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_6.webp" alt="8号厨房設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_7.webp" alt="8号シンク設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_8.webp" alt="8号カウンターのサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_9.webp" alt="8号照明設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_10.webp" alt="8号店舗内写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_11.webp" alt="8号共用部のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_8_12.webp" alt="8号区画写真のサムネイル"></div>
+                                                    <div class="thumbnail active"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_1.webp" alt="8号外観のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_2.webp" alt="8号外観写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_3.webp" alt="8号入口写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_4.webp" alt="8号屋台区画のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_5.webp" alt="8号客席のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_6.webp" alt="8号厨房設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_7.webp" alt="8号シンク設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_8.webp" alt="8号カウンターのサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_9.webp" alt="8号照明設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_10.webp" alt="8号店舗内写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_11.webp" alt="8号共用部のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_8_12.webp" alt="8号区画写真のサムネイル"></div>
                                                 </div>
                                                 <div class="thumbnail-nav">
                                                     <button class="thumb-button prev" type="button" aria-label="前のサムネイル">&#10094;</button>
@@ -247,17 +247,17 @@ HTML;
                                     <div class="gallery_thumbnail yafuso_vendor_gallery_029" data-gallery-id="vendors_room_1_gallery">
                                         <div class="main-gallery">
                                             <div class="main-slide cover">
-                                                <img src="<?php echo $img; ?>/vendors_1_1.webp" alt="丸真本社ビル1号の外観" class="active">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_1.webp" alt="丸真本社ビル1号の外観" class="active">
                                                 <div class="overflow">
-                                                    <img src="<?php echo $img; ?>/vendors_1_2.webp" alt="丸真本社ビル1号の外観写真">
-                                                    <img src="<?php echo $img; ?>/vendors_1_3.webp" alt="丸真本社ビル1号の入口写真">
-                                                    <img src="<?php echo $img; ?>/vendors_1_4.webp" alt="丸真本社ビル1号の屋台区画">
-                                                    <img src="<?php echo $img; ?>/vendors_1_5.webp" alt="丸真本社ビル1号の厨房設備">
-                                                    <img src="<?php echo $img; ?>/vendors_1_6.webp" alt="丸真本社ビル1号のシンク設備">
-                                                    <img src="<?php echo $img; ?>/vendors_1_7.webp" alt="丸真本社ビル1号のカウンター">
-                                                    <img src="<?php echo $img; ?>/vendors_1_8.webp" alt="丸真本社ビル1号の店舗内写真">
-                                                    <img src="<?php echo $img; ?>/vendors_1_9.webp" alt="丸真本社ビル1号の共用部">
-                                                    <img src="<?php echo $img; ?>/vendors_1_10.webp" alt="丸真本社ビル1号の区画写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_2.webp" alt="丸真本社ビル1号の外観写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_3.webp" alt="丸真本社ビル1号の入口写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_4.webp" alt="丸真本社ビル1号の屋台区画">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_5.webp" alt="丸真本社ビル1号の厨房設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_6.webp" alt="丸真本社ビル1号のシンク設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_7.webp" alt="丸真本社ビル1号のカウンター">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_8.webp" alt="丸真本社ビル1号の店舗内写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_9.webp" alt="丸真本社ビル1号の共用部">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_10.webp" alt="丸真本社ビル1号の区画写真">
                                                 </div>
                                                 <div class="gallery-nav">
                                                     <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -267,16 +267,16 @@ HTML;
                                             <div class="thumbnail-gallery-container">
                                                 <div class='space_1 space_sp1'></div>
                                                 <div class="thumbnail-gallery">
-                                                    <div class="thumbnail active"><img src="<?php echo $img; ?>/vendors_1_1.webp" alt="1号外観のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_2.webp" alt="1号外観写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_3.webp" alt="1号入口写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_4.webp" alt="1号屋台区画のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_5.webp" alt="1号厨房設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_6.webp" alt="1号シンク設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_7.webp" alt="1号カウンターのサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_8.webp" alt="1号店舗内写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_9.webp" alt="1号共用部のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_1_10.webp" alt="1号区画写真のサムネイル"></div>
+                                                    <div class="thumbnail active"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_1.webp" alt="1号外観のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_2.webp" alt="1号外観写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_3.webp" alt="1号入口写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_4.webp" alt="1号屋台区画のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_5.webp" alt="1号厨房設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_6.webp" alt="1号シンク設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_7.webp" alt="1号カウンターのサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_8.webp" alt="1号店舗内写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_9.webp" alt="1号共用部のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_1_10.webp" alt="1号区画写真のサムネイル"></div>
                                                 </div>
                                                 <div class="thumbnail-nav">
                                                     <button class="thumb-button prev" type="button" aria-label="前のサムネイル">&#10094;</button>
@@ -334,18 +334,18 @@ HTML;
                                     <div class="gallery_thumbnail yafuso_vendor_gallery_029" data-gallery-id="vendors_room_4_gallery">
                                         <div class="main-gallery">
                                             <div class="main-slide cover">
-                                                <img src="<?php echo $img; ?>/vendors_4_1.webp" alt="丸真本社ビル4号の屋内屋台区画" class="active">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_1.webp" alt="丸真本社ビル4号の屋内屋台区画" class="active">
                                                 <div class="overflow">
-                                                    <img src="<?php echo $img; ?>/vendors_4_2.webp" alt="丸真本社ビル4号の店舗内写真">
-                                                    <img src="<?php echo $img; ?>/vendors_4_3.webp" alt="丸真本社ビル4号のカウンター">
-                                                    <img src="<?php echo $img; ?>/vendors_4_4.webp" alt="丸真本社ビル4号の客席">
-                                                    <img src="<?php echo $img; ?>/vendors_4_5.webp" alt="丸真本社ビル4号の厨房設備">
-                                                    <img src="<?php echo $img; ?>/vendors_4_6.webp" alt="丸真本社ビル4号のシンク設備">
-                                                    <img src="<?php echo $img; ?>/vendors_4_7.webp" alt="丸真本社ビル4号の照明設備">
-                                                    <img src="<?php echo $img; ?>/vendors_4_8.webp" alt="丸真本社ビル4号の区画写真">
-                                                    <img src="<?php echo $img; ?>/vendors_4_9.webp" alt="丸真本社ビル4号の共用部">
-                                                    <img src="<?php echo $img; ?>/vendors_4_10.webp" alt="丸真本社ビル4号の店舗写真">
-                                                    <img src="<?php echo $img; ?>/vendors_4_11.webp" alt="丸真本社ビル4号の内覧写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_2.webp" alt="丸真本社ビル4号の店舗内写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_3.webp" alt="丸真本社ビル4号のカウンター">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_4.webp" alt="丸真本社ビル4号の客席">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_5.webp" alt="丸真本社ビル4号の厨房設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_6.webp" alt="丸真本社ビル4号のシンク設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_7.webp" alt="丸真本社ビル4号の照明設備">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_8.webp" alt="丸真本社ビル4号の区画写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_9.webp" alt="丸真本社ビル4号の共用部">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_10.webp" alt="丸真本社ビル4号の店舗写真">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_11.webp" alt="丸真本社ビル4号の内覧写真">
                                                 </div>
                                                 <div class="gallery-nav">
                                                     <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -355,17 +355,17 @@ HTML;
                                             <div class="thumbnail-gallery-container">
                                                 <div class='space_1 space_sp1'></div>
                                                 <div class="thumbnail-gallery">
-                                                    <div class="thumbnail active"><img src="<?php echo $img; ?>/vendors_4_1.webp" alt="4号屋内屋台区画のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_2.webp" alt="4号店舗内写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_3.webp" alt="4号カウンターのサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_4.webp" alt="4号客席のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_5.webp" alt="4号厨房設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_6.webp" alt="4号シンク設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_7.webp" alt="4号照明設備のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_8.webp" alt="4号区画写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_9.webp" alt="4号共用部のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_10.webp" alt="4号店舗写真のサムネイル"></div>
-                                                    <div class="thumbnail"><img src="<?php echo $img; ?>/vendors_4_11.webp" alt="4号内覧写真のサムネイル"></div>
+                                                    <div class="thumbnail active"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_1.webp" alt="4号屋内屋台区画のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_2.webp" alt="4号店舗内写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_3.webp" alt="4号カウンターのサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_4.webp" alt="4号客席のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_5.webp" alt="4号厨房設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_6.webp" alt="4号シンク設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_7.webp" alt="4号照明設備のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_8.webp" alt="4号区画写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_9.webp" alt="4号共用部のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_10.webp" alt="4号店舗写真のサムネイル"></div>
+                                                    <div class="thumbnail"><img decoding="async" loading="lazy" src="<?php echo $img; ?>/vendors_4_11.webp" alt="4号内覧写真のサムネイル"></div>
                                                 </div>
                                                 <div class="thumbnail-nav">
                                                     <button class="thumb-button prev" type="button" aria-label="前のサムネイル">&#10094;</button>

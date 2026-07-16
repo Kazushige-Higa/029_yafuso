@@ -16,11 +16,11 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
         <div id="yafuso_top" class="yafuso_hero_029">
             <div class="yafuso_hero_photo_029 slider_fullslider_wrap" aria-hidden="true">
                 <ul class="slider_fullslider yafuso_hero_slider_029">
-                    <li class="slide active"><img src="<?php echo $img; ?>/03.webp" alt="カラオケを楽しむグループ" loading="eager"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/06.webp" alt="カラオケと一緒に楽しめるドリンク" loading="lazy"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶの料理イメージ" loading="lazy"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/tebachu_1.webp" alt="屋台村で楽しめる手羽先料理" loading="lazy"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="にぎやかで心地よい時間は、ここにある！" loading="lazy"></li>
+                    <li class="slide active"><img decoding="async" src="<?php echo $img; ?>/03.webp" alt="カラオケを楽しむグループ" loading="eager" fetchpriority="high"></li>
+                    <li class="slide"><img decoding="async" src="<?php echo $img; ?>/06.webp" alt="カラオケと一緒に楽しめるドリンク" loading="lazy"></li>
+                    <li class="slide"><img decoding="async" src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶの料理イメージ" loading="lazy"></li>
+                    <li class="slide"><img decoding="async" src="<?php echo $img; ?>/tebachu_1.webp" alt="屋台村で楽しめる手羽先料理" loading="lazy"></li>
+                    <li class="slide"><img decoding="async" src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="にぎやかで心地よい時間は、ここにある！" loading="lazy"></li>
                 </ul>
             </div>
             <div class="yafuso_hero_inner_029 act inup">
@@ -71,20 +71,20 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
             <div>
                 <div class="gallery_slider contain set4 right yafuso_top_gallery_slider_029">
                     <ul>
-                        <li><img src="<?php echo $img; ?>/karaoke_momotaro16.webp" alt="カラオケワールドももたろうイメージ" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/01.webp" alt="やふそ屋台村ちょうちん横丁の写真01" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうイメージ02" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/02.webp" alt="やふそ屋台村ちょうちん横丁の写真02" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁の写真03" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/karaoke_momotaro16.webp" alt="カラオケワールドももたろうイメージ" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/01.webp" alt="やふそ屋台村ちょうちん横丁の写真01" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうイメージ02" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/02.webp" alt="やふそ屋台村ちょうちん横丁の写真02" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁の写真03" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
                     </ul>
                     <ul aria-hidden="true">
-                        <li><img src="<?php echo $img; ?>/karaoke_momotaro16.webp" alt="カラオケワールドももたろうイメージ" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/01.webp" alt="やふそ屋台村ちょうちん横丁の写真01" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうイメージ02" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/02.webp" alt="やふそ屋台村ちょうちん横丁の写真02" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁の写真03" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/karaoke_momotaro16.webp" alt="カラオケワールドももたろうイメージ" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/01.webp" alt="やふそ屋台村ちょうちん横丁の写真01" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうイメージ02" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/02.webp" alt="やふそ屋台村ちょうちん横丁の写真02" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁の写真03" loading="lazy"></li>
+                        <li><img decoding="async" src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
                     </ul>
                 </div>
             </div>
@@ -102,7 +102,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                 <div class="yafuso_shop_list_029">
                     <article class="yafuso_shop_card_029 act inup">
                         <div class="yafuso_shop_body_029">
-                            <img class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_momotaro.webp" alt="カラオケワールドももたろうのSNSアイコン" loading="lazy">
+                            <img decoding="async" class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_momotaro.webp" alt="カラオケワールドももたろうのSNSアイコン" loading="lazy">
                             <h3>カラオケワールド<br>
                                 <span class="pink">ももたろう</span>
                             </h3>
@@ -126,13 +126,13 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
-                            <img src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケワールドももたろうの店内イメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケワールドももたろうの店内イメージ" loading="lazy">
                         </figure>
                     </article>
 
                     <article class="yafuso_shop_card_029 act inup">
                         <div class="yafuso_shop_body_029">
-                            <img class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="西成ホルモンおか田のSNSアイコン" loading="lazy">
+                            <img decoding="async" class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="西成ホルモンおか田のSNSアイコン" loading="lazy">
                             <h3>西成ホルモン <span class="red">おか田</span></h3>
                             <p class="yafuso_shop_lead_029">大阪・西成スタイルのホルモン焼き。<br>
                                 昔ながらの大衆酒場の雰囲気で、もつ煮込みが一番人気。</p>
@@ -154,13 +154,13 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
-                            <img src="<?php echo $img; ?>/okada_0.webp" alt="西成ホルモンおか田の看板イメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/okada_0.webp" alt="西成ホルモンおか田の看板イメージ" loading="lazy">
                         </figure>
                     </article>
 
                     <article class="yafuso_shop_card_029 act inup">
                         <div class="yafuso_shop_body_029">
-                            <img class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_tokunobu.webp" alt="屋台ラーメンとくのぶのSNSアイコン" loading="lazy">
+                            <img decoding="async" class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_tokunobu.webp" alt="屋台ラーメンとくのぶのSNSアイコン" loading="lazy">
                             <h3>屋台ラーメン <span class="red">とくのぶ</span></h3>
                             <p class="yafuso_shop_lead_029">大量の煮干しと節類からとった、香り高い極上の正油スープ。<br>
                                 今日をがんばる心と体に、じんわり染み渡る一杯です。</p>
@@ -183,13 +183,13 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
-                            <img src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメンイメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメンイメージ" loading="lazy">
                         </figure>
                     </article>
 
                     <article class="yafuso_shop_card_029 act inup">
                         <div class="yafuso_shop_body_029">
-                            <img class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_tatan.webp" alt="居酒屋たーたんのSNSアイコン" loading="lazy">
+                            <img decoding="async" class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_tatan.webp" alt="居酒屋たーたんのSNSアイコン" loading="lazy">
                             <h3>居酒屋 <span class="red">たーたん</span></h3>
                             <p class="yafuso_shop_lead_029">沖縄料理とお肉料理がメイン。<br>
                                 常時40〜50種類のフードメニューあり◎</p>
@@ -210,13 +210,13 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
-                            <img src="<?php echo $img; ?>/tatan_3.webp" alt="居酒屋たーたんの看板イメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/tatan_3.webp" alt="居酒屋たーたんの看板イメージ" loading="lazy">
                         </figure>
                     </article>
 
                     <article class="yafuso_shop_card_029 act inup">
                         <div class="yafuso_shop_body_029">
-                            <img class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_tebachu.webp" alt="手羽先居酒屋てばちゅ〜のSNSアイコン" loading="lazy">
+                            <img decoding="async" class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_tebachu.webp" alt="手羽先居酒屋てばちゅ〜のSNSアイコン" loading="lazy">
                             <h3>手羽先居酒屋<br><span class="red">てばちゅ〜</span></h3>
                             <p class="yafuso_shop_lead_029">こだわり調理の食べやすい手羽先が人気の居酒屋。<br>
                                 気さくなスタッフ達が迎えてくれるので、お一人様から女性まで気軽に飲みに行けます！</p>
@@ -238,7 +238,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
-                            <img src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅ〜の看板イメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅ〜の看板イメージ" loading="lazy">
                         </figure>
                     </article>
                 </div>
@@ -256,7 +256,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                 <ul class="yafuso_scene_grid_029 act inup">
                     <li>
                         <figure>
-                            <img src="<?php echo $img; ?>/use_party_v2.webp" alt="飲み会・打ち上げのイメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/use_party_v2.webp" alt="飲み会・打ち上げのイメージ" loading="lazy">
                         </figure>
                         <div>
                             <h3><span>01</span>飲み会・打ち上げ</h3>
@@ -265,7 +265,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                     </li>
                     <li>
                         <figure>
-                            <img src="<?php echo $img; ?>/use_date_v2.webp" alt="デート・女子会のイメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/use_date_v2.webp" alt="デート・女子会のイメージ" loading="lazy">
                         </figure>
                         <div>
                             <h3><span>02</span>カジュアルな飲みに◎</h3>
@@ -274,7 +274,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                     </li>
                     <li>
                         <figure>
-                            <img src="<?php echo $img; ?>/use_karaoke_v2.webp" alt="カラオケ × 屋台村のイメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/use_karaoke_v2.webp" alt="カラオケ × 屋台村のイメージ" loading="lazy">
                         </figure>
                         <div>
                             <h3><span>03</span>カラオケ × 屋台村</h3>
@@ -283,7 +283,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                     </li>
                     <li>
                         <figure>
-                            <img src="<?php echo $img; ?>/use_solo_v2.webp" alt="一人飲み・ふらっと立ち寄りの店主イメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/use_solo_v2.webp" alt="一人飲み・ふらっと立ち寄りの店主イメージ" loading="lazy">
                         </figure>
                         <div>
                             <h3><span>04</span>一人飲み・ふらっと立ち寄り</h3>

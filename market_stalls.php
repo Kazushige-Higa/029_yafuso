@@ -20,7 +20,7 @@ HTML;
             <section>
                 <div class="yafuso_market_hero_029">
                     <div class="yafuso_market_hero_photo_029" aria-hidden="true">
-                        <img src="<?php echo $img; ?>/hero_scene.webp" alt="やふそ屋台村ちょうちん横丁の屋台エリア" loading="eager">
+                        <img decoding="async" src="<?php echo $img; ?>/hero_scene.webp" alt="やふそ屋台村ちょうちん横丁の屋台エリア" loading="eager" fetchpriority="high">
                     </div>
                     <div class="yafuso_single_029">
                         <div class="yafuso_market_hero_inner_029">
@@ -84,32 +84,32 @@ HTML;
                                 <div class="gallery_thumbnail yafuso_market_gallery_029" data-gallery-id="market_momotaro_gallery">
                                     <div class="main-gallery">
                                         <div class="main-slide cover">
-                                            <img src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケワールドももたろうの個室" class="active">
+                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケワールドももたろうの個室" class="active">
                                             <div class="overflow">
-                                                <img src="<?php echo $img; ?>/karaoke_momïotaro5.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="カラオケワールドももたろうのダーツマシン">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="カラオケワールドももたろうの店内写真">
-                                                <img src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro5.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="カラオケワールドももたろうのダーツマシン">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="カラオケワールドももたろうの店内写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="カラオケワールドももたろうの店内写真">
                                             </div>
                                             <div class="gallery-nav">
                                                 <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -121,79 +121,79 @@ HTML;
                                             <div class='space_1 space_sp1'></div>
                                             <div class="thumbnail-gallery">
                                                 <div class="thumbnail active">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケ個室のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケ個室のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro5.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro5.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="ダーツマシンのサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro1.webp" alt="ダーツマシンのサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro2.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro3.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro4.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro6.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro7.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro8.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro9.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro10.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro11.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro12.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro13.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro14.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro15.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro17.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro18.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro19.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro20.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro21.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro22.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro23.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro24.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="ももたろう店内写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/karaoke_momotaro26.webp" alt="ももたろう店内写真のサムネイル">
                                                 </div>
                                             </div>
                                             <div class="thumbnail-nav">
@@ -205,7 +205,7 @@ HTML;
                                 </div>
                             </div>
                             <div class="yafuso_market_shop_body_029">
-                                <img class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_momotaro.webp" alt="ももたろうのSNSアイコン" loading="lazy">
+                                <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_momotaro.webp" alt="ももたろうのSNSアイコン" loading="lazy">
                                 <h3>カラオケワールド <span class="pink">ももたろう</span></h3>
                                 <p class="yafuso_market_lead_029">屋台村と隣接する、ここにしかない珍しいスタイルのカラオケ店。<br>
                                 屋台村の種類豊富な料理をカラオケルームから注文できます。</p>
@@ -244,24 +244,24 @@ HTML;
                                 <div class="gallery_thumbnail yafuso_market_gallery_029" data-gallery-id="market_okada_gallery">
                                     <div class="main-gallery">
                                         <div class="main-slide cover">
-                                            <img src="<?php echo $img; ?>/okada_0.webp" alt="西成ホルモンおか田の写真01" class="active">
+                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_0.webp" alt="西成ホルモンおか田の写真01" class="active">
                                             <div class="overflow">
-                                                <img src="<?php echo $img; ?>/okada_1.webp" alt="西成ホルモンおか田の写真02">
-                                                <img src="<?php echo $img; ?>/okada_3.webp" alt="西成ホルモンおか田の写真03">
-                                                <img src="<?php echo $img; ?>/okada_4.webp" alt="西成ホルモンおか田の写真04">
-                                                <img src="<?php echo $img; ?>/okada_5.webp" alt="西成ホルモンおか田の写真05">
-                                                <img src="<?php echo $img; ?>/okada_6.webp" alt="西成ホルモンおか田の写真06">
-                                                <img src="<?php echo $img; ?>/okada_7.webp" alt="西成ホルモンおか田の写真07">
-                                                <img src="<?php echo $img; ?>/okada_8.webp" alt="西成ホルモンおか田の写真08">
-                                                <img src="<?php echo $img; ?>/okada_9.webp" alt="西成ホルモンおか田の写真09">
-                                                <img src="<?php echo $img; ?>/okada_10.webp" alt="西成ホルモンおか田の写真10">
-                                                <img src="<?php echo $img; ?>/okada_11.webp" alt="西成ホルモンおか田の写真11">
-                                                <img src="<?php echo $img; ?>/okada_12.webp" alt="西成ホルモンおか田の写真12">
-                                                <img src="<?php echo $img; ?>/okada_13.webp" alt="西成ホルモンおか田の写真13">
-                                                <img src="<?php echo $img; ?>/okada_14.webp" alt="西成ホルモンおか田の写真14">
-                                                <img src="<?php echo $img; ?>/okada_15.webp" alt="西成ホルモンおか田の写真15">
-                                                <img src="<?php echo $img; ?>/okada_16.webp" alt="西成ホルモンおか田の写真16">
-                                                <img src="<?php echo $img; ?>/okada_17.webp" alt="西成ホルモンおか田の写真17">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_1.webp" alt="西成ホルモンおか田の写真02">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_3.webp" alt="西成ホルモンおか田の写真03">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_4.webp" alt="西成ホルモンおか田の写真04">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_5.webp" alt="西成ホルモンおか田の写真05">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_6.webp" alt="西成ホルモンおか田の写真06">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_7.webp" alt="西成ホルモンおか田の写真07">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_8.webp" alt="西成ホルモンおか田の写真08">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_9.webp" alt="西成ホルモンおか田の写真09">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_10.webp" alt="西成ホルモンおか田の写真10">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_11.webp" alt="西成ホルモンおか田の写真11">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_12.webp" alt="西成ホルモンおか田の写真12">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_13.webp" alt="西成ホルモンおか田の写真13">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_14.webp" alt="西成ホルモンおか田の写真14">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_15.webp" alt="西成ホルモンおか田の写真15">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_16.webp" alt="西成ホルモンおか田の写真16">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_17.webp" alt="西成ホルモンおか田の写真17">
                                             </div>
                                             <div class="gallery-nav">
                                                 <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -273,55 +273,55 @@ HTML;
                                             <div class='space_1 space_sp1'></div>
                                             <div class="thumbnail-gallery">
                                                 <div class="thumbnail active">
-                                                    <img src="<?php echo $img; ?>/okada_0.webp" alt="おか田写真01のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_0.webp" alt="おか田写真01のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_1.webp" alt="おか田写真02のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_1.webp" alt="おか田写真02のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_3.webp" alt="おか田写真03のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_3.webp" alt="おか田写真03のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_4.webp" alt="おか田写真04のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_4.webp" alt="おか田写真04のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_5.webp" alt="おか田写真05のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_5.webp" alt="おか田写真05のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_6.webp" alt="おか田写真06のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_6.webp" alt="おか田写真06のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_7.webp" alt="おか田写真07のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_7.webp" alt="おか田写真07のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_8.webp" alt="おか田写真08のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_8.webp" alt="おか田写真08のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_9.webp" alt="おか田写真09のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_9.webp" alt="おか田写真09のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_10.webp" alt="おか田写真10のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_10.webp" alt="おか田写真10のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_11.webp" alt="おか田写真11のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_11.webp" alt="おか田写真11のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_12.webp" alt="おか田写真12のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_12.webp" alt="おか田写真12のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_13.webp" alt="おか田写真13のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_13.webp" alt="おか田写真13のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_14.webp" alt="おか田写真14のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_14.webp" alt="おか田写真14のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_15.webp" alt="おか田写真15のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_15.webp" alt="おか田写真15のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_16.webp" alt="おか田写真16のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_16.webp" alt="おか田写真16のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/okada_17.webp" alt="おか田写真17のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_17.webp" alt="おか田写真17のサムネイル">
                                                 </div>
                                             </div>
                                             <div class="thumbnail-nav">
@@ -333,7 +333,7 @@ HTML;
                                 </div>
                             </div>
                             <div class="yafuso_market_shop_body_029">
-                                <img class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="おか田のSNSアイコン" loading="lazy">
+                                <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="おか田のSNSアイコン" loading="lazy">
                                 <h3>西成ホルモン <span class="red">おか田</span></h3>
                                 <p class="yafuso_market_lead_029">大阪・西成で愛され続けてきたホルモン焼きの文化を沖縄の地で再現。<br>
                                 昔ながらの大衆酒場の雰囲気をそのまま楽しめます。</p>
@@ -372,12 +372,12 @@ HTML;
                                 <div class="gallery_thumbnail yafuso_market_gallery_029" data-gallery-id="market_tokunobu_gallery">
                                     <div class="main-gallery">
                                         <div class="main-slide cover">
-                                            <img src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶの正油ラーメン" class="active">
+                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶの正油ラーメン" class="active">
                                             <div class="overflow">
-                                                <img src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶのラーメン写真">
-                                                <img src="<?php echo $img; ?>/tokunobu_3.webp" alt="屋台ラーメンとくのぶの料理写真">
-                                                <img src="<?php echo $img; ?>/tokunobu_4.webp" alt="屋台ラーメンとくのぶの一品料理">
-                                                <img src="<?php echo $img; ?>/tokunobu_5.webp" alt="屋台ラーメンとくのぶの店舗写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶのラーメン写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_3.webp" alt="屋台ラーメンとくのぶの料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_4.webp" alt="屋台ラーメンとくのぶの一品料理">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_5.webp" alt="屋台ラーメンとくのぶの店舗写真">
                                             </div>
                                             <div class="gallery-nav">
                                                 <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -389,19 +389,19 @@ HTML;
                                             <div class='space_1 space_sp1'></div>
                                             <div class="thumbnail-gallery">
                                                 <div class="thumbnail active">
-                                                    <img src="<?php echo $img; ?>/tokunobu_1.webp" alt="正油ラーメンのサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_1.webp" alt="正油ラーメンのサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tokunobu_2.webp" alt="ラーメン写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_2.webp" alt="ラーメン写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tokunobu_3.webp" alt="料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_3.webp" alt="料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tokunobu_4.webp" alt="一品料理のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_4.webp" alt="一品料理のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tokunobu_5.webp" alt="店舗写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tokunobu_5.webp" alt="店舗写真のサムネイル">
                                                 </div>
                                             </div>
                                             <div class="thumbnail-nav">
@@ -413,7 +413,7 @@ HTML;
                                 </div>
                             </div>
                             <div class="yafuso_market_shop_body_029">
-                                <img class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_tokunobu.webp" alt="とくのぶのSNSアイコン" loading="lazy">
+                                <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_tokunobu.webp" alt="とくのぶのSNSアイコン" loading="lazy">
                                 <h3>屋台ラーメン <span class="red">とくのぶ</span></h3>
                                 <p class="yafuso_market_lead_029">大量の煮干しと節類に愛情をたっぷり込めた、香り高い正油スープ。<br>
                                 今日をがんばる心と体に、じんわり染み渡る一杯です。</p>
@@ -452,12 +452,12 @@ HTML;
                                 <div class="gallery_thumbnail yafuso_market_gallery_029" data-gallery-id="market_tatan_gallery">
                                     <div class="main-gallery">
                                         <div class="main-slide cover">
-                                            <img src="<?php echo $img; ?>/tatan_3.webp" alt="居酒屋たーたんの料理盛り合わせ" class="active">
+                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_3.webp" alt="居酒屋たーたんの料理盛り合わせ" class="active">
                                             <div class="overflow">
-                                                <img src="<?php echo $img; ?>/shop_tatan.webp" alt="居酒屋たーたんの看板イメージ">
-                                                <img src="<?php echo $img; ?>/tatan_1.webp" alt="居酒屋たーたんの店舗イメージ">
-                                                <img src="<?php echo $img; ?>/tatan_2.webp" alt="居酒屋たーたんの一品料理">
-                                                <img src="<?php echo $img; ?>/tatan_4.webp" alt="居酒屋たーたんの料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/shop_tatan.webp" alt="居酒屋たーたんの看板イメージ">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_1.webp" alt="居酒屋たーたんの店舗イメージ">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_2.webp" alt="居酒屋たーたんの一品料理">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_4.webp" alt="居酒屋たーたんの料理写真">
                                             </div>
                                             <div class="gallery-nav">
                                                 <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -469,19 +469,19 @@ HTML;
                                             <div class='space_1 space_sp1'></div>
                                             <div class="thumbnail-gallery">
                                                 <div class="thumbnail active">
-                                                    <img src="<?php echo $img; ?>/tatan_3.webp" alt="料理盛り合わせのサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_3.webp" alt="料理盛り合わせのサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/shop_tatan.webp" alt="たーたん看板のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/shop_tatan.webp" alt="たーたん看板のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tatan_1.webp" alt="店舗イメージのサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_1.webp" alt="店舗イメージのサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tatan_2.webp" alt="一品料理のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_2.webp" alt="一品料理のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tatan_4.webp" alt="料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tatan_4.webp" alt="料理写真のサムネイル">
                                                 </div>
                                             </div>
                                             <div class="thumbnail-nav">
@@ -493,7 +493,7 @@ HTML;
                                 </div>
                             </div>
                             <div class="yafuso_market_shop_body_029">
-                                <img class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_tatan.webp" alt="たーたんのSNSアイコン" loading="lazy">
+                                <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_tatan.webp" alt="たーたんのSNSアイコン" loading="lazy">
                                 <h3>居酒屋 <span class="red">たーたん</span></h3>
                                 <p class="yafuso_market_lead_029">沖縄料理とお肉料理をメインとした本格居酒屋。<br>
                                 日替わりオススメを含めて常時40〜50種のフードメニューがそろいます。</p>
@@ -532,20 +532,20 @@ HTML;
                                 <div class="gallery_thumbnail yafuso_market_gallery_029" data-gallery-id="market_tebachu_gallery">
                                     <div class="main-gallery">
                                         <div class="main-slide cover">
-                                            <img src="<?php echo $img; ?>/tebachu_combo.webp" alt="手羽先居酒屋てばちゅ〜の手羽唐コンプリート" class="active">
+                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_combo.webp" alt="手羽先居酒屋てばちゅ〜の手羽唐コンプリート" class="active">
                                             <div class="overflow">
-                                                <img src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅ〜の手羽先盛り合わせ">
-                                                <img src="<?php echo $img; ?>/tebachu_2.webp" alt="手羽先居酒屋てばちゅ〜の手羽先">
-                                                <img src="<?php echo $img; ?>/tebachu_3.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/tebachu_4.webp" alt="手羽先居酒屋てばちゅ〜の一品料理">
-                                                <img src="<?php echo $img; ?>/tebachu_5.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/tebachu_6.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/tebachu_7.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/tebachu_8.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/tebachu_9.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/tebachu_10.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/tebachu_11.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
-                                                <img src="<?php echo $img; ?>/shop_tebachu.webp" alt="手羽先居酒屋てばちゅ〜の看板イメージ">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅ〜の手羽先盛り合わせ">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_2.webp" alt="手羽先居酒屋てばちゅ〜の手羽先">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_3.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_4.webp" alt="手羽先居酒屋てばちゅ〜の一品料理">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_5.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_6.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_7.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_8.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_9.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_10.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_11.webp" alt="手羽先居酒屋てばちゅ〜の料理写真">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/shop_tebachu.webp" alt="手羽先居酒屋てばちゅ〜の看板イメージ">
                                             </div>
                                             <div class="gallery-nav">
                                                 <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -557,43 +557,43 @@ HTML;
                                             <div class='space_1 space_sp1'></div>
                                             <div class="thumbnail-gallery">
                                                 <div class="thumbnail active">
-                                                    <img src="<?php echo $img; ?>/tebachu_combo.webp" alt="手羽唐コンプリートのサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_combo.webp" alt="手羽唐コンプリートのサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先盛り合わせのサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先盛り合わせのサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_2.webp" alt="手羽先のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_2.webp" alt="手羽先のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_3.webp" alt="料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_3.webp" alt="料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_4.webp" alt="一品料理のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_4.webp" alt="一品料理のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_5.webp" alt="てばちゅ〜料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_5.webp" alt="てばちゅ〜料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_6.webp" alt="てばちゅ〜料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_6.webp" alt="てばちゅ〜料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_7.webp" alt="てばちゅ〜料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_7.webp" alt="てばちゅ〜料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_8.webp" alt="てばちゅ〜料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_8.webp" alt="てばちゅ〜料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_9.webp" alt="てばちゅ〜料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_9.webp" alt="てばちゅ〜料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_10.webp" alt="てばちゅ〜料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_10.webp" alt="てばちゅ〜料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/tebachu_11.webp" alt="てばちゅ〜料理写真のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/tebachu_11.webp" alt="てばちゅ〜料理写真のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img src="<?php echo $img; ?>/shop_tebachu.webp" alt="てばちゅ〜看板のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/shop_tebachu.webp" alt="てばちゅ〜看板のサムネイル">
                                                 </div>
                                             </div>
                                             <div class="thumbnail-nav">
@@ -605,7 +605,7 @@ HTML;
                                 </div>
                             </div>
                             <div class="yafuso_market_shop_body_029">
-                                <img class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_tebachu.webp" alt="てばちゅ〜のSNSアイコン" loading="lazy">
+                                <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_tebachu.webp" alt="てばちゅ〜のSNSアイコン" loading="lazy">
                                 <h3>手羽先居酒屋<span class="red">てばちゅ〜</span></h3>
                                 <p class="yafuso_market_lead_029">こだわりの調理法で仕上げた手羽先が大人気！<br>
                                     気さくなスタッフたちが出迎えるポップでかわいい居酒屋です。</p>
@@ -659,7 +659,7 @@ HTML;
                                 <a href="karaoke.php">カラオケワールドももたろうを見る</a>
                             </div>
                             <figure class="yafuso_market_cta_photo_029">
-                                <img src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケワールドももたろうで歌う利用イメージ" loading="lazy">
+                                <img decoding="async" src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケワールドももたろうで歌う利用イメージ" loading="lazy">
                             </figure>
                         </div>
                     </div>
