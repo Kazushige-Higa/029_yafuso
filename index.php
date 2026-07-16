@@ -3,8 +3,8 @@ require_once './common.php';
 
 $page_title = "やふそ屋台村 ちょうちん横丁";
 $page_meta_title = "やふそ屋台村 ちょうちん横丁｜浦添・屋富祖の屋内型屋台村";
-$page_meta_description = "浦添市屋富祖にある屋内型屋台村「ちょうちん横丁」。ホルモン、ラーメン、沖縄料理、手羽先、カラオケを天候を気にせず快適に楽しめる、にぎわいと安心の空間です。";
-$page_meta_image = $img . "/hero_scene.webp";
+$page_meta_description = "浦添市屋富祖にある屋内型屋台村「ちょうちん横丁」。屋富祖のディープな街時間の中で、飲む・食べる・歌う・遊ぶを楽しめるにぎわいの空間です。";
+$page_meta_image = $img . "/karaoke_momotaro16.webp";
 $page_style = "";
 $use_yafuso_layout = true;
 $page_script = '<script src="js/slider_fullslider.js" defer></script>';
@@ -16,31 +16,26 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
         <div id="yafuso_top" class="yafuso_hero_029">
             <div class="yafuso_hero_photo_029 slider_fullslider_wrap" aria-hidden="true">
                 <ul class="slider_fullslider yafuso_hero_slider_029">
-                    <li class="slide active"><img src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁で食事を楽しむ来店客" loading="eager"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/02.webp" alt="提灯が灯る屋内型屋台村のにぎわい" loading="lazy"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろう画像" loading="lazy"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/01.webp" alt="屋富祖のちょうちん横丁に並ぶ屋台席" loading="lazy"></li>
-                    <li class="slide"><img src="<?php echo $img; ?>/hero_scene.webp" alt="赤ちょうちんが並ぶやふそ屋台村の入口" loading="lazy"></li>
+                    <li class="slide active"><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケを楽しむグループ" loading="eager"></li>
+                    <li class="slide"><img src="<?php echo $img; ?>/03.webp" alt="カラオケと一緒に楽しめるドリンク" loading="lazy"></li>
+                    <li class="slide"><img src="<?php echo $img; ?>/tokunobu_2.webp" alt="屋台ラーメンとくのぶの料理イメージ" loading="lazy"></li>
+                    <li class="slide"><img src="<?php echo $img; ?>/tebachu_1.webp" alt="屋台村で楽しめる手羽先料理" loading="lazy"></li>
+                    <li class="slide"><img src="<?php echo $img; ?>/06.webp" alt="にぎやかで心地よい時間は、ここにある！" loading="lazy"></li>
                 </ul>
             </div>
             <div class="yafuso_hero_inner_029 act inup">
-                <p class="yafuso_hero_kicker_029 act01 blur">浦添市初の屋台村</p>
+                <p class="yafuso_hero_kicker_029 act01 blur">ディープな街屋富祖で飲もう！</p>
                 <h1 class="act02 blur">
                     <span>やふそ屋台村</span>
                     ちょうちん横丁
                 </h1>
                 <div class="act04 inup">
-                    <p class="yafuso_hero_lead_029">5店舗が集まる、にぎわいと安心の空間。<br>雨の日も、暑い日も、ここにおいで。</p>
+                    <p class="yafuso_hero_lead_029">まったりひとり飲みから<br>仲間とわいわい！ハシゴ酒まで<br>にぎやかで心地よい時間は、ここにある！</p>
                     <div class="yafuso_hero_buttons_029">
-                        <a href="#shops">屋台のご紹介を見る</a>
-                        <a href="#access">アクセスを見る</a>
+                        <a href="#shops">【店舗一覧】をチェック！</a>
+                        <a href="#access">【アクセス】58号線沿い！</a>
+                        <a href="concept.php">【屋富祖】ってどんな街？</a>
                     </div>
-                    <ul class="yafuso_hero_status_029" aria-label="営業情報の概要">
-                        <li><i class="fa-regular fa-clock" aria-hidden="true"></i>18:00〜2:00</li>
-                        <li><i class="fa-solid fa-house" aria-hidden="true"></i>屋内型</li>
-                        <li><i class="fa-solid fa-coins" aria-hidden="true"></i>せんべろ 1,000円〜</li>
-                        <li><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i>カラオケ併設！</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -51,19 +46,22 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
             <div class="yafuso_single_029 yafuso_concept_grid_029">
                 <div class="yafuso_section_title_029 yafuso_section_title_center_029">
                     <span aria-hidden="true"></span>
-                    <h2 class="act txt_split type_popup">コンセプト</h2>
+                    <h2 class="act txt_split type_popup">飲む・食べる・歌う・遊ぶ</h2>
                 </div>
                 <div class="yafuso_concept_text_029 act inup">
-                    <p class="orange">「今日という一日に、晴れやかな余韻を。」</p>
-                    <p><span class="red">浦添市屋富祖の屋内型屋台村「ちょうちん横丁」へようこそ。</span><br>
-                        ここは、いつでも、どんな気分のときでも、心地よく過ごせる場所です。</p>
-                    <p class="t_m5">香ばしいホルモンの煙、熱々のラーメン、心まであたたまる沖縄料理に手羽先、そして場を彩るカラオケ。それぞれの店が持つ「味」と「人柄」の灯りが集まって、ひとつの温かい場をつくっています。</p>
-                    <p>ご褒美のひとり飲みから、仲間との楽しいハシゴ酒まで。食べたいものが違っても、ここならみんなが好きなものを選べて笑顔になれる。</p>
-                    <p><span class="red">雨の日でも天候を気にせず快適に過ごせる店内</span>で、お好きな時間をゆっくりとお過ごしください。ちょうちんの暖かな灯りに包まれながら、訪れた人の心に「いい灯」がともる、そんな安心できる場所をいつでもお届けします。</p>
+                    <p><span class="red">浦添市屋富祖の屋台村<br class="sponly">『ちょうちん横丁』へようこそ！</span></p>
+                    <p>まったりひとり飲みから、仲間とわいわい！<br class="sponly">ハシゴ酒まで、<br>
+                        お酒やおつまみ・お食事を楽しみながら、<br>
+                        にぎやかで心地よい時間をお過ごしください。</p>
                 </div>
-                <figure class="yafuso_concept_photo_029 act blur delay_1">
-                    <img src="<?php echo $img; ?>/concept_scene.webp" alt="ちょうちん横丁のにぎやかな屋内屋台村" loading="lazy">
-                </figure>
+                <ul class="yafuso_feature_pills_029 act inup delay_1" aria-label="ちょうちん横丁の特徴">
+                    <li><i class="fa-solid fa-martini-glass-citrus" aria-hidden="true"></i>せんべろあり！</li>
+                    <li><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i>カラオケ店併設♪</li>
+                    <li><i class="fa-solid fa-yen-sign" aria-hidden="true"></i>コスパ◎</li>
+                    <li><i class="fa-solid fa-snowflake" aria-hidden="true"></i>屋内で涼しい！</li>
+                    <li><i class="fa-solid fa-route" aria-hidden="true"></i>アクセス良好◎</li>
+                    <li><i class="fa-regular fa-clock" aria-hidden="true"></i>深夜2時まで営業</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -78,7 +76,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                         <li><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうイメージ02" loading="lazy"></li>
                         <li><img src="<?php echo $img; ?>/02.webp" alt="やふそ屋台村ちょうちん横丁の写真02" loading="lazy"></li>
                         <li><img src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁の写真03" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/hero_scene.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
+                        <li><img src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
                     </ul>
                     <ul aria-hidden="true">
                         <li><img src="<?php echo $img; ?>/karaoke_momotaro16.webp" alt="カラオケワールドももたろうイメージ" loading="lazy"></li>
@@ -86,55 +84,9 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                         <li><img src="<?php echo $img; ?>/karaoke_generated_party.webp" alt="カラオケワールドももたろうイメージ02" loading="lazy"></li>
                         <li><img src="<?php echo $img; ?>/02.webp" alt="やふそ屋台村ちょうちん横丁の写真02" loading="lazy"></li>
                         <li><img src="<?php echo $img; ?>/03.webp" alt="やふそ屋台村ちょうちん横丁の写真03" loading="lazy"></li>
-                        <li><img src="<?php echo $img; ?>/hero_scene.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
+                        <li><img src="<?php echo $img; ?>/06.webp" alt="やふそ屋台村ちょうちん横丁の入口写真" loading="lazy"></li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="yafuso_reason_029">
-            <div class="yafuso_single_029">
-                <div class="yafuso_section_title_029 yafuso_section_title_center_029 yafuso_reason_heading_029">
-                    <span aria-hidden="true"></span>
-                    <h2 class="act txt_split type_popup">選ばれる4つの理由</h2>
-                </div>
-                <ul class="yafuso_reason_grid_029 act inup delay_1">
-                    <li>
-                        <figure>
-                            <img src="<?php echo $img; ?>/reason_value.webp" alt="圧倒的コスパのイラスト" loading="lazy">
-                        </figure>
-                        <h3>圧倒的コスパ</h3>
-                        <p>せんべろ・飲み放題が<span class="red">1,000円〜！</span><br>
-                            お財布に優しく、思い切り楽しめる。</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="<?php echo $img; ?>/reason_late.webp" alt="深夜2時までのイラスト" loading="lazy">
-                        </figure>
-                        <h3>深夜2時まで</h3>
-                        <p>深夜2:00まで営業中！<br>
-                            <span class="red">屋台</span>からカラオケまでずっとここで。
-                        </p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="<?php echo $img; ?>/reason_indoor.webp" alt="屋内で快適のイラスト" loading="lazy">
-                        </figure>
-                        <h3>屋内で快適</h3>
-                        <p>沖縄の暑さも突然の雨も<span class="red">関係なし！</span><br>
-                            エアコン完備で年中快適。</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="<?php echo $img; ?>/reason_all_in.webp" alt="全部ここで完結のイラスト" loading="lazy">
-                        </figure>
-                        <h3>全部ここで完結</h3>
-                        <p><span class="red">食べる・飲む・歌う・ダーツ。</span><br>
-                            5店舗とカラオケが一か所に集結！</p>
-                    </li>
-                </ul>
             </div>
         </div>
     </section>
@@ -154,11 +106,11 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             <h3>カラオケワールド<br>
                                 <span class="pink">ももたろう</span>
                             </h3>
-                            <p class="yafuso_shop_lead_029">屋台村に隣接するカラオケ店。<br>
-                                部屋から屋台の料理を注文できる唯一無二のスタイル。</p>
+                            <p class="yafuso_shop_lead_029">屋台村に隣接するカラオケ店♪<br>
+                                お部屋からお電話で屋台のお料理を注文できる！</p>
+                            <p class="yafuso_shop_campaign_029 blinking tcenter_sp">平日20時までのご来店で<br class="sponly">飲み放題1時間無料！</p>
                             <ul class="yafuso_shop_points_029">
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>ダーツマシンあり</li>
-                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>平日20時までの来店で飲み放題1時間無料</li>
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>予約 098-879-1055</li>
                             </ul>
                             <div class="yafuso_shop_meta_029">
@@ -168,7 +120,10 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>@karaoke.momotaro
                                 </a>
                             </div>
-                            <a class="yafuso_shop_detail_button_029" href="#market_stalls_momotaro">詳しくはコチラ</a>
+                            <div class="yafuso_shop_actions_029">
+                                <a class="yafuso_shop_detail_button_029" href="market_stalls.php#market_stalls_momotaro">詳しくはコチラ</a>
+                                <a class="yafuso_shop_sns_button_029" href="https://www.instagram.com/karaoke.momotaro/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</a>
+                            </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
                             <img src="<?php echo $img; ?>/karaoke_momotarou.webp" alt="カラオケワールドももたろうの店内イメージ" loading="lazy">
@@ -184,7 +139,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             <ul class="yafuso_shop_points_029">
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>テーブルチャージなし</li>
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>アサヒスーパードライあり</li>
-                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>団体予約OK</li>
+                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>団体さまのご予約OK！</li>
                             </ul>
                             <div class="yafuso_shop_meta_029">
                                 <span><i class="fa-regular fa-clock" aria-hidden="true"></i>18:00 - 2:00</span>
@@ -193,7 +148,10 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>@horumon_okada
                                 </a>
                             </div>
-                            <a class="yafuso_shop_detail_button_029" href="#market_stalls_okada">詳しくはコチラ</a>
+                            <div class="yafuso_shop_actions_029">
+                                <a class="yafuso_shop_detail_button_029" href="market_stalls.php#market_stalls_okada">詳しくはコチラ</a>
+                                <a class="yafuso_shop_sns_button_029" href="https://www.instagram.com/horumon_okada/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</a>
+                            </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
                             <img src="<?php echo $img; ?>/okada_0.webp" alt="西成ホルモンおか田の看板イメージ" loading="lazy">
@@ -207,10 +165,10 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             <p class="yafuso_shop_lead_029">大量の煮干しと節類からとった、香り高い極上の正油スープ。<br>
                                 今日をがんばる心と体に、じんわり染み渡る一杯です。</p>
                             <ul class="yafuso_shop_points_029">
+                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>今日をがんばる心と体に、じんわり染み渡る活力の味</li>
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>煮干し＆節系の香り高い、極上の正油スープ</li>
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>お食事メインのランチから、横丁巡りのひとときまで</li>
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>ラーメン一杯だけでのご利用も、どうぞお気軽に</li>
-                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>今日をがんばる心と体に、じんわり染み渡る活力の味</li>
                             </ul>
                             <div class="yafuso_shop_meta_029">
                                 <span><i class="fa-regular fa-clock" aria-hidden="true"></i>18:00 - 2:00</span>
@@ -219,7 +177,10 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>@tokunobuyatairamen
                                 </a>
                             </div>
-                            <a class="yafuso_shop_detail_button_029" href="#market_stalls_tokunobu">詳しくはコチラ</a>
+                            <div class="yafuso_shop_actions_029">
+                                <a class="yafuso_shop_detail_button_029" href="market_stalls.php#market_stalls_tokunobu">詳しくはコチラ</a>
+                                <a class="yafuso_shop_sns_button_029" href="https://www.instagram.com/tokunobuyatairamen/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</a>
+                            </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
                             <img src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメンイメージ" loading="lazy">
@@ -230,12 +191,11 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                         <div class="yafuso_shop_body_029">
                             <img class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_tatan.webp" alt="居酒屋たーたんのSNSアイコン" loading="lazy">
                             <h3>居酒屋 <span class="red">たーたん</span></h3>
-                            <p class="yafuso_shop_lead_029">沖縄料理とお肉料理をメイン。<br>
-                                常時40から50種のフードメニューを提供。</p>
+                            <p class="yafuso_shop_lead_029">沖縄料理とお肉料理がメイン。<br>
+                                常時40〜50種類のフードメニューあり◎</p>
                             <ul class="yafuso_shop_points_029">
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>日替わりおすすめあり</li>
-                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>プレモルや角ハイ入り飲み放題</li>
-                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>約40種のせんべろ</li>
+                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>プレモルや角ハイ込みの飲み放題あり</li>
                             </ul>
                             <div class="yafuso_shop_meta_029">
                                 <span><i class="fa-regular fa-clock" aria-hidden="true"></i>18:00 - 2:00</span>
@@ -244,7 +204,10 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>@ta_tan0301
                                 </a>
                             </div>
-                            <a class="yafuso_shop_detail_button_029" href="#market_stalls_tatan">詳しくはコチラ</a>
+                            <div class="yafuso_shop_actions_029">
+                                <a class="yafuso_shop_detail_button_029" href="market_stalls.php#market_stalls_tatan">詳しくはコチラ</a>
+                                <a class="yafuso_shop_sns_button_029" href="https://www.instagram.com/ta_tan0301/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</a>
+                            </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
                             <img src="<?php echo $img; ?>/tatan_3.webp" alt="居酒屋たーたんの看板イメージ" loading="lazy">
@@ -269,7 +232,10 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>@tebachu.tebasaki
                                 </a>
                             </div>
-                            <a class="yafuso_shop_detail_button_029" href="#market_stalls_tebachu">詳しくはコチラ</a>
+                            <div class="yafuso_shop_actions_029">
+                                <a class="yafuso_shop_detail_button_029" href="market_stalls.php#market_stalls_tebachu">詳しくはコチラ</a>
+                                <a class="yafuso_shop_sns_button_029" href="https://www.instagram.com/tebachu.tebasaki/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</a>
+                            </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
                             <img src="<?php echo $img; ?>/tebachu_1.webp" alt="手羽先居酒屋てばちゅ〜の看板イメージ" loading="lazy">
@@ -285,7 +251,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
             <div class="yafuso_single_029">
                 <div class="yafuso_section_title_029 yafuso_section_title_center_029">
                     <span aria-hidden="true"></span>
-                    <h2 class="act txt_split type_popup">今日の使い方</h2>
+                    <h2 class="act txt_split type_popup">こんな時には"屋台村"へ！</h2>
                 </div>
                 <ul class="yafuso_scene_grid_029 act inup">
                     <li>
@@ -294,7 +260,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                         </figure>
                         <div>
                             <h3><span>01</span>飲み会・打ち上げ</h3>
-                            <p>会社の同僚、サークル仲間、友達グループで。食事の後のカラオケまで全部ここで完結。</p>
+                            <p>友達・会社の同僚・サークル仲間と。食事の後の楽しいカラオケまで、全部ここで完結♪</p>
                         </div>
                     </li>
                     <li>
@@ -302,8 +268,8 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             <img src="<?php echo $img; ?>/use_date_v2.webp" alt="デート・女子会のイメージ" loading="lazy">
                         </figure>
                         <div>
-                            <h3><span>02</span>デート・女子会</h3>
-                            <p>選択肢の多さが会話のネタになる、カジュアルでにぎやかな横丁時間。</p>
+                            <h3><span>02</span>カジュアルな飲みに◎</h3>
+                            <p>横丁の中でハシゴ酒できて移動も楽！</p>
                         </div>
                     </li>
                     <li>
@@ -317,11 +283,11 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                     </li>
                     <li>
                         <figure>
-                            <img src="<?php echo $img; ?>/use_solo_v2.webp" alt="一人飲み・ふらっと立ち寄りのイメージ" loading="lazy">
+                            <img src="<?php echo $img; ?>/use_solo_v2.webp" alt="一人飲み・ふらっと立ち寄りの店主イメージ" loading="lazy">
                         </figure>
                         <div>
                             <h3><span>04</span>一人飲み・ふらっと立ち寄り</h3>
-                            <p>カウンターでマスターや常連とゆるく話す、アットホームな時間にも。</p>
+                            <p>アットホームな空間で、まったり過ごしたいひとり時間にも◎</p>
                         </div>
                     </li>
                 </ul>
@@ -329,96 +295,6 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
         </div>
     </section>
 
-    <section>
-        <div id="price" class="yafuso_price_029">
-            <div class="yafuso_single_029">
-                <div class="yafuso_section_title_029 yafuso_section_title_center_029">
-                    <span aria-hidden="true"></span>
-                    <h2 class="act txt_split type_popup">お得な料金プラン</h2>
-                </div>
-                <div class="yafuso_price_grid_029">
-                    <article>
-                        <figure><img src="<?php echo $img; ?>/price_senbero.webp" alt="せんべろプランのイラスト" loading="lazy"></figure>
-                        <h3>せんべろプラン</h3>
-                        <p>ドリンク最大4杯</p>
-                        <strong>¥1,000</strong>
-                        <small>おか田・たーたんで楽しめる定番プラン。<br>チャージ料なし。</small>
-                    </article>
-                    <article>
-                        <figure><img src="<?php echo $img; ?>/price_nomihodai.webp" alt="飲み放題プランのイラスト" loading="lazy"></figure>
-                        <h3>飲み放題プラン</h3>
-                        <p>横丁巡りにうれしい利用しやすい価格</p>
-                        <strong>1h ¥1,000〜</strong>
-                        <small>たーたんはプレモル・角ハイ入り。<br>内容は店舗により異なります。</small>
-                    </article>
-                    <article>
-                        <figure><img src="<?php echo $img; ?>/price_karaoke.webp" alt="カラオケ平日特典のイラスト" loading="lazy"></figure>
-                        <h3>カラオケ平日特典</h3>
-                        <p>平日20時までの来店で</p>
-                        <strong>飲み放題<br>1時間無料</strong>
-                        <small>ダーツマシン設置。<br>部屋から屋台村への注文もできます。</small>
-                    </article>
-                </div>
-                <p class="yafuso_price_note_029">価格は税込です。店舗により内容が異なります。詳細は各店舗にてご確認ください。</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="yafuso_sns_029">
-            <div class="yafuso_single_029">
-                <div class="yafuso_sns_mark_029" aria-hidden="true">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-                <div class="yafuso_section_title_029 yafuso_section_title_center_029">
-                    <h2 class="act txt_split type_popup">SNS・インスタグラム</h2>
-                </div>
-                <p class="yafuso_sns_lead_029">各店舗の最新情報・新メニュー・イベントはInstagramで発信中。</p>
-                <ul class="yafuso_sns_grid_029">
-                    <li>
-                        <a href="https://www.instagram.com/karaoke.momotaro/" target="_blank" rel="noopener noreferrer">
-                            <img class="yafuso_sns_account_icon_029" src="<?php echo $img; ?>/sns_momotaro.webp" alt="カラオケワールドももたろうのInstagramアイコン" loading="lazy">
-                            <span>カラオケワールド<br>ももたろう</span>
-                            <small>@karaoke.momotaro</small>
-                            <b><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</b>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/horumon_okada/" target="_blank" rel="noopener noreferrer">
-                            <img class="yafuso_sns_account_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="西成ホルモンおか田のInstagramアイコン" loading="lazy">
-                            <span>西成ホルモン<br>おか田</span>
-                            <small>@horumon_okada</small>
-                            <b><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</b>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/tokunobuyatairamen/" target="_blank" rel="noopener noreferrer">
-                            <img class="yafuso_sns_account_icon_029" src="<?php echo $img; ?>/sns_tokunobu.webp" alt="屋台ラーメンとくのぶのInstagramアイコン" loading="lazy">
-                            <span>屋台ラーメン<br>とくのぶ</span>
-                            <small>@tokunobuyatairamen</small>
-                            <b><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</b>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/ta_tan0301/" target="_blank" rel="noopener noreferrer">
-                            <img class="yafuso_sns_account_icon_029" src="<?php echo $img; ?>/sns_tatan.webp" alt="居酒屋たーたんのInstagramアイコン" loading="lazy">
-                            <span>居酒屋<br>たーたん</span>
-                            <small>@ta_tan0301</small>
-                            <b><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</b>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/tebachu.tebasaki/" target="_blank" rel="noopener noreferrer">
-                            <img class="yafuso_sns_account_icon_029" src="<?php echo $img; ?>/sns_tebachu.webp" alt="手羽先居酒屋てばちゅ〜のInstagramアイコン" loading="lazy">
-                            <span>手羽先居酒屋<br>てばちゅ〜</span>
-                            <small>@tebachu.tebasaki</small>
-                            <b><i class="fa-brands fa-instagram" aria-hidden="true"></i>フォローする</b>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
 </main>
 
 <?php include_once './footer.php'; ?>

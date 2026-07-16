@@ -83,6 +83,7 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
 
   <!-- OGP -->
   <meta property="og:url" content="<?= htmlspecialchars(nowUrl(), ENT_QUOTES, 'UTF-8') ?>">

@@ -60,11 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("load", function () {
   // 表示タイミングを個別指定（ミリ秒）
   const targets = [
-    { className: "act01", delay: 500 },
-    { className: "act02", delay: 1000 },
-    { className: "act03", delay: 1500 },
-    { className: "act04", delay: 3000 },
-    { className: "act05", delay: 3000 },
+    { className: "act01", delay: 300 },
+    { className: "act02", delay: 600 },
+    { className: "act03", delay: 900 },
+    { className: "act04", delay: 1200 },
+    { className: "act05", delay: 1200 },
   ];
 
   targets.forEach(({ className, delay }) => {

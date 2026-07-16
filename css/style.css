@@ -10104,9 +10104,9 @@ body.products-modal-open {
 
 .yafuso_hero_inner_029 h1 {
   color: #fff;
-  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-family: "Reggae One", "RocknRoll One", "Noto Sans JP", sans-serif;
   font-size: clamp(44px, 9vw, 96px);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1.06;
   text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 0, 0, 0.72);
 }
@@ -10150,12 +10150,17 @@ body.products-modal-open {
   color: var(--yafuso_black);
   box-shadow: 0 7px 0 #c08d00;
 }
+.yafuso_hero_buttons_029 a:nth-child(3) {
+  background: #fff;
+  color: var(--yafuso_red);
+  box-shadow: 0 7px 0 rgba(180, 120, 0, 0.72);
+}
 
 .yafuso_hero_status_029 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  width: min(100%, 610px);
+  width: min(100%, 820px);
   margin-top: 28px;
 }
 .yafuso_hero_status_029 li {
@@ -10245,8 +10250,10 @@ body.products-modal-open {
 .yafuso_concept_text_029 {
   display: grid;
   gap: 10px;
+  font-size: clamp(17px, 2vw, 23px);
   font-weight: 900;
   line-height: 1.72;
+  text-align: center;
 }
 
 .yafuso_concept_photo_029 {
@@ -10259,6 +10266,35 @@ body.products-modal-open {
   width: 100%;
   aspect-ratio: 16/7;
   object-fit: cover;
+}
+
+.yafuso_feature_pills_029 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: min(100%, 920px);
+  margin: 20px auto 0;
+}
+.yafuso_feature_pills_029 li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 10px 14px;
+  border: 3px solid var(--yafuso_line);
+  border-radius: 999px;
+  background: #fffdf0;
+  color: var(--yafuso_black);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 7px 0 rgba(184, 104, 0, 0.15);
+}
+.yafuso_feature_pills_029 li i {
+  color: var(--yafuso_red);
+  flex: 0 0 auto;
 }
 
 .yafuso_top_gallery_029,
@@ -10413,6 +10449,28 @@ body.products-modal-open {
   flex: 0 0 auto;
 }
 
+.yafuso_shop_point_emphasis_029 {
+  padding: 8px 10px;
+  border: 2px solid var(--yafuso_red);
+  border-radius: 8px;
+  background: #fff0a4;
+  color: var(--yafuso_red);
+}
+
+.yafuso_shop_campaign_029 {
+  width: fit-content;
+  margin-top: 4px;
+  padding: 10px 16px;
+  border: 3px solid var(--yafuso_red);
+  border-radius: 8px;
+  background: #fff0a4;
+  color: var(--yafuso_red);
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 900;
+  line-height: 1.45;
+}
+
 .yafuso_shop_meta_029 {
   display: flex;
   flex-wrap: wrap;
@@ -10445,6 +10503,31 @@ body.products-modal-open {
   font-weight: 900;
   line-height: 1;
   box-shadow: 0 5px 0 var(--yafuso_red_dark);
+}
+
+.yafuso_shop_actions_029 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.yafuso_shop_sns_button_029 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #211207;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 5px 0 #000;
 }
 
 .yafuso_shop_visual_029 {
@@ -10710,7 +10793,7 @@ body.products-modal-open {
   display: grid;
   gap: 14px;
 }
-.yafuso_access_panel_029 div {
+.yafuso_access_panel_029 dl > div {
   display: grid;
   gap: 5px;
 }
@@ -10728,11 +10811,33 @@ body.products-modal-open {
   line-height: 1.6;
 }
 
+.yafuso_access_notice_029 {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 229, 0, 0.32);
+}
+.yafuso_access_notice_029 h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--yafuso_yellow);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.45;
+}
+.yafuso_access_notice_029 > p {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
 .yafuso_map_panel_029 {
   display: grid;
   gap: 14px;
   padding: 16px;
-  grid-column: 1/-1;
 }
 .yafuso_map_panel_029 a {
   display: inline-flex;
@@ -10788,14 +10893,45 @@ body.products-modal-open {
   line-height: 1.7;
 }
 .yafuso_parking_panel_029 strong {
-  display: block;
-  padding: 10px 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.yafuso_drunk_driving_notice_029 {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 7px;
   background: rgba(231, 19, 19, 0.28);
-  color: #fff;
-  font-size: 14px;
+}
+.yafuso_drunk_driving_notice_029 img {
+  width: 96px;
+  aspect-ratio: 200/169;
+  object-fit: contain;
+}
+.yafuso_drunk_driving_notice_029 div {
+  display: grid;
+  gap: 6px;
+}
+.yafuso_drunk_driving_notice_029 h4 {
+  color: var(--yafuso_yellow);
+  font-size: 17px;
   font-weight: 900;
+  line-height: 1.4;
+}
+.yafuso_drunk_driving_notice_029 p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.8;
 }
 
 .yafuso_footer_029 {
@@ -10852,7 +10988,7 @@ body.products-modal-open {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .yafuso_concept_grid_029 {
-    grid-template-columns: minmax(280px, 0.88fr) minmax(420px, 1.12fr);
+    grid-template-columns: 1fr;
     align-items: center;
   }
   .yafuso_concept_grid_029 .yafuso_section_title_029 {
@@ -10881,6 +11017,9 @@ body.products-modal-open {
   }
   .yafuso_access_grid_029 {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .yafuso_parking_panel_029 {
+    grid-column: 1/-1;
   }
 }
 @media (min-width: 1180px) {
@@ -10993,6 +11132,10 @@ body.products-modal-open {
   .yafuso_hero_buttons_029 a {
     width: 100%;
   }
+  .yafuso_feature_pills_029 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
   .yafuso_concept_photo_029 img {
     aspect-ratio: 4/2.5;
   }
@@ -11015,6 +11158,9 @@ body.products-modal-open {
   .yafuso_shop_detail_button_029 {
     margin: 0.5em auto;
   }
+  .yafuso_shop_actions_029 {
+    justify-content: center;
+  }
   .yafuso_sns_grid_029 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
@@ -11033,6 +11179,12 @@ body.products-modal-open {
   }
   .yafuso_price_grid_029 article {
     min-height: 210px;
+  }
+}
+@media (max-width: 430px) {
+  .yafuso_hero_status_029,
+  .yafuso_feature_pills_029 {
+    grid-template-columns: 1fr;
   }
 }
 .yafuso_lower_concept_029 {
@@ -12234,12 +12386,20 @@ body.products-modal-open {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.68) 45%, rgba(0, 0, 0, 0.22) 100%), linear-gradient(180deg, rgba(255, 214, 0, 0.1), rgba(167, 0, 0, 0.42));
+  display: none;
 }
-.yafuso_vendors_hero_photo_029 img {
+.yafuso_vendors_hero_photo_029.slider_fullslider_wrap,
+.yafuso_vendors_hero_photo_029 .slider_fullslider,
+.yafuso_vendors_hero_photo_029 .slider_fullslider .slide {
+  width: 100%;
+  height: 100%;
+}
+.yafuso_vendors_hero_photo_029 img,
+.yafuso_vendors_hero_photo_029 .slider_fullslider .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 
 .yafuso_vendors_hero_inner_029 {
@@ -12296,6 +12456,35 @@ body.products-modal-open {
   font-weight: 800;
   line-height: 2;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.78);
+}
+
+.yafuso_vendors_hero_points_029 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: min(100%, 650px);
+  margin-top: 22px;
+}
+.yafuso_vendors_hero_points_029 li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  background: rgba(255, 253, 240, 0.94);
+  color: var(--yafuso_black);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.35;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+.yafuso_vendors_hero_points_029 i {
+  color: var(--yafuso_red);
+  flex: 0 0 auto;
 }
 
 .yafuso_vendors_hero_actions_029 {
@@ -12364,7 +12553,7 @@ body.products-modal-open {
 
 .yafuso_vendors_message_grid_029 {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  grid-template-columns: 1fr;
   gap: 28px;
   align-items: stretch;
 }
@@ -12691,6 +12880,11 @@ body.products-modal-open {
   font-size: 14px;
   font-weight: 900;
   box-shadow: 0 5px 0 var(--yafuso_red_dark);
+}
+.yafuso_vendor_room_info_029 .yafuso_vendor_room_apply_029 {
+  background: var(--yafuso_yellow);
+  color: var(--yafuso_black) !important;
+  box-shadow: 0 5px 0 #a97900;
 }
 
 .yafuso_vendors_conditions_029 {
@@ -13100,11 +13294,11 @@ body.products-modal-open {
     min-height: auto;
   }
   .yafuso_vendors_hero_photo_029 img {
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
   }
   .yafuso_vendors_hero_photo_029::after {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.34)), linear-gradient(180deg, rgba(255, 214, 0, 0.1), rgba(167, 0, 0, 0.22));
+    display: none;
   }
   .yafuso_vendors_hero_inner_029 {
     padding: 58px 0 34px;
@@ -13118,6 +13312,9 @@ body.products-modal-open {
   .yafuso_vendors_intro_029 {
     font-size: 14px;
     line-height: 1.9;
+  }
+  .yafuso_vendors_hero_points_029 {
+    grid-template-columns: 1fr;
   }
   .yafuso_vendors_hero_actions_029 a {
     width: 100%;
