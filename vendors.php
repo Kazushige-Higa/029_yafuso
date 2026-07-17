@@ -80,7 +80,7 @@ HTML;
                     <div class="yafuso_single_029">
                         <div class="yafuso_vendors_message_grid_029">
                             <div class="yafuso_vendors_message_text_029">
-                                <h3 class="tcenter">ただの「貸し屋台」ではなく、<br>お店同士が「ともに成長」できる環境です。</h3>
+                                <h3 class="tcenter">ただの「貸し屋台」ではなく、<br>お店同士が「ともに成長」<br class="sponly">できる環境です。</h3>
                                 <p class="tcenter">お店同士がお客様を共有し、ともに成長していくのが”やふそ屋台村 ちょうちん横丁”の特徴です。<br>
                                     あなたのお店が繁盛すれば、横丁全体が盛り上がる。そして横丁全体が繁盛すれば、あなたのお店にもお客様が来る。<br>
                                     そんなエネルギッシュな環境に、あなたのお店も加わってみませんか。<br>
@@ -560,7 +560,7 @@ HTML;
                                     </div>
                                 </dl>
                                 <a href="https://www.marushin-v.com/" target="_blank" rel="noopener noreferrer">マルシングループについて</a>
-                                <h3 class="yafuso_vendors_company_subtitle_029">テナント募集・契約に関するお問い合わせ先</h3>
+                                <h3 class="yafuso_vendors_company_subtitle_029">テナント募集・契約に関する<br class="sponly">お問い合わせ先</h3>
                                 <dl>
                                     <div>
                                         <dt>会社名</dt>

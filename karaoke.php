@@ -484,7 +484,7 @@ HTML;
                         <div class="yafuso_karaoke_rooms_grid_029">
                             <div class="yafuso_karaoke_rooms_text_029 act inup">
                                 <span class="yafuso_lower_lantern_icon_029" aria-hidden="true">歌</span>
-                                <h2>大人数の宴会も、幹事さん安心。</h2>
+                                <h2>大人数の宴会も、<br class="sponly">幹事さん安心。</h2>
                                 <p>隣接する屋台村でたっぷり飲み食いして、そのままももたろうへ。<br>
                                     移動不要でスムーズに流れ込めるのが最大の魅力です。</p>
                             </div>

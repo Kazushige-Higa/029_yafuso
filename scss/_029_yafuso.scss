@@ -4090,7 +4090,10 @@
     padding: 22px 18px;
   }
 
-  .yafuso_vendors_message_text_029 h3,
+  .yafuso_vendors_message_text_029 h3 {
+    font-size: 22px;
+  }
+
   .yafuso_vendors_contact_text_029 h2 {
     font-size: 25px;
   }
@@ -4119,7 +4122,10 @@
     font-size: clamp(28px, 5vw, 55px);
   }
 
-  .yafuso_vendor_room_head_029 h3,
+  .yafuso_vendor_room_head_029 h3 {
+    font-size: 23px;
+  }
+
   .yafuso_vendors_condition_card_029 h2 {
     font-size: 25px;
   }
@@ -5411,6 +5417,15 @@
 
   .yafuso_karaoke_feature_grid_029 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    article {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    h3 {
+      font-size: 17px;
+    }
   }
 
   .yafuso_karaoke_drink_photo_029 img {

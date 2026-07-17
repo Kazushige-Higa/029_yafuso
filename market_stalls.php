@@ -42,7 +42,7 @@ HTML;
                     <div class="yafuso_single_029">
                         <div class="yafuso_market_scene_head_029">
                             <span aria-hidden="true"></span>
-                            <h2>気分に合わせて、横丁をハシゴ</h2>
+                            <h2>気分に合わせて、<br class="sponly">横丁をハシゴ</h2>
                         </div>
                         <div class="yafuso_market_scene_grid_029">
                             <div class="yafuso_market_scene_item_029">
@@ -206,7 +206,7 @@ HTML;
                             </div>
                             <div class="yafuso_market_shop_body_029">
                                 <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_momotaro.webp" alt="ももたろうのSNSアイコン" loading="lazy">
-                                <h3>カラオケワールド <span class="pink">ももたろう</span></h3>
+                                <h3>カラオケワールド<br class="sponly"> <span class="pink">ももたろう</span></h3>
                                 <p class="yafuso_market_lead_029">屋台村と隣接する、ここにしかない珍しいスタイルのカラオケ店。<br>
                                 屋台村の種類豊富な料理をカラオケルームから注文できます。</p>
                                 <ul class="yafuso_market_point_list_029">
