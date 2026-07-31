@@ -33,6 +33,7 @@ $conf['supported'] = false;
 $conf['thanks'] = '/';
 $conf['failure'] = '/';
 $conf['required_fields'] = [];
+$conf['admin_body'] = '';
 $conf['field_labels'] = [
     'name' => 'お名前',
     'email' => 'メールアドレス',
@@ -64,6 +65,15 @@ if ($form_type === 'karaoke_reservation') {
     $conf['res_subject'] = '【カラオケワールド ももたろう】予約リクエストを受け付けました';
     $conf['required_fields'] = ['name', 'email', 'tel', 'reservation_date', 'reservation_time', 'guests', 'plan', 'agree'];
     $conf['field_labels']['message'] = 'ご要望・備考';
+    $conf['admin_body'] = <<<EOM
+【やふそ屋台村ちょうちん横丁ホームページより】
+オンライン予約フォームからご予約が入りました。
+内容を確認の上、折り返しのご対応をお願いします。
+
+─ご予約内容─────────────────
+<resbody>
+<errbody>
+EOM;
     $conf['res_body'] = <<<EOM
 カラオケワールド ももたろうへ予約リクエストをお送りいただき、ありがとうございます。
 空き状況を確認のうえ、店舗より折り返しご連絡いたします。
@@ -82,6 +92,15 @@ EOM;
     $conf['subject'] = '【出店申込み・お問い合わせ】Webフォームより受付';
     $conf['res_subject'] = '【やふそ屋台村 ちょうちん横丁】お問い合わせを受け付けました';
     $conf['required_fields'] = ['name', 'email', 'tel', 'room', 'genre', 'message', 'agree'];
+    $conf['admin_body'] = <<<EOM
+【やふそ屋台村ちょうちん横丁ホームページより】
+お申込み・お問い合わせフォームから出店のお申し込み・お問い合わせが入りました。
+内容を確認の上、折り返しのご対応をお願いします。
+
+─お申込み・お問い合わせ内容─────────────────
+<resbody>
+<errbody>
+EOM;
     $conf['res_body'] = <<<EOM
 やふそ屋台村 ちょうちん横丁へお問い合わせいただき、ありがとうございます。
 内容を確認のうえ、担当者より折り返しご連絡いたします。
@@ -6010,14 +6029,17 @@ function send_mail() {
 		}
 
 		$conf['res_body'] = str_replace('<resbody>',$resbody,$conf['res_body']);
+		$conf['admin_body'] = str_replace('<resbody>',$resbody,$conf['admin_body']);
 
 		// 添付ファイルが存在する場合、エラーチェックを行う
 		if(isset($_FILES['file']['name']) && 0 < is_array_count((array)$_FILES['file']['name'])) {
 			$files = check_file();
 			$conf['res_body'] = str_replace('<errbody>',$err["msg"],$conf['res_body']);
+			$conf['admin_body'] = str_replace('<errbody>',$err["msg"],$conf['admin_body']);
 		} else {
 			// 添付ファイルが存在しない場合、エラーをボディを削除する
 			$conf['res_body'] = str_replace('<errbody>',"",$conf['res_body']);
+			$conf['admin_body'] = str_replace('<errbody>',"",$conf['admin_body']);
         }
 
         $admin_posted_body = "";
@@ -6031,7 +6053,7 @@ function send_mail() {
             $admin_posted_body .= "[ HTTP REFERER ] ".(string)($_SERVER["HTTP_REFERER"] ?? '')."";
         }
         // 管理者用(メール本文)
-        $admin_body = $conf['res_body'] . $admin_posted_body;
+        $admin_body = $conf['admin_body'] . $admin_posted_body;
 
         // 問い合わせユーザ用(メール本文)
         $user_body = $conf['res_body'];

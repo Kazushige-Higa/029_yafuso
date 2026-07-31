@@ -32,7 +32,7 @@ $use_yafuso_layout = true;
 <div class='space_3 space_sp2'></div>
 <section>
     <div class="single">
-        <div class="mbox border bc_aaa size_1">
+        <div class="mbox border bc_aaa size_1 bg_white">
             <h3 class="tcenter base_color fs_30 fs_sp20">
                 <span><?php echo $is_karaoke_reservation_thanks ? '予約リクエストを送信しました' : '送信が完了しました'; ?></span>
             </h3>
