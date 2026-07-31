@@ -46,6 +46,10 @@ $configured_mail = getenv('YAFUSO_MAIL_TO');
 if ($configured_mail === false || trim((string)$configured_mail) === '') {
     $configured_mail = $site_config['mail_to'] ?? '';
 }
+if (trim((string)$configured_mail) === '') {
+    // This site has a fixed operational recipient; environment/site config can override it.
+    $configured_mail = 'truth@d-neko.com';
+}
 $mailRecipients = [];
 $mailRecipientsValid = true;
 foreach (explode(',', (string)$configured_mail) as $recipient) {
