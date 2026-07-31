@@ -9747,6 +9747,10 @@ body.products-modal-open {
   color: inherit;
   letter-spacing: 0;
 }
+.yafuso_page_029 :where(h1, h2, h3, h4) {
+  line-break: strict;
+  text-wrap: balance;
+}
 .yafuso_page_029 :where(h1, h2, h3, h4, p, figure, ul, dl, dd) {
   margin: 0;
 }

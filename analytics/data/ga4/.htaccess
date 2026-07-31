@@ -1,0 +1,12 @@
+# GA4 認証情報・キャッシュの非公開化
+# このフォルダ内のファイル(サービスアカウント鍵・トークン・キャッシュ)へ
+# ブラウザから直接アクセスできないようにする
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+
+# 古いApache(2.2系)向けフォールバック
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

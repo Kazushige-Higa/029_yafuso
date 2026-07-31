@@ -8,6 +8,8 @@ $page_meta_image = $img . "/vendors_4_1.webp";
 $page_style = "";
 $use_yafuso_layout = true;
 $hide_yafuso_parking_panel = true;
+$vendor_form_context = yafuso_mailform_context('vendor_inquiry');
+$vendor_csrf_token = $vendor_form_context['token'];
 $page_script = <<<'HTML'
 <script src="js/slider_fullslider.js" defer></script>
 <script src="js/gallery_thumbnail.js" defer></script>
@@ -525,9 +527,21 @@ HTML;
                                 <h2>お申込み・お問い合わせ<br class="sponly">フォーム</h2>
                                 <p>下記の内容をご確認・ご同意のうえ、<br class="sponly">お問い合わせください。<br class="sponly">担当者よりご連絡いたします。</p>
                             </div>
-                            <form class="yafuso_vendors_form_029" action="#" method="post" data-yafuso-required-form>
+                            <form class="yafuso_vendors_form_029" action="mailform/send.php" method="post" data-yafuso-required-form>
+                                <input type="hidden" name="form_type" value="vendor_inquiry">
+                                <input type="hidden" name="form_started_at" value="<?php echo (int)$vendor_form_context['started_at']; ?>">
+                                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($vendor_csrf_token, ENT_QUOTES, 'UTF-8'); ?>">
+                                <div class="yafuso_form_trap_029" aria-hidden="true">
+                                    <label>入力しないでください<input type="text" name="website_url" tabindex="-1" autocomplete="off"></label>
+                                </div>
+                                <?php if ((string)($_GET['form_error'] ?? '') === '1') : ?>
+                                    <div class="yafuso_form_error_029" role="alert">
+                                        <strong>送信できませんでした</strong>
+                                        <p>入力内容をご確認のうえ、時間をおいて再度お試しください。</p>
+                                    </div>
+                                <?php endif; ?>
                                 <label class="yafuso_vendors_agree_029">
-                                    <input type="checkbox" name="agree" required>
+                                    <input type="checkbox" name="agree" value="1" required>
                                     <span>上記「設備・条件・出店に伴うルールについて」に同意します <b class="yafuso_required_badge_029">必須</b></span>
                                 </label>
                                 <div class="yafuso_vendors_form_grid_029">

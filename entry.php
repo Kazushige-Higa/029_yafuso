@@ -13,7 +13,7 @@ $page_title_eng = ($entry_type === 'works') ? "Portfolio" : "News";
 // Get article ID from URL parameter
 $eid = isset($_GET["eid"]) ? trim($_GET["eid"]) : '';
 $entry_endpoint = ($entry_type === 'works') ? "/works" : "/blog";
-$list_back_link = "entry_list.php?type=" . urlencode($entry_type);
+$list_back_link = ($entry_type === 'works') ? '/works/' : '/news/';
 $list_back_text = ($entry_type === 'works') ? "制作実績一覧へ戻る" : "記事一覧へ戻る";
 $related_heading = ($entry_type === 'works') ? "関連制作実績" : "関連記事";
 $post = !empty($eid) ? microcms_get($entry_endpoint . "/" . rawurlencode($eid)) : null;
@@ -27,13 +27,13 @@ $post = !empty($eid) ? microcms_get($entry_endpoint . "/" . rawurlencode($eid)) 
         <?php
         if ($entry_type === 'works') {
           $category_name = '制作実績';
-          $category_link = 'entry_list.php?type=works';
+          $category_link = '/works/';
         } else {
           $primary_tag = (isset($post->tags) && !empty($post->tags)) ? $post->tags[0] : null;
           $category_name = ($primary_tag && isset($primary_tag->name)) ? $primary_tag->name : 'カテゴリーなし';
           $category_link = ($primary_tag && isset($primary_tag->id))
-            ? 'entry_list.php?type=blog&tag=' . urlencode($primary_tag->id)
-            : 'entry_list.php?type=blog';
+            ? '/news/?tag=' . urlencode($primary_tag->id)
+            : '/news/';
         }
 
         $writer_name = isset($post->writer->name) ? $post->writer->name : 'ライター';
@@ -100,8 +100,8 @@ $post = !empty($eid) ? microcms_get($entry_endpoint . "/" . rawurlencode($eid)) 
             </div>
             <div>
               <ul class="breadcrumb">
-                <li><a href="./"><i class="fas fa-home"></i></a></li>
-                <li><a href="entry.php?type=<?php echo urlencode($entry_type); ?>&eid=<?php echo urlencode($post->id); ?>"><?php echo htmlspecialchars($post->title, ENT_QUOTES, 'UTF-8'); ?></a></li>
+                <li><a href="/"><i class="fas fa-home"></i></a></li>
+                <li><a href="<?php echo $entry_type === 'works' ? '/works/' : '/news/'; ?><?php echo rawurlencode($post->id); ?>"><?php echo htmlspecialchars($post->title, ENT_QUOTES, 'UTF-8'); ?></a></li>
               </ul>
             </div>
             <h1>
@@ -222,7 +222,7 @@ $post = !empty($eid) ? microcms_get($entry_endpoint . "/" . rawurlencode($eid)) 
               $side_date_text = $side_timestamp ? date('Y.m.d', $side_timestamp) : '-';
               ?>
               <li>
-                <a href='entry.php?type=<?php echo urlencode($entry_type); ?>&eid=<?php echo urlencode($side_post->id); ?>'>
+                <a href='<?php echo $entry_type === 'works' ? '/works/' : '/news/'; ?><?php echo rawurlencode($side_post->id); ?>'>
                   <figure class="img">
                     <?php if (isset($side_post->thumbnail->url)): ?>
                       <img src="<?php echo htmlspecialchars($side_post->thumbnail->url, ENT_QUOTES, 'UTF-8'); ?>?w=200" alt="<?php echo htmlspecialchars($side_post->title, ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
@@ -259,5 +259,5 @@ $post = !empty($eid) ? microcms_get($entry_endpoint . "/" . rawurlencode($eid)) 
   </div>
 </div>
 
-<script src="js/blog_cms.js" defer></script>
+<script src="/js/blog_cms.js" defer></script>
 <?php include_once './footer.php'; ?>

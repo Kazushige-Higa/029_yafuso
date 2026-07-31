@@ -3,19 +3,18 @@
     <div class="child border bc_eee">
         <div class="p5 bg_white">
             <figure class="tcenter">
-                <img src="<?php echo $img; ?>/favicon.png" alt="デザネコのアイコン">
+                <img src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁">
             </figure>
             <p class='tcenter'>
                 <span class='bold base_color border_bottom fs_25 fs_sp25'>
-                    デザネコ
+                    やふそ屋台村<br>ちょうちん横丁
                 </span>
             </p>
             <p class="text">
-                ネコの手、借りませんか？<br>
-                デザインを通して、周りとのつながりを築きます。デザネコは魅力を引き出し、伝わりやすく心に届くデザインでお客さまの満足度が高まるよう努めます。私たちの制作物が、皆さまの幸せに繋がりますように。
+                浦添市屋富祖、国道58号沿いの屋内型屋台村です。店舗やイベントの新着情報をお届けします。
             </p>
             <div class='space_1 space_sp1'></div>
-            <button class='btn_mini radius center'><a href='./'>Top page</a></button>
+            <button class='btn_mini radius center'><a href='/'>Top page</a></button>
             <hr>
             <ul class="sns_btn center t_m10">
 
@@ -43,7 +42,7 @@
                     </a>
                 </li>
                 <li class="mail">
-                    <a href="<?php echo $mail; ?>">
+                    <a href="mailto:<?php echo htmlspecialchars($mail, ENT_QUOTES, 'UTF-8'); ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.65 15.27">
                             <path class="b" d="M19.6,2.17c-.09-.44-.29-.85-.56-1.18-.06-.07-.12-.14-.19-.2-.49-.49-1.18-.79-1.93-.79H2.73C1.97,0,1.29,.3,.8,.79c-.07,.07-.13,.13-.19,.2C.34,1.33,.14,1.73,.05,2.17c-.04,.17-.05,.35-.05,.52V12.57c0,.38,.08,.74,.23,1.07,.13,.31,.33,.6,.57,.84,.06,.06,.12,.12,.19,.17,.47,.39,1.08,.62,1.74,.62h14.2c.66,0,1.27-.23,1.74-.62,.07-.05,.13-.11,.19-.17,.24-.24,.44-.52,.58-.84h0c.14-.33,.22-.69,.22-1.07V2.7c0-.18-.02-.35-.05-.52ZM1.78,1.77c.24-.24,.57-.39,.94-.39h14.2c.37,0,.7,.15,.94,.39,.04,.04,.08,.09,.12,.14l-7.44,6.42c-.21,.18-.46,.27-.72,.27s-.51-.09-.72-.27L1.67,1.9s.07-.09,.12-.14Zm-.39,10.8V3.33L6.78,7.98,1.4,12.63s0-.04,0-.06Zm15.53,1.32H2.73c-.24,0-.47-.06-.66-.17l5.68-4.9,.53,.46c.44,.38,1,.58,1.55,.58s1.11-.19,1.55-.58l.53-.46,5.68,4.9c-.19,.11-.42,.17-.66,.17Zm1.33-1.32s0,.04,0,.06l-5.38-4.64,5.38-4.65V12.57Z" />
                         </svg>
@@ -68,7 +67,7 @@
                     $side_timestamp = ($side_date_source !== '') ? strtotime($side_date_source) : false;
                     ?>
                     <li>
-                        <a href='entry.php?type=blog&eid=<?php echo urlencode($side_post->id); ?>'>
+                        <a href='/news/<?php echo rawurlencode($side_post->id); ?>'>
                             <figure class="img">
                                 <?php if (isset($side_post->thumbnail->url)): ?>
                                     <img src="<?php echo htmlspecialchars($side_post->thumbnail->url, ENT_QUOTES, 'UTF-8'); ?>?w=200" alt="<?php echo htmlspecialchars($side_post->title, ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
@@ -104,7 +103,7 @@
                     $side_timestamp = ($side_date_source !== '') ? strtotime($side_date_source) : false;
                     ?>
                     <li>
-                        <a href='entry.php?type=works&eid=<?php echo urlencode($side_post->id); ?>'>
+                        <a href='/works/<?php echo rawurlencode($side_post->id); ?>'>
                             <figure class="img">
                                 <?php if (isset($side_post->thumbnail->url)): ?>
                                     <img src="<?php echo htmlspecialchars($side_post->thumbnail->url, ENT_QUOTES, 'UTF-8'); ?>?w=200" alt="<?php echo htmlspecialchars($side_post->title, ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">

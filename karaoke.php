@@ -51,151 +51,12 @@ $karaoke_reservation_values = [
     'room_request' => '指定なし',
     'message' => '',
 ];
-$karaoke_reservation_errors = [];
-
+$karaoke_form_context = yafuso_mailform_context('karaoke_reservation');
+$karaoke_csrf_token = $karaoke_form_context['token'];
 if (!function_exists('yafuso_karaoke_form_h')) {
     function yafuso_karaoke_form_h($value)
     {
         return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
-    }
-}
-
-if (!function_exists('yafuso_karaoke_post_value')) {
-    function yafuso_karaoke_post_value($key, $preserve_lines = false)
-    {
-        $value = trim((string)($_POST[$key] ?? ''));
-        $value = strip_tags($value);
-        if (!$preserve_lines) {
-            $value = preg_replace('/[\r\n]+/', ' ', $value);
-        }
-        return $value;
-    }
-}
-
-if (!function_exists('yafuso_karaoke_clean_mail_address')) {
-    function yafuso_karaoke_clean_mail_address($mail_address)
-    {
-        $mail_address = trim((string)$mail_address);
-        $mail_address = preg_replace('/^mailto:/i', '', $mail_address);
-        $mail_address = preg_replace('/\?.*$/', '', $mail_address);
-        $mail_address = preg_replace('/[\r\n].*$/', '', $mail_address);
-        return trim($mail_address);
-    }
-}
-
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (string)($_POST['form_type'] ?? '') === 'karaoke_reservation') {
-    foreach ($karaoke_reservation_values as $key => $default_value) {
-        $karaoke_reservation_values[$key] = yafuso_karaoke_post_value($key, $key === 'message');
-    }
-
-    if (trim((string)($_POST['website'] ?? '')) !== '') {
-        $karaoke_reservation_errors[] = '送信内容を確認できませんでした。時間をおいて再度お試しください。';
-    }
-
-    if ($karaoke_reservation_values['name'] === '') {
-        $karaoke_reservation_errors[] = 'お名前を入力してください。';
-    }
-
-    if (!filter_var($karaoke_reservation_values['email'], FILTER_VALIDATE_EMAIL)) {
-        $karaoke_reservation_errors[] = 'メールアドレスを正しく入力してください。';
-    }
-
-    if ($karaoke_reservation_values['tel'] === '') {
-        $karaoke_reservation_errors[] = '電話番号を入力してください。';
-    }
-
-    $reservation_date = DateTimeImmutable::createFromFormat('!Y-m-d', $karaoke_reservation_values['reservation_date'], $karaoke_reservation_timezone);
-    $date_parse_errors = DateTimeImmutable::getLastErrors();
-    $has_date_parse_error = $date_parse_errors !== false && ($date_parse_errors['warning_count'] > 0 || $date_parse_errors['error_count'] > 0);
-    if (!$reservation_date || $has_date_parse_error) {
-        $karaoke_reservation_errors[] = '予約希望日を正しく選択してください。';
-    } elseif ($reservation_date < new DateTimeImmutable('today', $karaoke_reservation_timezone)) {
-        $karaoke_reservation_errors[] = '予約希望日は本日以降の日付を選択してください。';
-    }
-
-    if (!in_array($karaoke_reservation_values['reservation_time'], $karaoke_reservation_time_options, true)) {
-        $karaoke_reservation_errors[] = '予約希望時間を選択してください。';
-    }
-
-    $guest_count = filter_var(
-        $karaoke_reservation_values['guests'],
-        FILTER_VALIDATE_INT,
-        ['options' => ['min_range' => 1, 'max_range' => 18]]
-    );
-    if ($guest_count === false) {
-        $karaoke_reservation_errors[] = 'ご利用人数は1名から18名までで入力してください。';
-    }
-
-    if (!in_array($karaoke_reservation_values['plan'], $karaoke_reservation_plan_options, true)) {
-        $karaoke_reservation_errors[] = 'ご利用内容を選択してください。';
-    }
-
-    if (!in_array($karaoke_reservation_values['room_request'], $karaoke_reservation_room_options, true)) {
-        $karaoke_reservation_errors[] = 'ご希望のお部屋を選択してください。';
-    }
-
-    if ((string)($_POST['agree'] ?? '') !== '1') {
-        $karaoke_reservation_errors[] = '折り返し連絡後に予約確定となることへ同意してください。';
-    }
-
-    $mail_to = yafuso_karaoke_clean_mail_address($karaoke_reservation_mail_to ?? '');
-    $mail_from = yafuso_karaoke_clean_mail_address($karaoke_reservation_mail_from ?? $mail_to);
-    if (!filter_var($mail_to, FILTER_VALIDATE_EMAIL)) {
-        $karaoke_reservation_errors[] = '予約フォームの送信先メールアドレスが未設定です。恐れ入りますが、お電話でご予約ください。';
-    }
-    if (!filter_var($mail_from, FILTER_VALIDATE_EMAIL)) {
-        $mail_from = $mail_to;
-    }
-
-    if (empty($karaoke_reservation_errors)) {
-        $subject = '【カラオケ予約】' . $karaoke_reservation_values['name'] . '様 ' . $karaoke_reservation_values['reservation_date'] . ' ' . $karaoke_reservation_values['reservation_time'];
-        $body = implode("\n", [
-            'カラオケワールド ももたろうのオンライン予約フォームから送信がありました。',
-            '',
-            '※この時点では予約は確定していません。内容確認後、お客様へ折り返しご連絡ください。',
-            '',
-            '受付日時：' . (new DateTimeImmutable('now', $karaoke_reservation_timezone))->format('Y-m-d H:i:s'),
-            'お名前：' . $karaoke_reservation_values['name'],
-            'メールアドレス：' . $karaoke_reservation_values['email'],
-            '電話番号：' . $karaoke_reservation_values['tel'],
-            '予約希望日：' . $karaoke_reservation_values['reservation_date'],
-            '予約希望時間：' . $karaoke_reservation_values['reservation_time'],
-            'ご利用人数：' . $karaoke_reservation_values['guests'] . '名',
-            'ご利用内容：' . $karaoke_reservation_values['plan'],
-            'ご希望のお部屋：' . $karaoke_reservation_values['room_request'],
-            '',
-            'ご要望・備考：',
-            $karaoke_reservation_values['message'] !== '' ? $karaoke_reservation_values['message'] : 'なし',
-            '',
-            '送信元ページ：' . nowUrl(),
-        ]);
-        $headers = implode("\r\n", [
-            'From: ' . $mail_from,
-            'Reply-To: ' . $karaoke_reservation_values['email'],
-            'Content-Type: text/plain; charset=UTF-8',
-            'X-Mailer: PHP/' . phpversion(),
-        ]);
-
-        if (function_exists('mb_language')) {
-            mb_language('Japanese');
-        }
-        if (function_exists('mb_internal_encoding')) {
-            mb_internal_encoding('UTF-8');
-        }
-
-        if (function_exists('mb_send_mail')) {
-            $sent = mb_send_mail($mail_to, $subject, $body, $headers);
-        } else {
-            $encoded_subject = function_exists('mb_encode_mimeheader') ? mb_encode_mimeheader($subject, 'UTF-8') : '=?UTF-8?B?' . base64_encode($subject) . '?=';
-            $sent = mail($mail_to, $encoded_subject, $body, $headers);
-        }
-
-        if ($sent) {
-            header('Location: thanks.php?type=karaoke_reservation');
-            exit;
-        }
-
-        $karaoke_reservation_errors[] = '送信に失敗しました。時間をおいて再度お試しいただくか、お電話でご予約ください。';
     }
 }
 
@@ -607,19 +468,17 @@ HTML;
                                 </ul>
                                 <a href="tel:098-879-1055"><i class="fa-solid fa-phone" aria-hidden="true"></i>電話予約：098-879-1055</a>
                             </div>
-                            <form class="yafuso_vendors_form_029 yafuso_karaoke_reservation_form_029 act blur delay_1" action="#karaoke_reservation" method="post" data-yafuso-required-form>
+                            <form class="yafuso_vendors_form_029 yafuso_karaoke_reservation_form_029 act blur delay_1" action="mailform/send.php" method="post" data-yafuso-required-form>
                                 <input type="hidden" name="form_type" value="karaoke_reservation">
+                                <input type="hidden" name="form_started_at" value="<?php echo (int)$karaoke_form_context['started_at']; ?>">
+                                <input type="hidden" name="csrf_token" value="<?php echo yafuso_karaoke_form_h($karaoke_csrf_token); ?>">
                                 <div class="yafuso_form_trap_029" aria-hidden="true">
-                                    <label>入力しないでください<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                                    <label>入力しないでください<input type="text" name="website_url" tabindex="-1" autocomplete="off"></label>
                                 </div>
-                                <?php if (!empty($karaoke_reservation_errors)) : ?>
+                                <?php if ((string)($_GET['form_error'] ?? '') === '1') : ?>
                                     <div class="yafuso_form_error_029" role="alert">
                                         <strong>送信できませんでした</strong>
-                                        <ul>
-                                            <?php foreach ($karaoke_reservation_errors as $error) : ?>
-                                                <li><?php echo yafuso_karaoke_form_h($error); ?></li>
-                                            <?php endforeach; ?>
-                                        </ul>
+                                        <p>入力内容をご確認のうえ、時間をおいて再度お試しください。</p>
                                     </div>
                                 <?php endif; ?>
                                 <div class="yafuso_vendors_form_grid_029">

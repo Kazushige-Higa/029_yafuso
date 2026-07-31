@@ -28,13 +28,37 @@ $categoryID04 = "";
 $categoryID05 = "";
 $categoryID06 = "";
 $page_images = "../images/images.webp"; //../images/images.webp
-$img = "images"; ///images
+$img = "/images";
 $ogp_image = $img . "/ogp_image.webp";
 
 $weblink = "";
 $instagram = "";
 $line = "";
-$mail = "";
+$site_config = [];
+$site_config_file = __DIR__ . '/site.config.php';
+if (is_file($site_config_file)) {
+    $loaded_site_config = require $site_config_file;
+    if (is_array($loaded_site_config)) {
+        $site_config = $loaded_site_config;
+    }
+}
+$configured_mail = getenv('YAFUSO_MAIL_TO');
+if ($configured_mail === false || trim((string)$configured_mail) === '') {
+    $configured_mail = $site_config['mail_to'] ?? '';
+}
+$mailRecipients = [];
+$mailRecipientsValid = true;
+foreach (explode(',', (string)$configured_mail) as $recipient) {
+    $recipient = trim($recipient);
+    if ($recipient === '' || !filter_var($recipient, FILTER_VALIDATE_EMAIL)) {
+        $mailRecipientsValid = false;
+        break;
+    }
+    $mailRecipients[] = $recipient;
+}
+$mail = $mailRecipientsValid && $mailRecipients !== []
+    ? implode(',', $mailRecipients)
+    : '';
 $karaoke_reservation_mail_to = $mail; // カラオケ予約フォームの送信先メールアドレス
 $karaoke_reservation_mail_from = $karaoke_reservation_mail_to; // 送信元メールアドレス
 $youtube = "";
@@ -42,7 +66,66 @@ $tiktok = "";
 $facebook = "";
 $x = "";
 
+// GA4測定IDは環境変数またはgit管理外のサイト設定から読み込みます。
+$configured_ga4_measurement_id = getenv('GA4_MEASUREMENT_ID');
+if ($configured_ga4_measurement_id === false || trim((string)$configured_ga4_measurement_id) === '') {
+    $configured_ga4_measurement_id = $site_config['ga4_measurement_id'] ?? '';
+}
+$ga4_measurement_id = preg_match('/^G-[A-Z0-9]+$/', trim((string)$configured_ga4_measurement_id))
+    ? trim((string)$configured_ga4_measurement_id)
+    : '';
+
 ini_set('display_errors', "Off");
+
+function yafuso_session_start()
+{
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        $is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || strtolower((string)($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')) === 'https';
+        session_start([
+            'cookie_httponly' => true,
+            'cookie_secure' => $is_https,
+            'cookie_samesite' => 'Lax',
+            'use_strict_mode' => true,
+        ]);
+    }
+}
+
+function yafuso_mailform_context($form_type)
+{
+    yafuso_session_start();
+
+    $form_type = (string)$form_type;
+    $started_at = (int)($_SESSION['yafuso_mailform_started_at'][$form_type] ?? 0);
+    if (
+        empty($_SESSION['yafuso_mailform_tokens'][$form_type])
+        || $started_at <= 0
+        || $started_at < time() - 7200
+    ) {
+        $_SESSION['yafuso_mailform_tokens'][$form_type] = bin2hex(random_bytes(32));
+        $_SESSION['yafuso_mailform_started_at'][$form_type] = time();
+    }
+
+    return [
+        'token' => (string)$_SESSION['yafuso_mailform_tokens'][$form_type],
+        'started_at' => (int)($_SESSION['yafuso_mailform_started_at'][$form_type] ?? time()),
+    ];
+}
+
+function yafuso_mailform_csrf_token($form_type)
+{
+    $context = yafuso_mailform_context($form_type);
+    return $context['token'];
+}
+
+function yafuso_visitor_tracker_token()
+{
+    yafuso_session_start();
+    if (empty($_SESSION['yafuso_visitor_tracker_token'])) {
+        $_SESSION['yafuso_visitor_tracker_token'] = bin2hex(random_bytes(32));
+    }
+    return (string)$_SESSION['yafuso_visitor_tracker_token'];
+}
 
 // blog CMS (ros-cp.com)
 $requested_eid = isset($_GET["eid"]) ? trim((string)$_GET["eid"]) : '';
@@ -60,8 +143,29 @@ if ($blog_title === '記事が見当たりません') {
 }
 
 // microCMS Settings
-$microcms_service_id = "";
-$microcms_api_key    = "";
+// 本番値は環境変数、またはgit管理外の microcms.config.php から読み込みます。
+$microcms_service_id = trim((string) getenv('MICROCMS_SERVICE_ID'));
+$microcms_api_key    = trim((string) getenv('MICROCMS_API_KEY'));
+$microcms_enabled_value = getenv('MICROCMS_ENABLED');
+$microcms_enabled_explicit = $microcms_enabled_value !== false && trim((string)$microcms_enabled_value) !== '';
+$microcms_enabled = $microcms_enabled_explicit
+    ? filter_var($microcms_enabled_value, FILTER_VALIDATE_BOOLEAN)
+    : false;
+$microcms_local_config = __DIR__ . '/microcms.config.php';
+if (is_file($microcms_local_config)) {
+    $microcms_config = require $microcms_local_config;
+    if (is_array($microcms_config)) {
+        $microcms_service_id = trim((string) ($microcms_config['service_id'] ?? $microcms_service_id));
+        $microcms_api_key = trim((string) ($microcms_config['api_key'] ?? $microcms_api_key));
+        if (array_key_exists('enabled', $microcms_config)) {
+            $microcms_enabled = (bool) $microcms_config['enabled'];
+            $microcms_enabled_explicit = true;
+        }
+    }
+}
+if (!$microcms_enabled_explicit) {
+    $microcms_enabled = $microcms_service_id !== '' && $microcms_api_key !== '';
+}
 $microcms_base_url   = "https://" . $microcms_service_id . ".microcms.io/api/v1";
 
 /**
@@ -72,7 +176,11 @@ $microcms_base_url   = "https://" . $microcms_service_id . ".microcms.io/api/v1"
  */
 function microcms_get($endpoint)
 {
-    global $microcms_base_url, $microcms_api_key;
+    global $microcms_base_url, $microcms_api_key, $microcms_service_id, $microcms_enabled;
+
+    if (!$microcms_enabled || $microcms_service_id === '' || $microcms_api_key === '') {
+        return null;
+    }
 
     $url = $microcms_base_url . $endpoint;
     $options = [
@@ -92,16 +200,17 @@ function microcms_get($endpoint)
 }
 
 /**
- * Get microCMS blog entry by Content ID.
+ * Get a microCMS entry by content ID and supported content type.
  *
  * @param string $eid  Content ID from URL parameter
  * @return object|null Blog entry object or null
  */
-function microcms_get_blog_entry($eid)
+function microcms_get_entry($eid, $type = 'blog')
 {
     $eid = trim((string)$eid);
     if ($eid === '') return null;
-    return microcms_get("/blog/" . rawurlencode($eid));
+    $endpoint = $type === 'works' ? '/works/' : '/blog/';
+    return microcms_get($endpoint . rawurlencode($eid));
 }
 
 /**
@@ -181,8 +290,9 @@ function microcms_extract_blog_image($entry)
     return '';
 }
 
-// microCMS blog meta (used for entry pages)
-$microcms_blog_entry = microcms_get_blog_entry($requested_eid);
+// microCMS meta (used for news and works entry pages)
+$requested_entry_type = (string)($_GET['type'] ?? 'blog') === 'works' ? 'works' : 'blog';
+$microcms_blog_entry = microcms_get_entry($requested_eid, $requested_entry_type);
 $microcms_blog_title = microcms_extract_blog_title($microcms_blog_entry);
 $microcms_blog_description = microcms_extract_blog_description($microcms_blog_entry);
 $microcms_blog_image = microcms_extract_blog_image($microcms_blog_entry);

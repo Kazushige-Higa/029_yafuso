@@ -148,7 +148,7 @@ if ($list_type === 'works') {
                 : $list_type;
               ?>
               <li>
-                <a href='entry.php?type=<?php echo urlencode($side_post_type); ?>&eid=<?php echo urlencode($side_post->id); ?>'>
+                <a href='<?php echo $side_post_type === 'works' ? '/works/' : '/news/'; ?><?php echo rawurlencode($side_post->id); ?>'>
                   <figure class="img">
                     <?php if (isset($side_post->thumbnail->url)): ?>
                       <img src="<?php echo htmlspecialchars($side_post->thumbnail->url, ENT_QUOTES, 'UTF-8'); ?>?w=200" alt="<?php echo htmlspecialchars($side_post->title, ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">

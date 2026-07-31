@@ -1,0 +1,17 @@
+Options -Indexes
+
+<IfModule mod_setenvif.c>
+    SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
+</IfModule>
+
+<IfModule mod_authz_core.c>
+    <FilesMatch "(^\.|config\.local\.php$)">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+    <FilesMatch "(^\.|config\.local\.php$)">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>

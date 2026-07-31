@@ -28,6 +28,20 @@ node_modules/
 .env
 .env.local
 .env.*
+microcms.config.php
+site.config.php
+analytics/config.local.php
+runtime.config.php
+
+# Runtime analytics data and credentials
+data/visitors.json
+data/visitors.lock
+data/sitemap.xml
+analytics/data/ga4/service_account.json
+analytics/data/ga4/token.json
+analytics/data/ga4/sc_token.json
+analytics/data/ga4/cache.json
+analytics/data/ga4/cwv_cache.json
 
 # Build artifacts
 dist/

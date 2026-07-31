@@ -19,6 +19,14 @@
     letter-spacing: 0;
   }
 
+  // Keep Japanese headings readable at narrow widths. `line-break: strict`
+  // prevents punctuation from being stranded at the start of a line, while
+  // `text-wrap: balance` evens out automatic line breaks on mobile screens.
+  :where(h1, h2, h3, h4) {
+    line-break: strict;
+    text-wrap: balance;
+  }
+
   :where(h1, h2, h3, h4, p, figure, ul, dl, dd) {
     margin: 0;
   }

@@ -4,14 +4,36 @@ header("Pragma: no-cache");
 header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
 ?>
 <?php require_once './common.php'; ?>
+<?php $visitor_tracker_token = yafuso_visitor_tracker_token(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head prefix="og:http://ogp.me/ns#">
+  <?php if ($ga4_measurement_id !== '') : ?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo rawurlencode($ga4_measurement_id); ?>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', <?php echo json_encode($ga4_measurement_id, JSON_UNESCAPED_SLASHES); ?>);
+    </script>
+  <?php endif; ?>
+  <script src="/js/visitor_tracker.js" defer></script>
   <meta charset="UTF-8">
+  <meta name="yafuso-visitor-token" content="<?= htmlspecialchars($visitor_tracker_token, ENT_QUOTES, 'UTF-8') ?>">
+  <?php if (!empty($visitor_form_submit_token)) : ?>
+    <meta name="yafuso-form-submit-token" content="<?= htmlspecialchars((string)$visitor_form_submit_token, ENT_QUOTES, 'UTF-8') ?>">
+  <?php endif; ?>
   <?php
-  $is_entry_page = (bool) preg_match('/^entry\d*\.php$/', $url);
-  $is_top_page   = ($url === 'index.php');
+  $current_script = basename((string)($_SERVER['SCRIPT_NAME'] ?? ''));
+  $is_entry_page = $current_script === 'entry.php' || (isset($url) && (bool) preg_match('/^entry\d*\.php$/', (string)$url));
+  $is_entry_list_page = $current_script === 'entry_list.php' || (isset($url) && $url === 'entry_list.php');
+  $is_top_page   = $current_script === 'index.php' || (isset($url) && $url === 'index.php');
   $clean_meta_value = static function ($value) {
     return trim((string)($value ?? ''));
   };
@@ -46,6 +68,38 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
   $page_meta_description_value = $clean_meta_value($page_meta_description ?? '');
   $page_meta_image_value = $clean_meta_value($page_meta_image ?? '');
   $default_meta_image = $clean_meta_value($ogp_image ?? (($img ?? '') . '/ogp_image.webp'));
+  $request_path = parse_url((string)($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH);
+  $canonical_path = is_string($request_path) && $request_path !== '' ? $request_path : '/';
+  if ($is_entry_page && $requested_eid !== '') {
+    $canonical_path = ($requested_entry_type === 'works' ? '/works/' : '/news/') . rawurlencode($requested_eid);
+  } elseif ($is_entry_list_page) {
+    $list_type_for_canonical = isset($list_type) && in_array($list_type, ['blog', 'works', 'all'], true)
+      ? $list_type
+      : ((string)($_GET['type'] ?? '') === 'works' ? 'works' : 'blog');
+    $archive_for_canonical = isset($archive_month) && preg_match('/^\d{4}-\d{2}$/', (string)$archive_month)
+      ? (string)$archive_month
+      : '';
+
+    if ($list_type_for_canonical === 'works') {
+      $canonical_path = '/works/';
+    } elseif ($list_type_for_canonical === 'blog') {
+      $canonical_path = '/news/';
+    } else {
+      $canonical_path = '/entry_list.php';
+    }
+
+    $canonical_query = [];
+    if ($list_type_for_canonical === 'all') {
+      $canonical_query['type'] = 'all';
+    }
+    if ($archive_for_canonical !== '') {
+      $canonical_query['archive'] = $archive_for_canonical;
+    }
+    if ($canonical_query) {
+      $canonical_path .= '?' . http_build_query($canonical_query, '', '&', PHP_QUERY_RFC3986);
+    }
+  }
+  $canonical_url = $to_absolute_url($canonical_path);
 
   if ($page_meta_title_value !== '') {
     $full_title = $page_meta_title_value;
@@ -72,11 +126,12 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="<?= htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8') ?>">
   <link href="https://cdn.rs-sys.jp/lib/reset/reset.css" rel="stylesheet">
-  <link href="css/reset.css" rel="stylesheet">
-  <link href="css/setting.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/animation_scroll.css" rel="stylesheet">
+  <link href="/css/reset.css" rel="stylesheet">
+  <link href="/css/setting.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/animation_scroll.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
   <?php echo $page_style ?? ''; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +141,7 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
   <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
 
   <!-- OGP -->
-  <meta property="og:url" content="<?= htmlspecialchars(nowUrl(), ENT_QUOTES, 'UTF-8') ?>">
+  <meta property="og:url" content="<?= htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8') ?>">
   <meta property="og:type" content="<?php if ($is_entry_page) {
                                       echo 'article';
                                     } else {
@@ -119,17 +174,17 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
       <header>
         <div class="yafuso_header_029">
           <div class="yafuso_header_inner_029">
-            <a class="yafuso_logo_029" href="./" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
+            <a class="yafuso_logo_029" href="/" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
               <img src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="eager">
             </a>
 
             <nav class="yafuso_nav_029 pconly" aria-label="メインナビゲーション">
               <ul>
-                <li><a href="./">トップページ</a></li>
-                <li><a href="concept.php">コンセプト</a></li>
-                <li><a href="market_stalls.php">屋台のご紹介</a></li>
-                <li><a href="karaoke.php">カラオケワールド ももたろう</a></li>
-                <li><a href="vendors.php">出店をご検討の方へ</a></li>
+                <li><a href="/">トップページ</a></li>
+                <li><a href="/concept.php">コンセプト</a></li>
+                <li><a href="/market_stalls.php">屋台のご紹介</a></li>
+                <li><a href="/karaoke.php">カラオケワールド ももたろう</a></li>
+                <li><a href="/vendors.php">出店をご検討の方へ</a></li>
               </ul>
             </nav>
 
@@ -147,14 +202,14 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
               <div class="nav_slide_container">
                 <div class="nav_menu_area">
                   <nav class="nav_menu_content" aria-label="スマートフォンナビゲーション">
-                    <a class="yafuso_slide_nav_logo_029" href="./" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
+                    <a class="yafuso_slide_nav_logo_029" href="/" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
                       <img src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="lazy">
                     </a>
-                    <a href="./">トップページ</a>
-                    <a href="concept.php">コンセプト</a>
-                    <a href="market_stalls.php">屋台のご紹介</a>
-                    <a href="karaoke.php">カラオケワールド ももたろう</a>
-                    <a href="vendors.php">出店をご検討の方へ</a>
+                    <a href="/">トップページ</a>
+                    <a href="/concept.php">コンセプト</a>
+                    <a href="/market_stalls.php">屋台のご紹介</a>
+                    <a href="/karaoke.php">カラオケワールド ももたろう</a>
+                    <a href="/vendors.php">出店をご検討の方へ</a>
                     <div class="yafuso_slide_nav_sns_029">
                       <p><i class="fa-brands fa-instagram" aria-hidden="true"></i>SNS・インスタグラム</p>
                       <ul>

@@ -1,0 +1,45 @@
+Options -Indexes
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+
+# www 付きURLはGA4・Search Console登録済みの正規ドメインへ統一する
+RewriteCond %{HTTP_HOST} ^www\.yafuso-yataimura\.com$ [NC]
+RewriteRule ^ https://yafuso-yataimura.com%{REQUEST_URI} [R=301,L,NE]
+
+# ローカル開発環境を除きHTTPSへ統一する
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1|\[::1\])(?::[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L,NE]
+
+# 公開URLは /sitemap.xml のまま、PHPで静的ページとmicroCMS記事を生成する
+RewriteCond %{THE_REQUEST} \s/+sitemap\.php(?:[\s?]|$) [NC]
+RewriteRule ^sitemap\.php$ sitemap.xml [R=301,L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L,QSA]
+
+# /index.php と /index.html はルートURLへ正規化する
+RewriteCond %{THE_REQUEST} \s/+index\.(?:php|html)(?:[\s?]|$) [NC]
+RewriteRule ^index\.(?:php|html)$ / [R=301,L]
+
+# 将来のmicroCMS公開URL。既存のクエリ形式も引き続き利用可能
+RewriteRule ^news/?$ entry_list.php?type=blog [QSA,L]
+RewriteRule ^news/([A-Za-z0-9_-]+)/?$ entry.php?type=blog&eid=$1 [QSA,L]
+RewriteRule ^works/?$ entry_list.php?type=works [QSA,L]
+RewriteRule ^works/([A-Za-z0-9_-]+)/?$ entry.php?type=works&eid=$1 [QSA,L]
+
+# 実アクセスデータはdocument root配下でもHTTP公開しない
+RewriteRule ^data(?:/|$) - [F,L]
+
+# ローカル設定・秘密情報はHTTP経由で公開しない
+<IfModule mod_authz_core.c>
+    <FilesMatch "(^\.|\.config\.php$|\.env|composer\.(json|lock)$|package(-lock)?\.json$)">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+    <FilesMatch "(^\.|\.config\.php$|\.env|composer\.(json|lock)$|package(-lock)?\.json$)">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>

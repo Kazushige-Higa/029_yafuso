@@ -61,23 +61,23 @@
         </section>
 
         <div class="yafuso_footer_029">
-            <a class="yafuso_footer_logo_029 act inup" href="./" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
+            <a class="yafuso_footer_logo_029 act inup" href="/" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
                 <img decoding="async" src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="lazy">
             </a>
             <nav class="yafuso_footer_nav_029" aria-label="フッターナビゲーション">
-                <a href="./">トップページ</a>
-                <a href="concept.php">コンセプト</a>
-                <a href="market_stalls.php">屋台のご紹介</a>
-                <a href="karaoke.php">カラオケワールド ももたろう</a>
-                <a href="vendors.php">出店をご検討の方へ</a>
+                <a href="/">トップページ</a>
+                <a href="/concept.php">コンセプト</a>
+                <a href="/market_stalls.php">屋台のご紹介</a>
+                <a href="/karaoke.php">カラオケワールド ももたろう</a>
+                <a href="/vendors.php">出店をご検討の方へ</a>
             </nav>
             <p>© 2026 有限会社 丸真産業</p>
         </div>
     </footer>
 </div>
 <?php endif; ?>
-<script src="js/javascript.js" defer></script>
-<script src="js/bg_parallax.js" defer></script>
+<script src="/js/javascript.js" defer></script>
+<script src="/js/bg_parallax.js" defer></script>
 <?php echo $page_script ?? ''; ?>
 </body>
 
