@@ -21,7 +21,7 @@ header('Cache-Control: no-store');
 require __DIR__ . '/auth.php';
 
 /* ===================== 設定 ===================== */
-$analyticsConfig = require_once __DIR__ . '/config.php';
+$analyticsConfig = $authConfig;
 $siteUrl = trim((string)($analyticsConfig['site_url'] ?? ''));
 if (
     $siteUrl === ''
