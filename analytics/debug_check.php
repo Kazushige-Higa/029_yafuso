@@ -53,6 +53,31 @@ if ($envValue !== '' && $envValue[0] === '/') {
 
 echo "\nmod_env active (SetEnv worked) if the first line above is not '(empty)'.\n";
 
+echo "\n--- require test (mirrors config.php) ---\n";
+if ($envValue !== '') {
+    $real = realpath($envValue);
+    if ($real !== false) {
+        try {
+            $loaded = require $real;
+            echo "require succeeded. is_array: " . (is_array($loaded) ? 'yes' : 'no') . "\n";
+            if (is_array($loaded)) {
+                echo "keys: " . implode(', ', array_keys($loaded)) . "\n";
+                foreach (['site_name', 'site_url', 'ga4_property_id', 'search_console_site_url', 'analytics_username', 'analytics_storage_dir'] as $k) {
+                    $v = $loaded[$k] ?? null;
+                    echo "  $k: " . var_export($v, true) . "\n";
+                }
+                echo "  analytics_password_hash length: " . (isset($loaded['analytics_password_hash']) ? strlen((string)$loaded['analytics_password_hash']) : 'n/a') . "\n";
+            }
+        } catch (\Throwable $e) {
+            echo "require THREW: " . get_class($e) . ": " . $e->getMessage() . " (line " . $e->getLine() . ")\n";
+        }
+        echo "\nfirst 200 bytes (hex-escaped for hidden chars):\n";
+        $raw = @file_get_contents($real, false, null, 0, 200);
+        echo bin2hex(substr((string)$raw, 0, 20)) . "...\n";
+        echo addcslashes((string)$raw, "\0..\37") . "\n";
+    }
+}
+
 echo "\n--- extra diagnostics ---\n";
 echo "open_basedir: " . (ini_get('open_basedir') ?: '(not set)') . "\n";
 
