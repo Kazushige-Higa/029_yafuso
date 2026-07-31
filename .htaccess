@@ -3,7 +3,7 @@ DirectoryIndex index.php index.html
 
 # Lolipop: analytics設定は公開フォルダの外側に配置する
 <IfModule mod_env.c>
-    SetEnv ANALYTICS_CONFIG_FILE /home/users/2/main.jp-d-neko/analytics.config.php
+    SetEnv ANALYTICS_CONFIG_FILE /home/users/2/main.jp-d-neko/web/analytics.config.php
 </IfModule>
 
 RewriteEngine On
