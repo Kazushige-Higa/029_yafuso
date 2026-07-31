@@ -2,7 +2,7 @@
 require __DIR__ . '/auth.php';
 header('Cache-Control: private, no-store');
 header('Pragma: no-cache');
-$analyticsConfig = require __DIR__ . '/config.php';
+$analyticsConfig = require_once __DIR__ . '/config.php';
 $analyticsSiteNameValue = trim((string)($analyticsConfig['site_name'] ?? ''));
 $analyticsSiteUrlValue = trim((string)($analyticsConfig['site_url'] ?? ''));
 if ($analyticsSiteNameValue === '' || $analyticsSiteUrlValue === '') {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-$authConfig = require __DIR__ . '/config.php';
+$authConfig = require_once __DIR__ . '/config.php';
 $expectedUser = (string)($authConfig['analytics_username'] ?? '');
 $expectedHash = (string)($authConfig['analytics_password_hash'] ?? '');
 $providedUser = (string)($_SERVER['PHP_AUTH_USER'] ?? '');

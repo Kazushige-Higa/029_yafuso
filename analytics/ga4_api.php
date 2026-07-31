@@ -27,7 +27,7 @@ header('Cache-Control: no-store');
 require __DIR__ . '/auth.php';
 
 /* ===================== 設定 ===================== */
-$analyticsConfig = require __DIR__ . '/config.php';
+$analyticsConfig = require_once __DIR__ . '/config.php';
 $GA4_PROPERTY_ID = $analyticsConfig['ga4_property_id'];            // GA4 プロパティ ID
 $GA4_CACHE_DIR   = $analyticsConfig['analytics_storage_dir'];      // web公開領域外
 $GA4_KEY_FILE    = $GA4_CACHE_DIR . '/service_account.json';       // サービスアカウント鍵
