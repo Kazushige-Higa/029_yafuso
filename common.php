@@ -42,12 +42,12 @@ if (is_file($site_config_file)) {
         $site_config = $loaded_site_config;
     }
 }
-$configured_mail = getenv('YAFUSO_MAIL_TO');
+$configured_mail = getenv('YAFUSO_MAIL_FROM');
 if ($configured_mail === false || trim((string)$configured_mail) === '') {
-    $configured_mail = $site_config['mail_to'] ?? '';
+    $configured_mail = $site_config['mail_from'] ?? '';
 }
 if (trim((string)$configured_mail) === '') {
-    // This site has a fixed operational recipient; environment/site config can override it.
+    // フォーム通知と自動返信の送信元。
     $configured_mail = 'truth@d-neko.com';
 }
 $mailRecipients = [];
@@ -63,8 +63,24 @@ foreach (explode(',', (string)$configured_mail) as $recipient) {
 $mail = $mailRecipientsValid && $mailRecipients !== []
     ? implode(',', $mailRecipients)
     : '';
-$karaoke_reservation_mail_to = $mail; // カラオケ予約フォームの送信先メールアドレス
-$karaoke_reservation_mail_from = $karaoke_reservation_mail_to; // 送信元メールアドレス
+$configured_karaoke_reservation_mail_to = getenv('YAFUSO_KARAOKE_RESERVATION_MAIL_TO');
+if ($configured_karaoke_reservation_mail_to === false || trim((string)$configured_karaoke_reservation_mail_to) === '') {
+    $configured_karaoke_reservation_mail_to = $site_config['karaoke_reservation_mail_to'] ?? '';
+}
+if (trim((string)$configured_karaoke_reservation_mail_to) === '') {
+    $configured_karaoke_reservation_mail_to = 'karaoke-momotarou@marushin-v.co.jp';
+}
+$configured_vendor_inquiry_mail_to = getenv('YAFUSO_VENDOR_INQUIRY_MAIL_TO');
+if ($configured_vendor_inquiry_mail_to === false || trim((string)$configured_vendor_inquiry_mail_to) === '') {
+    $configured_vendor_inquiry_mail_to = $site_config['vendor_inquiry_mail_to'] ?? '';
+}
+if (trim((string)$configured_vendor_inquiry_mail_to) === '') {
+    $configured_vendor_inquiry_mail_to = 'sm09021717224@yahoo.co.jp';
+}
+$karaoke_reservation_mail_to = trim((string)$configured_karaoke_reservation_mail_to);
+$vendor_inquiry_mail_to = trim((string)$configured_vendor_inquiry_mail_to);
+$karaoke_reservation_mail_from = $mail;
+$vendor_inquiry_mail_from = $mail;
 $youtube = "";
 $tiktok = "";
 $facebook = "";

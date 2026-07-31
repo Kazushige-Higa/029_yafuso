@@ -27,7 +27,8 @@ $conf['max_submit_seconds'] = 7200;
 $conf['no_disp'] = '1';
 $conf['admin_posted'] = true;
 $conf['name'] = (string) $name;
-$conf['mailto'] = (string) $mail;
+$conf['mailto'] = '';
+$conf['mailfrom'] = '';
 $conf['form_type'] = $form_type;
 $conf['supported'] = false;
 $conf['thanks'] = '/';
@@ -59,6 +60,8 @@ EOM;
 
 if ($form_type === 'karaoke_reservation') {
     $conf['supported'] = true;
+    $conf['mailto'] = (string) $karaoke_reservation_mail_to;
+    $conf['mailfrom'] = (string) $karaoke_reservation_mail_from;
     $conf['thanks'] = '/thanks.php?type=karaoke_reservation';
     $conf['failure'] = '/karaoke.php?form_error=1#karaoke_reservation';
     $conf['subject'] = '【カラオケ予約】オンライン予約フォームより受付';
@@ -87,6 +90,8 @@ EOM;
 EOM;
 } elseif ($form_type === 'vendor_inquiry') {
     $conf['supported'] = true;
+    $conf['mailto'] = (string) $vendor_inquiry_mail_to;
+    $conf['mailfrom'] = (string) $vendor_inquiry_mail_from;
     $conf['thanks'] = '/thanks.php?type=vendor_inquiry';
     $conf['failure'] = '/vendors.php?form_error=1#vendors_contact_form';
     $conf['subject'] = '【出店申込み・お問い合わせ】Webフォームより受付';
@@ -5922,12 +5927,14 @@ foreach (explode(',', (string)$conf['mailto']) as $recipient) {
     $mailRecipients[] = $recipient;
 }
 $conf['mail_recipients'] = $mailRecipients;
+$mailFromValid = filter_var((string)$conf['mailfrom'], FILTER_VALIDATE_EMAIL) !== false;
 
 if (
     ($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST'
     || !$conf['supported']
     || !$mailRecipientsValid
     || $mailRecipients === []
+    || !$mailFromValid
 ) {
     http_response_code(400);
     exit('Bad Request');
@@ -6138,7 +6145,7 @@ function send_mail() {
 		if ("" != $user_email) {
 			$admin_mailer->addReplyTo($user_email);
 		}
-        $admin_mailer->setFrom($mailtos[0],$conf['name']);
+        $admin_mailer->setFrom($conf['mailfrom'],$conf['name']);
 		$admin_mailer->Subject = mb_encode_mimeheader(mb_convert_encoding($conf['subject'],"UTF-8"));
         $admin_mailer->Body = mb_convert_encoding($admin_body,"UTF-8");
         // ファイル添付
@@ -6182,7 +6189,7 @@ function send_mail() {
 
             // 宛先設定
             $user_mailer->AddAddress($user_email);
-            $user_mailer->setFrom($mailtos[0],$conf['name']);
+            $user_mailer->setFrom($conf['mailfrom'],$conf['name']);
             $user_mailer->Subject = mb_encode_mimeheader(mb_convert_encoding($conf['res_subject'],"UTF-8"));
             $user_mailer->Body = mb_convert_encoding($user_body,"UTF-8");
             // ファイル添付
