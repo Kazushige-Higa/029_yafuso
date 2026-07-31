@@ -52,3 +52,31 @@ if ($envValue !== '' && $envValue[0] === '/') {
 }
 
 echo "\nmod_env active (SetEnv worked) if the first line above is not '(empty)'.\n";
+
+echo "\n--- extra diagnostics ---\n";
+echo "open_basedir: " . (ini_get('open_basedir') ?: '(not set)') . "\n";
+
+$candidates = [
+    '/home/users/2/main.jp-d-neko',
+    '/home/users/2/main.jp-d-neko/web',
+    '/home/users/2/main.jp-d-neko/web/029_yafuso',
+    '/home/users/2/main.jp-d-neko/analytics.config.php',
+];
+foreach ($candidates as $path) {
+    if (is_dir($path)) {
+        $entries = @scandir($path);
+        echo "\nscandir($path):\n";
+        if ($entries === false) {
+            echo "  (scandir failed - likely blocked by open_basedir)\n";
+        } else {
+            foreach ($entries as $e) {
+                if ($e === '.' || $e === '..') continue;
+                echo "  - $e\n";
+            }
+        }
+    } elseif (is_file($path)) {
+        echo "\n$path is a FILE (exists, " . filesize($path) . " bytes, readable=" . (is_readable($path) ? 'yes' : 'no') . ")\n";
+    } else {
+        echo "\n$path : not accessible (is_dir/is_file both false - either missing, or blocked by open_basedir)\n";
+    }
+}
