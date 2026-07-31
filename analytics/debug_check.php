@@ -90,6 +90,12 @@ $candidates = [
     '/home/users/2/main.jp-d-neko/web/.yafuso-analytics',
     '/home/users/2/main.jp-d-neko/.yafuso-analytics/service_account.json',
     '/home/users/2/main.jp-d-neko/web/.yafuso-analytics/service_account.json',
+    '/home/users/2/main.jp-d-neko/yafuso-analytics',
+    '/home/users/2/main.jp-d-neko/web/yafuso-analytics',
+    '/home/users/2/main.jp-d-neko/web/029_yafuso/yafuso-analytics',
+    '/home/users/2/main.jp-d-neko/yafuso-analytics/service_account.json',
+    '/home/users/2/main.jp-d-neko/web/yafuso-analytics/service_account.json',
+    '/home/users/2/main.jp-d-neko/web/029_yafuso/yafuso-analytics/service_account.json',
 ];
 foreach ($candidates as $path) {
     if (is_dir($path)) {
