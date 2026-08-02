@@ -28,7 +28,61 @@ $categoryID04 = "";
 $categoryID05 = "";
 $categoryID06 = "";
 $page_images = "../images/images.webp"; //../images/images.webp
-$img = "/images";
+
+// 本番はドメイン直下、localhostの1階層目ではMAMPのサブフォルダを自動で補います。
+// 必要な場合は YAFUSO_BASE_PATH（例: /029_yafuso）で明示指定できます。
+$configured_base_path = getenv('YAFUSO_BASE_PATH');
+$site_base_path = $configured_base_path !== false
+    ? trim((string)$configured_base_path)
+    : '';
+if ($site_base_path === '') {
+    $request_host = strtolower((string)($_SERVER['HTTP_HOST'] ?? ''));
+    $request_host = preg_replace('/:\d+$/', '', $request_host);
+    $request_script = str_replace('\\', '/', (string)($_SERVER['SCRIPT_NAME'] ?? ''));
+    if (in_array($request_host, ['localhost', '127.0.0.1', '::1'], true)) {
+        $script_segments = array_values(array_filter(explode('/', trim($request_script, '/')), 'strlen'));
+        if (count($script_segments) >= 2) {
+            $site_base_path = '/' . $script_segments[0];
+        }
+    }
+}
+$site_base_path = trim($site_base_path, '/');
+$site_base_path = $site_base_path === '' ? '' : '/' . $site_base_path;
+
+function yafuso_url($path = '/')
+{
+    global $site_base_path;
+
+    $path = '/' . ltrim((string)$path, '/');
+    if ($site_base_path !== '' && ($path === $site_base_path || strpos($path, $site_base_path . '/') === 0)) {
+        return $path;
+    }
+    return ($site_base_path !== '' ? $site_base_path : '') . $path;
+}
+
+function yafuso_mailform_routes($form_type)
+{
+    $routes = [
+        'karaoke_reservation' => [
+            'thanks' => yafuso_url('/thanks.php') . '?type=karaoke_reservation',
+            'failure' => yafuso_url('/karaoke.php') . '?form_error=1#karaoke_reservation',
+            'guard' => yafuso_url('/karaoke.php') . '#karaoke_reservation',
+        ],
+        'vendor_inquiry' => [
+            'thanks' => yafuso_url('/thanks.php') . '?type=vendor_inquiry',
+            'failure' => yafuso_url('/vendors.php') . '?form_error=1#vendors_contact_form',
+            'guard' => yafuso_url('/vendors.php') . '#vendors_contact_form',
+        ],
+    ];
+
+    return $routes[(string)$form_type] ?? [
+        'thanks' => yafuso_url('/'),
+        'failure' => yafuso_url('/'),
+        'guard' => yafuso_url('/'),
+    ];
+}
+
+$img = yafuso_url('/images');
 $ogp_image = $img . "/ogp_image.webp";
 
 $weblink = "";

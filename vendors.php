@@ -527,7 +527,7 @@ HTML;
                                 <h2>お申込み・お問い合わせ<br class="sponly">フォーム</h2>
                                 <p>下記の内容をご確認・ご同意のうえ、<br class="sponly">お問い合わせください。<br class="sponly">担当者よりご連絡いたします。</p>
                             </div>
-                            <form class="yafuso_vendors_form_029" action="mailform/send.php" method="post" data-yafuso-required-form>
+                            <form class="yafuso_vendors_form_029" action="<?php echo htmlspecialchars(yafuso_url('/mailform/send.php'), ENT_QUOTES, 'UTF-8'); ?>" method="post" data-yafuso-required-form>
                                 <input type="hidden" name="form_type" value="vendor_inquiry">
                                 <input type="hidden" name="form_started_at" value="<?php echo (int)$vendor_form_context['started_at']; ?>">
                                 <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($vendor_csrf_token, ENT_QUOTES, 'UTF-8'); ?>">

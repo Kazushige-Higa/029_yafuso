@@ -148,7 +148,7 @@ if ($list_type === 'works') {
                 : $list_type;
               ?>
               <li>
-                <a href='<?php echo $side_post_type === 'works' ? '/works/' : '/news/'; ?><?php echo rawurlencode($side_post->id); ?>'>
+                <a href='<?php echo htmlspecialchars(yafuso_url($side_post_type === 'works' ? '/works/' : '/news/') . rawurlencode($side_post->id), ENT_QUOTES, 'UTF-8'); ?>'>
                   <figure class="img">
                     <?php if (isset($side_post->thumbnail->url)): ?>
                       <img src="<?php echo htmlspecialchars($side_post->thumbnail->url, ENT_QUOTES, 'UTF-8'); ?>?w=200" alt="<?php echo htmlspecialchars($side_post->title, ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">

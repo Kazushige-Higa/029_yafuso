@@ -39,7 +39,7 @@ body {
 }
 
 a {
-  color: rgb(0, 79.7944785276, 188.5);
+  color: rgb(0%, 31.2919523638%, 73.9215686275%);
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -3509,7 +3509,7 @@ body.nav_open {
   display: inline-block;
 }
 .breadcrumb li a {
-  color: rgb(0, 47.4110429448, 112);
+  color: rgb(0%, 18.5925658607%, 43.9215686275%);
 }
 .breadcrumb li + li:before {
   margin: 0 10px;
@@ -4215,7 +4215,7 @@ body.nav_open {
   color: #284074;
 }
 .calendar-box .item-td {
-  background: rgb(61, 143.1226993865, 255);
+  background: rgb(23.9215686275%, 56.126548779%, 100%);
 }
 .calendar-box .item-td .days {
   color: #333;
@@ -4776,7 +4776,7 @@ body.nav_open {
 }
 
 .bg_glass_base {
-  background-color: rgba(0, 47.4110429448, 112, 0.5) !important;
+  background-color: rgba(0%, 18.5925658607%, 43.9215686275%, 0.5) !important;
   backdrop-filter: saturate(180%) blur(2px);
 }
 
@@ -9674,7 +9674,7 @@ body.products-modal-open {
   padding: 10px 0px 10px 25px;
   font-size: 80%;
   color: #fff;
-  background-color: rgb(0, 47.4110429448, 112);
+  background-color: rgb(0%, 18.5925658607%, 43.9215686275%);
   line-height: 1.2;
 }
 #top_navi ul.commonnav > li > a:before {
@@ -9691,7 +9691,7 @@ body.products-modal-open {
 }
 #top_navi ul.commonnav > li > a:hover {
   color: #fff;
-  background-color: rgb(0, 25.8220858896, 61);
+  background-color: rgb(0%, 10.126308192%, 23.9215686275%);
 }
 @media screen and (max-width: 500px) {
   #top_navi ul.commonnav > li > a {
@@ -14164,66 +14164,132 @@ body.products-modal-open {
 }
 
 .yafuso_karaoke_reservation_029 {
-  background: linear-gradient(90deg, rgba(255, 229, 0, 0.08) 0 1px, transparent 1px 42px), #fff7fb;
+  scroll-margin-top: 96px;
+  padding: clamp(124px, 10vw, 140px) 0 clamp(76px, 9vw, 118px);
+  background: #fff7fb;
+}
+
+.yafuso_karaoke_reservation_heading_029 {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  margin-bottom: clamp(34px, 5vw, 50px);
+  text-align: center;
+}
+.yafuso_karaoke_reservation_heading_029 h2 {
+  color: var(--yafuso_pink_deep);
+  font-family: "RocknRoll One", "Noto Sans JP", sans-serif;
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+.yafuso_karaoke_reservation_heading_029 p {
+  color: #2d211d;
+  font-size: clamp(15px, 1.6vw, 19px);
+  font-weight: 900;
+  line-height: 1.8;
+}
+
+.yafuso_karaoke_reservation_icon_029 {
+  width: clamp(48px, 5vw, 66px);
+  height: auto;
+  filter: drop-shadow(0 7px 0 rgba(255, 46, 166, 0.14));
 }
 
 .yafuso_karaoke_reservation_grid_029 {
   display: grid;
-  grid-template-columns: minmax(280px, 0.45fr) minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 1120px);
+  justify-content: center;
   align-items: start;
 }
 
 .yafuso_karaoke_reservation_note_029 {
   display: grid;
-  gap: 18px;
-  padding: 26px;
+  gap: 32px;
+  padding: clamp(40px, 5vw, 68px) clamp(28px, 5vw, 58px) clamp(34px, 4.5vw, 54px);
   border: 4px solid var(--yafuso_pink);
-  border-radius: 8px;
-  background: #211207;
-  color: #fff;
-  box-shadow: var(--yafuso_shadow);
+  border-radius: 10px;
+  background: #fff;
+  color: #2d211d;
+  box-shadow: 0 22px 48px rgba(155, 0, 86, 0.08);
 }
 .yafuso_karaoke_reservation_note_029 h3 {
-  color: var(--yafuso_yellow);
-  font-size: 24px;
+  color: var(--yafuso_pink_deep);
+  font-size: clamp(24px, 3vw, 34px);
   font-weight: 900;
   line-height: 1.4;
-  text-align: left;
+  text-align: center;
 }
 .yafuso_karaoke_reservation_note_029 ul {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+  width: min(100%, 720px);
+  margin: 0 auto;
 }
 .yafuso_karaoke_reservation_note_029 li {
   display: flex;
-  gap: 10px;
+  gap: 14px;
   align-items: flex-start;
-  color: #fffdf0;
-  font-size: 14px;
+  color: #2d211d;
+  font-size: clamp(15px, 1.5vw, 18px);
   font-weight: 900;
   line-height: 1.7;
 }
 .yafuso_karaoke_reservation_note_029 i {
-  margin-top: 5px;
-  color: var(--yafuso_yellow);
+  width: 22px;
+  margin-top: 6px;
+  color: var(--yafuso_pink);
+  text-align: center;
 }
 .yafuso_karaoke_reservation_note_029 a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 50px;
-  padding: 0 18px;
+  min-height: 66px;
+  padding: 0 24px;
   border-radius: 999px;
   background: var(--yafuso_red);
   color: #fff !important;
+  font-size: 17px;
   font-weight: 900;
   box-shadow: 0 6px 0 var(--yafuso_red_dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+.yafuso_karaoke_reservation_note_029 a:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 var(--yafuso_red_dark);
+  filter: brightness(1.04);
 }
 
-.yafuso_karaoke_reservation_form_029 {
-  border-color: var(--yafuso_pink);
+.yafuso_karaoke_reservation_actions_029 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+.yafuso_karaoke_reservation_actions_029 a {
+  margin: 0;
+  text-align: center;
+}
+.yafuso_karaoke_reservation_actions_029 .yafuso_karaoke_reservation_link_029 {
+  background: var(--yafuso_pink);
+  box-shadow: 0 6px 0 #a9005d;
+}
+.yafuso_karaoke_reservation_actions_029 .yafuso_karaoke_reservation_link_029:hover {
+  box-shadow: 0 4px 0 #a9005d;
+}
+.yafuso_karaoke_reservation_actions_029 .yafuso_karaoke_reservation_phone_029 {
+  background: var(--yafuso_red);
+}
+
+.yafuso_karaoke_reservation_external_note_029 {
+  color: #7c6370;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .yafuso_karaoke_info_grid_029 {
@@ -14507,9 +14573,47 @@ body.products-modal-open {
   .yafuso_karaoke_food_text_029,
   .yafuso_karaoke_price_table_029,
   .yafuso_karaoke_reservation_note_029,
-  .yafuso_karaoke_reservation_form_029,
   .yafuso_karaoke_info_card_029 {
     padding: 22px 18px;
+  }
+  .yafuso_karaoke_reservation_actions_029 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .yafuso_karaoke_reservation_note_029 li {
+    font-size: 14px;
+  }
+  .yafuso_karaoke_reservation_heading_029 {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .yafuso_karaoke_reservation_heading_029 h2 {
+    font-size: clamp(32px, 10vw, 42px);
+  }
+  .yafuso_karaoke_reservation_heading_029 p {
+    max-width: 330px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .yafuso_karaoke_reservation_029 {
+    scroll-margin-top: 64px;
+    padding-top: 96px;
+  }
+  .yafuso_karaoke_reservation_note_029 {
+    gap: 24px;
+    padding: 30px 18px 28px;
+    border-width: 3px;
+  }
+  .yafuso_karaoke_reservation_note_029 h3 {
+    font-size: 22px;
+  }
+  .yafuso_karaoke_reservation_note_029 li {
+    gap: 10px;
+  }
+  .yafuso_karaoke_reservation_note_029 a {
+    min-height: 58px;
+    padding: 0 14px;
+    font-size: 15px;
   }
   .yafuso_karaoke_campaign_text_029 h2,
   .yafuso_karaoke_food_text_029 h2,
@@ -14660,5 +14764,3 @@ body.products-modal-open {
     margin-top: 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

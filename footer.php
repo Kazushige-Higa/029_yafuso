@@ -61,23 +61,23 @@
         </section>
 
         <div class="yafuso_footer_029">
-            <a class="yafuso_footer_logo_029 act inup" href="/" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
+            <a class="yafuso_footer_logo_029 act inup" href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
                 <img decoding="async" src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="lazy">
             </a>
             <nav class="yafuso_footer_nav_029" aria-label="フッターナビゲーション">
-                <a href="/">トップページ</a>
-                <a href="/concept.php">コンセプト</a>
-                <a href="/market_stalls.php">屋台のご紹介</a>
-                <a href="/karaoke.php">カラオケワールド ももたろう</a>
-                <a href="/vendors.php">出店をご検討の方へ</a>
+                <a href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>">トップページ</a>
+                <a href="<?= htmlspecialchars(yafuso_url('/concept.php'), ENT_QUOTES, 'UTF-8') ?>">コンセプト</a>
+                <a href="<?= htmlspecialchars(yafuso_url('/market_stalls.php'), ENT_QUOTES, 'UTF-8') ?>">屋台のご紹介</a>
+                <a href="<?= htmlspecialchars(yafuso_url('/karaoke.php'), ENT_QUOTES, 'UTF-8') ?>">カラオケワールド ももたろう</a>
+                <a href="<?= htmlspecialchars(yafuso_url('/vendors.php'), ENT_QUOTES, 'UTF-8') ?>">出店をご検討の方へ</a>
             </nav>
             <p>© 2026 有限会社 丸真産業</p>
         </div>
     </footer>
 </div>
 <?php endif; ?>
-<script src="/js/javascript.js" defer></script>
-<script src="/js/bg_parallax.js" defer></script>
+<script src="<?= htmlspecialchars(yafuso_url('/js/javascript.js'), ENT_QUOTES, 'UTF-8') ?>" defer></script>
+<script src="<?= htmlspecialchars(yafuso_url('/js/bg_parallax.js'), ENT_QUOTES, 'UTF-8') ?>" defer></script>
 <?php echo $page_script ?? ''; ?>
 </body>
 

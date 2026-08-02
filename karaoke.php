@@ -7,80 +7,12 @@ $page_meta_description = "屋台村に隣接するカラオケワールド も�
 $page_meta_image = $img . "/ogp_image_momotarou.jpg";
 $page_style = "";
 $use_yafuso_layout = true;
-$karaoke_reservation_timezone = new DateTimeZone('Asia/Tokyo');
-$karaoke_today = (new DateTimeImmutable('today', $karaoke_reservation_timezone))->format('Y-m-d');
-$karaoke_reservation_time_options = [
-    '19:00',
-    '19:30',
-    '20:00',
-    '20:30',
-    '21:00',
-    '21:30',
-    '22:00',
-    '22:30',
-    '23:00',
-    '23:30',
-    '00:00',
-    '00:30',
-    '01:00',
-    '01:30',
-];
-$karaoke_reservation_plan_options = [
-    'カラオケ利用',
-    '飲み放題付きカラオケ',
-    '宴会・二次会',
-    'キッズルーム希望',
-    '未定・相談したい',
-];
-$karaoke_reservation_room_options = [
-    '指定なし',
-    '4〜8名個室',
-    '4〜10名個室',
-    '8〜18名個室',
-    '座敷個室',
-    'キッズスペース希望',
-];
-$karaoke_reservation_values = [
-    'name' => '',
-    'email' => '',
-    'tel' => '',
-    'reservation_date' => '',
-    'reservation_time' => '',
-    'guests' => '',
-    'plan' => '',
-    'room_request' => '指定なし',
-    'message' => '',
-];
-$karaoke_form_context = yafuso_mailform_context('karaoke_reservation');
-$karaoke_csrf_token = $karaoke_form_context['token'];
-if (!function_exists('yafuso_karaoke_form_h')) {
-    function yafuso_karaoke_form_h($value)
-    {
-        return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
-    }
-}
 
 $page_script = <<<'HTML'
 <script src="js/gallery_thumbnail.js" defer></script>
 <script src="js/slider_fullslider.js" defer></script>
 <script>
     (() => {
-        const initYafusoRequiredForms = function() {
-            const forms = document.querySelectorAll('[data-yafuso-required-form]');
-            forms.forEach(function(form) {
-                const submitButton = form.querySelector('[type="submit"]');
-                if (!submitButton) {
-                    return;
-                }
-                const syncSubmitState = function() {
-                    submitButton.disabled = !form.checkValidity();
-                };
-                form.addEventListener('input', syncSubmitState);
-                form.addEventListener('change', syncSubmitState);
-                syncSubmitState();
-            });
-        };
-
         const initYafusoKaraokeModal = function() {
             const modal = document.querySelector('[data-yafuso-karaoke-modal]');
             const openButton = document.querySelector('[data-yafuso-karaoke-menu-open]');
@@ -121,7 +53,6 @@ $page_script = <<<'HTML'
 
         const initYafusoKaraokePage = function() {
             initYafusoKaraokeModal();
-            initYafusoRequiredForms();
         };
 
         if (document.readyState === 'loading') {
@@ -451,74 +382,6 @@ HTML;
             </section>
 
             <section>
-                <div id="karaoke_reservation" class="yafuso_karaoke_reservation_029">
-                    <div class="yafuso_single_029">
-                        <div class="yafuso_karaoke_title_029 act blur">
-                            <span aria-hidden="true"></span>
-                            <h2>オンライン予約フォーム</h2>
-                            <p>ご希望内容を送信してください。空き状況を確認後、店舗より折り返しご連絡いたします。</p>
-                        </div>
-                        <div class="yafuso_karaoke_reservation_grid_029">
-                            <div class="yafuso_karaoke_reservation_note_029 act inup">
-                                <h3>送信前のご確認</h3>
-                                <ul>
-                                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>予約は店舗からの折り返し連絡をもって確定となります。</li>
-                                    <li><i class="fa-solid fa-users" aria-hidden="true"></i>18名様を超えるご利用は、お電話にてご相談ください。</li>
-                                    <li><i class="fa-solid fa-clock" aria-hidden="true"></i>当日予約やお急ぎの場合は、電話予約が確実です。</li>
-                                </ul>
-                                <a href="tel:098-879-1055"><i class="fa-solid fa-phone" aria-hidden="true"></i>電話予約：098-879-1055</a>
-                            </div>
-                            <form class="yafuso_vendors_form_029 yafuso_karaoke_reservation_form_029 act blur delay_1" action="mailform/send.php" method="post" data-yafuso-required-form>
-                                <input type="hidden" name="form_type" value="karaoke_reservation">
-                                <input type="hidden" name="form_started_at" value="<?php echo (int)$karaoke_form_context['started_at']; ?>">
-                                <input type="hidden" name="csrf_token" value="<?php echo yafuso_karaoke_form_h($karaoke_csrf_token); ?>">
-                                <div class="yafuso_form_trap_029" aria-hidden="true">
-                                    <label>入力しないでください<input type="text" name="website_url" tabindex="-1" autocomplete="off"></label>
-                                </div>
-                                <?php if ((string)($_GET['form_error'] ?? '') === '1') : ?>
-                                    <div class="yafuso_form_error_029" role="alert">
-                                        <strong>送信できませんでした</strong>
-                                        <p>入力内容をご確認のうえ、時間をおいて再度お試しください。</p>
-                                    </div>
-                                <?php endif; ?>
-                                <div class="yafuso_vendors_form_grid_029">
-                                    <label>お名前 <b class="yafuso_required_badge_029">必須</b><input type="text" name="name" value="<?php echo yafuso_karaoke_form_h($karaoke_reservation_values['name']); ?>" autocomplete="name" required></label>
-                                    <label>メールアドレス <b class="yafuso_required_badge_029">必須</b><input type="email" name="email" value="<?php echo yafuso_karaoke_form_h($karaoke_reservation_values['email']); ?>" autocomplete="email" required></label>
-                                    <label>電話番号 <b class="yafuso_required_badge_029">必須</b><input type="tel" name="tel" value="<?php echo yafuso_karaoke_form_h($karaoke_reservation_values['tel']); ?>" autocomplete="tel" required></label>
-                                    <label>ご利用人数 <b class="yafuso_required_badge_029">必須</b><input type="number" name="guests" value="<?php echo yafuso_karaoke_form_h($karaoke_reservation_values['guests']); ?>" min="1" max="18" inputmode="numeric" required></label>
-                                    <label>予約希望日 <b class="yafuso_required_badge_029">必須</b><input type="date" name="reservation_date" value="<?php echo yafuso_karaoke_form_h($karaoke_reservation_values['reservation_date']); ?>" min="<?php echo yafuso_karaoke_form_h($karaoke_today); ?>" required></label>
-                                    <label>予約希望時間 <b class="yafuso_required_badge_029">必須</b><select name="reservation_time" required>
-                                            <option value="" <?php echo $karaoke_reservation_values['reservation_time'] === '' ? 'selected' : ''; ?> disabled>選択してください</option>
-                                            <?php foreach ($karaoke_reservation_time_options as $time_option) : ?>
-                                                <option value="<?php echo yafuso_karaoke_form_h($time_option); ?>" <?php echo $karaoke_reservation_values['reservation_time'] === $time_option ? 'selected' : ''; ?>><?php echo yafuso_karaoke_form_h($time_option); ?></option>
-                                            <?php endforeach; ?>
-                                        </select></label>
-                                    <label>ご利用内容 <b class="yafuso_required_badge_029">必須</b><select name="plan" required>
-                                            <option value="" <?php echo $karaoke_reservation_values['plan'] === '' ? 'selected' : ''; ?> disabled>選択してください</option>
-                                            <?php foreach ($karaoke_reservation_plan_options as $plan_option) : ?>
-                                                <option value="<?php echo yafuso_karaoke_form_h($plan_option); ?>" <?php echo $karaoke_reservation_values['plan'] === $plan_option ? 'selected' : ''; ?>><?php echo yafuso_karaoke_form_h($plan_option); ?></option>
-                                            <?php endforeach; ?>
-                                        </select></label>
-                                    <label>ご希望のお部屋 <select name="room_request">
-                                            <?php foreach ($karaoke_reservation_room_options as $room_option) : ?>
-                                                <option value="<?php echo yafuso_karaoke_form_h($room_option); ?>" <?php echo $karaoke_reservation_values['room_request'] === $room_option ? 'selected' : ''; ?>><?php echo yafuso_karaoke_form_h($room_option); ?></option>
-                                            <?php endforeach; ?>
-                                        </select></label>
-                                </div>
-                                <label>ご要望・備考<textarea name="message" rows="5" placeholder="お子様連れ、誕生日利用、屋台村からの持ち込み予定などがあればご記入ください。"><?php echo yafuso_karaoke_form_h($karaoke_reservation_values['message']); ?></textarea></label>
-                                <label class="yafuso_vendors_agree_029">
-                                    <input type="checkbox" name="agree" value="1" required <?php echo (string)($_POST['agree'] ?? '') === '1' ? 'checked' : ''; ?>>
-                                    <span>店舗からの折り返し連絡後に予約確定となることに同意します <b class="yafuso_required_badge_029">必須</b></span>
-                                </label>
-                                <button type="submit">予約内容を送信する</button>
-                                <a href="tel:098-879-1055" class="yafuso_vendors_phone_029"><i class="fa-solid fa-phone" aria-hidden="true"></i>電話で予約する</a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
                 <div class="yafuso_karaoke_info_029">
                     <div class="yafuso_single_029">
                         <div class="yafuso_karaoke_info_grid_029">
@@ -566,7 +429,7 @@ HTML;
                             <div class="yafuso_karaoke_contact_card_029 act blur delay_1">
                                 <img decoding="async" src="<?php echo $img; ?>/momotarou.webp" alt="カラオケワールドももたろうのロゴ" loading="lazy">
                                 <h2>ご予約・お問い合わせ</h2>
-                                <p>ご予約はお電話またはオンライン予約フォームから承ります。<br>
+                                <p>ご予約はお電話またはオンライン予約ページから承ります。<br>
                                     お急ぎの場合はお電話ください。</p>
                                 <dl>
                                     <div>
@@ -586,8 +449,39 @@ HTML;
                                         <dd><a href="https://www.instagram.com/karaoke.momotaro/" target="_blank" rel="noopener noreferrer">@karaoke.momotaro</a></dd>
                                     </div>
                                 </dl>
-                                <a href="#karaoke_reservation">オンライン予約フォームへ</a>
+                                <a href="#karaoke_reservation">オンライン予約のご案内へ</a>
                                 <a href="tel:098-879-1055" class="yafuso_karaoke_phone_button_029">電話予約：098-879-1055</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div id="karaoke_reservation" class="yafuso_karaoke_reservation_029">
+                    <div class="yafuso_single_029">
+                        <div class="yafuso_karaoke_reservation_heading_029 act blur">
+                            <img class="yafuso_karaoke_reservation_icon_029" src="<?php echo $img; ?>/karaoke_microphone_icon.webp" alt="" aria-hidden="true" loading="lazy">
+                            <h2>オンライン予約</h2>
+                            <p>下記のご案内を確認のうえ、外部予約ページからお申し込みください。</p>
+                        </div>
+                        <div class="yafuso_karaoke_reservation_grid_029">
+                            <div class="yafuso_karaoke_reservation_note_029 act inup">
+                                <h3>オンライン予約前のご確認</h3>
+                                <ul>
+                                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i><span>予約は店舗からの折り返し連絡をもって確定となります。</span></li>
+                                    <li><i class="fa-solid fa-users" aria-hidden="true"></i><span>18名様を超えるご利用は、お電話にてご相談ください。</span></li>
+                                    <li><i class="fa-solid fa-clock" aria-hidden="true"></i><span>当日予約やお急ぎの場合は、電話予約が確実です。</span></li>
+                                </ul>
+                                <div class="yafuso_karaoke_reservation_actions_029">
+                                    <a class="yafuso_karaoke_reservation_link_029" href="https://momotaro-reserve--karaokeworldreservationpage.asia-east1.hosted.app/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+                                        <span>ご予約はコチラ</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="yafuso_karaoke_reservation_phone_029" href="tel:098-879-1055"><i class="fa-solid fa-phone white" aria-hidden="true"></i><span>電話予約：098-879-1055</span></a>
+                                </div>
+                                <p class="yafuso_karaoke_reservation_external_note_029">「ご予約はコチラ」を押すと、外部の予約ページが新しい画面で開きます。</p>
                             </div>
                         </div>
                     </div>

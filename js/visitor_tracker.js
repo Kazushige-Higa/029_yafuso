@@ -10,14 +10,18 @@
   'use strict';
 
   /* ---- 設定 ---- */
-  const API_URL     = '/visitor_tracker.php';
+  const BASE_PATH   = (document.querySelector('meta[name="yafuso-base-path"]')?.content || '').replace(/\/$/, '');
+  const API_URL     = BASE_PATH + '/visitor_tracker.php';
   const COOKIE_NAME = 'yafuso_vid';
   const COOKIE_DAYS = 90;
   const TRACKER_TOKEN = document.querySelector('meta[name="yafuso-visitor-token"]')?.content || '';
   const FORM_SUBMIT_TOKEN = document.querySelector('meta[name="yafuso-form-submit-token"]')?.content || '';
 
   /* ---- analyticsページは計測しない ---- */
-  if (location.pathname.startsWith('/analytics') || !TRACKER_TOKEN) return;
+  const sitePath = BASE_PATH && location.pathname.startsWith(BASE_PATH)
+    ? location.pathname.slice(BASE_PATH.length) || '/'
+    : location.pathname;
+  if (sitePath.startsWith('/analytics') || !TRACKER_TOKEN) return;
 
   /* ================================================================
    * Cookie ユーティリティ
@@ -31,7 +35,7 @@
     const expires = new Date(Date.now() + days * 864e5).toUTCString();
     document.cookie = name + '=' + encodeURIComponent(value)
       + '; expires=' + expires
-      + '; path=/; SameSite=Lax'
+      + '; path=' + (BASE_PATH || '/') + '; SameSite=Lax'
       + (location.protocol === 'https:' ? '; Secure' : '');
   }
 

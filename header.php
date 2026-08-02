@@ -23,9 +23,10 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
       gtag('config', <?php echo json_encode($ga4_measurement_id, JSON_UNESCAPED_SLASHES); ?>);
     </script>
   <?php endif; ?>
-  <script src="/js/visitor_tracker.js" defer></script>
+  <script src="<?= htmlspecialchars(yafuso_url('/js/visitor_tracker.js'), ENT_QUOTES, 'UTF-8') ?>" defer></script>
   <meta charset="UTF-8">
   <meta name="yafuso-visitor-token" content="<?= htmlspecialchars($visitor_tracker_token, ENT_QUOTES, 'UTF-8') ?>">
+  <meta name="yafuso-base-path" content="<?= htmlspecialchars($site_base_path, ENT_QUOTES, 'UTF-8') ?>">
   <?php if (!empty($visitor_form_submit_token)) : ?>
     <meta name="yafuso-form-submit-token" content="<?= htmlspecialchars((string)$visitor_form_submit_token, ENT_QUOTES, 'UTF-8') ?>">
   <?php endif; ?>
@@ -50,7 +51,7 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
     }
 
     if (substr($value, 0, 1) === '/') {
-      return $scheme . '://' . $host . $value;
+      return $scheme . '://' . $host . yafuso_url($value);
     }
 
     $base_path = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/'));
@@ -128,10 +129,10 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="canonical" href="<?= htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8') ?>">
   <link href="https://cdn.rs-sys.jp/lib/reset/reset.css" rel="stylesheet">
-  <link href="/css/reset.css" rel="stylesheet">
-  <link href="/css/setting.css" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
-  <link href="/css/animation_scroll.css" rel="stylesheet">
+  <link href="<?= htmlspecialchars(yafuso_url('/css/reset.css'), ENT_QUOTES, 'UTF-8') ?>" rel="stylesheet">
+  <link href="<?= htmlspecialchars(yafuso_url('/css/setting.css'), ENT_QUOTES, 'UTF-8') ?>" rel="stylesheet">
+  <link href="<?= htmlspecialchars(yafuso_url('/css/style.css'), ENT_QUOTES, 'UTF-8') ?>" rel="stylesheet">
+  <link href="<?= htmlspecialchars(yafuso_url('/css/animation_scroll.css'), ENT_QUOTES, 'UTF-8') ?>" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
   <?php echo $page_style ?? ''; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -174,17 +175,17 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
       <header>
         <div class="yafuso_header_029">
           <div class="yafuso_header_inner_029">
-            <a class="yafuso_logo_029" href="/" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
+            <a class="yafuso_logo_029" href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
               <img src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="eager">
             </a>
 
             <nav class="yafuso_nav_029 pconly" aria-label="メインナビゲーション">
               <ul>
-                <li><a href="/">トップページ</a></li>
-                <li><a href="/concept.php">コンセプト</a></li>
-                <li><a href="/market_stalls.php">屋台のご紹介</a></li>
-                <li><a href="/karaoke.php">カラオケワールド ももたろう</a></li>
-                <li><a href="/vendors.php">出店をご検討の方へ</a></li>
+                <li><a href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>">トップページ</a></li>
+                <li><a href="<?= htmlspecialchars(yafuso_url('/concept.php'), ENT_QUOTES, 'UTF-8') ?>">コンセプト</a></li>
+                <li><a href="<?= htmlspecialchars(yafuso_url('/market_stalls.php'), ENT_QUOTES, 'UTF-8') ?>">屋台のご紹介</a></li>
+                <li><a href="<?= htmlspecialchars(yafuso_url('/karaoke.php'), ENT_QUOTES, 'UTF-8') ?>">カラオケワールド ももたろう</a></li>
+                <li><a href="<?= htmlspecialchars(yafuso_url('/vendors.php'), ENT_QUOTES, 'UTF-8') ?>">出店をご検討の方へ</a></li>
               </ul>
             </nav>
 
@@ -202,14 +203,14 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
               <div class="nav_slide_container">
                 <div class="nav_menu_area">
                   <nav class="nav_menu_content" aria-label="スマートフォンナビゲーション">
-                    <a class="yafuso_slide_nav_logo_029" href="/" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
+                    <a class="yafuso_slide_nav_logo_029" href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>" aria-label="やふそ屋台村 ちょうちん横丁 トップ">
                       <img src="<?php echo $img; ?>/logo.webp" alt="やふそ屋台村 ちょうちん横丁" loading="lazy">
                     </a>
-                    <a href="/">トップページ</a>
-                    <a href="/concept.php">コンセプト</a>
-                    <a href="/market_stalls.php">屋台のご紹介</a>
-                    <a href="/karaoke.php">カラオケワールド ももたろう</a>
-                    <a href="/vendors.php">出店をご検討の方へ</a>
+                    <a href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>">トップページ</a>
+                    <a href="<?= htmlspecialchars(yafuso_url('/concept.php'), ENT_QUOTES, 'UTF-8') ?>">コンセプト</a>
+                    <a href="<?= htmlspecialchars(yafuso_url('/market_stalls.php'), ENT_QUOTES, 'UTF-8') ?>">屋台のご紹介</a>
+                    <a href="<?= htmlspecialchars(yafuso_url('/karaoke.php'), ENT_QUOTES, 'UTF-8') ?>">カラオケワールド ももたろう</a>
+                    <a href="<?= htmlspecialchars(yafuso_url('/vendors.php'), ENT_QUOTES, 'UTF-8') ?>">出店をご検討の方へ</a>
                     <div class="yafuso_slide_nav_sns_029">
                       <p><i class="fa-brands fa-instagram" aria-hidden="true"></i>SNS・インスタグラム</p>
                       <ul>

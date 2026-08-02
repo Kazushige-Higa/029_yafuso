@@ -14,7 +14,7 @@
                 浦添市屋富祖、国道58号沿いの屋内型屋台村です。店舗やイベントの新着情報をお届けします。
             </p>
             <div class='space_1 space_sp1'></div>
-            <button class='btn_mini radius center'><a href='/'>Top page</a></button>
+            <button class='btn_mini radius center'><a href='<?php echo htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8'); ?>'>Top page</a></button>
             <hr>
             <ul class="sns_btn center t_m10">
 
@@ -67,7 +67,7 @@
                     $side_timestamp = ($side_date_source !== '') ? strtotime($side_date_source) : false;
                     ?>
                     <li>
-                        <a href='/news/<?php echo rawurlencode($side_post->id); ?>'>
+                        <a href='<?php echo htmlspecialchars(yafuso_url('/news/') . rawurlencode($side_post->id), ENT_QUOTES, 'UTF-8'); ?>'>
                             <figure class="img">
                                 <?php if (isset($side_post->thumbnail->url)): ?>
                                     <img src="<?php echo htmlspecialchars($side_post->thumbnail->url, ENT_QUOTES, 'UTF-8'); ?>?w=200" alt="<?php echo htmlspecialchars($side_post->title, ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
@@ -103,7 +103,7 @@
                     $side_timestamp = ($side_date_source !== '') ? strtotime($side_date_source) : false;
                     ?>
                     <li>
-                        <a href='/works/<?php echo rawurlencode($side_post->id); ?>'>
+                        <a href='<?php echo htmlspecialchars(yafuso_url('/works/') . rawurlencode($side_post->id), ENT_QUOTES, 'UTF-8'); ?>'>
                             <figure class="img">
                                 <?php if (isset($side_post->thumbnail->url)): ?>
                                     <img src="<?php echo htmlspecialchars($side_post->thumbnail->url, ENT_QUOTES, 'UTF-8'); ?>?w=200" alt="<?php echo htmlspecialchars($side_post->title, ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">

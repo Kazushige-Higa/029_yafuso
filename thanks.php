@@ -4,16 +4,12 @@ yafuso_session_start();
 
 $requested_thanks_type = $_GET['type'] ?? '';
 $thanks_type = is_scalar($requested_thanks_type) ? (string)$requested_thanks_type : '';
-$thanks_redirects = [
-    'karaoke_reservation' => '/karaoke.php#karaoke_reservation',
-    'vendor_inquiry' => '/vendors.php#vendors_contact_form',
-];
+$thanks_routes = yafuso_mailform_routes($thanks_type);
 if (
-    !isset($thanks_redirects[$thanks_type])
+    !in_array($thanks_type, ['karaoke_reservation', 'vendor_inquiry'], true)
     || empty($_SESSION['yafuso_mailform_success'][$thanks_type])
 ) {
-    $redirect = $thanks_redirects[$thanks_type] ?? '/';
-    header('Location: ' . $redirect, true, 303);
+    header('Location: ' . $thanks_routes['guard'], true, 303);
     exit;
 }
 unset($_SESSION['yafuso_mailform_success'][$thanks_type]);
@@ -49,7 +45,7 @@ $use_yafuso_layout = true;
                     今しばらくお待ちくださいますようお願いいたします。</p>
             <?php endif; ?>
             <button class="btn_mini center radius">
-                <a href="./">ホームへ戻る</a>
+                <a href="<?php echo htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8'); ?>">ホームへ戻る</a>
             </button>
         </div>
     </div>
