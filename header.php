@@ -63,12 +63,11 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
   $site_description = $clean_meta_value($description ?? '');
   $entry_display_title = $clean_meta_value($entry_title ?? $blog_title ?? '');
   $entry_display_description = $clean_meta_value($entry_description ?? '');
-  $entry_display_image = $clean_meta_value($entry_og_image ?? '');
   $display_title = $is_entry_page ? $entry_display_title : $clean_meta_value($page_title ?? '');
   $page_meta_title_value = $clean_meta_value($page_meta_title ?? '');
   $page_meta_description_value = $clean_meta_value($page_meta_description ?? '');
   $page_meta_image_value = $clean_meta_value($page_meta_image ?? '');
-  $default_meta_image = $clean_meta_value($ogp_image ?? (($img ?? '') . '/ogp_image.webp'));
+  $default_meta_image = $clean_meta_value($ogp_image ?? (($img ?? '') . '/ogp_image.jpg'));
   $request_path = parse_url((string)($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH);
   $canonical_path = is_string($request_path) && $request_path !== '' ? $request_path : '/';
   if ($is_entry_page && $requested_eid !== '') {
@@ -118,9 +117,8 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
     $full_description = $site_description;
   }
 
-  $meta_image = $to_absolute_url(
-    $page_meta_image_value !== '' ? $page_meta_image_value : ($entry_display_image !== '' ? $entry_display_image : $default_meta_image)
-  );
+  $meta_image_source = $page_meta_image_value !== '' ? $page_meta_image_value : $default_meta_image;
+  $meta_image = $to_absolute_url($meta_image_source);
   ?>
   <title><?= htmlspecialchars($full_title, ENT_QUOTES, 'UTF-8') ?></title>
   <meta name="description" content="<?= htmlspecialchars($full_description, ENT_QUOTES, 'UTF-8') ?>">

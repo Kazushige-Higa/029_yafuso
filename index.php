@@ -4,7 +4,7 @@ require_once './common.php';
 $page_title = "やふそ屋台村 ちょうちん横丁";
 $page_meta_title = "やふそ屋台村 ちょうちん横丁｜浦添・屋富祖の屋内型屋台村";
 $page_meta_description = "浦添市屋富祖にある屋内型屋台村「ちょうちん横丁」。屋富祖のディープな街時間の中で、飲む・食べる・歌う・遊ぶを楽しめるにぎわいの空間です。";
-$page_meta_image = $img . "/karaoke_momotaro16.webp";
+$page_meta_image = $ogp_image;
 $page_style = "";
 $use_yafuso_layout = true;
 $page_script = '<script src="js/slider_fullslider.js" defer></script>';

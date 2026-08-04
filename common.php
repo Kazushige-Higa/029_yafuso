@@ -83,7 +83,7 @@ function yafuso_mailform_routes($form_type)
 }
 
 $img = yafuso_url('/images');
-$ogp_image = $img . "/ogp_image.webp";
+$ogp_image = $img . "/ogp_image.jpg";
 
 $weblink = "";
 $instagram = "";

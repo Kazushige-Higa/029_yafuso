@@ -4,7 +4,7 @@ require_once './common.php';
 $page_title = "出店をご検討の方へ";
 $page_meta_title = "出店をご検討の方へ｜やふそ屋台村 ちょうちん横丁";
 $page_meta_description = "やふそ屋台村 ちょうちん横丁の貸し屋台区画、出店メリット、設備、契約条件、申し込み情報をご案内します。";
-$page_meta_image = $img . "/vendors_4_1.webp";
+$page_meta_image = $ogp_image;
 $page_style = "";
 $use_yafuso_layout = true;
 $hide_yafuso_parking_panel = true;

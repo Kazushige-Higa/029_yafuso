@@ -4,7 +4,7 @@ require_once './common.php';
 $page_title = "コンセプト";
 $page_meta_title = "コンセプト｜やふそ屋台村 ちょうちん横丁";
 $page_meta_description = "浦添市・屋富祖の屋内型屋台村「ちょうちん横丁」のコンセプト。昭和レトロと多彩な味が交差する、天候を気にせず過ごせるにぎわいと安心の空間です。";
-$page_meta_image = $img . "/hero_people.webp";
+$page_meta_image = $ogp_image;
 $page_style = "";
 $use_yafuso_layout = true;
 ?>

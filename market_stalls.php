@@ -4,7 +4,7 @@ require_once './common.php';
 $page_title = "屋台のご紹介";
 $page_meta_title = "屋台のご紹介｜やふそ屋台村 ちょうちん横丁";
 $page_meta_description = "やふそ屋台村 ちょうちん横丁に集まるカラオケ、ホルモン、ラーメン、沖縄料理、手羽先の各店舗をご紹介します。";
-$page_meta_image = $img . "/hero_scene.webp";
+$page_meta_image = $ogp_image;
 $page_style = "";
 $use_yafuso_layout = true;
 $page_script = <<<'HTML'
