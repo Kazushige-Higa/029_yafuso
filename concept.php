@@ -64,7 +64,7 @@ $use_yafuso_layout = true;
                                     <img decoding="async" src="<?php echo $img; ?>/tokunobu_1.webp" alt="屋台ラーメンとくのぶのラーメン" loading="lazy">
                                 </figure>
                                 <figure>
-                                    <img decoding="async" src="<?php echo $img; ?>/shop_okada.webp" alt="西成ホルモンおか田のホルモン料理" loading="lazy">
+                                    <img decoding="async" src="<?php echo $img; ?>/shop_okada.webp" alt="大衆横丁 おか田のホルモン料理" loading="lazy">
                                 </figure>
                             </div>
                             <div class="yafuso_lower_variety_text_029">

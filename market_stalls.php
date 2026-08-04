@@ -244,24 +244,24 @@ HTML;
                                 <div class="gallery_thumbnail yafuso_market_gallery_029" data-gallery-id="market_okada_gallery">
                                     <div class="main-gallery">
                                         <div class="main-slide cover">
-                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_0.webp" alt="西成ホルモンおか田の写真01" class="active">
+                                            <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_0.webp" alt="大衆横丁 おか田の写真01" class="active">
                                             <div class="overflow">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_1.webp" alt="西成ホルモンおか田の写真02">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_3.webp" alt="西成ホルモンおか田の写真03">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_4.webp" alt="西成ホルモンおか田の写真04">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_5.webp" alt="西成ホルモンおか田の写真05">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_6.webp" alt="西成ホルモンおか田の写真06">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_7.webp" alt="西成ホルモンおか田の写真07">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_8.webp" alt="西成ホルモンおか田の写真08">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_9.webp" alt="西成ホルモンおか田の写真09">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_10.webp" alt="西成ホルモンおか田の写真10">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_11.webp" alt="西成ホルモンおか田の写真11">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_12.webp" alt="西成ホルモンおか田の写真12">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_13.webp" alt="西成ホルモンおか田の写真13">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_14.webp" alt="西成ホルモンおか田の写真14">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_15.webp" alt="西成ホルモンおか田の写真15">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_16.webp" alt="西成ホルモンおか田の写真16">
-                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_17.webp" alt="西成ホルモンおか田の写真17">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_1.webp" alt="大衆横丁 おか田の写真02">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_3.webp" alt="大衆横丁 おか田の写真03">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_4.webp" alt="大衆横丁 おか田の写真04">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_5.webp" alt="大衆横丁 おか田の写真05">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_6.webp" alt="大衆横丁 おか田の写真06">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_7.webp" alt="大衆横丁 おか田の写真07">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_8.webp" alt="大衆横丁 おか田の写真08">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_9.webp" alt="大衆横丁 おか田の写真09">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_10.webp" alt="大衆横丁 おか田の写真10">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_11.webp" alt="大衆横丁 おか田の写真11">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_12.webp" alt="大衆横丁 おか田の写真12">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_13.webp" alt="大衆横丁 おか田の写真13">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_14.webp" alt="大衆横丁 おか田の写真14">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_15.webp" alt="大衆横丁 おか田の写真15">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_16.webp" alt="大衆横丁 おか田の写真16">
+                                                <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_17.webp" alt="大衆横丁 おか田の写真17">
                                             </div>
                                             <div class="gallery-nav">
                                                 <button class="nav-button prev" type="button" aria-label="前の写真">&#10094;</button>
@@ -273,55 +273,55 @@ HTML;
                                             <div class='space_1 space_sp1'></div>
                                             <div class="thumbnail-gallery">
                                                 <div class="thumbnail active">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_0.webp" alt="おか田写真01のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_0.webp" alt="大衆横丁 おか田の写真01のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_1.webp" alt="おか田写真02のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_1.webp" alt="大衆横丁 おか田の写真02のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_3.webp" alt="おか田写真03のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_3.webp" alt="大衆横丁 おか田の写真03のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_4.webp" alt="おか田写真04のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_4.webp" alt="大衆横丁 おか田の写真04のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_5.webp" alt="おか田写真05のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_5.webp" alt="大衆横丁 おか田の写真05のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_6.webp" alt="おか田写真06のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_6.webp" alt="大衆横丁 おか田の写真06のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_7.webp" alt="おか田写真07のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_7.webp" alt="大衆横丁 おか田の写真07のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_8.webp" alt="おか田写真08のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_8.webp" alt="大衆横丁 おか田の写真08のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_9.webp" alt="おか田写真09のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_9.webp" alt="大衆横丁 おか田の写真09のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_10.webp" alt="おか田写真10のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_10.webp" alt="大衆横丁 おか田の写真10のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_11.webp" alt="おか田写真11のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_11.webp" alt="大衆横丁 おか田の写真11のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_12.webp" alt="おか田写真12のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_12.webp" alt="大衆横丁 おか田の写真12のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_13.webp" alt="おか田写真13のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_13.webp" alt="大衆横丁 おか田の写真13のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_14.webp" alt="おか田写真14のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_14.webp" alt="大衆横丁 おか田の写真14のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_15.webp" alt="おか田写真15のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_15.webp" alt="大衆横丁 おか田の写真15のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_16.webp" alt="おか田写真16のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_16.webp" alt="大衆横丁 おか田の写真16のサムネイル">
                                                 </div>
                                                 <div class="thumbnail">
-                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_17.webp" alt="おか田写真17のサムネイル">
+                                                    <img decoding="async" loading="lazy" src="<?php echo $img; ?>/okada_17.webp" alt="大衆横丁 おか田の写真17のサムネイル">
                                                 </div>
                                             </div>
                                             <div class="thumbnail-nav">
@@ -333,8 +333,8 @@ HTML;
                                 </div>
                             </div>
                             <div class="yafuso_market_shop_body_029">
-                                <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="おか田のSNSアイコン" loading="lazy">
-                                <h3>西成ホルモン <span class="red">おか田</span></h3>
+                                <img decoding="async" class="yafuso_market_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="大衆横丁 おか田のSNSアイコン" loading="lazy">
+                                <h3>大衆横丁 <span class="red">おか田</span></h3>
                                 <p class="yafuso_market_lead_029">大阪・西成で愛され続けてきたホルモン焼きの文化を沖縄の地で再現。<br>
                                 昔ながらの大衆酒場の雰囲気をそのまま楽しめます。</p>
                                 <ul class="yafuso_market_point_list_029">
@@ -419,7 +419,7 @@ HTML;
                                 今日をがんばる心と体に、じんわり染み渡る一杯です。</p>
                                 <ul class="yafuso_market_point_list_029">
                                     <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>煮干し＆節系の香り高い、極上の正油スープ</li>
-                                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>お食事メインのランチから、横丁巡りのひとときまで</li>
+                                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>ポテサラやめんまなど、店内仕込みのおつまみで赤星を楽しめます</li>
                                     <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>ラーメン一杯だけでのご利用も、どうぞお気軽に</li>
                                     <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>今日をがんばる心と体に、じんわり染み渡る活力の味</li>
                                 </ul>

@@ -221,8 +221,8 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
                         </li>
                         <li>
                           <a href="https://www.instagram.com/horumon_okada/" target="_blank" rel="noopener noreferrer">
-                            <img src="<?php echo $img; ?>/sns_okada.webp" alt="西成ホルモンおか田のInstagramアイコン" loading="lazy">
-                            <span>西成ホルモン<br>おか田</span>
+                            <img src="<?php echo $img; ?>/sns_okada.webp" alt="大衆横丁 おか田のInstagramアイコン" loading="lazy">
+                            <span>大衆横丁<br>おか田</span>
                             <small>@horumon_okada</small>
                           </a>
                         </li>

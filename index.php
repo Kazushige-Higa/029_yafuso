@@ -34,7 +34,6 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                     <div class="yafuso_hero_buttons_029">
                         <a href="#shops">【店舗一覧】をチェック！</a>
                         <a href="#access">【アクセス】58号線沿い！</a>
-                        <a href="concept.php">【屋富祖】ってどんな街？</a>
                     </div>
                 </div>
             </div>
@@ -132,8 +131,8 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
 
                     <article class="yafuso_shop_card_029 act inup">
                         <div class="yafuso_shop_body_029">
-                            <img decoding="async" class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="西成ホルモンおか田のSNSアイコン" loading="lazy">
-                            <h3>西成ホルモン <span class="red">おか田</span></h3>
+                            <img decoding="async" class="yafuso_shop_sns_icon_029" src="<?php echo $img; ?>/sns_okada.webp" alt="大衆横丁 おか田のSNSアイコン" loading="lazy">
+                            <h3>大衆横丁 <span class="red">おか田</span></h3>
                             <p class="yafuso_shop_lead_029">大阪・西成スタイルのホルモン焼き。<br>
                                 昔ながらの大衆酒場の雰囲気で、もつ煮込みが一番人気。</p>
                             <ul class="yafuso_shop_points_029">
@@ -154,7 +153,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             </div>
                         </div>
                         <figure class="yafuso_shop_visual_029">
-                            <img decoding="async" src="<?php echo $img; ?>/okada_0.webp" alt="西成ホルモンおか田の看板イメージ" loading="lazy">
+                            <img decoding="async" src="<?php echo $img; ?>/okada_0.webp" alt="大衆横丁 おか田の看板イメージ" loading="lazy">
                         </figure>
                     </article>
 
@@ -167,7 +166,7 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
                             <ul class="yafuso_shop_points_029">
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>今日をがんばる心と体に、じんわり染み渡る活力の味</li>
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>煮干し＆節系の香り高い、極上の正油スープ</li>
-                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>お食事メインのランチから、横丁巡りのひとときまで</li>
+                                <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>ポテサラやめんまなど、店内仕込みのおつまみで赤星を楽しめます</li>
                                 <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i>ラーメン一杯だけでのご利用も、どうぞお気軽に</li>
                             </ul>
                             <div class="yafuso_shop_meta_029">
