@@ -15162,13 +15162,18 @@ body.products-modal-open {
 }
 
 .yafuso_about_history_lead_029 img {
-  aspect-ratio: 3/2;
-  object-fit: cover;
+  aspect-ratio: 1092/627;
+  object-fit: contain;
   filter: sepia(0.18) contrast(1.04);
 }
 
 .yafuso_about_history_lead_029 figcaption {
   color: var(--about_brown);
+}
+
+.yafuso_about_history_lead_029 figcaption a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .yafuso_about_history_lead_029 > div {

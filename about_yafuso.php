@@ -102,10 +102,12 @@ $use_yafuso_layout = true;
             <div class="yafuso_about_history_lead_029">
                 <figure>
                     <div class="yafuso_about_image_frame_029">
-                        <img decoding="async" src="<?php echo $img; ?>/about_yafuso_history.webp" alt="1950年ごろの屋富祖の通りを想定した再現イメージ" loading="lazy">
-                        <span class="yafuso_about_image_note_029">生成イメージ</span>
+                        <img decoding="async" src="<?php echo $img; ?>/about_yafuso_history_1959.webp" alt="1959年頃の屋富祖大通り。通りの両側に商店が並び、右手に食堂、糸満屋、宮里食堂が見える" loading="lazy">
                     </div>
-                    <figcaption>1950年ごろの屋富祖を想定した再現イメージ</figcaption>
+                    <figcaption>
+                        1959年頃の屋富祖大通り<br>
+                        出典：<a href="https://www2.archives.pref.okinawa.jp/opa/OPA600_RESULT_BUNSYO.aspx?cont_cd=A000009983&amp;src_keyword=&amp;keyword_hit=&amp;lang=jp" target="_blank" rel="noopener noreferrer">『屋富祖戦後写真集』（浦添市屋富祖自治会）</a>
+                    </figcaption>
                 </figure>
                 <div>
                     <p>屋富祖大通りの始まりは、戦前の集落にあった細く曲がりくねった道を、戦後、米軍がブルドーザーで拡幅したことにさかのぼります。</p>
