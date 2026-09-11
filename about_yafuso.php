@@ -143,7 +143,7 @@ $use_yafuso_layout = true;
                 <figure class="yafuso_about_generations_photo_029">
                     <img decoding="async" src="<?php echo $img; ?>/about_yafuso_generations.webp" alt="古い建物を生かした店で世代を超えて会話を楽しむ人々を描いた生成イメージ" loading="lazy">
                     <span>新しい感性が交わる</span>
-                    <figcaption class="yafuso_about_image_note_029">生成イメージ</figcaption>
+                    <figcaption class="yafuso_about_image_note_029">※イメージ画像</figcaption>
                 </figure>
             </div>
         </div>
@@ -164,7 +164,7 @@ $use_yafuso_layout = true;
             <div class="yafuso_about_walk_story_029">
                 <figure class="yafuso_about_walk_photo_029">
                     <img decoding="async" src="<?php echo $img; ?>/about_yafuso_walk_01.webp" alt="提灯が灯る屋富祖の通りを歩く人々を描いた生成イメージ" loading="lazy">
-                    <figcaption class="yafuso_about_image_note_029">生成イメージ</figcaption>
+                    <figcaption class="yafuso_about_image_note_029">※イメージ画像</figcaption>
                 </figure>
                 <div class="yafuso_about_walk_prose_029">
                     <p>屋富祖の楽しみ方は、最初から一軒の目的地を決めることだけではありません。</p>
