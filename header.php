@@ -181,6 +181,7 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
               <ul>
                 <li><a href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>">トップページ</a></li>
                 <li><a href="<?= htmlspecialchars(yafuso_url('/concept.php'), ENT_QUOTES, 'UTF-8') ?>">コンセプト</a></li>
+                <li><a href="<?= htmlspecialchars(yafuso_url('/about_yafuso.php'), ENT_QUOTES, 'UTF-8') ?>">屋富祖とは</a></li>
                 <li><a href="<?= htmlspecialchars(yafuso_url('/market_stalls.php'), ENT_QUOTES, 'UTF-8') ?>">屋台のご紹介</a></li>
                 <li><a href="<?= htmlspecialchars(yafuso_url('/karaoke.php'), ENT_QUOTES, 'UTF-8') ?>">カラオケワールド ももたろう</a></li>
                 <li><a href="<?= htmlspecialchars(yafuso_url('/vendors.php'), ENT_QUOTES, 'UTF-8') ?>">出店をご検討の方へ</a></li>
@@ -206,6 +207,7 @@ header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
                     </a>
                     <a href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>">トップページ</a>
                     <a href="<?= htmlspecialchars(yafuso_url('/concept.php'), ENT_QUOTES, 'UTF-8') ?>">コンセプト</a>
+                    <a href="<?= htmlspecialchars(yafuso_url('/about_yafuso.php'), ENT_QUOTES, 'UTF-8') ?>">屋富祖とは</a>
                     <a href="<?= htmlspecialchars(yafuso_url('/market_stalls.php'), ENT_QUOTES, 'UTF-8') ?>">屋台のご紹介</a>
                     <a href="<?= htmlspecialchars(yafuso_url('/karaoke.php'), ENT_QUOTES, 'UTF-8') ?>">カラオケワールド ももたろう</a>
                     <a href="<?= htmlspecialchars(yafuso_url('/vendors.php'), ENT_QUOTES, 'UTF-8') ?>">出店をご検討の方へ</a>

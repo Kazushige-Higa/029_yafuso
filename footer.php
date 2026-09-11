@@ -67,6 +67,7 @@
             <nav class="yafuso_footer_nav_029" aria-label="フッターナビゲーション">
                 <a href="<?= htmlspecialchars(yafuso_url('/'), ENT_QUOTES, 'UTF-8') ?>">トップページ</a>
                 <a href="<?= htmlspecialchars(yafuso_url('/concept.php'), ENT_QUOTES, 'UTF-8') ?>">コンセプト</a>
+                <a href="<?= htmlspecialchars(yafuso_url('/about_yafuso.php'), ENT_QUOTES, 'UTF-8') ?>">屋富祖とは</a>
                 <a href="<?= htmlspecialchars(yafuso_url('/market_stalls.php'), ENT_QUOTES, 'UTF-8') ?>">屋台のご紹介</a>
                 <a href="<?= htmlspecialchars(yafuso_url('/karaoke.php'), ENT_QUOTES, 'UTF-8') ?>">カラオケワールド ももたろう</a>
                 <a href="<?= htmlspecialchars(yafuso_url('/vendors.php'), ENT_QUOTES, 'UTF-8') ?>">出店をご検討の方へ</a>

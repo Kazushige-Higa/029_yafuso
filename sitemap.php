@@ -98,6 +98,7 @@ $urls = [];
 $staticPages = [
     '/' => 'index.php',
     '/concept.php' => 'concept.php',
+    '/about_yafuso.php' => 'about_yafuso.php',
     '/market_stalls.php' => 'market_stalls.php',
     '/karaoke.php' => 'karaoke.php',
     '/vendors.php' => 'vendors.php',
