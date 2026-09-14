@@ -40,6 +40,19 @@ $page_script = '<script src="js/slider_fullslider.js" defer></script>';
         </div>
     </section>
 
+    <section aria-labelledby="yafuso_notice_title">
+        <div class="yafuso_notice_029">
+            <div class="yafuso_single_029 yafuso_notice_box_029">
+                <h2 id="yafuso_notice_title" class="yafuso_notice_label_029 fs_22 fs_sp20">お知らせ</h2>
+                <time class="yafuso_notice_date_029 fs_16" datetime="2026-09-14">2026.09.14</time>
+                <div class="yafuso_notice_text_029 fs_16">
+                    <p><strong>9/21・22・23日の連休の営業についてのお知らせ。</strong></p>
+                    <p>連休や火曜祝日の場合は、連休・祝日期間中の最終日をお休みとさせていただきます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section>
         <div id="concept" class="yafuso_concept_029">
             <div class="yafuso_single_029 yafuso_concept_grid_029">
